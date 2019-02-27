@@ -1,0 +1,151 @@
+﻿/*
+
+@author  João Felipe 
+@version 0.1
+
+/*========================= layout =====================================*/
+
+/* pageHeader */
+
+body {
+    font-size: 11px;
+    float: center;
+    font-family: "arial", "verdana", "sans-serif";
+    padding: 0px 0px 0px 10px;
+}
+
+h3, th, td, h4 {
+    text-align: center;
+}
+
+}
+
+select {
+    width: 100px;
+}
+
+th {
+    width: 90px;
+    height: 25px;
+}
+
+
+.corText {
+    color: white;
+}
+
+.select2 {
+    width: 40px;
+}
+
+#escolher {
+    width: 25px;
+    height: 25px;
+    padding: 0px 0px 0px 0px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.tamanho {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 4px;
+    border-color: silver;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    width: 50px;
+    height: 30px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #f44336; /* Green */
+    width: 50px;
+    height: 30px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.semana1 {
+    background-color: #ffffcc !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.semana2 {
+    background-color: #ddffdd !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.semana3 {
+    background-color: #ffdddd !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.semana4 {
+    background-color: #ddffff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.semana5 {
+    background-color: #e9ddff !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.azul {
+    background-color: #5bc0de;
+    -webkit-print-color-adjust: exact;
+}
+
+#mes {
+    margin-bottom: 10px;
+}
+
+.ui-widget-header {
+    border: 1px solid #dddddd;
+    background: #5bc0de !important;
+    color: #333333;
+    font-weight: bold;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: .3em;
+    top: 50%;
+    width: 20px;
+    margin: -10px 0 0 0;
+    padding: 1px;
+    height: 20px;
+    background-color: #5bc0de !important;
+    border: none;
+}
+
+
+th {
+    text-align: center;
+}
+
+.input-lg {
+    height: 30px;
+    padding: 4px 7px;
+    font-size: 14px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+select.input-lg {
+    height: 30px;
+}

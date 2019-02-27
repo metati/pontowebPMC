@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery/external/jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <link href="jquery/jquery-ui.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table th, table td {
+            height: 30px;
+            width: 200px;
+        }
+
+        table span {
+            display: block;
+            background-color: #09C;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <table id="#our_table" border="1">
+        <tr>
+            <th>head1</th>
+            <th>head1</th>
+            <th>head1</th>
+        </tr>
+        <tr>
+            <td><span class="event" id="a" draggable="true"><img src="img/p.png">aaa</span></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.event').on("dragstart", function (event) {
+                var dt = event.originalEvent.dataTransfer;
+                dt.setData('Text', $(this).attr('id'));
+            });
+            $('table td').on("dragenter dragover drop", function (event) {
+                event.preventDefault();
+                if (event.type === 'drop') {
+                    var data = event.originalEvent.dataTransfer.getData('Text', $(this).attr('id'));
+                    de = $('#' + data).detach();
+                    de.appendTo($(this));
+                };
+            });
+
+            $.getJSON('api/vs1/escala/getCalendario').done(function (data) {
+                console.log(data)
+            });
+        })
+
+    </script>
+</body>
+</html>
