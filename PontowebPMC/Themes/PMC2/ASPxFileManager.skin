@@ -1,0 +1,11 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFileManager" Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxFileManager runat="server" CssFilePath="{0}/styles.css" CssPostfix="PMC2">
+    <Styles CssPostfix="PMC2" CssFilePath="{0}/styles.css" />
+    <SettingsFolders ShowTreeLines="False" />
+    <Images SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="Web/Loading.gif" />
+    </Images>
+</dx:ASPxFileManager>
+

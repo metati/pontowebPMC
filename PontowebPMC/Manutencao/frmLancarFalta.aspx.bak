@@ -1,0 +1,167 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmLancarFalta.aspx.cs" Inherits="Manutencao_frmLancarFalta" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <script type="text/javascript">
+        function PreenchecbUsuario() 
+        {
+            cbUsuario.PerformCallback();
+        }
+    </script>
+    <style type="text/css">
+    .style4
+    {
+        width: 79px;
+    }
+    .style5
+    {
+        font-size: medium;
+    }
+    .style6
+    {
+        width: 430px;
+    }
+</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <p class="style5">
+        <strong>Lançar Faltas</strong></p>
+    <table class="style1">
+        <tr>
+            <td class="style4">
+                Setor:</td>
+            <td class="style6">
+                <dx:ASPxComboBox ID="cbSetor" runat="server" ClientInstanceName="cbSetor" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    CssPostfix="DevEx" DataMember="TBSetor" 
+                    DropDownStyle="DropDown" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="DSSetor" 
+                    ValueField="IDSetor" Width="300px" Spacing="0">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreenchecbUsuario();
+}" />
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+            <td>
+                <dx:ASPxCheckBox ID="cheqSetor" runat="server" CheckState="Unchecked" 
+                    ClientInstanceName="cheqSetor" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                    Text="Lançar para todo o setor selecionado">
+                </dx:ASPxCheckBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Usuário:</td>
+            <td class="style6">
+                <dx:ASPxComboBox ID="cbUsuario" runat="server" ClientInstanceName="cbUsuario" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    DataMember="vwNomeUsuario" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="Nome" 
+                    ValueField="IDUsuario" Width="300px" oncallback="cbUsuario_Callback" 
+                    DropDownStyle="DropDown" Spacing="0">
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                </dx:ASPxComboBox>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Motivo Falta:</td>
+            <td class="style6">
+                <dx:ASPxComboBox ID="cbMotivoFalta" runat="server" ClientInstanceName="cbMotivoFalta" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    CssPostfix="DevEx" DataMember="TBMotivoFalta" 
+                    DropDownStyle="DropDown" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="DSMotivoFalta" 
+                    ValueField="IDMotivoFalta" Width="300px" Spacing="0">
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Data:</td>
+            <td class="style6">
+                <dx:ASPxDateEdit ID="deData" runat="server" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="300px" 
+                    Spacing="0">
+                    <CalendarProperties>
+                        <HeaderStyle Spacing="1px" />
+                    </CalendarProperties>
+                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxDateEdit>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Observação:</td>
+            <td class="style6">
+                <dx:ASPxMemo ID="ASPxMemo1" runat="server" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    Height="71px" SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                    Width="300px">
+                </dx:ASPxMemo>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                    ControlToValidate="ASPxMemo1" ErrorMessage="Adicione uma observação"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                &nbsp;</td>
+            <td class="style6">
+                <table class="style1" style="width: 19%">
+                    <tr>
+                        <td>
+                            <dx:ASPxButton ID="btSalvar" runat="server" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                onclick="btSalvar_Click" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Salvar" 
+                                Width="100px" ValidationGroup="ValidaGrupo">
+                            </dx:ASPxButton>
+                        </td>
+                        <td>
+                            <dx:ASPxButton ID="btVoltar" runat="server" CausesValidation="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                CssPostfix="DevEx" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                style="margin-left: 0px" Text="Voltar" Width="100px" 
+                                onclick="btVoltar_Click">
+                            </dx:ASPxButton>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

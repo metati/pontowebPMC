@@ -1,0 +1,293 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using MetodosPontoFrequencia;
+
+public partial class frmHorasDiarias : System.Web.UI.Page
+{
+    public DataSetPontoFrequencia ds = new DataSetPontoFrequencia();
+    public Frequencia Freq = new Frequencia();
+    public PreencheTabela PT = new PreencheTabela();
+    public int Lei;
+    public string msg;
+    public bool Linhas;
+    private DateTime Horas;
+    protected int Ano = 0;
+    protected TimeSpan terminojornada, sugestaoEntradaTarde;
+    protected string tothorasDiarias;
+    protected string Hora;
+    protected TimeSpan Segundos;
+    protected string TotalHoraDia;
+    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        Crip crp = new Crip();
+
+        if (HttpContext.Current.User.Identity.IsAuthenticated == false)
+        {
+            Response.Redirect("~/Account/Login.aspx");
+        }
+        else
+        {
+
+            lblegenda1.BackColor = System.Drawing.Color.CornflowerBlue;
+            lblegenda1.Text = "***";
+            lblegenda1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            lblegenda2.BackColor = System.Drawing.Color.WhiteSmoke;
+            lblegenda2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            lblegenda2.Text = "***";
+            lblegenda3.BackColor = System.Drawing.Color.Wheat;
+            lblegenda3.ForeColor = System.Drawing.Color.Wheat;
+            lblegenda3.Text = "***";
+            lblegenda4.BackColor = System.Drawing.Color.IndianRed;
+            lblegenda4.ForeColor = System.Drawing.Color.IndianRed;
+            lblegenda4.Text = "***";
+            
+            if (!IsPostBack)
+            {
+                coIDusuario.Add("iduMinhasHoras", crp.CriptograFa(Convert.ToString(Session["IDUsuario"])));
+                coIDSetorMinhas.Add("idsetorMinhasHoras", crp.CriptograFa(Convert.ToString(Session["IDSETOR"])));
+                CarregaDropMes();
+
+                cbMesN.Value = System.DateTime.Now.Month.ToString();
+                //FrequenciaMes(Convert.ToInt32(Session["IDUsuario"]), System.DateTime.Now.Month);
+                this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> PreencheGrid();</script>");
+            }
+        }
+    }
+    public void CarregaDropMes()
+    {
+        PT.PreencheTBMes(ds);
+        cbMesN.DataSource = ds;
+        cbMesN.DataBind();
+    }
+    public void FolhaPDF(bool rel)
+    {
+        if (rel)
+        {
+            //Session["MesCorrenteH"] = cbMesN.SelectedItem.Value;
+            Response.Write("<script>window.open('/Relatorio/frmRelHorasDia.aspx');</script>");
+        }
+        else
+        {
+            this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('Não há registros para o mês selecionado.');</script>");
+        }
+    }
+    public void FrequenciaMes(int IDUsuario, int Mes)
+    {
+        //coIDUsuario. = Convert.ToString(Session["IDUsuario"]);
+        //coIDSetor.Value = Convert.ToString(Session["IDSETOR"]);
+        if (rbAno.SelectedItem.Text == "Ano Corrente")
+            Ano = System.DateTime.Now.Year;
+        else
+            Ano = System.DateTime.Now.Year -1;
+        
+        msg = Freq.HorasDias(Mes, IDUsuario, Ano, ds, Convert.ToInt32(Session["IDEmpresa"]), Convert.ToInt32(Session["IDSETOR"]));
+
+        if (msg != "1")
+        {
+            gridHoras.DataSource = ds;
+                     
+            if (!ds.vWHorasDia[0].IsDSSetorNull())
+            {
+                //Label3.Text = ds.vWHorasDia[0].DSSetor.ToString();
+                //Label3.DataBind();
+            }
+
+            if (ds.vWHorasDia[0].DSUsuario != "")
+            {
+                //Label2.Text = ds.vWHorasDia[0].DSUsuario.ToString();
+                //Label2.DataBind();
+            }
+            gridHoras.DataBind();
+        }
+        else
+        {
+            this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('Não há registros para o mês selecionado.');</script>");
+            gridHoras.DataBind();
+        }
+    }
+
+    //prevendo o término da jornada
+    protected string TerminoJornada(DevExpress.Web.ASPxGridView.GridViewDataItemTemplateContainer Container)
+    {        
+        string EntrManha, SaidaManha, EntrTarde, SaidaTarde,horasdia, dtfrequencia,IMF, IDRegimeHora;
+
+        IMF = gridHoras.GetRowValues(Container.VisibleIndex, "IMF").ToString();
+
+        terminojornada = TimeSpan.Parse("00:00:00");
+
+        if (IMF == "0")
+        {
+
+            IDRegimeHora = gridHoras.GetRowValues(Container.VisibleIndex, "IDRegimeHora").ToString();
+            EntrManha = gridHoras.GetRowValues(Container.VisibleIndex, "EntradaManha").ToString();
+            SaidaManha = gridHoras.GetRowValues(Container.VisibleIndex, "SaidaManha").ToString();
+            EntrTarde = gridHoras.GetRowValues(Container.VisibleIndex, "EntradaTarde").ToString();
+            SaidaTarde = gridHoras.GetRowValues(Container.VisibleIndex, "SaidaTarde").ToString();
+            tothorasDiarias = gridHoras.GetRowValues(Container.VisibleIndex, "TotHorasDiarias").ToString();
+            horasdia = gridHoras.GetRowValues(Container.VisibleIndex, "HorasDia").ToString();
+            dtfrequencia = gridHoras.GetRowValues(Container.VisibleIndex, "DataFrequencia").ToString();
+
+            if (tothorasDiarias == "")
+                tothorasDiarias = "0";
+
+            //Horas
+            if (EntrManha == "00:00:00" && SaidaManha == "00:00:00" && EntrTarde == "00:00:00" && SaidaTarde == "00:00:00")
+            {
+                terminojornada = TimeSpan.Parse("00:00:00");
+            }
+            else if (EntrManha != "00:00:00" && SaidaManha == "00:00:00" && EntrTarde == "00:00:00" && SaidaTarde == "00:00:00")
+            {
+                terminojornada = TimeSpan.Parse(Convert.ToDateTime(EntrManha).AddHours(Convert.ToInt32(tothorasDiarias)).ToLongTimeString());
+                //Adiciona 2 horas de almoço para regime de expediente de 8 horas
+                if (tothorasDiarias == "8")
+                    terminojornada += TimeSpan.Parse("02:00:00");
+            }
+            else if (EntrManha == "00:00:00" && SaidaManha == "00:00:00" && EntrTarde != "00:00:00" && SaidaTarde == "00:00:00")
+            {
+                if (tothorasDiarias == "4" && IDRegimeHora == "7")
+                {
+                    terminojornada = TimeSpan.Parse(Convert.ToDateTime(EntrTarde).AddHours(Convert.ToInt32(tothorasDiarias)).ToLongTimeString());
+                    terminojornada = terminojornada + new TimeSpan(0, 30, 0);
+                }
+                else
+                    terminojornada = TimeSpan.Parse(Convert.ToDateTime(EntrTarde).AddHours(Convert.ToInt32(tothorasDiarias)).ToLongTimeString());
+            }
+            else if (horasdia != "00:00:00" && tothorasDiarias == "8" && EntrTarde == "00:00:00" && SaidaTarde == "00:00:00") //Se regime de expedinte de 8 horas fazer os calculos para conseguir a saída final
+            {
+                sugestaoEntradaTarde = TimeSpan.Parse(SaidaManha).Add(TimeSpan.Parse("02:00:00"));
+
+                terminojornada = TimeSpan.Parse("08:00:00") - TimeSpan.Parse(horasdia);
+
+                terminojornada = terminojornada + sugestaoEntradaTarde;
+            }
+            else if (horasdia != "00:00:00" && tothorasDiarias == "8" && EntrTarde != "00:00:00" && SaidaTarde == "00:00:00") //Se regime de expedinte de 8 horas fazer os calculos para conseguir a saída final
+            {
+                terminojornada = TimeSpan.Parse("08:00:00") - TimeSpan.Parse(horasdia); //Qts horas se passaram pela manhã;
+                terminojornada = TimeSpan.Parse(EntrTarde).Add(terminojornada);
+            }
+        }
+        else
+        {
+            terminojornada = TimeSpan.Parse("00:00:00");
+        }
+
+        Hora = terminojornada.ToString();
+        //CorDaFonte();
+
+        if (terminojornada.ToString() == "00:00:00")
+            return "------";
+        else
+            return terminojornada.ToString();
+    }
+
+    protected System.Drawing.Color CorDaFonte()
+    {
+        if (Hora == "00:00:00")
+            return System.Drawing.Color.Black;
+        else
+            return System.Drawing.Color.White;
+    }
+
+    protected void gridHoras_HtmlRowPrepared(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewTableRowEventArgs e)
+    {
+        
+        if (Lei == 1)
+        {
+            e.Row.Font.Size = 9;
+
+            string IDRegimeHOra = Convert.ToString(e.GetValue("IDRegimeHora"));
+
+            string Justificado = Convert.ToString(e.GetValue("IMF"));
+
+            int TotalHoras = Convert.ToInt32(e.GetValue("TotHorasDiarias"));
+
+            DateTime DTFrequencia = Convert.ToDateTime(e.GetValue("DataFrequencia"));
+
+            
+
+            if (DTFrequencia.ToShortDateString() != "01/01/0001")
+            {
+                //if (e.GetValue("HorasDia").ToString() != "")
+                    //Horas = Convert.ToDateTime(e.GetValue("HorasDia"));
+                //else
+                    //Horas = Convert.ToDateTime("00:00:00");
+                TotalHoraDia = e.GetValue("HorasDia").ToString();
+                Segundos = new TimeSpan(Convert.ToInt32(TotalHoraDia.Substring(0, 2)), Convert.ToInt32(TotalHoraDia.Substring(3, 2)), Convert.ToInt32(TotalHoraDia.Substring(6, 2)));
+            }
+            
+
+            //Caso Frequência igual igual ou maior a carga horária pintar de branco.
+            //Caso na tolerância - pentar de laranjo
+            //Caso abaixo da tolerância pintar de vermelho.
+
+            if (Segundos.TotalSeconds != 0 && Justificado == "0")
+            {
+                TotalHoras = TotalHoras * 3600;
+
+                if (TotalHoras == 4 && IDRegimeHOra == "7") // Se regime for de 4:30 , acrescentar mais 1800 segundos.s
+                    TotalHoras = TotalHoras + 1800;
+
+                
+                if (Segundos.TotalSeconds >= TotalHoras)
+                {
+                    e.Row.BackColor = System.Drawing.Color.WhiteSmoke; // Completou a carga horária.
+                }
+                else if ((Segundos.TotalSeconds < TotalHoras) && (Segundos.TotalSeconds >= ((TotalHoras) - (15 * 60))))
+                {
+                    e.Row.BackColor = System.Drawing.Color.Wheat; //Tolerãncia
+                }
+                else if (IDRegimeHOra != "3" && IDRegimeHOra != "4")
+                {
+                    e.Row.BackColor = System.Drawing.Color.IndianRed;
+                }
+                return;
+            }
+            else if ((DTFrequencia.DayOfWeek.ToString() == "Saturday" || DTFrequencia.DayOfWeek.ToString() == "Sunday") && Justificado == "0")
+            {
+                e.Row.BackColor = System.Drawing.Color.Gainsboro;
+                return;
+            }
+            else if ((Justificado != "0") && (Justificado != "10") && (Justificado != ""))
+            {
+                e.Row.BackColor = System.Drawing.Color.CornflowerBlue;
+                return;
+            }
+            else if ((Justificado == "0" || Justificado == "10") && DTFrequencia <= DateTime.Now && (IDRegimeHOra != "3" && IDRegimeHOra != "4"))
+            {
+                e.Row.BackColor = System.Drawing.Color.IndianRed;
+                return;
+            }
+        }
+    }
+
+    protected void gridHoras_PageIndexChanged(object sender, EventArgs e)
+    {
+        Freq.HorasDias(Convert.ToInt32(cbMesN.SelectedItem.Value), Convert.ToInt32(Session["IDUsuario"]), System.DateTime.Now.Year, ds, Convert.ToInt32(Session["IDEmpresa"]), Convert.ToInt32(Session["IDSETOR"]));
+    }
+    protected void btPDF_Click(object sender, EventArgs e)
+    {
+        if (gridHoras.PageCount > 0)
+        {//achar um jeito de dar ou negar permissão
+            
+            FrequenciaMes(Convert.ToInt32(Session["IDUsuario"]), Convert.ToInt32(cbMesN.SelectedItem.Value));
+            btPDF.Font.Size = 9;
+            //ASPxLabel9.Font.Size = 9;
+            //ASPxLabel13.Font.Size = 9;
+            Lei = 1;
+            FolhaPDF(true);
+        }
+        else
+            this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('Não há registros para o mês selecionado.');</script>");
+    }
+    protected void gridHoras_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e)
+    {
+        FrequenciaMes(Convert.ToInt32(Session["IDUsuario"]), Convert.ToInt32(cbMesN.SelectedItem.Value));
+        Lei = 1;
+    }
+}

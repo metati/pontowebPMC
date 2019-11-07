@@ -1,0 +1,1039 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmManutencaoFrequencia.aspx.cs" Inherits="Manutencao_frmManutencaoFrequencia" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxScheduler.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxScheduler.Controls" tagprefix="dxwschsc" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxScheduler.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxScheduler" tagprefix="dxwschs" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxGridView.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxCallbackPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxDataView" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxRoundPanel" tagprefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    .dxeBase
+{
+    font-family: Tahoma;
+    font-size: x-small;
+}
+    .style6
+    {
+    }
+    .style7
+    {
+        width: 52px;
+    }
+        .style9
+        {
+            font-size: medium;
+        }
+        .style11
+        {
+        }
+        .style13
+        {
+            height: 26px;
+            }
+        .style15
+        {}
+        .style16
+        {
+            width: 100%;
+        }
+        .style17
+        {
+            width: 61px;
+        }
+        .style18
+        {
+            width: 63px;
+        }
+        .style19
+        {
+            width: 83px;
+        }
+        .style24
+        {
+            width: 646px;
+        }
+        .style25
+        {
+            width: 76px;
+        }
+    .dxpcControl_Office2003Olive
+{
+	font: 12px Tahoma;
+	color: black;
+	background-color: white;
+	border: 1px solid #758D5E;
+	width: 200px;
+}
+.dxpcHeader_Office2003Olive
+{
+	border-bottom: 1px solid #758D5E;
+	padding: 6px 6px 6px 12px;
+}
+.dxpcCloseButton_Office2003Olive
+{
+	padding: 1px 1px 1px 2px;
+}
+.dxpcContent_Office2003Olive
+{
+	background-color: white;
+	white-space: normal;
+	border-width: 0px;
+	vertical-align: top;
+}
+.dxpcContentPaddings_Office2003Olive 
+{
+	padding: 9px 12px 30px;
+}
+        .style26
+        {
+            width: 92px;
+        }
+        .style27
+        {
+            width: 273px;
+        }
+        .style28
+        {
+            width: 81px;
+        }
+        .style29
+        {
+            width: 94px;
+        }
+        .style30
+        {
+            height: 26px;
+            width: 94px;
+        }
+        </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+<script type="text/javascript">
+
+    
+    function FecharPopJustificativaColetiva() {
+        pcJustificativaColetiva.Hide();
+    }
+    
+    function AbreJustificativaColetiva() {
+        
+        pcJustificativaColetiva.Show();
+    }
+    
+    function JustificativaColetiva() {
+        gridFrequencia.PerformCallback('1');
+        pcJustificativaColetiva.Hide();
+    }
+
+    function Justificar(IDUsuario, IDFrequencia) {
+
+        document.getElementById("<%=coIDUsuario.ClientID %>").value = IDUsuario;
+        document.getElementById("<%=coIDFrequencia.ClientID %>").value = IDFrequencia;
+        pcCadastraFalta.Show();
+    }
+    
+    function AbrePopDetalheFrequencia(Nome, Data, Motivo, OBS) {
+        tbNome.SetText(Nome);
+        tbData.SetText(Data)
+        tbMotivoFalta.SetText(Motivo);
+        memoOBSS.SetText(OBS);
+        popDetalheFrequencia.Show();
+        
+    }
+
+
+    function AbrePopExcluirJust(IDFrequencia, IDUsuario) {
+
+        document.getElementById("<%=coIDFrequencia.ClientID %>").value = IDFrequencia;
+        document.getElementById("<%=coIDUsuario.ClientID %>").value = IDUsuario;
+        popExcluirJust.Show();
+    }
+    
+    function AbrePopExcluir(IDFrequencia) 
+    {
+        document.getElementById("<%=coIDFrequencia.ClientID %>").value = IDFrequencia;
+        popExcluir.Show();
+    }
+    function FecharPopExcluir() {
+        popExcluir.Hide();
+    }
+    function FecharPopExcluirJust() {
+        popExcluirJust.Hide();
+        gridFrequencia.PerformCallback('J');
+    }
+
+    function FecharPopExcluirJust1() {
+        popExcluirJust.Hide();
+    }
+    function AbrePopJustificativa() 
+    {
+        var Opcao = cbSetor.GetValue();
+        
+        if (Opcao == '') 
+        {
+            window.alert('Favor aplicar os filtros necessários para fazer justificativa ou selecionar uma frequência válida.');
+        }
+        else if (Opcao == 0) 
+        {
+            window.alert('Favor aplicar os filtros necessários para fazer justificativa ou selecionar uma frequência válida.');        
+        }
+        else if (Opcao > 0) {
+            pcCadastraFalta.Show();
+        }
+    }
+
+    function AbrePopLancaFalta(IDFrequencia) 
+    {
+        document.getElementById("<%=coIDFrequencia.ClientID %>").value = IDFrequencia;
+        pcLancaFalta.Show();
+    }
+    function FechaPopJustificativa() 
+    {
+        pcCadastraFalta.Hide();
+    }
+    function AbrePopSemRegistro() {
+        popSemRegistro.Show();
+        gridSemRegistro.PerformCallback();
+    }
+    function AbrePopFoto(Nome, IDUsuario, DSUsuario) {
+        popImagem.SetContentUrl("/Cadastro/frmfoto.aspx?ID=" + IDUsuario + "&nome=" + Nome + "&Sobre=" + DSUsuario);
+        popImagem.Show();
+    }
+
+    function RecebeIDgrid() {
+        
+        gridFrequencia.GetRowValues(gridFrequencia.GetFocusedRowIndex(), 'DSUsuario;DataFrequencia;OBS;MF', PegarValoresGrid);
+
+        tbNome.SetText("Aguarde...");
+        tbData.SetText("Aguarde...");
+        tbMotivoFalta.SetText('Aguarde...');
+        memoOBSS.SetText("Aguarde...");
+        
+        //window.alert(Item);
+    }
+    function PegarValoresGrid(valor)
+    {
+        tbNome.SetText(valor[0]);
+        tbData.SetText(valor[1]);
+        memoOBSS.SetText(valor[2]);
+        tbMotivoFalta.SetText(valor[3]);
+   }
+    function LimpaCampos() 
+    {
+        tbNome.SetText('');
+        tbData.SetText('');
+        memoOBSS.SetText('');
+        tbMotivoFalta.SetText('');
+    }    
+</script>
+    <table class="style1">
+        <tr>
+            <td class="style9">
+                 <strong>Manutenção de Frequência</strong></td>
+                <table class="style1">
+                    <tr>
+                        <td class="style30">
+                            <dx:ASPxLabel ID="ASPxLabel1" runat="server" Text="Setor:" Font-Size="Small">
+                            </dx:ASPxLabel>
+                        </td>
+                        <td class="style13" colspan="2">
+                <dx:ASPxComboBox ID="cbSetor" runat="server" ClientInstanceName="cbSetor" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" DataMember="TBSetor" 
+                    DropDownStyle="DropDown" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="DSSetor" 
+                    ValueField="IDSetor" Width="300px" Spacing="0" IncrementalFilteringMode="StartsWith" 
+                                EnableIncrementalFiltering="True">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))PesquisaGridFrequencia();
+}" />
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+                        </td>
+                        <td class="style13" colspan="3">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style29">
+                            <dx:ASPxLabel ID="ASPxLabel2" runat="server" Text="Dia Referência:" 
+                                Font-Size="Small">
+                            </dx:ASPxLabel>
+                        </td>
+                        <td class="style24">
+                            <dx:ASPxDateEdit ID="deData" runat="server" ClientInstanceName="deData" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                Date="01/12/2013 14:38:46" Spacing="0" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                                <CalendarProperties ClearButtonText="Apagar" TodayButtonText="Hoje">
+                                    <HeaderStyle Spacing="1px" />
+                                </CalendarProperties>
+                                <ClientSideEvents DateChanged="function(s, e) {
+if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))PesquisaGridFrequencia();
+}" />
+                                <ButtonStyle Width="13px">
+                                </ButtonStyle>
+                                <ValidationSettings ValidationGroup="ValidaGrupo">
+                                </ValidationSettings>
+                            </dx:ASPxDateEdit>
+                            <td class="style11" colspan="4">
+                                &nbsp;<tr>
+                        <td class="style29"></td>
+                        <td class="style15" colspan="3">
+                            <table class="style16">
+                                <tr>
+                                    <td class="style17">
+                                        &nbsp;</td>
+                                    <td class="style19">
+                                        &nbsp;</td>
+                                    <td>
+                                                    &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+                            <td>
+                                &nbsp;</td>
+                        <td class="style18">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table class="style1">
+                                <tr>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td class="style27">
+                                                    <dx:ASPxHyperLink ID="hlJustificativaColetiva" runat="server" 
+                                                        ClientInstanceName="hlJustificativaColetiva" 
+                                                        CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" 
+                                                        Text="Lançar justificativa coletiva" 
+                                            Width="294px" style="font-weight: 700">
+                                                        <ClientSideEvents Click="function(s, e) {
+if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))AbreJustificativaColetiva();	
+}" />
+                                                    </dx:ASPxHyperLink>
+                                    </td>
+                                    <td>
+                                                    <dx:ASPxHyperLink ID="hlSemregistro" runat="server" 
+                                                        ClientInstanceName="hlSemregistro" 
+                                                        CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" 
+                                                        Text="Funcionário(s) sem registro no dia corrente" 
+                                            Width="294px" style="font-weight: 700">
+                                                        <ClientSideEvents Click="function(s, e) {
+if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))AbrePopSemRegistro();
+}" />
+                                                    </dx:ASPxHyperLink>
+                                    </td>
+                                    <td>
+                                                    <dx:ASPxHyperLink ID="hlLancarfalta" runat="server" 
+                                                        CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" 
+                                                        Font-Bold="True" Font-Size="Small" Font-Strikeout="False" 
+                                                        Text="Permitir frequência ou Lançar Exceção">
+                                                        <ClientSideEvents Click="function(s, e) {
+	AbrePopLancaFalta();
+}" />
+                                                    </dx:ASPxHyperLink>
+                                                </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">
+                            <dx:ASPxGridView ID="gridFrequencia" runat="server" AutoGenerateColumns="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                CssPostfix="DevEx" DataMember="vWHorasDia" 
+                                Width="1200px" ClientInstanceName="gridFrequencia" 
+                                KeyFieldName="IDFrequencia" 
+                                onbeforecolumnsortinggrouping="gridFrequencia_BeforeColumnSortingGrouping" 
+                                oncustomcallback="gridFrequencia_CustomCallback" 
+                                onpageindexchanged="gridFrequencia_PageIndexChanged" 
+                                onprocesscolumnautofilter="gridFrequencia_ProcessColumnAutoFilter" 
+                                onhtmlrowprepared="gridFrequencia_HtmlRowPrepared" 
+                                oncustomcolumngroup="gridFrequencia_CustomColumnGroup" 
+                                oncustomcolumnsort="gridFrequencia_CustomColumnSort" 
+                                ondetailrowexpandedchanged="gridFrequencia_DetailRowExpandedChanged" 
+                                ondetailschanged="gridFrequencia_DetailsChanged">
+                                <ClientSideEvents RowDblClick="function(s, e) {	RecebeIDgrid();}" />
+<ClientSideEvents RowDblClick="function(s, e) {	RecebeIDgrid();}"></ClientSideEvents>
+                                <Settings ShowFilterRow="True" ShowVerticalScrollBar="True" />
+                                <Columns>
+                                    <dx:GridViewDataTextColumn FieldName="IDFrequencia" Visible="False" 
+                                        VisibleIndex="5">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="IDUsuario" 
+                                        Visible="False" VisibleIndex="6">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Nome" FieldName="DSUsuario" 
+                                        VisibleIndex="8" Width="100px">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Data" FieldName="DataFrequencia" 
+                                        VisibleIndex="9" Width="100px">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="EntradaManha" VisibleIndex="10" 
+                                        Width="100px" Caption="Entr Manhã">
+                                        <Settings AllowAutoFilter="False" />
+<Settings AllowAutoFilter="False"></Settings>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="SaidaManha" VisibleIndex="11" 
+                                        Width="100px">
+                                        <Settings AllowAutoFilter="False" />
+<Settings AllowAutoFilter="False"></Settings>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="EntradaTarde" VisibleIndex="12" 
+                                        Width="100px" Caption="Entr. Tarde">
+                                        <Settings AllowAutoFilter="False" />
+<Settings AllowAutoFilter="False"></Settings>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="SaidaTarde" VisibleIndex="13" 
+                                        Width="100px">
+                                        <Settings AllowAutoFilter="False" />
+<Settings AllowAutoFilter="False"></Settings>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Total do Dia" FieldName="HorasDia" 
+                                        VisibleIndex="17" Width="100px">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="TotHorasDiarias" Visible="False" 
+                                        VisibleIndex="16">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="MF" 
+                                        Visible="False" VisibleIndex="15">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="IMF" Visible="False" VisibleIndex="7">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="OBS" Visible="False" VisibleIndex="14">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Just." VisibleIndex="0" Width="50px">
+                                    <DataItemTemplate>
+                                        <a href="javascript:void(0);" onclick="Justificar('<%# Eval("IDUsuario") %>','<%# Eval("IDFrequencia") %>')">Just.</a>
+                                    </DataItemTemplate>                                    
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Det." VisibleIndex="1" Width="50px">
+                                    <DataItemTemplate>
+                                        <a href="javascript:void(0);" onclick="AbrePopDetalheFrequencia('<%# Eval("DSUsuario") %>','<%# Eval("DataFrequencia") %>','<%# Eval("MF") %>','<%# Eval("OBS") %>')">Det.</a>
+                                    </DataItemTemplate>                                    
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Exc. Falta" VisibleIndex="2" Width="55px">
+                                    <DataItemTemplate>
+                                        <a href="javascript:void(0);" onclick="AbrePopExcluir('<%# Eval("IDFrequencia") %>')">Excl</a>
+                                    </DataItemTemplate>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Excl. Just." VisibleIndex="3" Width="55px">
+                                    <DataItemTemplate>
+                                        <a href="javascript:void(0);" onclick="AbrePopExcluirJust('<%# Eval("IDFrequencia") %>','<%# Eval("IDUsuario") %>')">Excl.Just.</a>
+                                    </DataItemTemplate>                                    
+                                    </dx:GridViewDataTextColumn>
+                                </Columns>
+                                <SettingsPager>
+                                    <AllButton Text="All">
+                                    </AllButton>
+                                    <NextPageButton Text="Próx &gt;">
+                                    </NextPageButton>
+                                    <PrevPageButton Text="&lt; Ant">
+                                    </PrevPageButton>
+                                    <Summary Text="Página {0} de {1} ({2} itens)" />
+
+<Summary Text="P&#225;gina {0} de {1} ({2} itens)"></Summary>
+                                </SettingsPager>
+                                <Settings ShowVerticalScrollBar="True" />
+                                <SettingsText EmptyDataRow="Sem dados para exibir" 
+                                    GroupPanel="Para agrupar arraste uma coluna aqui" />
+                                <SettingsLoadingPanel Text="Processando&amp;hellip;" />
+
+<Settings ShowVerticalScrollBar="True"></Settings>
+
+<SettingsText GroupPanel="Para agrupar arraste uma coluna aqui" EmptyDataRow="Sem dados para exibir"></SettingsText>
+
+<SettingsLoadingPanel Text="Processando&amp;hellip;"></SettingsLoadingPanel>
+
+                                <Images SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                                    <LoadingPanelOnStatusBar Url="~/App_Themes/DevEx/GridView/StatusBarLoading.gif">
+                                    </LoadingPanelOnStatusBar>
+                                    <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+                                    </LoadingPanel>
+                                </Images>
+                                <ImagesFilterControl>
+                                    <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+                                    </LoadingPanel>
+                                </ImagesFilterControl>
+                                <Styles CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                    CssPostfix="DevEx">
+                                    <Header ImageSpacing="5px" SortingImageSpacing="5px">
+                                    </Header>
+                                    <AlternatingRow Enabled="True">
+                                    </AlternatingRow>
+                                    <LoadingPanel ImageSpacing="5px">
+                                    </LoadingPanel>
+                                </Styles>
+                                <StylesEditors ButtonEditCellSpacing="0">
+                                    <ProgressBar Height="25px">
+                                    </ProgressBar>
+                                </StylesEditors>
+                            </dx:ASPxGridView>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">
+                            <table class="style1">
+                                <tr>
+                                                <td class="style26">
+                                                    <strong>Legenda:</strong></td>
+                                                <td class="style11">
+                                                    <dx:ASPxLabel runat="server" 
+                                                        Text="* Horas Incompletas" Font-Bold="True" 
+                                                        Font-Size="Small" ForeColor="Red" ClientIDMode="AutoID" ID="ASPxLabel9">
+                                                    </dx:ASPxLabel>
+&nbsp;&nbsp;&nbsp;
+                                                    <dx:ASPxLabel runat="server" Text="* Horas Justificadas" 
+                                                        Font-Bold="True" Font-Size="Small" ForeColor="#9900CC" ClientIDMode="AutoID" 
+                                                        ID="ASPxLabel12">
+                                                    </dx:ASPxLabel>
+&nbsp;&nbsp;
+                                                    <dx:ASPxLabel runat="server" Text="* Horas Normais" 
+                                                        Font-Bold="True" Font-Size="Small" ForeColor="Black" ClientIDMode="AutoID" 
+                                                        ID="ASPxLabel13">
+                                                    </dx:ASPxLabel>
+                                                </td>
+                                                <td class="style18">
+&nbsp;&nbsp;
+                                                </td>
+                                            </tr>
+                                </table>
+                            <dx:ASPxPopupControl ID="pcCadastraFalta" runat="server" 
+                                ClientInstanceName="pcCadastraFalta" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Justificar Falta ou Atraso" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="500px" 
+                                Modal="True" PopupAction="MouseOver" PopupHorizontalAlign="WindowCenter" 
+                                PopupVerticalAlign="WindowCenter" CloseAction="CloseButton" 
+                                EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table class="style1">
+        <tr>
+            <td>
+                <dx:ASPxLabel ID="ASPxLabel3" runat="server" ClientIDMode="AutoID" 
+                    Text="Motivo:">
+                </dx:ASPxLabel>
+            </td>
+            <td>
+                <dx:ASPxComboBox ID="cbMotivoFaltaManut" runat="server" 
+                    ClientInstanceName="cbMotivoFaltaManut" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    DataMember="TBMotivoFalta" DropDownStyle="DropDown" EnableIncrementalFiltering="True" 
+                    Height="20px" IncrementalFilteringMode="StartsWith" Spacing="0" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="DSMotivoFalta" 
+                    ValueField="IDMotivoFalta" Width="400px">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+}" />
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                    <ValidationSettings ValidationGroup="ValidaMotivoFalta">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <dx:ASPxLabel ID="ASPxLabel4" runat="server" ClientIDMode="AutoID" 
+                    Text="Descrição:">
+                </dx:ASPxLabel>
+            </td>
+            <td>
+                <dx:ASPxMemo ID="memoOBS" runat="server" ClientIDMode="AutoID" 
+                    CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue" 
+                    Height="100px" SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css" 
+                    Width="400px">
+                    <ValidationSettings>
+                        <ErrorFrameStyle ImageSpacing="4px">
+                            <ErrorTextPaddings PaddingLeft="4px" />
+                        </ErrorFrameStyle>
+                    </ValidationSettings>
+                </dx:ASPxMemo>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                    ControlToValidate="memoOBS" ErrorMessage="*"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+    </table>
+    <table class="style1">
+        <tr>
+            <td class="style7">
+                <dx:ASPxButton ID="btSalvar" runat="server" ClientInstanceName="btSalvar" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="OK" 
+                    Width="100px" AutoPostBack="False" OnClick="btSalvar_Click" 
+                    ValidationGroup="ValidaMotivoFalta">
+                    <ClientSideEvents Click="function(s, e) {
+if(ASPxClientEdit.ValidateGroup('ValidaMotivoFalta'))FechaPopJustificativa();
+}" />
+                </dx:ASPxButton>
+            </td>
+            <td>
+                <dx:ASPxButton ID="btFechar" runat="server" AutoPostBack="False" ClientInstanceName="btFechar" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Fechar" 
+                    Width="100px">
+                    <ClientSideEvents Click="function(s, e) {
+	FechaPopJustificativa();
+}" />
+                </dx:ASPxButton>
+            </td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+    </table>
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+                            <asp:HiddenField ID="coIDFrequencia" runat="server" />
+                                        <asp:HiddenField ID="coIDUsuario" runat="server" />
+                            <dx:ASPxPopupControl ID="popDetalheFrequencia" runat="server" 
+                                ClientInstanceName="popDetalheFrequencia" CloseAction="CloseButton" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Detalhe da frequência" 
+                                Modal="True" SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                Width="400px" PopupHorizontalAlign="WindowCenter" 
+                                PopupVerticalAlign="WindowCenter" EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table class="style1">
+        <tr>
+            <td>
+                Nome:</td>
+            <td>
+                <dx:ASPxTextBox ID="tbNome" runat="server" ClientIDMode="AutoID" 
+                    ClientInstanceName="tbNome" ReadOnly="True" Width="200px">
+                </dx:ASPxTextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Data:</td>
+            <td>
+                <dx:ASPxTextBox ID="tbData" runat="server" ClientIDMode="AutoID" 
+                    ClientInstanceName="tbData" ReadOnly="True" Width="200px">
+                </dx:ASPxTextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Motivo:</td>
+            <td>
+                <dx:ASPxTextBox ID="tbMotivoFalta" runat="server" ClientIDMode="AutoID" 
+                    ClientInstanceName="tbMotivoFalta" ReadOnly="True" Width="200px">
+                </dx:ASPxTextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Descrição</td>
+            <td>
+                <dx:ASPxMemo ID="memoOBSS" runat="server" ClientIDMode="AutoID" 
+                    ClientInstanceName="memoOBSS" Height="35px" ReadOnly="True" Width="420px">
+                </dx:ASPxMemo>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+                            <dx:ASPxPopupControl ID="pclancaFalta" runat="server" 
+                                ClientInstanceName="pcLancaFalta" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Permitir frequência ou lançar falta" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="570px" 
+                                Modal="True" PopupAction="MouseOver" PopupHorizontalAlign="WindowCenter" 
+                                PopupVerticalAlign="WindowCenter" CloseAction="CloseButton" 
+                                ContentUrl="~/Manutencao/frmLancaFalta.aspx" Height="400px" 
+                                EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+                            <dx:ASPxPopupControl ID="pcJustificativaColetiva" runat="server" 
+                                ClientInstanceName="pcJustificativaColetiva" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Justificativa Coletiva" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="570px" 
+                                Modal="True" PopupAction="MouseOver" PopupHorizontalAlign="WindowCenter" 
+                                PopupVerticalAlign="WindowCenter" CloseAction="CloseButton" 
+                                EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+                                    <table class="style1">
+                                        <tr>
+                                            <td class="style28">
+                                                Setor:</td>
+                                            <td>
+                                                <dx:ASPxComboBox ID="cbSetor0" runat="server" ClientInstanceName="cbSetor" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    DataMember="TBSetor" DropDownStyle="DropDown" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="DSSetor" 
+                                                    ValueField="IDSetor" Width="300px" Spacing="0" 
+                                                    EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith">
+                                                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+}" />
+                                                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                                                    </LoadingPanelImage>
+                                                    <LoadingPanelStyle ImageSpacing="5px">
+                                                    </LoadingPanelStyle>
+                                                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                                                        <RequiredField IsRequired="True" />
+                                                    </ValidationSettings>
+                                                </dx:ASPxComboBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style28">
+                                                Motivo:</td>
+                                            <td>
+                                                <dx:ASPxComboBox ID="cbMotivoFalta" runat="server" 
+                                                    ClientInstanceName="cbMotivoFalta" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    DataMember="TBMotivoFalta" DropDownStyle="DropDown" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                                    TextField="DSMotivoFalta" ValueField="IDMotivoFalta" Width="300px" 
+                                                    Spacing="0" EnableIncrementalFiltering="True" 
+                                                    IncrementalFilteringMode="StartsWith">
+                                                    <loadingpanelimage url="~/App_Themes/DevEx/Editors/Loading.gif">
+                                                    </loadingpanelimage>
+                                                    <LoadingPanelStyle ImageSpacing="5px">
+                                                    </LoadingPanelStyle>
+                                                    <validationsettings validationgroup="ValidaGrupo">
+                                                        <requiredfield isrequired="True" />
+                                                    </validationsettings>
+                                                </dx:ASPxComboBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style28">
+                                                Data:</td>
+                                            <td>
+                                                <dx:ASPxDateEdit ID="deDataFalta" runat="server" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                                    CssPostfix="DevEx" SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                                    Width="300px" Spacing="0">
+                                                    <CalendarProperties ClearButtonText="Deletar" TodayButtonText="Hoje">
+                                                        <HeaderStyle Spacing="1px" />
+                                                    </CalendarProperties>
+                                                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                                                        <RequiredField IsRequired="True" />
+                                                    </ValidationSettings>
+                                                </dx:ASPxDateEdit>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style28">
+                                                Observação:</td>
+                                            <td>
+                                                <dx:ASPxMemo ID="memoOBS0" runat="server" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    Height="36px" SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                                    Width="300px">
+                                                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                                                        <RequiredField IsRequired="True" />
+                                                    </ValidationSettings>
+                                                </dx:ASPxMemo>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="style1">
+                                        <tr>
+                                            <td class="style29">
+                                                <dx:ASPxButton ID="btOKJustificativa" runat="server" CausesValidation="False" 
+                                                    ClientInstanceName="btOKJustificativa" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="OK" 
+                                                    Width="100px" AutoPostBack="False">
+                                                    <ClientSideEvents Click="function(s, e) {
+	if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))JustificativaColetiva();
+}" />
+                                                </dx:ASPxButton>
+                                            </td>
+                                            <td>
+                                                <dx:ASPxButton ID="btCancelJustificativa" runat="server" 
+                                                    ClientInstanceName="btCancelJustificativa" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                                    style="margin-left: 0px" Text="Cancelar" Width="100px" 
+                                                    AutoPostBack="False">
+                                                    <ClientSideEvents Click="function(s, e) {
+	FecharPopJustificativaColetiva();
+}" />
+                                                </dx:ASPxButton>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+                            <dx:ASPxPopupControl ID="popSemRegistro" runat="server" 
+                                ClientInstanceName="popSemRegistro" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Funcionários sem registros para hoje" 
+                                PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="320px" 
+                                Modal="True" EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <dx:ASPxGridView ID="gridSemRegistro" runat="server" 
+        AutoGenerateColumns="False" ClientInstanceName="gridSemRegistro" 
+        CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+        DataMember="TBUsuario" KeyFieldName="IDUsuario" 
+        OnCustomCallback="gridSemRegistro_CustomCallback" Width="300px" 
+        OnPageIndexChanged="gridSemRegistro_PageIndexChanged">
+        <Columns>
+            <dx:GridViewDataTextColumn Caption="Nome" FieldName="PrimeiroNome" 
+                ShowInCustomizationForm="True" VisibleIndex="1">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn Caption="Sobrenome" FieldName="DSUsuario" 
+                ShowInCustomizationForm="True" VisibleIndex="2">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn Caption="Foto" FieldName="FotoUsuario" 
+                ShowInCustomizationForm="True" VisibleIndex="0">
+             <DataItemTemplate>
+             <a href="javascript:void(0);" onclick="AbrePopFoto('<%#Eval("PrimeiroNome") %>','<%# Eval("IDUsuario") %>','<%# Eval("DSUsuario") %>')">
+                <dx:ASPxBinaryImage ID="ImgFoto" Width="40px" Height="20px" runat="server" Value='<%# Eval("FotoUsuario") %>'>
+                <EmptyImage AlternateText="Sem Imagem"></EmptyImage>
+                </dx:ASPxBinaryImage>
+             </a>
+             </DataItemTemplate>
+            </dx:GridViewDataTextColumn>
+        </Columns>
+        <SettingsBehavior AllowGroup="False" AllowSort="False" />
+        <SettingsPager>
+            <AllButton Text="All">
+            </AllButton>
+            <NextPageButton Text="Próx&gt;">
+            </NextPageButton>
+            <PrevPageButton Text="&lt; Ant">
+            </PrevPageButton>
+            <Summary Text="Página {0} de {1} ({2} itens)" />
+        </SettingsPager>
+        <Settings ShowVerticalScrollBar="True" />
+        <SettingsLoadingPanel Text="Processando&amp;hellip;" />
+        <Images SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+            <LoadingPanelOnStatusBar Url="~/App_Themes/DevEx/GridView/StatusBarLoading.gif">
+            </LoadingPanelOnStatusBar>
+            <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+            </LoadingPanel>
+        </Images>
+        <ImagesFilterControl>
+            <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+            </LoadingPanel>
+        </ImagesFilterControl>
+        <Styles CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+            CssPostfix="DevEx">
+            <Header ImageSpacing="5px" SortingImageSpacing="5px">
+            </Header>
+            <AlternatingRow Enabled="True">
+            </AlternatingRow>
+            <LoadingPanel ImageSpacing="5px">
+            </LoadingPanel>
+        </Styles>
+        <StylesEditors ButtonEditCellSpacing="0">
+            <ProgressBar Height="25px">
+            </ProgressBar>
+        </StylesEditors>
+    </dx:ASPxGridView>
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+    <dx:ASPxPopupControl ID="popImagem" runat="server" 
+        ClientInstanceName="popImagem" 
+        CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+        CssPostfix="DevEx" HeaderText="Funcionário" 
+        SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+        Width="220px" ContentUrl="~/Cadastro/frmfoto.aspx" Height="270px" 
+        Modal="True" PopupHorizontalAlign="WindowCenter" 
+        PopupVerticalAlign="WindowCenter" EnableHotTrack="False">
+        <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+        </LoadingPanelImage>
+        <HeaderStyle>
+        <Paddings PaddingLeft="7px" />
+        </HeaderStyle>
+        <LoadingPanelStyle ImageSpacing="5px">
+        </LoadingPanelStyle>
+        <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+            </dx:PopupControlContentControl>
+</ContentCollection>
+    </dx:ASPxPopupControl>
+                            <asp:HiddenField ID="coJustColetiva" runat="server" />
+                            <dx:ASPxPopupControl ID="popExcluir" runat="server" 
+                                ClientInstanceName="popExcluir" CloseAction="None" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Excluir Faltas" Modal="True" PopupAction="None" 
+                                PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="320px" 
+                                EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table class="style1">
+        <tr>
+            <td>Deseja realmente excluir a falta selecionada ?</td>
+        </tr>
+    </table>
+    <table class="style1">
+        <tr>
+            <td class="style25" style="text-align: right">
+                <dx:ASPxButton ID="btOK" runat="server" 
+                    ClientInstanceName="btOkExlcuir" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="OK" 
+                    Width="100px" CausesValidation="False" OnClick="btOK_Click" 
+                    AutoPostBack="False">
+                    <ClientSideEvents Click="function(s, e) {
+	FecharPopExcluir();
+}" />
+                </dx:ASPxButton>
+            </td>
+            <td>
+                <dx:ASPxButton ID="btCancel" runat="server" 
+                    ClientInstanceName="btCancelExcluir" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                    style="margin-left: 0px" Text="Cancelar" Width="100px">
+                    <ClientSideEvents Click="function(s, e) {
+	FecharPopExcluir();
+}" />
+                </dx:ASPxButton>
+            </td>
+        </tr>
+    </table>
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+                            <dx:ASPxPopupControl ID="popExcluir0" runat="server" 
+                                ClientInstanceName="popExcluirJust" CloseAction="None" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                HeaderText="Excluir Justificativa" Modal="True" PopupAction="None" 
+                                PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="320px" 
+                                EnableHotTrack="False">
+                                <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                                </LoadingPanelImage>
+                                <HeaderStyle>
+                                <Paddings PaddingLeft="7px" />
+                                </HeaderStyle>
+                                <LoadingPanelStyle ImageSpacing="5px">
+                                </LoadingPanelStyle>
+                                <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table class="style1">
+        <tr>
+            <td>
+                Deseja realmente excluir a justificativa selecionada ?</td>
+        </tr>
+    </table>
+    <table class="style1">
+        <tr>
+            <td class="style25" style="text-align: right">
+                <dx:ASPxButton ID="btOK0" runat="server" 
+                    ClientInstanceName="btOkExlcuirJust" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="OK" 
+                    Width="100px" CausesValidation="False" 
+                    AutoPostBack="False">
+                    <ClientSideEvents Click="function(s, e) {FecharPopExcluirJust();}" />
+                </dx:ASPxButton>
+            </td>
+            <td>
+                <dx:ASPxButton ID="btCancel0" runat="server" 
+                    ClientInstanceName="btCancelExcluirJust" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                    style="margin-left: 0px" Text="Cancelar" Width="100px">
+                    <ClientSideEvents Click="function(s, e) {
+	FecharPopExcluirJust1();
+}" />
+                </dx:ASPxButton>
+            </td>
+        </tr>
+    </table>
+                                    </dx:PopupControlContentControl>
+</ContentCollection>
+                            </dx:ASPxPopupControl>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+

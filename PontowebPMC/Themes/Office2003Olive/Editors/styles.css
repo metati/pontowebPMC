@@ -1,0 +1,1598 @@
+/* -- ValidationSummary -- */
+.dxvsValidationSummary_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: Red;
+}
+.dxvsValidationSummary_Office2003Olive td.dxvsRC_Office2003Olive
+{
+	vertical-align: top;
+	padding: 2px 5px 4px 6px;
+}
+.dxvsValidationSummary_Office2003Olive .dxvsE_Office2003Olive
+{
+}
+.dxvsValidationSummary_Office2003Olive table.dxvsHT_Office2003Olive
+{
+	width: 100%;
+}
+.dxvsValidationSummary_Office2003Olive td.dxvsH_Office2003Olive
+{
+	padding: 2px 0;
+}
+.dxvsValidationSummary_Office2003Olive a.dxvsHL_Office2003Olive,
+.dxvsValidationSummary_Office2003Olive a.dxvsHL_Office2003Olive:visited
+{
+	color: red;
+}
+.dxvsValidationSummary_Office2003Olive a.dxvsHL_Office2003Olive
+{
+	text-decoration: none;
+	border-bottom: 1px dashed #f70;
+}
+.dxvsValidationSummary_Office2003Olive a.dxvsHL_Office2003Olive:hover
+{
+	color: #f70;
+}
+.dxvsValidationSummary_Office2003Olive table.dxvsT_Office2003Olive
+{
+}
+.dxvsValidationSummary_Office2003Olive tr.dxvsE_Office2003Olive
+{
+}
+.dxvsValidationSummary_Office2003Olive td.dxvsETC_Office2003Olive
+{
+	padding: 2px 0;
+}
+.dxvsValidationSummary_Office2003Olive ul.dxvsL_Office2003Olive
+{
+}
+.dxvsValidationSummary_Office2003Olive ol.dxvsL_Office2003Olive
+{
+}
+.dxvsValidationSummary_Office2003Olive li.dxvsE_Office2003Olive
+{
+	padding: 2px 0;
+}
+
+/* TrackBar */
+.dxeTrackBar_Office2003Olive
+{
+	user-select: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	visibility:hidden;
+}
+
+.dxeDisabled_Office2003Olive .dxeTBHSys a,
+.dxeDisabled_Office2003Olive .dxeTBVSys a
+{
+    cursor: default;
+}
+
+.dxeTBBarHighlight_Office2003Olive
+{
+	font-size: 0;
+}
+
+.dxeTBScale_Office2003Olive,
+.dxeTBTrack_Office2003Olive,
+.dxeTBBarHighlight_Office2003Olive
+{
+	cursor: pointer;
+}
+
+.dxeTBScale_Office2003Olive
+{
+    font: 11px Tahoma, Geneva, sans-serif;
+	z-index: 1;
+}
+.dxeTBSecondaryDH_Office2003Olive,
+.dxeTBMainDH_Office2003Olive
+{
+	z-index: 4;
+}
+
+.dxeTBHSys
+{
+	width: 170px;
+	height: 43px;
+}
+.dxeTBVSys
+{
+	height: 170px;
+	width: 43px;
+}
+.dxeTrackBar_Office2003Olive.dxeTBBScaleSys.dxeTBVSys
+{
+	width: 70px;
+}
+.dxeTrackBar_Office2003Olive.dxeTBBScaleSys.dxeTBHSys
+{	
+	height: 70px;
+}
+
+.dxeTBTrack_Office2003Olive
+{
+	z-index: 2;
+	position: absolute;
+}
+
+.dxeTBHSys .dxeTBTrack_Office2003Olive
+{
+	background-image:  url('edtTrackBarTrackH.gif');
+}
+.dxeTBVSys .dxeTBTrack_Office2003Olive
+{
+	background-image:  url('edtTrackBarTrackV.gif');
+}
+
+.dxeTBHSys .dxeTBTrack_Office2003Olive, 
+.dxeTBHSys .dxeTBBarHighlight_Office2003Olive
+{
+	height: 9px;
+}
+.dxeTBVSys .dxeTBTrack_Office2003Olive, 
+.dxeTBVSys .dxeTBBarHighlight_Office2003Olive
+{
+	width: 9px;
+}
+
+.dxeTBHSys .dxeTBMainDH_Office2003Olive,
+.dxeTBHSys .dxeTBSecondaryDH_Office2003Olive
+{	
+	top: -5px;
+	width:13px;
+	height:19px;
+}
+.dxeTBVSys .dxeTBMainDH_Office2003Olive,
+.dxeTBVSys .dxeTBSecondaryDH_Office2003Olive
+{
+	left: -5px;
+	width:19px;
+	height:13px;
+}
+
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBTrack_Office2003Olive,
+.dxeTBVSys .dxeTBTrack_Office2003Olive
+{
+	left: 6px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBTrack_Office2003Olive
+{
+	right: 6px;
+	left: auto;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBTrack_Office2003Olive
+{
+	bottom: 6px;
+	top: auto;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBTrack_Office2003Olive,
+.dxeTBHSys .dxeTBTrack_Office2003Olive
+{
+	top: 6px;
+}
+
+.dxeTBBarHighlight_Office2003Olive
+{
+	left: 0px;
+	top: 0px;
+	position:absolute;
+	z-index: 3;
+}
+
+.dxeTBHSys .dxeTBBarHighlight_Office2003Olive
+{
+	background-image:  url('edtTrackBarBarHighlightH.gif');
+}
+.dxeTBVSys .dxeTBBarHighlight_Office2003Olive
+{
+	background-image:  url('edtTrackBarBarHighlightV.gif');
+}
+
+.dxeTBRBLabel_Office2003Olive,
+.dxeTBLTLabel_Office2003Olive
+{
+	text-align: center;
+	cursor: default;
+}
+.dxeTBSmallTickSys .dxeTBRBLabel_Office2003Olive,
+.dxeTBSmallTickSys .dxeTBLTLabel_Office2003Olive,
+.dxeTBLargeTickSys .dxeTBRBLabel_Office2003Olive,
+.dxeTBLargeTickSys .dxeTBLTLabel_Office2003Olive
+{	
+	position: absolute;
+}
+
+.dxeTBHSys .dxeTBRBLabel_Office2003Olive,
+.dxeTBHSys .dxeTBLTLabel_Office2003Olive
+{
+	width: 100%;
+}
+
+.dxeTBIncBtn_Office2003Olive,
+.dxeTBDecBtn_Office2003Olive
+{
+	padding: 2px;
+	width: 17px;
+	height: 17px;
+}
+
+.dxeTBVSys .dxeTBRBLabel_Office2003Olive,
+.dxeTBVSys .dxeTBLTLabel_Office2003Olive
+{
+	padding-top: 2px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_Office2003Olive
+{
+	margin-left: -4px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBRBLabel_Office2003Olive,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLTLabel_Office2003Olive
+{
+	right: 0px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBLTLabel_Office2003Olive,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBRBLabel_Office2003Olive
+{
+	left: 0px;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBRBLabel_Office2003Olive,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLTLabel_Office2003Olive
+{
+	bottom: 0px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBLTLabel_Office2003Olive,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_Office2003Olive
+{
+	top: 0px;
+}
+
+.dxeTBHSys .dxeTBItem_Office2003Olive .dxeTBRBLabel_Office2003Olive,
+.dxeTBHSys .dxeTBItem_Office2003Olive .dxeTBLTLabel_Office2003Olive
+{
+	display: inline-block;
+	margin-left: 0px!important;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBItem_Office2003Olive .dxeTBRBLabel_Office2003Olive
+{
+	padding-top: 12px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBItem_Office2003Olive .dxeTBLTLabel_Office2003Olive
+{
+	margin-top: 8px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_Office2003Olive .dxeTBRBLabel_Office2003Olive 
+{
+	margin-left: 5px;
+}
+
+.dxeTBSelectedItem_Office2003Olive .dxeTBRBLabel_Office2003Olive,
+.dxeTBSelectedItem_Office2003Olive .dxeTBLTLabel_Office2003Olive,
+.dxeTBSelectedTick_Office2003Olive .dxeTBRBLabel_Office2003Olive,
+.dxeTBSelectedTick_Office2003Olive .dxeTBLTLabel_Office2003Olive
+{
+	color: #7E9045;
+}
+
+.dxeDisabled_Office2003Olive .dxeTBSelectedItem_Office2003Olive .dxeTBRBLabel_Office2003Olive,
+.dxeDisabled_Office2003Olive .dxeTBSelectedItem_Office2003Olive .dxeTBLTLabel_Office2003Olive,
+.dxeDisabled_Office2003Olive .dxeTBSelectedTick_Office2003Olive .dxeTBRBLabel_Office2003Olive,
+.dxeDisabled_Office2003Olive .dxeTBSelectedTick_Office2003Olive .dxeTBLTLabel_Office2003Olive
+{
+	color: #BFBFBF;
+}
+
+.dxeTBRBLabel_Office2003Olive,
+.dxeTBLTLabel_Office2003Olive,
+.dxeTBItem_Office2003Olive
+{
+	color: #BDC6A0;
+}
+
+.dxeDisabled_Office2003Olive .dxeTBRBLabel_Office2003Olive,
+.dxeDisabled_Office2003Olive .dxeTBLTLabel_Office2003Olive,
+.dxeDisabled_Office2003Olive .dxeTBItem_Office2003Olive
+{
+	color: #BFBFBF;
+}
+
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBItem_Office2003Olive
+{
+	text-align: left;
+}
+
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_Office2003Olive
+{
+	text-align: right;
+}
+
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_Office2003Olive
+{
+	text-align: center;
+}
+
+.dxeTBHSys .dxeTBItem_Office2003Olive
+{
+	background-image:  url('edtTrackBarLargeTickH.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBItem_Office2003Olive
+{
+	background-image:  url('edtTrackBarDoubleSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBItem_Office2003Olive 
+{
+	background-image:  url('edtTrackBarLargeTickV.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_Office2003Olive
+{
+	background-image:  url('edtTrackBarDoubleSmallTickV.gif');
+}
+
+.dxeTBHSys .dxeTBLargeTick_Office2003Olive
+{
+	background-image:  url('edtTrackBarLargeTickH.gif');
+}
+.dxeTBVSys .dxeTBLargeTick_Office2003Olive
+{
+	background-image: url('edtTrackBarLargeTickV.gif');
+}
+.dxeTBHSys .dxeTBSmallTick_Office2003Olive
+{
+	background-image: url('edtTrackBarSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBSmallTick_Office2003Olive
+{
+	background-image: url('edtTrackBarSmallTickV.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLargeTick_Office2003Olive
+{
+	background-image: url('edtTrackBarDoubleLargeTickH.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLargeTick_Office2003Olive
+{
+	background-image: url('edtTrackBarDoubleLargeTickV.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBSmallTick_Office2003Olive
+{
+	background-image: url('edtTrackBarDoubleSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBSmallTick_Office2003Olive
+{
+	background-image: url('edtTrackBarDoubleSmallTickV.gif');
+}
+
+.dxeTBVSys .dxeTBIncBtn_Office2003Olive,
+.dxeTBVSys .dxeReversedDirectionSys .dxeTBDecBtn_Office2003Olive
+{
+	bottom: 0px;
+	top: auto;
+}
+.dxeTBVSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBVSys .dxeReversedDirectionSys .dxeTBIncBtn_Office2003Olive
+{
+	top: 0px;
+	bottom: auto;
+}
+.dxeTBHSys .dxeTBDecBtn_Office2003Olive, 
+.dxeTBHSys .dxeReversedDirectionSys .dxeTBIncBtn_Office2003Olive
+{
+	left: 0px;
+	right: auto;
+}
+.dxeTBHSys .dxeTBIncBtn_Office2003Olive,
+.dxeTBHSys .dxeReversedDirectionSys .dxeTBDecBtn_Office2003Olive
+{
+	right: 0px;
+	left: auto;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBIncBtn_Office2003Olive
+{
+	margin-left: -10px;
+	left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBIncBtn_Office2003Olive
+{
+	margin-top: -10px;
+	top: 50%;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBTrack_Office2003Olive
+{ 
+	margin-left: -4px;
+	left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBTrack_Office2003Olive
+{ 
+	margin-top: -4px;
+	top: 50%;
+}
+
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBIncBtn_Office2003Olive
+{
+	right: 0px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBIncBtn_Office2003Olive
+{
+	bottom: 0px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBIncBtn_Office2003Olive
+{
+	left: 0px;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBDecBtn_Office2003Olive,
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBIncBtn_Office2003Olive
+{
+	top: 0px;
+}
+
+div.dxeHelpText_Office2003Olive,
+.dxeTBValueToolTip_Office2003Olive
+{
+	padding: 3px 8px 4px 8px;
+    display: inline;
+    position:absolute;
+    z-index: 41998;
+    border: 1px solid #608058;
+    font: 12px Tahoma, Geneva, sans-serif;
+    background: #D8E3B6;
+}
+td.dxeHelpText_Office2003Olive {
+    visibility: visible;
+    color: #9F9F9F;
+    font: 11px Tahoma, Geneva, sans-serif;
+}
+td.dxeHelpText_Office2003Olive.dxeHHelpTextSys {
+    padding: 0 6px;
+}
+td.dxeHelpText_Office2003Olive.dxeVHelpTextSys {
+    padding: 2px 0;
+}
+
+/* InternalCheckBox */
+.dxeIRBFocused_Office2003Olive
+{
+	border: 1px dotted #869648;
+	margin: 0px!important;
+}
+.dxeIRadioButton_Office2003Olive
+{
+	margin: 1px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.dxeLoadingDiv_Office2003Olive
+{
+	background: White none;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+.dxeLoadingDivWithContent_Office2003Olive
+{
+	background: White none;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+.dxeLoadingPanel_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: #303030;
+}
+.dxeLoadingPanelWithContent_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: #303030;
+	border: 1px solid #a4b26d;
+	background-color: white;
+}
+
+.dxeLoadingPanel_Office2003Olive td.dx,
+.dxeLoadingPanelWithContent_Office2003Olive td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+
+.dxeButtonEditSys .dxic .dxeLoadingDiv_Office2003Olive
+{
+	opacity: 1!important;
+	filter: alpha(opacity=100)!important;
+}
+
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Office2003Olive
+{
+    background-color: transparent!important;
+    font: normal 0px arial, verdana!important;
+}
+
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Office2003Olive td.dx
+{
+	padding: 0px!important;
+}
+
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Office2003Olive td.dx > span
+{
+	display: none;
+}
+
+.dxeButtonEditSys .dxic .dxeLoadingPanel_Office2003Olive td.dx > img
+{
+	height: 15px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.dxeBase_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+td.dxic
+{
+	font-size: 0;
+}
+/* -- ErrorFrame -- */
+.dxeErrorCell_Office2003Olive,
+.dxeErrorCell_Office2003Olive td
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: Red;
+}
+.dxeErrorCell_Office2003Olive
+{
+	padding-left: 4px;
+	padding-right: 5px;
+}
+.dxeErrorFrame_Office2003Olive
+{
+}
+.dxeErrorFrameWithoutError_Office2003Olive
+{
+	border: 1px solid Red;
+}
+.dxeErrorFrameWithoutError_Office2003Olive .dxeControlsCell_Office2003Olive,
+.dxeErrorFrameWithoutError_Office2003Olive.dxeControlsCell_Office2003Olive
+{
+	padding: 2px;
+}
+.dxeEditArea_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	border: 1px solid #608058;
+}
+
+/* -- Buttons -- */
+.dxeButtonEditButton_Office2003Olive,
+.dxeCalendarButton_Office2003Olive,
+.dxeSpinIncButton_Office2003Olive,
+.dxeSpinDecButton_Office2003Olive,
+.dxeSpinLargeIncButton_Office2003Olive,
+.dxeSpinLargeDecButton_Office2003Olive
+{
+	vertical-align: middle;
+	border: 1px solid #608058;
+	cursor: pointer;
+} 
+.dxeButtonEditButton_Office2003Olive,
+.dxeCalendarButton_Office2003Olive,
+.dxeButtonEditButton_Office2003Olive td.dx,
+.dxeCalendarButton_Office2003Olive td.dx,
+.dxeSpinIncButton_Office2003Olive,
+.dxeSpinDecButton_Office2003Olive,
+.dxeSpinLargeIncButton_Office2003Olive,
+.dxeSpinLargeDecButton_Office2003Olive,
+.dxeSpinIncButton_Office2003Olive td.dx,
+.dxeSpinDecButton_Office2003Olive td.dx,
+.dxeSpinLargeIncButton_Office2003Olive td.dx,
+.dxeSpinLargeDecButton_Office2003Olive td.dx
+{
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	text-align: center;
+} 
+.dxeButtonEditButton_Office2003Olive
+{
+	padding: 0px 1px;
+	background: #d8e3b6 url('edtButtonBack.gif') repeat-x center bottom;
+}
+.dxeSpinIncButton_Office2003Olive,
+.dxeSpinDecButton_Office2003Olive
+{
+	border-style: none;
+	padding: 0px;
+}
+.dxeSpinLargeIncButton_Office2003Olive,
+.dxeSpinLargeDecButton_Office2003Olive
+{
+	border-style: none;
+	padding: 0px;
+}
+
+.dxeButtonEditButton_Office2003Olive table.dxbebt
+{
+	width: 14px;
+}
+.dxeSpinLargeIncButton_Office2003Olive
+{
+	padding-left: 1px;
+}
+.dxeSpinIncButton_Office2003Olive
+{
+	background: #9abbea url('edtSpinIncBtnBack.gif') no-repeat left top;
+	border-bottom: 1px Solid #FFFFFF;
+}
+.dxeSpinDecButton_Office2003Olive
+{
+	background: #a2c1ec url('edtSpinDecBtnBack.gif') no-repeat left top;
+	border-bottom-style: none;
+}
+.dxeSpinLargeIncButton_Office2003Olive,
+.dxeSpinLargeDecButton_Office2003Olive
+{
+	background: #c1cf9e url('edtSpinLargeIncBtnBack.gif') no-repeat left top;
+}
+
+.dxeCalendarButton_Office2003Olive
+{
+	background: #d8e3b6 url('edtButtonBack.gif') repeat-x center bottom;
+	padding: 2px 11px 4px;
+	width: 32px;
+}
+.dxeCalendarButton_Office2003Olive table.dxbebt
+{
+	width: 100%;
+}
+.dxeCalendarButton_Office2003Olive td.dx
+{
+	text-align: center;
+	white-space: nowrap;
+}
+/* SpinButtons */
+.dxeSpinIncButton_Office2003Olive table.dxbebt,
+.dxeSpinDecButton_Office2003Olive table.dxbebt
+{
+	width: 15px;
+}
+.dxeSpinLargeDecButton_Office2003Olive table.dxbebt
+{
+	width: 15px;
+}
+.dxeSpinLargeIncButton_Office2003Olive table.dxbebt
+{
+	width: 14px;
+}
+
+/* -- Pressed -- */
+.dxeCalendarButtonPressed_Office2003Olive,
+.dxeButtonEditButtonPressed_Office2003Olive
+{
+	border: 1px solid #608058;
+	background: #ffcf8b url('edtButtonBackPressed.gif') repeat-x center top;
+}
+/* SpinButtons */
+.dxeSpinIncButtonPressed_Office2003Olive,
+.dxeSpinDecButtonPressed_Office2003Olive
+{
+	border-style: none;
+}
+.dxeSpinIncButtonPressed_Office2003Olive
+{
+	background: #ffbc78 url('edtSpinIncBtnPBack.gif') no-repeat left top;
+	border-bottom: 1px Solid #FFFFFF;
+}
+.dxeSpinDecButtonPressed_Office2003Olive
+{
+	background: #ffbc78 url('edtSpinIncBtnPBack.gif') no-repeat left top;
+	border-bottom-style: none;
+}
+.dxeSpinLargeIncButtonPressed_Office2003Olive,
+.dxeSpinLargeDecButtonPressed_Office2003Olive
+{
+	background: #ffc17c url('edtSpinLargeIncBtnPBack.gif') no-repeat left top;
+	border-style: none;
+}
+
+/* -- Hover -- */
+.dxeCalendarButtonHover_Office2003Olive,
+.dxeButtonEditButtonHover_Office2003Olive
+{
+	border: 1px solid #608058;
+	background: #fff2c8 url('edtButtonBackHover.gif') repeat-x center bottom;
+}
+/* SpinButtons */
+.dxeSpinIncButtonHover_Office2003Olive,
+.dxeSpinDecButtonHover_Office2003Olive
+{
+	border-style: none;
+}
+.dxeSpinIncButtonHover_Office2003Olive
+{
+	background: #ffdda6 url('edtSpinIncBtnHBack.gif') no-repeat left top;
+	border-bottom: 1px Solid #ffffff;
+}
+.dxeSpinDecButtonHover_Office2003Olive
+{
+	background: #ffdda6 url('edtSpinIncBtnHBack.gif') no-repeat left top;
+	border-bottom-style: none;
+}
+.dxeSpinLargeIncButtonHover_Office2003Olive,
+.dxeSpinLargeDecButtonHover_Office2003Olive
+{
+	background: #ffdaa1 url('edtSpinLargeIncBtnHBack.gif') no-repeat left top;
+	border-style: none;
+}
+
+.dxeButtonEdit_Office2003Olive
+{
+	background-color: white;
+	border: 1px solid #608058;
+}
+.dxeButtonEdit_Office2003Olive td.dxic {
+    *padding-left: 2px;
+}
+*[dir="rtl"].dxeTextBox_Office2003Olive td.dxic {
+    *padding-right: 2px;
+}
+.dxeButtonEdit_Office2003Olive .dxeEditArea_Office2003Olive
+{
+	background-color: white;
+}
+.dxeButtonEdit_Office2003Olive .dxeIIC img
+{
+	padding-left: 3px;
+}
+.dxeTextBox_Office2003Olive,
+.dxeMemo_Office2003Olive
+{
+	background-color: white;
+	border: 1px solid #608058;
+}
+.dxeTextBox_Office2003Olive .dxeEditArea_Office2003Olive
+{
+	background-color: white;
+}
+.dxeRadioButtonList_Office2003Olive,
+.dxeRadioButtonList_Office2003Olive table,
+.dxeCheckBoxList_Office2003Olive,
+.dxeCheckBoxList_Office2003Olive table
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+
+.dxeCheckBoxList_Office2003Olive .dxe > table,
+.dxeRadioButtonList_Office2003Olive .dxe > table 
+{
+    width: 100%;
+}
+
+.dxeRadioButtonList_Office2003Olive,
+.dxeCheckBoxList_Office2003Olive
+{
+	border: 1px Solid #608058;
+}
+.dxeRadioButtonList_Office2003Olive td.dxe,
+.dxeCheckBoxList_Office2003Olive td.dxe
+{
+	padding: 6px 5px 6px 11px;
+}
+.dxeRadioButtonList_Office2003Olive label,
+.dxeCheckBoxList_Office2003Olive label
+{
+	margin-right: 6px;
+}
+.dxeRadioButtonList_Office2003Olive img,
+.dxeCheckBoxList_Office2003Olive img
+{
+	margin-bottom: -4px;
+    padding-right: 5px;
+}
+
+/* -- Memo -- */
+.dxeMemo_Office2003Olive
+{
+}
+.dxeMemoEditArea_Office2003Olive
+{
+	background-color: white;
+	font: 12px Tahoma, Geneva, sans-serif;
+	outline: none;
+}
+
+/* -- Hyperlink -- */
+.dxeHyperlink_Office2003Olive
+{
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	color: black;
+	text-decoration: underline;
+}
+
+/* -- ListBox -- */
+.dxeListBox_Office2003Olive
+{
+	background-color: white;
+	border: 1px solid #608058;
+	font: 12px Tahoma, Geneva, sans-serif;
+	height: 113px;
+	width: 70px;
+}
+.dxeListBox_Office2003Olive div.dxlbd
+{
+	padding-top: 1px;
+	height: 112px;
+}
+.dxeListBox_Office2003Olive
+{
+	cursor: default;
+}
+.dxeListBoxItem_Office2003Olive
+{
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	color: Black;
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	padding: 3px 2px 4px 3px;
+	white-space: nowrap;
+	text-align: left;
+}
+.dxeListBoxItem_Office2003Olive em
+{
+	background: #e3f0bb none repeat 0 0;
+	color: #333333;
+	font-weight: bold;
+	font-style: normal;
+}
+.dxeListBoxItemSelected_Office2003Olive     /* inherits dxeListBoxItem */
+{
+	color: black;
+	background-color: #ffc076;
+}
+.dxeListBoxItemHover_Office2003Olive        /* inherits dxeListBoxItem */
+{
+	background-color: #e3f0bb;
+}
+.dxeListBoxItemHover_Office2003Olive em,
+.dxeListBoxItemSelected_Office2003Olive em
+{
+	background-image: none;
+}
+.dxeListBox_Office2003Olive td.dxeI,
+.dxeListBox_Office2003Olive td.dxeIM,
+.dxeListBox_Office2003Olive .dxeHIC,
+.dxeListBox_Office2003Olive td.dxeFTM,
+.dxeListBox_Office2003Olive td.dxeTM,
+.dxeListBox_Office2003Olive td.dxeC,
+.dxeListBox_Office2003Olive td.dxeCM,
+.dxeListBox_Office2003Olive td.dxeHCC,
+.dxeListBox_Office2003Olive td.dxeMI,
+.dxeListBox_Office2003Olive td.dxeMIM
+{
+	border-right-width: 0!important;
+}
+.dxeListBox_Office2003Olive td.dxeIR,
+.dxeListBox_Office2003Olive td.dxeIMR,
+.dxeListBox_Office2003Olive .dxeHICR,
+.dxeListBox_Office2003Olive td.dxeFTMR,
+.dxeListBox_Office2003Olive td.dxeTMR,
+.dxeListBox_Office2003Olive td.dxeCR,
+.dxeListBox_Office2003Olive td.dxeCMR,
+.dxeListBox_Office2003Olive td.dxeHCCR,
+.dxeListBox_Office2003Olive td.dxeMIR,
+.dxeListBox_Office2003Olive td.dxeMIMR
+{
+	border-left-width: 0!important;
+}
+.dxeListBox_Office2003Olive td.dxeCM,
+.dxeListBox_Office2003Olive td.dxeHCC,
+.dxeListBox_Office2003Olive td.dxeCMR,
+.dxeListBox_Office2003Olive td.dxeHCCR
+{
+	width: 29px;
+    *width: 23px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dxeListBox_Office2003Olive td.dxeIM,
+.dxeListBox_Office2003Olive td.dxeIMR
+{
+	width: 0;
+}
+.dxeListBox_Office2003Olive td.dxeC
+{
+	padding-right: 3px!important;
+}
+.dxeListBox_Office2003Olive td.dxeCR
+{
+	padding-left: 3px!important;
+}
+.dxeListBox_Office2003Olive td.dxeC > span,
+.dxeListBox_Office2003Olive td.dxeCM > span
+{
+    margin: 2px 2px 2px 3px;
+}
+.dxeListBox_Office2003Olive td.dxeCR > span,
+.dxeListBox_Office2003Olive td.dxeCMR > span
+{
+    margin: 2px 3px 2px 2px;
+}
+.dxeListBox_Office2003Olive td.dxeT
+{
+	width: 100%;
+	padding-left: 0!important;
+}
+.dxeListBox_Office2003Olive td.dxeTR
+{
+	width: 100%;
+	padding-right: 0!important;
+}
+.dxeListBox_Office2003Olive td.dxeT,
+.dxeListBox_Office2003Olive td.dxeMI
+{
+	border-left-width: 0!important;
+}
+.dxeListBox_Office2003Olive td.dxeTR,
+.dxeListBox_Office2003Olive td.dxeMIR
+{
+	border-right-width: 0!important;
+}
+.dxeListBox_Office2003Olive td.dxeFTM,
+.dxeListBox_Office2003Olive td.dxeTM,
+.dxeListBox_Office2003Olive td.dxeLTM,
+.dxeListBox_Office2003Olive .dxeHFC,
+.dxeListBox_Office2003Olive .dxeHC,
+.dxeListBox_Office2003Olive .dxeHLC,
+.dxeListBox_Office2003Olive td.dxeFTMR,
+.dxeListBox_Office2003Olive td.dxeTMR,
+.dxeListBox_Office2003Olive td.dxeLTMR,
+.dxeListBox_Office2003Olive .dxeHFCR,
+.dxeListBox_Office2003Olive .dxeHCR,
+.dxeListBox_Office2003Olive .dxeHLCR
+{
+	overflow: hidden;
+}
+.dxeListBox_Office2003Olive td.dxeFTM,
+.dxeListBox_Office2003Olive td.dxeTM, 
+.dxeListBox_Office2003Olive .dxeHFC,
+.dxeListBox_Office2003Olive .dxeHC
+{
+	padding-right: 6px!important;
+}
+.dxeListBox_Office2003Olive td.dxeFTMR,
+.dxeListBox_Office2003Olive td.dxeTMR, 
+.dxeListBox_Office2003Olive .dxeHFCR,
+.dxeListBox_Office2003Olive .dxeHCR
+{
+	padding-left: 6px!important;
+}
+.dxeListBox_Office2003Olive td.dxeLTM,
+.dxeListBox_Office2003Olive td.dxeTM, 
+.dxeListBox_Office2003Olive .dxeHC,
+.dxeListBox_Office2003Olive .dxeHLC
+{
+	padding-left: 6px!important;
+}
+.dxeListBox_Office2003Olive td.dxeLTMR,
+.dxeListBox_Office2003Olive td.dxeTMR, 
+.dxeListBox_Office2003Olive .dxeHCR,
+.dxeListBox_Office2003Olive .dxeHLCR
+{
+	padding-right: 6px!important;
+}
+/*Grid lines*/
+.dxeListBox_Office2003Olive td.dxeLTM,
+.dxeListBox_Office2003Olive td.dxeTM,
+.dxeListBox_Office2003Olive td.dxeMIM
+{
+	border-left: 1px solid #CDD6A7!important;
+}
+.dxeListBox_Office2003Olive td.dxeLTMR,
+.dxeListBox_Office2003Olive td.dxeTMR,
+.dxeListBox_Office2003Olive td.dxeMIMR
+{
+	border-right: 1px solid #CDD6A7!important;
+}
+.dxeListBox_Office2003Olive td.dxeIM,
+.dxeListBox_Office2003Olive td.dxeFTM,
+.dxeListBox_Office2003Olive td.dxeTM,
+.dxeListBox_Office2003Olive td.dxeLTM,
+.dxeListBox_Office2003Olive td.dxeCM,
+.dxeListBox_Office2003Olive td.dxeMIM,
+.dxeListBox_Office2003Olive td.dxeIMR,
+.dxeListBox_Office2003Olive td.dxeFTMR,
+.dxeListBox_Office2003Olive td.dxeTMR,
+.dxeListBox_Office2003Olive td.dxeLTMR,
+.dxeListBox_Office2003Olive td.dxeCMR,
+.dxeListBox_Office2003Olive td.dxeMIMR
+{
+	border-bottom: 1px solid #CDD6A7;
+}
+/*Header*/
+.dxeListBox_Office2003Olive .dxeHD
+{
+	background: #B8C692 url('lbHeaderBackground.gif') repeat-x top center;
+	border-bottom: 1px solid #608058;
+}
+.dxeListBox_Office2003Olive .dxeHFC,
+.dxeListBox_Office2003Olive .dxeHIC,
+.dxeListBox_Office2003Olive .dxeHC,
+.dxeListBox_Office2003Olive .dxeHLC,
+.dxeListBox_Office2003Olive td.dxeHCC,
+.dxeListBox_Office2003Olive td.dxeHMIC,
+.dxeListBox_Office2003Olive .dxeHFCR,
+.dxeListBox_Office2003Olive .dxeHICR,
+.dxeListBox_Office2003Olive .dxeHCR,
+.dxeListBox_Office2003Olive .dxeHLCR,
+.dxeListBox_Office2003Olive td.dxeHCCR,
+.dxeListBox_Office2003Olive td.dxeHMICR
+{
+	border-bottom-width: 0;
+	padding-top: 4px;
+	padding-bottom: 5px;
+}
+.dxeListBox_Office2003Olive .dxeHC,
+.dxeListBox_Office2003Olive .dxeHLC,
+.dxeListBox_Office2003Olive td.dxeHMIC
+{
+	border-left: 1px solid #608058;
+}
+.dxeListBox_Office2003Olive .dxeHCR,
+.dxeListBox_Office2003Olive .dxeHLCR,
+.dxeListBox_Office2003Olive td.dxeHMICR
+{
+	border-right: 1px solid #608058;
+	text-align: right;
+}
+.dxeListBox_Office2003Olive .dxeHIC,
+.dxeListBox_Office2003Olive .dxeHFC,
+.dxeListBox_Office2003Olive .dxeHCC
+{
+	border-left: 1px solid #B8C692;
+}
+.dxeListBox_Office2003Olive .dxeHICR,
+.dxeListBox_Office2003Olive .dxeHFCR,
+.dxeListBox_Office2003Olive .dxeHCCR
+{
+	border-right: 1px solid #B8C692;
+	text-align: right;
+}
+.dxeListBox_Office2003Olive .dxeHFC,
+.dxeListBox_Office2003Olive .dxeHC,
+.dxeListBox_Office2003Olive .dxeHMIC
+{
+	border-right-width: 0;
+}
+.dxeListBox_Office2003Olive .dxeHFCR,
+.dxeListBox_Office2003Olive .dxeHCR,
+.dxeListBox_Office2003Olive .dxeHMICR
+{
+	border-left-width: 0;
+	text-align: right;
+}
+.dxeListBox_Office2003Olive .dxeHLC
+{
+	border-right: 1px solid #608058;
+}
+.dxeListBox_Office2003Olive .dxeHLCR
+{
+	border-left: 1px solid #608058;
+	text-align: right;
+}
+
+/* -- Calendar -- */
+.dxeCalendar_Office2003Olive
+{
+	color: black;
+	font-weight: normal;
+	border: 1px solid #608058;
+	background-color: white;
+}
+.dxeCalendar_Office2003Olive td.dxMonthGrid
+{
+	padding: 8px 20px;
+	cursor: default;
+}
+.dxeCalendar_Office2003Olive td.dxMonthGridWithWeekNumbers
+{
+	padding: 8px 20px 8px 8px;
+	cursor: default;
+}
+.dxeCalendar_Office2003Olive td.dxMonthGridWithWeekNumbersRtl
+{
+	padding: 8px 8px 8px 20px;
+	cursor: default;
+}
+.dxeCalendarDayHeader_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	padding: 4px 4px 5px;
+	border-bottom: 1px solid #d5e1b1;
+}
+.dxeCalendarWeekNumber_Office2003Olive
+{
+	font: 9px Tahoma, Geneva, sans-serif;
+	text-align: right;
+	padding: 6px 8px 2px 4px;
+	color: #b7c691;
+}
+.dxeCalendarDay_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	padding: 4px;
+	text-align: center;
+}
+.dxeCalendarWeekend_Office2003Olive        /* inherits dxeCalendarDay */
+{
+	color: #c00000;
+}
+.dxeCalendarOtherMonth_Office2003Olive     /* inherits dxeCalendarDay */
+{
+	color: #888;
+}
+.dxeCalendarOutOfRange_Office2003Olive      /* inherits dxeCalendarDay */
+{
+	color: #d0d0d0;
+}
+.dxeCalendarToday_Office2003Olive               /* inherits dxeCalendarDay */
+{
+	padding: 3px;
+	border: 1px solid #c00000;
+}
+.dxeCalendarSelected_Office2003Olive       /* inherits dxeCalendarDay */
+{
+	color: black;
+	background-color: #ffc076;
+}
+.dxeCalendarHeader_Office2003Olive
+{
+	background: #f4f7de url('edtCalendarHeadBack.gif') repeat-x center bottom;
+	border-top: 1px solid #d4e5a9;
+	border-right: 0 solid #d4e5a9;
+	border-bottom: 1px solid #d4e5a9;
+	border-left: 0 solid #d4e5a9;
+	padding: 4px 7px;
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+.dxeCalendarHeader_Office2003Olive td.dxe
+{
+	text-align: center;
+	cursor: pointer;
+}
+.dxeCalendarFooter_Office2003Olive
+{
+	background-color: #e3ebc5;
+	padding: 8px 0px;
+	border-top: 1px solid #d4e5a9;
+}
+.dxeCalendarFastNav_Office2003Olive
+{
+	background: white none;
+	border-top: 1px solid #608058;
+	border-right: 1px solid #608058;
+	border-bottom: 0px solid #608058;
+	border-left: 1px solid #608058;
+	padding: 12px 8px;
+}
+.dxeCalendarFastNavMonthArea_Office2003Olive
+{
+	padding: 0px 9px;
+}
+.dxeCalendarFastNavFooter_Office2003Olive
+{
+	color: black;
+	background-color: #e3ebc5;
+	padding: 8px 0px;
+	border-right: 1px solid #608058;
+	border-bottom: 1px solid #608058;
+	border-left: 1px solid #608058;
+	border-top: 1px solid #d4e5a9;
+}
+.dxeCalendarFastNavMonth_Office2003Olive,
+.dxeCalendarFastNavYear_Office2003Olive
+{
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	color: Black;
+	padding: 3px 5px;
+	text-align: center;
+	cursor: pointer;
+}
+.dxeCalendarFastNavMonth_Office2003Olive
+{
+	padding: 6px;
+}
+.dxeCalendarFastNavMonthSelected_Office2003Olive,
+.dxeCalendarFastNavYearSelected_Office2003Olive
+{
+	border: 1px solid #608058;
+	background: #ffcf8b url('edtButtonBackPressed.gif') repeat-x center top;
+	padding: 2px 4px;
+}
+.dxeCalendarFastNavMonthSelected_Office2003Olive
+{
+	padding: 5px;
+}
+.dxeCalendarFastNavMonthHover_Office2003Olive,
+.dxeCalendarFastNavYearHover_Office2003Olive
+{
+	background: #e3ebc5 none;
+	border: 1px solid #608058;
+	padding: 2px 4px;
+}
+.dxeCalendarFastNavMonthHover_Office2003Olive
+{
+	padding: 5px;
+}
+.dxeDateEditTimeEditCell_Office2003Olive
+{
+    padding: 9px 25px 28px ;
+}
+.dxeDateEditClockCell_Office2003Olive
+{
+    padding: 19px 18px 0;
+}
+.dxeCalendarFooter_Office2003Olive.dxeDETSF
+{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+/* Disabled */
+.dxeDisabled_Office2003Olive,
+.dxeDisabled_Office2003Olive td.dxe
+{
+	color: #aaaaaa;
+	cursor: default;
+}
+.dxeButtonDisabled_Office2003Olive,
+.dxeButtonDisabled_Office2003Olive td.dxe
+{
+	border-color: #bfbfbf;
+	background: #cccccc url('edtButtonBackDis.gif') repeat-x top;
+	color: #aaaaaa;
+	cursor: default;
+}
+/* -- Button -- */
+.dxbButton_Office2003Olive
+{
+	color: #000000;
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	vertical-align: middle;
+	border: 1px solid #608058;
+	background: #d8e3b6 url('edtButtonBack.gif') repeat-x center bottom;
+	padding: 1px;
+	cursor: pointer;
+}
+.dxbButtonHover_Office2003Olive
+{
+	color: #000000;
+	border: 1px solid #608058;
+	background: #fff2c8 url('edtButtonBackHover.gif') repeat-x center bottom;
+}
+.dxbButtonChecked_Office2003Olive
+{
+	color: #000000;
+	border: 1px solid #608058;
+	background: #ffcf8b url('edtButtonBackPressed.gif') repeat-x center top;
+}
+.dxbButtonPressed_Office2003Olive
+{
+	color: #000000;
+	border: 1px solid #608058;
+	background: #ffcf8b url('edtButtonBackPressed.gif') repeat-x center top;
+}
+.dxbButton_Office2003Olive div.dxb
+{
+	padding: 4px 8px 5px;
+	border-width: 0px;
+}
+.dxbButton_Office2003Olive div.dxbf
+{
+	padding: 3px 7px 4px;
+	border: 1px dotted black;
+}
+.dxbButton_Office2003Olive div.dxb td.dxb
+{
+	background: transparent url('')!important;
+	border-width: 0px!important;
+	padding: 0px!important;
+}
+/* Disabled */
+.dxbDisabled_Office2003Olive
+{
+	background: #cecece url('edtButtonBackDis.gif') repeat-x top;
+	border-color: #BFBFBF;
+	color: #808080;
+	cursor: default;
+}
+.dxbDisabled_Office2003Olive td.dxb
+{
+	color: #808080;
+}
+/* -- FilterControl -- */
+.dxfcTable_Office2003Olive
+{
+	border-collapse: separate!important;
+}
+.dxfcTable_Office2003Olive td.dxfc
+{
+	padding: 0px 0px 0px 3px;
+	vertical-align: middle;
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: Black;
+}
+a.dxfcPropertyName_Office2003Olive
+{
+	white-space: nowrap!important;
+	color: Blue!important;
+}
+a.dxfcGroupType_Office2003Olive
+{
+	white-space: nowrap!important;
+	padding: 0px 3px!important;
+	color: Red!important;
+}
+a.dxfcOperation_Office2003Olive
+{
+	white-space: nowrap!important;
+	color: Green!important;
+}
+a.dxfcValue_Office2003Olive
+{
+	white-space: nowrap!important;
+	color: Gray!important;
+}
+.dxfcImageButton_Office2003Olive
+{
+	cursor: pointer;
+}
+.dxfcLoadingPanel_Office2003Olive
+{
+	border: 1px solid #a4b26d;
+	background-color: white;
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: #758D5E;
+}
+.dxfcLoadingPanel_Office2003Olive td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxfcLoadingDiv_Office2003Olive
+{
+	background: white none;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+.dxeMaskHint_Office2003Olive
+{
+	background: #ffffe1 none;
+	border: 1px solid black;
+	padding: 2px 5px 3px;
+	color: Black;
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+/* -- ProgressBar -- */
+.dxeProgressBar_Office2003Olive
+{
+	border: 1px Solid #758d5e;
+	background-color: #e2e8c9;
+}
+.dxeProgressBar_Office2003Olive .dxePBMainCell
+{
+	padding: 1px;
+}
+.dxeProgressBar_Office2003Olive td.dxe
+{
+	padding: 0;
+}
+.dxeProgressBar_Office2003Olive,
+.dxeProgressBar_Office2003Olive td.dxe
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: Black;
+}
+.dxeProgressBarIndicator_Office2003Olive
+{
+	background-color: #b5c48f;
+}
+
+/* -- DropDownWindow -- */
+.dxeDropDownWindow_Office2003Olive
+{
+	background-color: white;
+	border: 1px solid #608058;
+}
+
+/*----------------- ColorTable -----------------*/
+.dxeColorIndicator_Office2003Olive
+{
+	border: 1px solid #608058;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
+.dxeColorTable_Office2003Olive
+{
+	background-color: white;
+	border: 1px solid #608058;
+}
+.dxeItemPicker_Office2003Olive
+{
+	background-color: #F4F4EE;
+	border: 1px solid #758D5E;
+}
+.dxeColorTable_Office2003Olive td.dx,
+.dxeItemPicker_Office2003Olive td.dx
+{
+	padding: 4px;
+}
+.dxeColorTableCell_Office2003Olive,
+.dxeItemPickerCell_Office2003Olive
+{
+	padding: 3px;
+	cursor: pointer;
+}
+.dxeColorTableCellDiv_Office2003Olive
+{
+	border: 1px solid #808080;
+	width: 12px;
+	height: 12px;
+	font-size: 0px;
+}
+.dxeColorTableCellSelected_Office2003Olive
+{
+	padding: 2px!important;
+	background-color: #CBCBCB;
+	border: 1px solid #888888;
+}
+.dxeColorTableCellHover_Office2003Olive,
+.dxeItemPickerCellHover_Office2003Olive
+{
+	padding: 2px!important;
+}
+.dxeColorTableCellHover_Office2003Olive
+{
+	background-color: #F2F2F2;
+	border: 1px solid #888888;
+}
+.dxeItemPickerCellHover_Office2003Olive
+{
+	background: #FFEEC2 url('../Web/mPopupHBack.gif') repeat-x center top;
+	border: 1px solid #758D5E;
+}
+
+/* -- Invalid Style -- */
+.dxeInvalid_Office2003Olive
+{
+}
+.dxeInvalid_Office2003Olive .dxeEditArea_Office2003Olive,
+.dxeInvalid_Office2003Olive .dxeMemoEditArea_Office2003Olive
+{
+}
+
+/* -- Focused Style -- */
+.dxeFocused_Office2003Olive
+{
+	border: 1px solid #293e24;
+}
+
+.dxeFocused_Office2003Olive.dxeTrackBar_Office2003Olive
+{	
+	border: 0px;
+}
+
+/* -- Null Text Style -- */
+.dxeNullText_Office2003Olive .dxeEditArea_Office2003Olive,
+.dxeNullText_Office2003Olive .dxeMemoEditArea_Office2003Olive
+{
+	color: #aaa;
+}
+
+
+/* -- Captcha -- */
+.dxcaControl_Office2003Olive 
+{
+}
+
+.dxcaRefreshButton_Office2003Olive
+{
+	font: 13px Tahoma, Geneva, sans-serif;
+	text-decoration: none;
+	color: #1e3695;
+}
+
+.dxcaDisabledRefreshButton_Office2003Olive
+{
+	color: #aaaaaa;
+}
+
+.dxcaRefreshButtonCell_Office2003Olive
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.dxcaRefreshButtonText_Office2003Olive
+{
+	text-decoration: underline;
+}
+
+.dxcaDisabledRefreshButtonText_Office2003Olive
+{
+	text-decoration: none;
+}
+
+.dxcaTextBoxCell_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+
+.dxcaTextBoxCell_Office2003Olive,
+.dxcaTextBoxCellNoIndent_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+
+.dxcaTextBoxCellNoIndent_Office2003Olive .dxeErrorCell_Office2003Olive
+{
+	padding-left: 0px;
+	padding-top: 4px;
+	color: Red;
+}
+
+.dxcaTextBoxLabel_Office2003Olive
+{
+	padding-bottom: 4px;
+	display: block;
+}
+
+.dxcaLoadingPanel_Office2003Olive
+{
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: #303030;
+}
+
+.dxcaLoadingPanel_Office2003Olive td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+
+.dxpcControl_Office2003Olive .dxHFBPS,
+.dxpcLite_Office2003Olive .dxHFBPS
+{
+    width: 6px;
+}
+
+.dxeTextBox_Office2003Olive,
+.dxeButtonEdit_Office2003Olive,
+.dxeIRadioButton_Office2003Olive,
+.dxeRadioButtonList_Office2003Olive,
+.dxeCheckBoxList_Office2003Olive
+{
+    cursor: default;
+}
+
+/* Removes flicking in iOS Safari*/
+.dxeTrackBar_Office2003Olive, 
+.dxeIRadioButton_Office2003Olive, 
+.dxeButtonEdit_Office2003Olive, 
+.dxeTextBox_Office2003Olive, 
+.dxeRadioButtonList_Office2003Olive, 
+.dxeCheckBoxList_Office2003Olive, 
+.dxeMemo_Office2003Olive, 
+.dxeListBox_Office2003Olive, 
+.dxeCalendar_Office2003Olive, 
+.dxeColorTable_Office2003Olive
+{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+

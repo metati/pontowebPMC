@@ -1,0 +1,1434 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <DataSetPontoFrequencia Ref="2" type="Stimulsoft.Report.Dictionary.StiXmlDatabase" isKey="true">
+        <Alias>DataSetPontoFrequencia</Alias>
+        <Name>DataSetPontoFrequencia</Name>
+        <PathData>C:\Users\Dayan\Documents\Ponto Frequencia\MetodosPontoFrequencia - GED\MetodosPontoFrequencia\DataSetPontoFrequencia.xsd</PathData>
+        <PathSchema />
+      </DataSetPontoFrequencia>
+    </Databases>
+    <DataSources isList="true" count="34">
+      <vWHorasDia Ref="3" type="DataTableSource" isKey="true">
+        <Alias>vWHorasDia</Alias>
+        <Columns isList="true" count="28">
+          <value>DSUsuario,System.String</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>DataFrequencia,System.String</value>
+          <value>EntradaManha,System.String</value>
+          <value>SaidaManha,System.String</value>
+          <value>EntradaTarde,System.String</value>
+          <value>SaidaTarde,System.String</value>
+          <value>HorasDia,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>OBS,System.String</value>
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>Justificado,System.String</value>
+          <value>MF,System.String</value>
+          <value>IMF,System.String</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>IMGEmpresa,System.Byte[]</value>
+          <value>AnoReferencia,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Situacao,System.String</value>
+          <value>DSMes,System.String</value>
+          <value>DSEmpresa,System.String</value>
+          <value>login,System.String</value>
+          <value>DTFrequencia,System.DateTime</value>
+          <value>IDusuario,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vWHorasDia</Name>
+        <NameInSource>DataSetPontoFrequencia.vWHorasDia</NameInSource>
+      </vWHorasDia>
+      <TBCargo Ref="4" type="DataTableSource" isKey="true">
+        <Alias>TBCargo</Alias>
+        <Columns isList="true" count="2">
+          <value>IDCargo,System.Int32</value>
+          <value>DSCargo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBCargo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBCargo</NameInSource>
+      </TBCargo>
+      <TBEntidade Ref="5" type="DataTableSource" isKey="true">
+        <Alias>TBEntidade</Alias>
+        <Columns isList="true" count="4">
+          <value>IDEntidade,System.Int32</value>
+          <value>DSEntidade,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>VinculoCodigo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBEntidade</Name>
+        <NameInSource>DataSetPontoFrequencia.TBEntidade</NameInSource>
+      </TBEntidade>
+      <TBFeriadoPontoFacultativo Ref="6" type="DataTableSource" isKey="true">
+        <Alias>TBFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSFeriadoPontoFacultativo,System.String</value>
+          <value>FeriadoAnual,System.Byte[]</value>
+          <value>IDTPFeriadoPontoFacultativo,System.Int32</value>
+          <value>DTFeriadoPontoFacultativo,System.String</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFeriadoPontoFacultativo</NameInSource>
+      </TBFeriadoPontoFacultativo>
+      <TBFrequencia Ref="7" type="DataTableSource" isKey="true">
+        <Alias>TBFrequencia</Alias>
+        <Columns isList="true" count="12">
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDMotivoFalta,System.Int32</value>
+          <value>DTFrequencia,System.DateTime</value>
+          <value>HoraEntraManha,System.DateTime</value>
+          <value>HoraSaidaManha,System.DateTime</value>
+          <value>HoraEntradaTarde,System.DateTime</value>
+          <value>HoraSaidaTarde,System.DateTime</value>
+          <value>OBS,System.String</value>
+          <value>TotalHorasDias,System.DateTime</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>AnoReferencia,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFrequencia</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFrequencia</NameInSource>
+      </TBFrequencia>
+      <TBInformacaoDiaria Ref="8" type="DataTableSource" isKey="true">
+        <Alias>TBInformacaoDiaria</Alias>
+        <Columns isList="true" count="5">
+          <value>TBInformacaoDiaria,System.Int32</value>
+          <value>DSInformacaoDiaria,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>DTInformacaoDiaria,System.String</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBInformacaoDiaria</Name>
+        <NameInSource>DataSetPontoFrequencia.TBInformacaoDiaria</NameInSource>
+      </TBInformacaoDiaria>
+      <TBMotivoFalta Ref="9" type="DataTableSource" isKey="true">
+        <Alias>TBMotivoFalta</Alias>
+        <Columns isList="true" count="2">
+          <value>IDMotivoFalta,System.Int32</value>
+          <value>DSMotivoFalta,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBMotivoFalta</Name>
+        <NameInSource>DataSetPontoFrequencia.TBMotivoFalta</NameInSource>
+      </TBMotivoFalta>
+      <TBOrgao Ref="10" type="DataTableSource" isKey="true">
+        <Alias>TBOrgao</Alias>
+        <Columns isList="true" count="3">
+          <value>IDOrgao,System.Int32</value>
+          <value>DSOrgao,System.String</value>
+          <value>Sigla,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBOrgao</Name>
+        <NameInSource>DataSetPontoFrequencia.TBOrgao</NameInSource>
+      </TBOrgao>
+      <TBSetor Ref="11" type="DataTableSource" isKey="true">
+        <Alias>TBSetor</Alias>
+        <Columns isList="true" count="10">
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>IDOrgao,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>Sigla,System.String</value>
+          <value>EntradaManha,System.DateTime</value>
+          <value>SaidaManha,System.DateTime</value>
+          <value>EntradaTarde,System.DateTime</value>
+          <value>SaidaTarde,System.DateTime</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>DataSetPontoFrequencia.TBSetor</NameInSource>
+      </TBSetor>
+      <TBStatus Ref="12" type="DataTableSource" isKey="true">
+        <Alias>TBStatus</Alias>
+        <Columns isList="true" count="2">
+          <value>IDStatus,System.Int32</value>
+          <value>DSStatus,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>DataSetPontoFrequencia.TBStatus</NameInSource>
+      </TBStatus>
+      <TBTipoUsuario Ref="13" type="DataTableSource" isKey="true">
+        <Alias>TBTipoUsuario</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPUsuario,System.Int32</value>
+          <value>DSTPUsuario,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoUsuario</NameInSource>
+      </TBTipoUsuario>
+      <TBUsuario Ref="14" type="DataTableSource" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <Columns isList="true" count="30">
+          <value>IDUsuario,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDEntidade,System.Int32</value>
+          <value>DSUsuario,System.String</value>
+          <value>Login,System.String</value>
+          <value>DTCadastro,System.DateTime</value>
+          <value>Senha,System.Byte[]</value>
+          <value>DTExclusao,System.DateTime</value>
+          <value>IDTPUsuario,System.Int32</value>
+          <value>SenhaAdmin,System.String</value>
+          <value>IDCargo,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>HoraEntradaManha,System.String</value>
+          <value>HoraEntradaTarde,System.String</value>
+          <value>HoraSaidaManha,System.String</value>
+          <value>HoraSaidaTarde,System.String</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>PrimeiroAcesso,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>SenhaDigital,System.String</value>
+          <value>AcessoEspecial,System.Boolean</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>TextHashCode,System.String</value>
+          <value>DTNascimento,System.DateTime</value>
+          <value>DTAdmissao,System.DateTime</value>
+          <value>PIS,System.String</value>
+          <value>RG,System.String</value>
+          <value>DTRG,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.TBUsuario</NameInSource>
+      </TBUsuario>
+      <TBMes Ref="15" type="DataTableSource" isKey="true">
+        <Alias>TBMes</Alias>
+        <Columns isList="true" count="2">
+          <value>IDMes,System.Int32</value>
+          <value>DSMes,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBMes</Name>
+        <NameInSource>DataSetPontoFrequencia.TBMes</NameInSource>
+      </TBMes>
+      <TBTipoFeriadoPontoFacultativo Ref="16" type="DataTableSource" isKey="true">
+        <Alias>TBTipoFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPFeiradoPontoFacultativo,System.Int32</value>
+          <value>DSTPFeriadoPontoFacultativo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoFeriadoPontoFacultativo</NameInSource>
+      </TBTipoFeriadoPontoFacultativo>
+      <vwFerias Ref="17" type="DataTableSource" isKey="true">
+        <Alias>vwFerias</Alias>
+        <Columns isList="true" count="11">
+          <value>IDFerias,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+          <value>DTInicioFerias,System.DateTime</value>
+          <value>DTFimFerias,System.DateTime</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DTInicioFerias1,DTInicioFerias,System.String</value>
+          <value>DTFimFerias1,DTFimFerias,System.String</value>
+          <value>DSTPFerias,System.String</value>
+          <value>IDTPFerias,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.vwFerias</NameInSource>
+      </vwFerias>
+      <vwNomeUsuario Ref="18" type="DataTableSource" isKey="true">
+        <Alias>vwNomeUsuario</Alias>
+        <Columns isList="true" count="2">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwNomeUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.vwNomeUsuario</NameInSource>
+      </vwNomeUsuario>
+      <vwInformacaoDiaria Ref="19" type="DataTableSource" isKey="true">
+        <Alias>vwInformacaoDiaria</Alias>
+        <Columns isList="true" count="5">
+          <value>TBInformacaoDiaria,System.Int32</value>
+          <value>DSInformacaoDiaria,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DTInformacaoDiaria,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwInformacaoDiaria</Name>
+        <NameInSource>DataSetPontoFrequencia.vwInformacaoDiaria</NameInSource>
+      </vwInformacaoDiaria>
+      <vwFeriadoPontoFacultativo Ref="20" type="DataTableSource" isKey="true">
+        <Alias>vwFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSFeriadoPontoFacultativo,System.String</value>
+          <value>DTFeriadoPontoFacultativo,System.String</value>
+          <value>FeriadoAnual,System.Byte[]</value>
+          <value>IDTPFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSTPFeriadoPontoFacultativo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.vwFeriadoPontoFacultativo</NameInSource>
+      </vwFeriadoPontoFacultativo>
+      <TBLog Ref="21" type="DataTableSource" isKey="true">
+        <Alias>TBLog</Alias>
+        <Columns isList="true" count="7">
+          <value>IDlog,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>Operacao,System.String</value>
+          <value>Dado,System.String</value>
+          <value>DadoAnterior,System.String</value>
+          <value>DTInclusao,System.DateTime</value>
+          <value>Metodo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBLog</Name>
+        <NameInSource>DataSetPontoFrequencia.TBLog</NameInSource>
+      </TBLog>
+      <vwTotalHorasMes Ref="22" type="DataTableSource" isKey="true">
+        <Alias>vwTotalHorasMes</Alias>
+        <Columns isList="true" count="6">
+          <value>IDUsuario,System.Int32</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>Horas,System.Int32</value>
+          <value>Minutos,System.Int32</value>
+          <value>Segundos,System.Int32</value>
+          <value>AnoReferencia,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwTotalHorasMes</Name>
+        <NameInSource>DataSetPontoFrequencia.vwTotalHorasMes</NameInSource>
+      </vwTotalHorasMes>
+      <TBTipoFerias Ref="23" type="DataTableSource" isKey="true">
+        <Alias>TBTipoFerias</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPFerias,System.Int32</value>
+          <value>DSTPFerias,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoFerias</NameInSource>
+      </TBTipoFerias>
+      <TBFerias Ref="24" type="DataTableSource" isKey="true">
+        <Alias>TBFerias</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFerias,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>DTInicioFerias,System.DateTime</value>
+          <value>DTFimFerias,System.DateTime</value>
+          <value>IDTPFerias,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFerias</NameInSource>
+      </TBFerias>
+      <vwHoras Ref="25" type="DataTableSource" isKey="true">
+        <Alias>vwHoras</Alias>
+        <Columns isList="true" count="1">
+          <value>Horas,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwHoras</Name>
+        <NameInSource>DataSetPontoFrequencia.vwHoras</NameInSource>
+      </vwHoras>
+      <TBEmpresa Ref="26" type="DataTableSource" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <Columns isList="true" count="15">
+          <value>IDEmpresa,System.Int32</value>
+          <value>DSEmpresa,System.String</value>
+          <value>Endereco,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>HoraEntradaManhaPadrao,System.String</value>
+          <value>HoraEntradaTardePadrao,System.String</value>
+          <value>HoraSaidaManhaPadrao,System.String</value>
+          <value>HoraSaidaTardePadrao,System.String</value>
+          <value>CNPJ,System.String</value>
+          <value>LimiteEntradaSaida,System.String</value>
+          <value>PadraoHoraEmpresa,System.Boolean</value>
+          <value>IMGEmpresa,System.Byte[]</value>
+          <value>HoraPadraoAlmoco,System.String</value>
+          <value>TrabalhaSabado,System.Boolean</value>
+          <value>HorasSabado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>DataSetPontoFrequencia.TBEmpresa</NameInSource>
+      </TBEmpresa>
+      <TBTesteAutomatico Ref="27" type="DataTableSource" isKey="true">
+        <Alias>TBTesteAutomatico</Alias>
+        <Columns isList="true" count="2">
+          <value>IDInsert,System.Int32</value>
+          <value>DataHora,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTesteAutomatico</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTesteAutomatico</NameInSource>
+      </TBTesteAutomatico>
+      <TBDado Ref="28" type="DataTableSource" isKey="true">
+        <Alias>TBDado</Alias>
+        <Columns isList="true" count="3">
+          <value>IDDado,System.Int32</value>
+          <value>Insercao,System.Int32</value>
+          <value>IDTPDado,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBDado</Name>
+        <NameInSource>DataSetPontoFrequencia.TBDado</NameInSource>
+      </TBDado>
+      <TBTipoDado Ref="29" type="DataTableSource" isKey="true">
+        <Alias>TBTipoDado</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPDado,System.Int32</value>
+          <value>DSDado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoDado</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoDado</NameInSource>
+      </TBTipoDado>
+      <viewDado Ref="30" type="DataTableSource" isKey="true">
+        <Alias>viewDado</Alias>
+        <Columns isList="true" count="3">
+          <value>TotalDado,System.Int32</value>
+          <value>IDTPDado,System.Int32</value>
+          <value>DSDado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>viewDado</Name>
+        <NameInSource>DataSetPontoFrequencia.viewDado</NameInSource>
+      </viewDado>
+      <TBUserTeste Ref="31" type="DataTableSource" isKey="true">
+        <Alias>TBUserTeste</Alias>
+        <Columns isList="true" count="8">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+          <value>Senha1,System.String</value>
+          <value>Senha2,System.String</value>
+          <value>Template1,System.Byte[]</value>
+          <value>Template2,System.Byte[]</value>
+          <value>Template3,System.Byte[]</value>
+          <value>Template4,System.Byte[]</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBUserTeste</Name>
+        <NameInSource>DataSetPontoFrequencia.TBUserTeste</NameInSource>
+      </TBUserTeste>
+      <vwIndicePresenca Ref="32" type="DataTableSource" isKey="true">
+        <Alias>vwIndicePresenca</Alias>
+        <Columns isList="true" count="7">
+          <value>IDEmpresa,System.Int32</value>
+          <value>Situacao,System.String</value>
+          <value>TotSituacao,System.Int32</value>
+          <value>DataFrequencia,System.String</value>
+          <value>IDSetor,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Total,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwIndicePresenca</Name>
+        <NameInSource>DataSetPontoFrequencia.vwIndicePresenca</NameInSource>
+      </vwIndicePresenca>
+      <vwUsuariogrid Ref="33" type="DataTableSource" isKey="true">
+        <Alias>vwUsuariogrid</Alias>
+        <Columns isList="true" count="28">
+          <value>PrimeiroNome,System.String</value>
+          <value>DSUsuario,System.String</value>
+          <value>DataCadastro,System.String</value>
+          <value>DSTPUsuario,System.String</value>
+          <value>DSStatus,System.String</value>
+          <value>DSCargo,System.String</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>Login,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDCargo,System.Int32</value>
+          <value>IDTPUsuario,System.Int32</value>
+          <value>DTCadastro,System.DateTime</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>HoraEntradaManha,System.String</value>
+          <value>HoraEntradaTarde,System.String</value>
+          <value>HoraSaidaManha,System.String</value>
+          <value>HoraSaidaTarde,System.String</value>
+          <value>SenhaDigital,System.String</value>
+          <value>AcessoEspecial,System.Boolean</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>DTNascimento,System.DateTime</value>
+          <value>DTAdmissao,System.DateTime</value>
+          <value>PIS,System.String</value>
+          <value>IDEntidade,System.Int32</value>
+          <value>DSEntidade,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwUsuariogrid</Name>
+        <NameInSource>DataSetPontoFrequencia.vwUsuariogrid</NameInSource>
+      </vwUsuariogrid>
+      <TBGenero Ref="34" type="DataTableSource" isKey="true">
+        <Alias>TBGenero</Alias>
+        <Columns isList="true" count="2">
+          <value>IDGenero,System.Int32</value>
+          <value>DSGenero,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBGenero</Name>
+        <NameInSource>DataSetPontoFrequencia.TBGenero</NameInSource>
+      </TBGenero>
+      <TBGrauInstr Ref="35" type="DataTableSource" isKey="true">
+        <Alias>TBGrauInstr</Alias>
+        <Columns isList="true" count="2">
+          <value>IDGrauInstr,System.Int32</value>
+          <value>DSGrauInstr,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBGrauInstr</Name>
+        <NameInSource>DataSetPontoFrequencia.TBGrauInstr</NameInSource>
+      </TBGrauInstr>
+      <TBDiasAno Ref="36" type="DataTableSource" isKey="true">
+        <Alias>TBDiasAno</Alias>
+        <Columns isList="true" count="2">
+          <value>IDDiasAno,System.Int64</value>
+          <value>DTDiasAno,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBDiasAno</Name>
+        <NameInSource>DataSetPontoFrequencia.TBDiasAno</NameInSource>
+      </TBDiasAno>
+    </DataSources>
+    <Relations isList="true" count="21">
+      <TBStatus Ref="37" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBEntidade_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </TBStatus>
+      <TBTipoFeriadoPontoFacultativo Ref="38" type="DataRelation" isKey="true">
+        <Alias>TBTipoFeriadoPontoFacultativo</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDTPFeriadoPontoFacultativo</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>TBTipoFeriadoPontoFacultativo</Name>
+        <NameInSource>FK_TBFeriadoPontoFacultativo_TBTipoFeriadoPontoFacultativo</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDTPFeiradoPontoFacultativo</value>
+        </ParentColumns>
+        <ParentSource isRef="16" />
+      </TBTipoFeriadoPontoFacultativo>
+      <TBEmpresa Ref="39" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBFeriadoPontoFacultativo_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBMotivoFalta Ref="40" type="DataRelation" isKey="true">
+        <Alias>TBMotivoFalta</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDMotivoFalta</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>TBMotivoFalta</Name>
+        <NameInSource>FK_TBFrequencia_TBMotivoFalta</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDMotivoFalta</value>
+        </ParentColumns>
+        <ParentSource isRef="9" />
+      </TBMotivoFalta>
+      <TBUsuario Ref="41" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBFrequencia_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="14" />
+      </TBUsuario>
+      <TBEmpresa Ref="42" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="8" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBInformacaoDiaria_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBOrgao Ref="43" type="DataRelation" isKey="true">
+        <Alias>TBOrgao</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDOrgao</value>
+        </ChildColumns>
+        <ChildSource isRef="11" />
+        <Dictionary isRef="1" />
+        <Name>TBOrgao</Name>
+        <NameInSource>FK_TBSetor_TBOrgao</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDOrgao</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </TBOrgao>
+      <TBStatus Ref="44" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="11" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBSetor_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </TBStatus>
+      <TBEmpresa Ref="45" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="11" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBSetor_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBFerias Ref="46" type="DataRelation" isKey="true">
+        <Alias>TBFerias</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="12" />
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>TBFerias_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="24" />
+      </TBFerias>
+      <TBCargo Ref="47" type="DataRelation" isKey="true">
+        <Alias>TBCargo</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDCargo</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBCargo</Name>
+        <NameInSource>FK_TBUsuario_TBCargo</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDCargo</value>
+        </ParentColumns>
+        <ParentSource isRef="4" />
+      </TBCargo>
+      <TBEntidade Ref="48" type="DataRelation" isKey="true">
+        <Alias>TBEntidade</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEntidade</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBEntidade</Name>
+        <NameInSource>FK_TBUsuario_TBEntidade</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEntidade</value>
+        </ParentColumns>
+        <ParentSource isRef="5" />
+      </TBEntidade>
+      <TBSetor Ref="49" type="DataRelation" isKey="true">
+        <Alias>TBSetor</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDSetor</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>FK_TBUsuario_TBSetor</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDSetor</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBSetor>
+      <TBStatus Ref="50" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBUsuario_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </TBStatus>
+      <TBTipoUsuario Ref="51" type="DataRelation" isKey="true">
+        <Alias>TBTipoUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDTPUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBTipoUsuario</Name>
+        <NameInSource>FK_TBUsuario_TBTipoUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDTPUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBTipoUsuario>
+      <TBLog Ref="52" type="DataRelation" isKey="true">
+        <Alias>TBLog</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBLog</Name>
+        <NameInSource>TBLog_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="21" />
+      </TBLog>
+      <TBFerias Ref="53" type="DataRelation" isKey="true">
+        <Alias>TBFerias</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>TBFerias_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="24" />
+      </TBFerias>
+      <TBEmpresa Ref="54" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="14" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBUsuario_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBUsuario Ref="55" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="21" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBLog_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="14" />
+      </TBUsuario>
+      <TBUsuario Ref="56" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="24" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBFerias_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="14" />
+      </TBUsuario>
+      <TBStatus Ref="57" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="26" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBEmpresa_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </TBStatus>
+    </Relations>
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="1">
+    <value>InternalVersion,_x0032_011.2.1012_x0020_from_x0020_14-Jun-2011</value>
+  </MetaTags>
+  <Pages isList="true" count="1">
+    <Page1 Ref="58" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="12">
+        <Section1 Ref="59" type="ReportTitleBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,0.4,20.5,2.1</ClientRectangle>
+          <Components isList="true" count="3">
+            <Picture2 Ref="60" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.85,0.11,2.34,1.92</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Name>Picture2</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+            </Picture2>
+            <Text20 Ref="61" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>5.75,0.18,9.17,1.92</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+              <Text>Secretaria de Estado de AdministraçãoSecretaria Executiva Núcleo AdminsitraçãoCoordenadoria de Tecnologia da InformaçãoFolha de Frequência</Text>
+              <TextBrush>Black</TextBrush>
+            </Text20>
+            <Line27 Ref="62" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,2.06,20.89,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="63" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line27</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+              <StartCap Ref="64" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section1>
+        <ReportHeaderSection1 Ref="65" type="ReportTitleBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,3.3,20.5,1.92</ClientRectangle>
+          <Components isList="true" count="11">
+            <DSUsuario1 Ref="66" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.45,0.43,8.53,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSUsuario1</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>{vWHorasDia.DSUsuario}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </DSUsuario1>
+            <TotHorasDiarias1 Ref="67" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.02,0.43,4.17,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>TotHorasDiarias1</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>{vWHorasDia.TotHorasDiarias}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </TotHorasDiarias1>
+            <Text15 Ref="68" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0.43,2.13,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>Funcionário:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text16 Ref="69" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.18,0.43,3.84,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>Total de Horas Diárias:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text16>
+            <DSSetor1 Ref="70" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.17,0,9.17,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSSetor1</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>{vWHorasDia.DSSetor}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </DSSetor1>
+            <Text14 Ref="71" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0,1.07,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>Setor:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text14>
+            <DSMes Ref="72" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>4.09,0.85,2.34,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSMes</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>{vWHorasDia.DSMes}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </DSMes>
+            <Text17 Ref="73" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0.85,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>Mês Referência:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text17>
+            <ano1 Ref="74" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>8.8,0.85,1.29,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>ano1</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>{vWHorasDia.AnoReferencia}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </ano1>
+            <Text10 Ref="75" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.67,0.85,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <Text>Ano Referência:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text10>
+            <Line28 Ref="76" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,1.28,20.89,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="77" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line28</Name>
+              <Page isRef="58" />
+              <Parent isRef="65" />
+              <StartCap Ref="78" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line28>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportHeaderSection1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </ReportHeaderSection1>
+        <Section5 Ref="79" type="PageFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,115.71,20.5,1.57</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text23 Ref="80" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.36,0.53,19.2,0.85</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="58" />
+              <Parent isRef="79" />
+              <Text>Centro Político Administrativo, Bloco III - CEP: 78050-970 - Cuiabá-MTemail: faleconosco@sad.mt.gov.br - www.sad.mt.gov.br</Text>
+              <TextBrush>Black</TextBrush>
+            </Text23>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section5</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section5>
+        <Section2 Ref="81" type="PageHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,6.02,20.5,0.61</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text7 Ref="82" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>9.52,0.21,2.98,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Entrada da Tarde</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="83" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.72,0.21,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Saida da Tarde</Text>
+              <TextBrush>Black</TextBrush>
+            </Text8>
+            <Text9 Ref="84" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.7,0.21,1.07,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Total </Text>
+              <TextBrush>Black</TextBrush>
+            </Text9>
+            <Text11 Ref="85" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>17.19,0.21,2.56,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Observação</Text>
+              <TextBrush>Black</TextBrush>
+            </Text11>
+            <Text6 Ref="86" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.54,0.21,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Saida da Manha</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text5 Ref="87" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.13,0.21,3.2,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Entrada da Manha</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text4 Ref="88" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.99,0.21,1.71,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="58" />
+              <Parent isRef="81" />
+              <Text>Data</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section2>
+        <GroupHeaderSection1 Ref="89" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,7.43,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSSetor}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupHeaderSection1>
+        <GroupHeaderSection2 Ref="90" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,8.23,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSUsuario}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupHeaderSection2>
+        <GroupHeaderSection3 Ref="91" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,9.03,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSMes}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupHeaderSection3>
+        <Section3 Ref="92" type="DataBand" isKey="true">
+          <Brush>White</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.83,20.5,0.61</ClientRectangle>
+          <Components isList="true" count="8">
+            <DataFrequencia1 Ref="93" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.99,0.21,2.74,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataFrequencia1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.DataFrequencia}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </DataFrequencia1>
+            <EntradaManha1 Ref="94" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>4.19,0.21,2.53,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>EntradaManha1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.EntradaManha}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </EntradaManha1>
+            <SaidaManha1 Ref="95" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>7.39,0.21,2.27,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>SaidaManha1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.SaidaManha}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </SaidaManha1>
+            <EntradaTarde1 Ref="96" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>10.37,0.21,2.48,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>EntradaTarde1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.EntradaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </EntradaTarde1>
+            <SaidaTarde1 Ref="97" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.93,0.21,2.06,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>SaidaTarde1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.SaidaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </SaidaTarde1>
+            <HorasDia1 Ref="98" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.28,0.21,1.85,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>HorasDia1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.HorasDia}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </HorasDia1>
+            <MF1 Ref="99" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.98,0.21,5.9,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>MF1</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <Text>{vWHorasDia.MF}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </MF1>
+            <Line25 Ref="100" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0,20.66,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="101" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line25</Name>
+              <Page isRef="58" />
+              <Parent isRef="92" />
+              <StartCap Ref="102" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>vWHorasDia</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Section3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+          <Sort isList="true" count="0" />
+        </Section3>
+        <GroupFooterSection3 Ref="103" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,11.24,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupFooterSection3>
+        <GroupFooterSection2 Ref="104" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,12.04,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupFooterSection2>
+        <GroupFooterSection1 Ref="105" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,12.84,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupFooterSection1>
+        <Section4 Ref="106" type="FooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,13.64,20.5,1.94</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text2 Ref="107" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.93,1.37,1.68,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="58" />
+              <Parent isRef="106" />
+              <Text>Funcionário</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+            <Text1 Ref="108" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.64,1.37,2.21,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="58" />
+              <Parent isRef="106" />
+              <Text>Chefe Imediato</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Line1 Ref="109" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1.17,1.35,5.81,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="110" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line1</Name>
+              <Page isRef="58" />
+              <Parent isRef="106" />
+              <StartCap Ref="111" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line1>
+            <Line2 Ref="112" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.77,1.33,5.81,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="113" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line2</Name>
+              <Page isRef="58" />
+              <Parent isRef="106" />
+              <StartCap Ref="114" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section4</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>c9a071df6d224a6ab18afa261174e2df</Guid>
+      <LargeHeight>True</LargeHeight>
+      <Margins>0.25,0.25,0.19,0.19</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <TitleBeforeHeader>True</TitleBeforeHeader>
+      <Watermark Ref="115" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="116" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportAuthor isNull="true" />
+  <ReportChanged>7/1/2014 9:38:30 PM</ReportChanged>
+  <ReportCreated>7/1/2014 6:35:00 PM</ReportCreated>
+  <ReportDescription isNull="true" />
+  <ReportFile>C:\Users\Dayan\Documents\Ponto Frequencia\WebPontoFrequencia2\Relatorio\RPT\rptFolhaFrequencia3.mrt</ReportFile>
+  <ReportGuid>d0db598afd8f4750887760e5bf5a8bb6</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.2.1304</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

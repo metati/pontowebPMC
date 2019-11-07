@@ -1,0 +1,1510 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <DataSetPontoFrequencia Ref="2" type="Stimulsoft.Report.Dictionary.StiXmlDatabase" isKey="true">
+        <Alias>DataSetPontoFrequencia</Alias>
+        <Name>DataSetPontoFrequencia</Name>
+        <PathData>C:\Users\Dayan\Documents\Ponto Frequencia\MetodosPontoFrequencia - GED\MetodosPontoFrequencia\DataSetPontoFrequencia.xsd</PathData>
+        <PathSchema />
+      </DataSetPontoFrequencia>
+    </Databases>
+    <DataSources isList="true" count="34">
+      <TBCargo Ref="3" type="DataTableSource" isKey="true">
+        <Alias>TBCargo</Alias>
+        <Columns isList="true" count="2">
+          <value>IDCargo,System.Int32</value>
+          <value>DSCargo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBCargo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBCargo</NameInSource>
+      </TBCargo>
+      <TBEntidade Ref="4" type="DataTableSource" isKey="true">
+        <Alias>TBEntidade</Alias>
+        <Columns isList="true" count="4">
+          <value>IDEntidade,System.Int32</value>
+          <value>DSEntidade,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>VinculoCodigo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBEntidade</Name>
+        <NameInSource>DataSetPontoFrequencia.TBEntidade</NameInSource>
+      </TBEntidade>
+      <TBFeriadoPontoFacultativo Ref="5" type="DataTableSource" isKey="true">
+        <Alias>TBFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSFeriadoPontoFacultativo,System.String</value>
+          <value>FeriadoAnual,System.Byte[]</value>
+          <value>IDTPFeriadoPontoFacultativo,System.Int32</value>
+          <value>DTFeriadoPontoFacultativo,System.String</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFeriadoPontoFacultativo</NameInSource>
+      </TBFeriadoPontoFacultativo>
+      <TBFrequencia Ref="6" type="DataTableSource" isKey="true">
+        <Alias>TBFrequencia</Alias>
+        <Columns isList="true" count="12">
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDMotivoFalta,System.Int32</value>
+          <value>DTFrequencia,System.DateTime</value>
+          <value>HoraEntraManha,System.DateTime</value>
+          <value>HoraSaidaManha,System.DateTime</value>
+          <value>HoraEntradaTarde,System.DateTime</value>
+          <value>HoraSaidaTarde,System.DateTime</value>
+          <value>OBS,System.String</value>
+          <value>TotalHorasDias,System.DateTime</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>AnoReferencia,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFrequencia</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFrequencia</NameInSource>
+      </TBFrequencia>
+      <TBInformacaoDiaria Ref="7" type="DataTableSource" isKey="true">
+        <Alias>TBInformacaoDiaria</Alias>
+        <Columns isList="true" count="5">
+          <value>TBInformacaoDiaria,System.Int32</value>
+          <value>DSInformacaoDiaria,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>DTInformacaoDiaria,System.String</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBInformacaoDiaria</Name>
+        <NameInSource>DataSetPontoFrequencia.TBInformacaoDiaria</NameInSource>
+      </TBInformacaoDiaria>
+      <TBMotivoFalta Ref="8" type="DataTableSource" isKey="true">
+        <Alias>TBMotivoFalta</Alias>
+        <Columns isList="true" count="2">
+          <value>IDMotivoFalta,System.Int32</value>
+          <value>DSMotivoFalta,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBMotivoFalta</Name>
+        <NameInSource>DataSetPontoFrequencia.TBMotivoFalta</NameInSource>
+      </TBMotivoFalta>
+      <TBOrgao Ref="9" type="DataTableSource" isKey="true">
+        <Alias>TBOrgao</Alias>
+        <Columns isList="true" count="3">
+          <value>IDOrgao,System.Int32</value>
+          <value>DSOrgao,System.String</value>
+          <value>Sigla,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBOrgao</Name>
+        <NameInSource>DataSetPontoFrequencia.TBOrgao</NameInSource>
+      </TBOrgao>
+      <TBSetor Ref="10" type="DataTableSource" isKey="true">
+        <Alias>TBSetor</Alias>
+        <Columns isList="true" count="10">
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>IDOrgao,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>Sigla,System.String</value>
+          <value>EntradaManha,System.DateTime</value>
+          <value>SaidaManha,System.DateTime</value>
+          <value>EntradaTarde,System.DateTime</value>
+          <value>SaidaTarde,System.DateTime</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>DataSetPontoFrequencia.TBSetor</NameInSource>
+      </TBSetor>
+      <TBStatus Ref="11" type="DataTableSource" isKey="true">
+        <Alias>TBStatus</Alias>
+        <Columns isList="true" count="2">
+          <value>IDStatus,System.Int32</value>
+          <value>DSStatus,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>DataSetPontoFrequencia.TBStatus</NameInSource>
+      </TBStatus>
+      <TBTipoUsuario Ref="12" type="DataTableSource" isKey="true">
+        <Alias>TBTipoUsuario</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPUsuario,System.Int32</value>
+          <value>DSTPUsuario,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoUsuario</NameInSource>
+      </TBTipoUsuario>
+      <TBUsuario Ref="13" type="DataTableSource" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <Columns isList="true" count="30">
+          <value>IDUsuario,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDEntidade,System.Int32</value>
+          <value>DSUsuario,System.String</value>
+          <value>Login,System.String</value>
+          <value>DTCadastro,System.DateTime</value>
+          <value>Senha,System.Byte[]</value>
+          <value>DTExclusao,System.DateTime</value>
+          <value>IDTPUsuario,System.Int32</value>
+          <value>SenhaAdmin,System.String</value>
+          <value>IDCargo,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>HoraEntradaManha,System.String</value>
+          <value>HoraEntradaTarde,System.String</value>
+          <value>HoraSaidaManha,System.String</value>
+          <value>HoraSaidaTarde,System.String</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>PrimeiroAcesso,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>SenhaDigital,System.String</value>
+          <value>AcessoEspecial,System.Boolean</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>TextHashCode,System.String</value>
+          <value>DTNascimento,System.DateTime</value>
+          <value>DTAdmissao,System.DateTime</value>
+          <value>PIS,System.String</value>
+          <value>RG,System.String</value>
+          <value>DTRG,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.TBUsuario</NameInSource>
+      </TBUsuario>
+      <TBMes Ref="14" type="DataTableSource" isKey="true">
+        <Alias>TBMes</Alias>
+        <Columns isList="true" count="2">
+          <value>IDMes,System.Int32</value>
+          <value>DSMes,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBMes</Name>
+        <NameInSource>DataSetPontoFrequencia.TBMes</NameInSource>
+      </TBMes>
+      <TBTipoFeriadoPontoFacultativo Ref="15" type="DataTableSource" isKey="true">
+        <Alias>TBTipoFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPFeiradoPontoFacultativo,System.Int32</value>
+          <value>DSTPFeriadoPontoFacultativo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoFeriadoPontoFacultativo</NameInSource>
+      </TBTipoFeriadoPontoFacultativo>
+      <vwFerias Ref="16" type="DataTableSource" isKey="true">
+        <Alias>vwFerias</Alias>
+        <Columns isList="true" count="11">
+          <value>IDFerias,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+          <value>DTInicioFerias,System.DateTime</value>
+          <value>DTFimFerias,System.DateTime</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DTInicioFerias1,DTInicioFerias,System.String</value>
+          <value>DTFimFerias1,DTFimFerias,System.String</value>
+          <value>DSTPFerias,System.String</value>
+          <value>IDTPFerias,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.vwFerias</NameInSource>
+      </vwFerias>
+      <vwNomeUsuario Ref="17" type="DataTableSource" isKey="true">
+        <Alias>vwNomeUsuario</Alias>
+        <Columns isList="true" count="2">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwNomeUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.vwNomeUsuario</NameInSource>
+      </vwNomeUsuario>
+      <vwInformacaoDiaria Ref="18" type="DataTableSource" isKey="true">
+        <Alias>vwInformacaoDiaria</Alias>
+        <Columns isList="true" count="5">
+          <value>TBInformacaoDiaria,System.Int32</value>
+          <value>DSInformacaoDiaria,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DTInformacaoDiaria,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwInformacaoDiaria</Name>
+        <NameInSource>DataSetPontoFrequencia.vwInformacaoDiaria</NameInSource>
+      </vwInformacaoDiaria>
+      <vWHorasDia Ref="19" type="DataTableSource" isKey="true">
+        <Alias>vWHorasDia</Alias>
+        <Columns isList="true" count="28">
+          <value>DSUsuario,System.String</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>DataFrequencia,System.String</value>
+          <value>EntradaManha,System.String</value>
+          <value>SaidaManha,System.String</value>
+          <value>EntradaTarde,System.String</value>
+          <value>SaidaTarde,System.String</value>
+          <value>HorasDia,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>OBS,System.String</value>
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>Justificado,System.String</value>
+          <value>MF,System.String</value>
+          <value>IMF,System.String</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>IMGEmpresa,System.Byte[]</value>
+          <value>AnoReferencia,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Situacao,System.String</value>
+          <value>DSMes,System.String</value>
+          <value>DSEmpresa,System.String</value>
+          <value>login,System.String</value>
+          <value>DTFrequencia,System.DateTime</value>
+          <value>IDusuario,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vWHorasDia</Name>
+        <NameInSource>DataSetPontoFrequencia.vWHorasDia</NameInSource>
+      </vWHorasDia>
+      <vwFeriadoPontoFacultativo Ref="20" type="DataTableSource" isKey="true">
+        <Alias>vwFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSFeriadoPontoFacultativo,System.String</value>
+          <value>DTFeriadoPontoFacultativo,System.String</value>
+          <value>FeriadoAnual,System.Byte[]</value>
+          <value>IDTPFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSTPFeriadoPontoFacultativo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.vwFeriadoPontoFacultativo</NameInSource>
+      </vwFeriadoPontoFacultativo>
+      <TBLog Ref="21" type="DataTableSource" isKey="true">
+        <Alias>TBLog</Alias>
+        <Columns isList="true" count="7">
+          <value>IDlog,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>Operacao,System.String</value>
+          <value>Dado,System.String</value>
+          <value>DadoAnterior,System.String</value>
+          <value>DTInclusao,System.DateTime</value>
+          <value>Metodo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBLog</Name>
+        <NameInSource>DataSetPontoFrequencia.TBLog</NameInSource>
+      </TBLog>
+      <vwTotalHorasMes Ref="22" type="DataTableSource" isKey="true">
+        <Alias>vwTotalHorasMes</Alias>
+        <Columns isList="true" count="6">
+          <value>IDUsuario,System.Int32</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>Horas,System.Int32</value>
+          <value>Minutos,System.Int32</value>
+          <value>Segundos,System.Int32</value>
+          <value>AnoReferencia,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwTotalHorasMes</Name>
+        <NameInSource>DataSetPontoFrequencia.vwTotalHorasMes</NameInSource>
+      </vwTotalHorasMes>
+      <TBTipoFerias Ref="23" type="DataTableSource" isKey="true">
+        <Alias>TBTipoFerias</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPFerias,System.Int32</value>
+          <value>DSTPFerias,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoFerias</NameInSource>
+      </TBTipoFerias>
+      <TBFerias Ref="24" type="DataTableSource" isKey="true">
+        <Alias>TBFerias</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFerias,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>DTInicioFerias,System.DateTime</value>
+          <value>DTFimFerias,System.DateTime</value>
+          <value>IDTPFerias,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFerias</NameInSource>
+      </TBFerias>
+      <vwHoras Ref="25" type="DataTableSource" isKey="true">
+        <Alias>vwHoras</Alias>
+        <Columns isList="true" count="1">
+          <value>Horas,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwHoras</Name>
+        <NameInSource>DataSetPontoFrequencia.vwHoras</NameInSource>
+      </vwHoras>
+      <TBEmpresa Ref="26" type="DataTableSource" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <Columns isList="true" count="15">
+          <value>IDEmpresa,System.Int32</value>
+          <value>DSEmpresa,System.String</value>
+          <value>Endereco,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>HoraEntradaManhaPadrao,System.String</value>
+          <value>HoraEntradaTardePadrao,System.String</value>
+          <value>HoraSaidaManhaPadrao,System.String</value>
+          <value>HoraSaidaTardePadrao,System.String</value>
+          <value>CNPJ,System.String</value>
+          <value>LimiteEntradaSaida,System.String</value>
+          <value>PadraoHoraEmpresa,System.Boolean</value>
+          <value>IMGEmpresa,System.Byte[]</value>
+          <value>HoraPadraoAlmoco,System.String</value>
+          <value>TrabalhaSabado,System.Boolean</value>
+          <value>HorasSabado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>DataSetPontoFrequencia.TBEmpresa</NameInSource>
+      </TBEmpresa>
+      <TBTesteAutomatico Ref="27" type="DataTableSource" isKey="true">
+        <Alias>TBTesteAutomatico</Alias>
+        <Columns isList="true" count="2">
+          <value>IDInsert,System.Int32</value>
+          <value>DataHora,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTesteAutomatico</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTesteAutomatico</NameInSource>
+      </TBTesteAutomatico>
+      <TBDado Ref="28" type="DataTableSource" isKey="true">
+        <Alias>TBDado</Alias>
+        <Columns isList="true" count="3">
+          <value>IDDado,System.Int32</value>
+          <value>Insercao,System.Int32</value>
+          <value>IDTPDado,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBDado</Name>
+        <NameInSource>DataSetPontoFrequencia.TBDado</NameInSource>
+      </TBDado>
+      <TBTipoDado Ref="29" type="DataTableSource" isKey="true">
+        <Alias>TBTipoDado</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPDado,System.Int32</value>
+          <value>DSDado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoDado</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoDado</NameInSource>
+      </TBTipoDado>
+      <viewDado Ref="30" type="DataTableSource" isKey="true">
+        <Alias>viewDado</Alias>
+        <Columns isList="true" count="3">
+          <value>TotalDado,System.Int32</value>
+          <value>IDTPDado,System.Int32</value>
+          <value>DSDado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>viewDado</Name>
+        <NameInSource>DataSetPontoFrequencia.viewDado</NameInSource>
+      </viewDado>
+      <TBUserTeste Ref="31" type="DataTableSource" isKey="true">
+        <Alias>TBUserTeste</Alias>
+        <Columns isList="true" count="8">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+          <value>Senha1,System.String</value>
+          <value>Senha2,System.String</value>
+          <value>Template1,System.Byte[]</value>
+          <value>Template2,System.Byte[]</value>
+          <value>Template3,System.Byte[]</value>
+          <value>Template4,System.Byte[]</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBUserTeste</Name>
+        <NameInSource>DataSetPontoFrequencia.TBUserTeste</NameInSource>
+      </TBUserTeste>
+      <vwIndicePresenca Ref="32" type="DataTableSource" isKey="true">
+        <Alias>vwIndicePresenca</Alias>
+        <Columns isList="true" count="7">
+          <value>IDEmpresa,System.Int32</value>
+          <value>Situacao,System.String</value>
+          <value>TotSituacao,System.Int32</value>
+          <value>DataFrequencia,System.String</value>
+          <value>IDSetor,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Total,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwIndicePresenca</Name>
+        <NameInSource>DataSetPontoFrequencia.vwIndicePresenca</NameInSource>
+      </vwIndicePresenca>
+      <vwUsuariogrid Ref="33" type="DataTableSource" isKey="true">
+        <Alias>vwUsuariogrid</Alias>
+        <Columns isList="true" count="28">
+          <value>PrimeiroNome,System.String</value>
+          <value>DSUsuario,System.String</value>
+          <value>DataCadastro,System.String</value>
+          <value>DSTPUsuario,System.String</value>
+          <value>DSStatus,System.String</value>
+          <value>DSCargo,System.String</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>Login,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDCargo,System.Int32</value>
+          <value>IDTPUsuario,System.Int32</value>
+          <value>DTCadastro,System.DateTime</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>HoraEntradaManha,System.String</value>
+          <value>HoraEntradaTarde,System.String</value>
+          <value>HoraSaidaManha,System.String</value>
+          <value>HoraSaidaTarde,System.String</value>
+          <value>SenhaDigital,System.String</value>
+          <value>AcessoEspecial,System.Boolean</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>DTNascimento,System.DateTime</value>
+          <value>DTAdmissao,System.DateTime</value>
+          <value>PIS,System.String</value>
+          <value>IDEntidade,System.Int32</value>
+          <value>DSEntidade,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwUsuariogrid</Name>
+        <NameInSource>DataSetPontoFrequencia.vwUsuariogrid</NameInSource>
+      </vwUsuariogrid>
+      <TBGenero Ref="34" type="DataTableSource" isKey="true">
+        <Alias>TBGenero</Alias>
+        <Columns isList="true" count="2">
+          <value>IDGenero,System.Int32</value>
+          <value>DSGenero,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBGenero</Name>
+        <NameInSource>DataSetPontoFrequencia.TBGenero</NameInSource>
+      </TBGenero>
+      <TBGrauInstr Ref="35" type="DataTableSource" isKey="true">
+        <Alias>TBGrauInstr</Alias>
+        <Columns isList="true" count="2">
+          <value>IDGrauInstr,System.Int32</value>
+          <value>DSGrauInstr,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBGrauInstr</Name>
+        <NameInSource>DataSetPontoFrequencia.TBGrauInstr</NameInSource>
+      </TBGrauInstr>
+      <TBDiasAno Ref="36" type="DataTableSource" isKey="true">
+        <Alias>TBDiasAno</Alias>
+        <Columns isList="true" count="2">
+          <value>IDDiasAno,System.Int64</value>
+          <value>DTDiasAno,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBDiasAno</Name>
+        <NameInSource>DataSetPontoFrequencia.TBDiasAno</NameInSource>
+      </TBDiasAno>
+    </DataSources>
+    <Relations isList="true" count="21">
+      <TBStatus Ref="37" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBEntidade_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+      <TBTipoFeriadoPontoFacultativo Ref="38" type="DataRelation" isKey="true">
+        <Alias>TBTipoFeriadoPontoFacultativo</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDTPFeriadoPontoFacultativo</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Name>TBTipoFeriadoPontoFacultativo</Name>
+        <NameInSource>FK_TBFeriadoPontoFacultativo_TBTipoFeriadoPontoFacultativo</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDTPFeiradoPontoFacultativo</value>
+        </ParentColumns>
+        <ParentSource isRef="15" />
+      </TBTipoFeriadoPontoFacultativo>
+      <TBEmpresa Ref="39" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBFeriadoPontoFacultativo_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBMotivoFalta Ref="40" type="DataRelation" isKey="true">
+        <Alias>TBMotivoFalta</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDMotivoFalta</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>TBMotivoFalta</Name>
+        <NameInSource>FK_TBFrequencia_TBMotivoFalta</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDMotivoFalta</value>
+        </ParentColumns>
+        <ParentSource isRef="8" />
+      </TBMotivoFalta>
+      <TBUsuario Ref="41" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBFrequencia_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBUsuario>
+      <TBEmpresa Ref="42" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBInformacaoDiaria_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBOrgao Ref="43" type="DataRelation" isKey="true">
+        <Alias>TBOrgao</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDOrgao</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>TBOrgao</Name>
+        <NameInSource>FK_TBSetor_TBOrgao</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDOrgao</value>
+        </ParentColumns>
+        <ParentSource isRef="9" />
+      </TBOrgao>
+      <TBStatus Ref="44" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBSetor_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+      <TBEmpresa Ref="45" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBSetor_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBFerias Ref="46" type="DataRelation" isKey="true">
+        <Alias>TBFerias</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="11" />
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>TBFerias_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="24" />
+      </TBFerias>
+      <TBCargo Ref="47" type="DataRelation" isKey="true">
+        <Alias>TBCargo</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDCargo</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBCargo</Name>
+        <NameInSource>FK_TBUsuario_TBCargo</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDCargo</value>
+        </ParentColumns>
+        <ParentSource isRef="3" />
+      </TBCargo>
+      <TBEntidade Ref="48" type="DataRelation" isKey="true">
+        <Alias>TBEntidade</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEntidade</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBEntidade</Name>
+        <NameInSource>FK_TBUsuario_TBEntidade</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEntidade</value>
+        </ParentColumns>
+        <ParentSource isRef="4" />
+      </TBEntidade>
+      <TBSetor Ref="49" type="DataRelation" isKey="true">
+        <Alias>TBSetor</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDSetor</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>FK_TBUsuario_TBSetor</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDSetor</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </TBSetor>
+      <TBStatus Ref="50" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBUsuario_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+      <TBTipoUsuario Ref="51" type="DataRelation" isKey="true">
+        <Alias>TBTipoUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDTPUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBTipoUsuario</Name>
+        <NameInSource>FK_TBUsuario_TBTipoUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDTPUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </TBTipoUsuario>
+      <TBLog Ref="52" type="DataRelation" isKey="true">
+        <Alias>TBLog</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBLog</Name>
+        <NameInSource>TBLog_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="21" />
+      </TBLog>
+      <TBFerias Ref="53" type="DataRelation" isKey="true">
+        <Alias>TBFerias</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>TBFerias_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="24" />
+      </TBFerias>
+      <TBEmpresa Ref="54" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBUsuario_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBUsuario Ref="55" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="21" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBLog_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBUsuario>
+      <TBUsuario Ref="56" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="24" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBFerias_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBUsuario>
+      <TBStatus Ref="57" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="26" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBEmpresa_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+    </Relations>
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="1">
+    <value>InternalVersion,_x0032_011.2.1012_x0020_from_x0020_14-Jun-2011</value>
+  </MetaTags>
+  <Pages isList="true" count="1">
+    <Page1 Ref="58" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="12">
+        <Section1 Ref="59" type="ReportTitleBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,0.4,20.5,2.1</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text20 Ref="60" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.95,0.18,16.77,0.72</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+              <Text>Secretaria de Estado de Administração</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text20>
+            <Text3 Ref="61" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.6,1.6,16.77,0.72</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Guid>777847a5f3d84bae8e5b4027036f7704</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+              <Text>Folha de Frequência</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text3>
+            <Text12 Ref="62" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.8,0.84,10,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+              <Text>{vWHorasDia.DSSetor}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text12>
+            <Picture2 Ref="63" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.45,0.11,2.34,1.92</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Image>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</Image>
+              <Name>Picture2</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+            </Picture2>
+            <Line27 Ref="64" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,2.06,20.89,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="65" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line27</Name>
+              <Page isRef="58" />
+              <Parent isRef="59" />
+              <StartCap Ref="66" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section1>
+        <ReportHeaderSection1 Ref="67" type="ReportTitleBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,3.3,20.5,1.92</ClientRectangle>
+          <Components isList="true" count="13">
+            <DSUsuario1 Ref="68" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.45,0.43,8.53,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSUsuario1</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>{vWHorasDia.DSUsuario}</Text>
+              <TextBrush>Black</TextBrush>
+            </DSUsuario1>
+            <TotHorasDiarias1 Ref="69" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.02,0.43,0.77,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>TotHorasDiarias1</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>{vWHorasDia.EntradaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </TotHorasDiarias1>
+            <Text15 Ref="70" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0.43,2.13,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>Funcionário:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text16 Ref="71" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.18,0.43,3.84,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>Total de Horas Diárias:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text16>
+            <DSSetor1 Ref="72" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.17,0,9.17,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSSetor1</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>{vWHorasDia.DSSetor}</Text>
+              <TextBrush>Black</TextBrush>
+            </DSSetor1>
+            <Text14 Ref="73" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0,1.07,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>Setor:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text14>
+            <DSMES1 Ref="74" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>4.09,0.85,2.34,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSMES1</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>{vWHorasDia.DSMes}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </DSMES1>
+            <Text17 Ref="75" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0.85,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>Mês Referência:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text17>
+            <ano1 Ref="76" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>9.43,0.85,3.29,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>ano1</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>{vWHorasDia.AnoReferencia}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+            </ano1>
+            <Text10 Ref="77" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.67,0.85,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>Ano Referência:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text10>
+            <Text19 Ref="78" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13,0.1,5.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>{vWHorasDia.DSUsuario}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text19>
+            <Text21 Ref="79" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.8,0.1,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <Text>DSUsuario</Text>
+              <TextBrush>Black</TextBrush>
+            </Text21>
+            <Line28 Ref="80" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,1.28,20.89,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="81" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line28</Name>
+              <Page isRef="58" />
+              <Parent isRef="67" />
+              <StartCap Ref="82" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line28>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportHeaderSection1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </ReportHeaderSection1>
+        <Section5 Ref="83" type="PageFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,115.71,20.5,1.57</ClientRectangle>
+          <Components isList="true" count="2">
+            <Picture1 Ref="84" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.71,0.07,4.9,1.28</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Name>Picture1</Name>
+              <Page isRef="58" />
+              <Parent isRef="83" />
+            </Picture1>
+            <Text23 Ref="85" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.56,0.53,13,0.85</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="58" />
+              <Parent isRef="83" />
+              <Text>Centro Político Administrativo, Bloco III - CEP: 78050-970 - Cuiabá-MTemail: faleconosco@sad.mt.gov.br - www.sad.mt.gov.br</Text>
+              <TextBrush>Black</TextBrush>
+            </Text23>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section5</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section5>
+        <Section2 Ref="86" type="PageHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,6.02,20.5,0.61</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text7 Ref="87" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>9.52,0.21,2.98,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Entrada da Tarde</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="88" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.72,0.21,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Saida da Tarde</Text>
+              <TextBrush>Black</TextBrush>
+            </Text8>
+            <Text9 Ref="89" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.7,0.21,1.07,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Total </Text>
+              <TextBrush>Black</TextBrush>
+            </Text9>
+            <Text11 Ref="90" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>17.19,0.21,2.56,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Observação</Text>
+              <TextBrush>Black</TextBrush>
+            </Text11>
+            <Text6 Ref="91" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.54,0.21,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Saida da Manha</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text5 Ref="92" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.13,0.21,3.2,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Entrada da Manha</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text4 Ref="93" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.99,0.21,1.71,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="58" />
+              <Parent isRef="86" />
+              <Text>Data</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section2>
+        <GroupHeaderSection1 Ref="94" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,7.43,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSSetor}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupHeaderSection1>
+        <GroupHeaderSection2 Ref="95" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,8.23,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSUsuario}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupHeaderSection2>
+        <GroupHeaderSection3 Ref="96" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,9.03,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSMes}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupHeaderSection3>
+        <Section3 Ref="97" type="DataBand" isKey="true">
+          <Brush>White</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.83,20.5,0.61</ClientRectangle>
+          <Components isList="true" count="10">
+            <DataFrequencia1 Ref="98" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.99,0.21,2.74,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataFrequencia1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.DataFrequencia}</Text>
+              <TextBrush>Black</TextBrush>
+            </DataFrequencia1>
+            <EntradaManha1 Ref="99" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>4.19,0.21,2.53,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>EntradaManha1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.EntradaManha}</Text>
+              <TextBrush>Black</TextBrush>
+            </EntradaManha1>
+            <SaidaManha1 Ref="100" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>7.39,0.21,2.27,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>SaidaManha1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.SaidaManha}</Text>
+              <TextBrush>Black</TextBrush>
+            </SaidaManha1>
+            <EntradaTarde1 Ref="101" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>10.37,0.21,2.48,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>EntradaTarde1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.EntradaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+            </EntradaTarde1>
+            <SaidaTarde1 Ref="102" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.93,0.21,2.06,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>SaidaTarde1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.SaidaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+            </SaidaTarde1>
+            <HorasDia1 Ref="103" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.28,0.21,1.85,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>HorasDia1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.HorasDia}</Text>
+              <TextBrush>Black</TextBrush>
+            </HorasDia1>
+            <MF1 Ref="104" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.98,0.21,5.9,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>MF1</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.MF}</Text>
+              <TextBrush>Black</TextBrush>
+            </MF1>
+            <Text13 Ref="105" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4,0.37,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>{vWHorasDia.DataFrequencia}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text13>
+            <Text18 Ref="106" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.37,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <Text>DataFrequencia</Text>
+              <TextBrush>Black</TextBrush>
+            </Text18>
+            <Line25 Ref="107" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0,20.66,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="108" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line25</Name>
+              <Page isRef="58" />
+              <Parent isRef="97" />
+              <StartCap Ref="109" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>vWHorasDia</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Section3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+          <Sort isList="true" count="0" />
+        </Section3>
+        <GroupFooterSection3 Ref="110" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,11.24,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupFooterSection3>
+        <GroupFooterSection2 Ref="111" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,12.04,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupFooterSection2>
+        <GroupFooterSection1 Ref="112" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,12.84,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </GroupFooterSection1>
+        <Section4 Ref="113" type="FooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,13.64,20.5,1.94</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text2 Ref="114" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.93,1.37,1.68,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="58" />
+              <Parent isRef="113" />
+              <Text>Funcionário</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+            <Text1 Ref="115" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.64,1.37,2.21,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="58" />
+              <Parent isRef="113" />
+              <Text>Chefe Imediato</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Line1 Ref="116" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1.17,1.35,5.81,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="117" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line1</Name>
+              <Page isRef="58" />
+              <Parent isRef="113" />
+              <StartCap Ref="118" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line1>
+            <Line2 Ref="119" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.77,1.33,5.81,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="120" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line2</Name>
+              <Page isRef="58" />
+              <Parent isRef="113" />
+              <StartCap Ref="121" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section4</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+        </Section4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>fc3f33e6a438484989fd830b3f4ac243</Guid>
+      <LargeHeight>True</LargeHeight>
+      <Margins>0.25,0.25,0.19,0.19</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <TitleBeforeHeader>True</TitleBeforeHeader>
+      <Watermark Ref="122" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="123" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportAuthor isNull="true" />
+  <ReportChanged>7/1/2014 7:26:45 PM</ReportChanged>
+  <ReportCreated>6/27/2014 6:09:38 PM</ReportCreated>
+  <ReportDescription isNull="true" />
+  <ReportFile>C:\Users\Dayan\Documents\Ponto Frequencia\WebPontoFrequencia2\Relatorio\RPT\rptFolhaFrequencia.mrt</ReportFile>
+  <ReportGuid>9606cfd60e034daa94ba131c0fba22af</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.2.1304</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

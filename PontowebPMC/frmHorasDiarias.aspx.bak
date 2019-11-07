@@ -1,0 +1,226 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmHorasDiarias.aspx.cs" Inherits="frmHorasDiarias" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxGridView.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx1" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <script type="text/javascript">
+
+        function AbreRelatorio() {
+
+            window.open('/Relatorio/frmRelHorasDia.aspx?Mes=' + cbMesN.GetValue());
+            
+        }
+        
+        function PreencheGrid() 
+        {
+            gridHoras.PerformCallback();
+        }
+        
+        function Informacao() 
+        {
+            gridHoras.GetRowValues(gridHoras.GetFocusedRowIndex(), 'OBS', ValorPop);
+            memoOBS.SetText('Aguarde...');
+        }
+        function ValorPop(Valor) 
+        {
+            memoOBS.SetText(Valor);
+            
+            popInformacao.Show();
+        }
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            width: 720px;
+        }
+        .style2
+        {
+            width: 81px;
+        }
+        .style3
+        {
+            width: 241px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <table class="style1">
+        <tr>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text="Mês:"></asp:Label>
+            </td>
+            <td class="style19">
+                <dx:ASPxComboBox ID="cbMesN" runat="server" ClientInstanceName="cbMesN" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    CssPostfix="DevEx" DataMember="TBMes" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" TextField="DSMes" 
+                    ValueField="IDMes" DropDownStyle="DropDown" Width="300px" Spacing="0">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreencheGrid();
+}" />
+<ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreencheGrid();
+}"></ClientSideEvents>
+
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                        <RequiredField IsRequired="True" />
+
+<RequiredField IsRequired="True"></RequiredField>
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+            <td class="style19">
+                </td>
+            <td class="style19">
+                </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="2">
+                <dx:ASPxGridView ID="gridHoras" runat="server" AutoGenerateColumns="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    CssPostfix="DevEx" DataMember="vWHorasDia" Width="1200px" 
+                    onhtmlrowprepared="gridHoras_HtmlRowPrepared" 
+                    onpageindexchanged="gridHoras_PageIndexChanged" 
+                    ClientInstanceName="gridHoras" oncustomcallback="gridHoras_CustomCallback" 
+                    Font-Size="Small">
+                    <ClientSideEvents RowClick="function(s, e) {
+}" RowDblClick="function(s, e) {
+}" />
+                    <SettingsBehavior AllowSort="False" />
+                    <Settings ShowVerticalScrollBar="True" />
+                    <SettingsText EmptyDataRow="Sem dados para exibir" />
+<ClientSideEvents RowClick="function(s, e) {
+}" RowDblClick="function(s, e) {
+}"></ClientSideEvents>
+                    <Columns>
+                        <dx:GridViewDataTextColumn FieldName="IDFrequencia" Visible="False" 
+                            VisibleIndex="0">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Usuário" FieldName="PrimeiroNome" 
+                            VisibleIndex="1" Visible="False">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Data" 
+                            FieldName="DataFrequencia" VisibleIndex="2" Width="120px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Entr. Manhã" FieldName="EntradaManha" 
+                            VisibleIndex="3">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Saída Manhã" FieldName="SaidaManha" 
+                            VisibleIndex="4" Width="120px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Entr. Tarde" 
+                            FieldName="EntradaTarde" VisibleIndex="5" Width="120px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Saída Tarde" FieldName="SaidaTarde" 
+                            VisibleIndex="6" Width="120px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Total" FieldName="HorasDia" 
+                            VisibleIndex="7" Width="100px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="IMF" Visible="False" VisibleIndex="8" 
+                            Width="50px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn Caption="Justificativa" FieldName="MF" 
+                            VisibleIndex="9" Width="150px">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="OBS" VisibleIndex="10" Width="30%">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="IDUsuario" Visible="False" 
+                            VisibleIndex="11">
+                        </dx:GridViewDataTextColumn>
+                    </Columns>
+
+<SettingsBehavior AllowSort="False"></SettingsBehavior>
+
+                    <SettingsPager NumericButtonCount="31" PageSize="31">
+                        <AllButton Text="All">
+                        </AllButton>
+                        <NextPageButton Text="Próx &gt;">
+                        </NextPageButton>
+                        <PrevPageButton Text="&lt; Ant.">
+                        </PrevPageButton>
+                        <Summary Text="Página {0} de {1} ({2} itens)" />
+
+<Summary Text="P&#225;gina {0} de {1} ({2} itens)"></Summary>
+                    </SettingsPager>
+
+<Settings ShowVerticalScrollBar="True"></Settings>
+
+<SettingsText EmptyDataRow="Sem dados para exibir"></SettingsText>
+
+                    <SettingsLoadingPanel Text="Processando&amp;hellip;" />
+
+                    <Images SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                        <LoadingPanelOnStatusBar Url="~/App_Themes/DevEx/GridView/StatusBarLoading.gif">
+                        </LoadingPanelOnStatusBar>
+                        <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+                        </LoadingPanel>
+                    </Images>
+                    <ImagesFilterControl>
+                        <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+                        </LoadingPanel>
+                    </ImagesFilterControl>
+                    <Styles CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                        CssPostfix="DevEx">
+                        <Header ImageSpacing="5px" SortingImageSpacing="5px">
+                        </Header>
+                        <alternatingrow enabled="True">
+                        </alternatingrow>
+                        <LoadingPanel ImageSpacing="5px">
+                        </LoadingPanel>
+                    </Styles>
+                    <StylesEditors ButtonEditCellSpacing="0">
+                        <ProgressBar Height="25px">
+                        </ProgressBar>
+                    </StylesEditors>
+                </dx:ASPxGridView>
+            </td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        </table>
+    <table class="style1">
+        <tr>
+            <td class="style21">
+                                                    <dx:ASPxButton ID="btPDF" runat="server" 
+                                                        CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                                        CssPostfix="DevEx" 
+                                                        SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" 
+                                                        Text="Imprimir ou salvar em PDF" Width="228px" 
+                                                        ClientInstanceName="btPDF" AutoPostBack="False" 
+                                                        ValidationGroup="ValidaGrupo">
+                                                        <ClientSideEvents Click="function(s, e) {
+	if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))AbreRelatorio();
+}" />
+                                                        <Image Url="~/ícones/Impressoras/Impressora32.png" Width="16px">
+                                                        </Image>
+                                                    </dx:ASPxButton>
+                                                </td>
+            <td class="style3">
+                                                    &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

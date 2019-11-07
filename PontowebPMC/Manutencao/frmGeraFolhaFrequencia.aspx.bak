@@ -1,0 +1,182 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmGeraFolhaFrequencia.aspx.cs" Inherits="Manutencao_frmGeraFolhaFrequencia" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <script type="text/javascript">
+        function PreenchecbUsuario() {
+            cbUsuarioFolha.PerformCallback();
+        }
+        function MudaPagina() 
+        {
+            var Ano, hoje;
+
+            hoje = new Date();
+            if (rbAno.GetValue() == "Ano Corrente") {
+
+                Ano = 0;
+            }
+            else
+                Ano = 1;
+
+            window.open('/Relatorio/frmVizualizaRelatorio.aspx?Mes='+cbMes.GetValue() +'&Setor='+cbSetorFolha.GetValue()+'&User='+cbUsuarioFolha.GetValue()+'&Ano='+ Ano)
+        }
+    </script>
+    <style type="text/css">
+    .style4
+    {
+        font-size: large;
+    }
+        .style5
+        {
+            width: 81px;
+        }
+        .style6
+        {
+            width: 65px;
+        }
+        .style7
+        {
+            width: 316px;
+        }
+        .style8
+        {
+            width: 62px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <table class="style1">
+    <tr>
+        <td class="style4" colspan="3">
+            <strong>Gerar Folha de Frequência</strong></td>
+    </tr>
+    <tr>
+        <td class="style8">
+            Mês:</td>
+        <td class="style7">
+                                    <dx:ASPxComboBox runat="server" 
+                    EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
+                    TextField="DSMes" ValueField="IDMes" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="TBMes" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbMes" ID="cbMes">
+<LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+
+<ValidationSettings ValidationGroup="ConfirmaBusca">
+<RequiredField IsRequired="True"></RequiredField>
+</ValidationSettings>
+</dx:ASPxComboBox>
+
+
+        </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="style8">
+            Setor:</td>
+        <td class="style7">
+                                    <dx:ASPxComboBox runat="server" 
+                    EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
+                    TextField="DSSetor" ValueField="IDSetor" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="TBSetor" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbSetorFolha" ID="cbSetorFolha" oncallback="cbSetorFolha_Callback1">
+                                        <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreenchecbUsuario();
+}" />
+<LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+
+<ValidationSettings ValidationGroup="ConfirmaBusca">
+<RequiredField IsRequired="True"></RequiredField>
+</ValidationSettings>
+</dx:ASPxComboBox>
+
+
+        </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="style8">
+            Colaborador:</td>
+        <td class="style7">
+                                    <dx:ASPxComboBox runat="server" 
+                    EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
+                    TextField="Nome" ValueField="IDUsuario" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="vwNomeUsuario" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbUsuarioFolha" ID="cbUsuario" oncallback="cbUsuario_Callback">
+<LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+
+<ValidationSettings>
+<RequiredField IsRequired="True"></RequiredField>
+</ValidationSettings>
+</dx:ASPxComboBox>
+
+
+        </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="style8">
+            Ano:</td>
+        <td class="style7">
+            <dx:ASPxRadioButtonList ID="rbAno" runat="server" 
+                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                SelectedIndex="0" 
+                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="300px" 
+                ClientInstanceName="rbAno">
+                <Items>
+                    <dx:ListEditItem Selected="True" Text="Ano Corrente" Value="Ano Corrente" />
+                    <dx:ListEditItem Text="Ano Anterior" Value="Ano Anterior" />
+                </Items>
+            </dx:ASPxRadioButtonList>
+        </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="style8">
+            &nbsp;</td>
+        <td class="style7">
+            <table class="style1">
+                <tr>
+                    <td class="style5">
+                        <dx:ASPxButton ID="btGerarFolhaFrequencia" runat="server" 
+                            CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Gerar" 
+                            Width="100px" onclick="btGerarFolhaFrequencia_Click" 
+                            ValidationGroup="ValidaGrupo" AutoPostBack="False" 
+                            ClientInstanceName="btGerarFolhaFrequencia">
+                            <ClientSideEvents Click="function(s, e) {
+	if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))MudaPagina();
+}" />
+                        </dx:ASPxButton>
+                    </td>
+                    <td class="style6">
+                        <dx:ASPxButton ID="btVoltar" runat="server" CausesValidation="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                            CssPostfix="DevEx" 
+                            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Voltar" 
+                            Width="100px" onclick="btVoltar_Click">
+                        </dx:ASPxButton>
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+</table>
+</asp:Content>
+

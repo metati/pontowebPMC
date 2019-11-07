@@ -1,0 +1,4 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxxr" Namespace="DevExpress.XtraReports.Web" Assembly="DevExpress.XtraReports.v13.1.Web, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxxr:ReportParametersPanel runat="server" CssFilePath="{0}/styles.css" CssPostfix="Office2003Olive" SpriteCssFilePath="{0}/sprite.css">
+</dxxr:ReportParametersPanel>

@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetUsuario" targetNamespace="http://tempuri.org/DataSetUsuario.xsd" xmlns:mstns="http://tempuri.org/DataSetUsuario.xsd" xmlns="http://tempuri.org/DataSetUsuario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PontoFrequenciaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PontoFrequenciaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MetodosPontoFrequencia.Properties.Settings.GlobalReference.Default.PontoFrequenciaConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PontoFrequenciaConnectionStringSAD" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PontoFrequenciaConnectionStringSAD (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MetodosPontoFrequencia.Properties.Settings.GlobalReference.Default.PontoFrequenciaConnectionStringSAD" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PontoFrequenciaNConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PontoFrequenciaNConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MetodosPontoFrequencia.Properties.Settings.GlobalReference.Default.PontoFrequenciaNConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PontoFrequenciaConnectionStringDev" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Public" Name="PontoFrequenciaConnectionStringDev (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MetodosPontoFrequencia.Properties.Settings.GlobalReference.Default.PontoFrequenciaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwUsuarioWebServiceTableAdapter" GeneratorDataComponentClassName="vwUsuarioWebServiceTableAdapter" Name="vwUsuarioWebService" UserDataComponentName="vwUsuarioWebServiceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDUsuario, IDSetor, IDStatus, DSUsuario, Login, IDEmpresa, TextHashCode, SenhaAdmin, IDTPUsuario, PIS, ReferenciaREP, FotoUsuario, PrimeiroNome, CadastraDigital, Template1, Template2, Matricula, 
+                         IDVinculoUsuario, TotalHoraDia, HoraSaidaTarde, HoraEntradaTarde, HoraSaidaManha, HoraEntradaManha, RegimePlantonista
+FROM            vwUsuarioWebService</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDUsuario" DataSetColumn="IDUsuario" />
+              <Mapping SourceColumn="IDSetor" DataSetColumn="IDSetor" />
+              <Mapping SourceColumn="IDStatus" DataSetColumn="IDStatus" />
+              <Mapping SourceColumn="Login" DataSetColumn="Login" />
+              <Mapping SourceColumn="IDEmpresa" DataSetColumn="IDEmpresa" />
+              <Mapping SourceColumn="TextHashCode" DataSetColumn="TextHashCode" />
+              <Mapping SourceColumn="SenhaAdmin" DataSetColumn="SenhaAdmin" />
+              <Mapping SourceColumn="IDTPUsuario" DataSetColumn="IDTPUsuario" />
+              <Mapping SourceColumn="PIS" DataSetColumn="PIS" />
+              <Mapping SourceColumn="ReferenciaREP" DataSetColumn="ReferenciaREP" />
+              <Mapping SourceColumn="PrimeiroNome" DataSetColumn="PrimeiroNome" />
+              <Mapping SourceColumn="DSUsuario" DataSetColumn="DSUsuario" />
+              <Mapping SourceColumn="FotoUsuario" DataSetColumn="FotoUsuario" />
+              <Mapping SourceColumn="CadastraDigital" DataSetColumn="CadastraDigital" />
+              <Mapping SourceColumn="Template1" DataSetColumn="Template1" />
+              <Mapping SourceColumn="Template2" DataSetColumn="Template2" />
+              <Mapping SourceColumn="Matricula" DataSetColumn="Matricula" />
+              <Mapping SourceColumn="IDVinculoUsuario" DataSetColumn="IDVinculoUsuario" />
+              <Mapping SourceColumn="TotalHoraDia" DataSetColumn="TotalHoraDia" />
+              <Mapping SourceColumn="HoraSaidaTarde" DataSetColumn="HoraSaidaTarde" />
+              <Mapping SourceColumn="HoraEntradaTarde" DataSetColumn="HoraEntradaTarde" />
+              <Mapping SourceColumn="HoraSaidaManha" DataSetColumn="HoraSaidaManha" />
+              <Mapping SourceColumn="HoraEntradaManha" DataSetColumn="HoraEntradaManha" />
+              <Mapping SourceColumn="RegimePlantonista" DataSetColumn="RegimePlantonista" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Filldologin" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDatadologin" GeneratorSourceName="Filldologin" GetMethodModifier="Public" GetMethodName="GetDatadologin" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDatadologin" UserSourceName="Filldologin">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDUsuario, IDSetor, IDStatus, DSUsuario, Login, IDEmpresa, TextHashCode, SenhaAdmin, IDTPUsuario, PIS, ReferenciaREP, FotoUsuario, PrimeiroNome, CadastraDigital, Template1, Template2, Matricula, 
+                         IDVinculoUsuario, TotalHoraDia, HoraSaidaTarde, HoraEntradaTarde, HoraSaidaManha, HoraEntradaManha, RegimePlantonista
+FROM            vwUsuarioWebService
+where IDusuario = @IDUsuario
+and IDEmpresa = @IDEmpresa</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDUsuario" ColumnName="IDUsuario" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDUsuario" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresa" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FilldoLoginAdmin" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDatadoLoginAdmin" GeneratorSourceName="FilldoLoginAdmin" GetMethodModifier="Public" GetMethodName="GetDatadoLoginAdmin" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDatadoLoginAdmin" UserSourceName="FilldoLoginAdmin">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDUsuario, IDSetor, IDStatus, DSUsuario, Login, IDEmpresa, TextHashCode, SenhaAdmin, IDTPUsuario, PIS, ReferenciaREP, FotoUsuario, PrimeiroNome, CadastraDigital, Template1, Template2, Matricula, 
+                         IDVinculoUsuario, TotalHoraDia, HoraSaidaTarde, HoraEntradaTarde, HoraSaidaManha, HoraEntradaManha, RegimePlantonista
+FROM            vwUsuarioWebService
+WHERE        (IDUsuario = @IDUsuario) AND (IDTPUsuario = 1) AND (IDStatus = 1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDUsuario" ColumnName="IDUsuario" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDUsuario" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillDSUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataDSUsuario" GeneratorSourceName="FillDSUsuario" GetMethodModifier="Public" GetMethodName="GetDataDSUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataDSUsuario" UserSourceName="FillDSUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (IDEmpresa = @IDEmpresaPes) AND (IDStatus = 1) AND (DSUsuario LIKE '%' + @DSUsuar + '%') GROUP BY DSUsuario, IDEmpresa, IDStatus, IDUsuario, Login, SenhaAdmin, TextHashCode, CadastraDigital, IDVinculoUsuario, Template1, Matricula</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresaPes" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresaPes" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DSUsuar" ColumnName="DSUsuario" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(500)" DbType="AnsiString" Direction="Input" ParameterName="@DSUsuar" Precision="0" ProviderType="VarChar" Scale="0" Size="500" SourceColumn="DSUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillDSUsuarioGrupoRegistro" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataDSUsuarioGrupoRegistro" GeneratorSourceName="FillDSUsuarioGrupoRegistro" GetMethodModifier="Public" GetMethodName="GetDataDSUsuarioGrupoRegistro" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataDSUsuarioGrupoRegistro" UserSourceName="FillDSUsuarioGrupoRegistro">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (IDEmpresa IN (SELECT IDEmpresa FROM TBGrupoRegistroEmpresa WHERE (IDGrupoRegistro = @IDGrupoRegistro))) AND (IDStatus = 1) AND (DSUsuario LIKE '%' + @DSUsuar + '%') GROUP BY DSUsuario, IDEmpresa, IDStatus, IDUsuario, Login, SenhaAdmin, TextHashCode, CadastraDigital, IDVinculoUsuario, Matricula, Template1</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DSUsuar" ColumnName="DSUsuario" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(500)" DbType="AnsiString" Direction="Input" ParameterName="@DSUsuar" Precision="0" ProviderType="VarChar" Scale="0" Size="500" SourceColumn="DSUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDGrupoRegistro" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDGrupoRegistro" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillIDEmpresa" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataIDEmpresa" GeneratorSourceName="FillIDEmpresa" GetMethodModifier="Public" GetMethodName="GetDataIDEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataIDEmpresa" UserSourceName="FillIDEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CadastraDigital, DSUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PrimeiroNome, 
+                         RegimePlantonista, Template1, TextHashCode, TotalHoraDia,template2
+FROM            vwUsuarioWebService
+WHERE        (IDStatus = 1) AND (IDEmpresa = @IDEmpresa)
+GROUP BY DSUsuario, IDEmpresa, IDUsuario, PrimeiroNome, TextHashCode, PrimeiroNome, TextHashCode, Matricula, Template1,template2, IDVinculoUsuario, Login, CadastraDigital, HoraEntradaManha, HoraEntradaTarde, 
+                         HoraSaidaManha, HoraSaidaTarde, IDSetor, IDTPUsuario, RegimePlantonista, TotalHoraDia</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresa" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.spGetUsuariosPontoHash" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillIDEmpresaByHash" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataFillIDEmpresaByHash" GeneratorSourceName="FillIDEmpresaByHash" GetMethodModifier="Public" GetMethodName="GetDataFillIDEmpresaByHash" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataFillIDEmpresaByHash" UserSourceName="FillIDEmpresaByHash">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.spGetUsuariosPontoHash</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdEmpresa" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@HashMaquina" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillIDEmpresaUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataIDEmpresaUsuario" GeneratorSourceName="FillIDEmpresaUsuario" GetMethodModifier="Public" GetMethodName="GetDataIDEmpresaUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataIDEmpresaUsuario" UserSourceName="FillIDEmpresaUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     DSUsuario, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, Login, PIS, ReferenciaREP, SenhaAdmin, TextHashCode, CadastraDigital
+FROM         vwUsuarioWebService
+WHERE     (IDEmpresa = @IDEmUse) AND (IDUsuario = @IDUserdd)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmUse" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmUse" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDUserdd" ColumnName="IDUsuario" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDUserdd" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillIDGrupoRegistro" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataIDGrupoRegistro" GeneratorSourceName="FillIDGrupoRegistro" GetMethodModifier="Public" GetMethodName="GetDataIDGrupoRegistro" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataIDGrupoRegistro" UserSourceName="FillIDGrupoRegistro">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CadastraDigital, DSUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PrimeiroNome, 
+                         RegimePlantonista, Template1,template2, TextHashCode, TotalHoraDia
+FROM            vwUsuarioWebService
+WHERE        (IDEmpresa IN
+                             (SELECT        IDEmpresa
+                               FROM            TBGrupoRegistroEmpresa
+                               WHERE        (IDGrupoRegistro = @IDGrupoRegistro))) AND (IDStatus = 1)
+GROUP BY DSUsuario, Matricula, IDVinculoUsuario, IDEmpresa, IDStatus, IDUsuario, Login, TextHashCode, PrimeiroNome, CadastraDigital, IDTPUsuario, Template1, HoraEntradaManha, HoraEntradaTarde, 
+                         HoraSaidaManha, HoraSaidaTarde, IDSetor, RegimePlantonista, TotalHoraDia,template2
+ORDER BY DSUsuario, Matricula, Login</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDGrupoRegistro" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDGrupoRegistro" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FilllLoginGrupoRegistro" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLoginGrupoRegistro" GeneratorSourceName="FilllLoginGrupoRegistro" GetMethodModifier="Public" GetMethodName="GetDataLoginGrupoRegistro" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLoginGrupoRegistro" UserSourceName="FilllLoginGrupoRegistro">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND idempresa = vwUsuarioWebService.IDEmpresa AND (IDTPUsuario = 1 OR
+                                                   IDTPUsuario = 7)) &gt; 0 THEN (CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND idempresa = vwUsuarioWebService.IDEmpresa AND (IDTPUsuario = 1)) &gt; 0 THEN 1 ELSE 7 END) 
+                      ELSE 2 END AS IDTPUsuario, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = vwUsuarioWebService.IDEmpresa AND ManutencaoDigital = 1) 
+                      &gt; 0 THEN 1 ELSE 0 END AS CadastraDigital, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = vwUsuarioWebService.IDEmpresa AND IDStatus = 1) 
+                      &gt; 0 THEN 1 ELSE 2 END AS IDStatus, DSUsuario, IDEmpresa, IDUsuario
+FROM         vwUsuarioWebService
+WHERE     (Login = @LoginLogar) AND (IDStatus = 1) AND (@IDEmpresa IN
+                          (SELECT     IDEmpresa
+                            FROM          TBGrupoRegistroEmpresa))
+GROUP BY DSUsuario, IDEmpresa, IDUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LoginLogar" ColumnName="Login" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@LoginLogar" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IDEmpresa" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillLogar" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLogar" GeneratorSourceName="FillLogar" GetMethodModifier="Public" GetMethodName="GetDataLogar" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLogar" UserSourceName="FillLogar">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 1) AND (IDStatus = 1)) &gt; 0 THEN 1 WHEN
+                          ((SELECT     COUNT(IDUsuario)
+                              FROM         TBVinculoUsuario
+                              WHERE     IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 7 AND IDempresa = @IDEmpresa))) &gt; 0 THEN 7 WHEN
+                          ((SELECT     COUNT(IDUsuario)
+                              FROM         TBVinculoUsuario
+                              WHERE     IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 7 AND IDEmpresa IN
+                                                        (SELECT     IDEmpresa
+                                                          FROM          TBGrupoRegistroEmpresa)))) &gt; 0 THEN 7 ELSE 2 END AS IDTPUsuario, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = @IDEmpresa AND ManutencaoDigital = 1) &gt; 0 THEN 1 ELSE 0 END AS CadastraDigital, 
+                      CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = @IDEmpresa AND IDStatus = 1) &gt; 0 THEN 1 ELSE 2 END AS IDStatus, DSUsuario, 
+                      IDEmpresa, IDUsuario
+FROM         vwUsuarioWebService
+WHERE     (Login = @LoginLogar) AND (SenhaAdmin = @SenhaAdmin) AND (IDStatus = 1)
+GROUP BY DSUsuario, IDEmpresa, IDUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LoginLogar" ColumnName="Login" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@LoginLogar" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SenhaAdmin" ColumnName="SenhaAdmin" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@SenhaAdmin" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="SenhaAdmin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillLogar2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLogar2" GeneratorSourceName="FillLogar2" GetMethodModifier="Public" GetMethodName="GetDataLogar2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLogar2" UserSourceName="FillLogar2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDUsuario, IDSetor, IDStatus, DSUsuario, Login, IDEmpresa, TextHashCode, SenhaAdmin, IDTPUsuario, PIS, ReferenciaREP, FotoUsuario, PrimeiroNome, CadastraDigital, Template1, Template2, Matricula, 
+                         IDVinculoUsuario, TotalHoraDia, HoraSaidaTarde, HoraEntradaTarde, HoraSaidaManha, HoraEntradaManha, RegimePlantonista
+FROM            vwUsuarioWebService
+WHERE        (Login = @Login) 
+AND (passwd = @Passwd) 
+and IDStatus = 1</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Login" ColumnName="Login" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@Login" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Passwd" ColumnName="passwd" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(128)" DbType="AnsiString" Direction="Input" ParameterName="@Passwd" Precision="0" ProviderType="VarChar" Scale="0" Size="128" SourceColumn="passwd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillLogar3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLogar3" GeneratorSourceName="FillLogar3" GetMethodModifier="Public" GetMethodName="GetDataLogar3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLogar3" UserSourceName="FillLogar3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 1) AND (IDStatus = 1)) &gt; 0 THEN 1 WHEN
+                          ((SELECT     COUNT(IDUsuario)
+                              FROM         TBVinculoUsuario
+                              WHERE     IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 8 AND IDempresa = @IDEmpresa))) &gt; 0 THEN 7 WHEN
+                          ((SELECT     COUNT(IDUsuario)
+                              FROM         TBVinculoUsuario
+                              WHERE     IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 8 AND IDEmpresa IN
+                                                        (SELECT     IDEmpresa
+                                                          FROM          TBGrupoRegistroEmpresa)))) &gt; 0 THEN 7 ELSE 2 END AS IDTPUsuario, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = @IDEmpresa AND ManutencaoDigital = 1) &gt; 0 THEN 1 ELSE 0 END AS CadastraDigital, 
+                      CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = @IDEmpresa AND IDStatus = 1) &gt; 0 THEN 1 ELSE 2 END AS IDStatus, DSUsuario, 
+                      IDEmpresa, IDUsuario
+FROM         vwUsuarioWebService
+WHERE     (Login = @LoginLogar) AND (SenhaAdmin = @SenhaAdmin) AND (IDStatus = 1)
+GROUP BY DSUsuario, IDEmpresa, IDUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LoginLogar" ColumnName="Login" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@LoginLogar" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SenhaAdmin" ColumnName="SenhaAdmin" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@SenhaAdmin" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="SenhaAdmin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillLogarGrupoRegistro" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLogarGrupoRegistro" GeneratorSourceName="FillLogarGrupoRegistro" GetMethodModifier="Public" GetMethodName="GetDataLogarGrupoRegistro" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLogarGrupoRegistro" UserSourceName="FillLogarGrupoRegistro">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND idempresa = vwUsuarioWebService.IDEmpresa AND (IDTPUsuario = 1 OR
+                                                   IDTPUsuario = 7)) &gt; 0 THEN (CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND idempresa = vwUsuarioWebService.IDEmpresa AND (IDTPUsuario = 1)) &gt; 0 THEN 1 ELSE 7 END) 
+                      ELSE 2 END AS IDTPUsuario, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = vwUsuarioWebService.IDEmpresa AND ManutencaoDigital = 1) 
+                      &gt; 0 THEN 1 ELSE 0 END AS CadastraDigital, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = vwUsuarioWebService.IDEmpresa AND IDStatus = 1) 
+                      &gt; 0 THEN 1 ELSE 2 END AS IDStatus, DSUsuario, IDEmpresa, IDUsuario
+FROM         vwUsuarioWebService
+WHERE     (Login = @LoginLogar) AND (SenhaAdmin = @SenhaAdmin) AND (IDStatus = 1) AND (@IDEmpresa IN
+                          (SELECT     IDEmpresa
+                            FROM          TBGrupoRegistroEmpresa))
+GROUP BY DSUsuario, IDEmpresa, IDUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LoginLogar" ColumnName="Login" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@LoginLogar" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SenhaAdmin" ColumnName="SenhaAdmin" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@SenhaAdmin" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="SenhaAdmin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IDEmpresa" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillLogarGrupoRegistro2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLogarGrupoRegistro2" GeneratorSourceName="FillLogarGrupoRegistro2" GetMethodModifier="Public" GetMethodName="GetDataLogarGrupoRegistro2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLogarGrupoRegistro2" UserSourceName="FillLogarGrupoRegistro2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CASE WHEN
+                             (SELECT        COUNT(IDUsuario)
+                               FROM            TBVinculoUsuario
+                               WHERE        IDUsuario = vwUsuarioWebService.IDUsuario AND idempresa = vwUsuarioWebService.IDEmpresa AND (IDTPUsuario = 1 OR
+                                                         IDTPUsuario = 7)) &gt; 0 THEN (CASE WHEN
+                             (SELECT        COUNT(IDUsuario)
+                               FROM            TBVinculoUsuario
+                               WHERE        IDUsuario = vwUsuarioWebService.IDUsuario AND idempresa = vwUsuarioWebService.IDEmpresa AND (IDTPUsuario = 1)) &gt; 0 THEN 1 ELSE 7 END) ELSE 2 END AS IDTPUsuario, 
+                         CASE WHEN
+                             (SELECT        COUNT(IDUsuario)
+                               FROM            TBVinculoUsuario
+                               WHERE        IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = vwUsuarioWebService.IDEmpresa AND ManutencaoDigital = 1) &gt; 0 THEN 1 ELSE 0 END AS CadastraDigital, CASE WHEN
+                             (SELECT        COUNT(IDUsuario)
+                               FROM            TBVinculoUsuario
+                               WHERE        IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = vwUsuarioWebService.IDEmpresa AND IDStatus = 1) &gt; 0 THEN 1 ELSE 2 END AS IDStatus, DSUsuario, IDEmpresa, IDUsuario
+FROM            vwUsuarioWebService
+WHERE        (Login = @LoginLogar) AND (passwd = @SenhaAdmin) AND (IDStatus = 1) AND (@IDEmpresa IN
+                             (SELECT        IDEmpresa
+                               FROM            TBGrupoRegistroEmpresa))
+GROUP BY DSUsuario, IDEmpresa, IDUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LoginLogar" ColumnName="Login" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@LoginLogar" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SenhaAdmin" ColumnName="passwd" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(128)" DbType="AnsiString" Direction="Input" ParameterName="@SenhaAdmin" Precision="0" ProviderType="VarChar" Scale="0" Size="128" SourceColumn="passwd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IDEmpresa" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillLogin" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataLogin" GeneratorSourceName="FillLogin" GetMethodModifier="Public" GetMethodName="GetDataLogin" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataLogin" UserSourceName="FillLogin">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 1) 
+AND (IDStatus = 1)) &gt; 0 THEN 1 WHEN
+                          ((SELECT     COUNT(IDUsuario)
+                              FROM         TBVinculoUsuario
+                              WHERE     IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 7 AND IDempresa = @IDEmpresa))) &gt; 0 THEN 7 WHEN
+                          ((SELECT     COUNT(IDUsuario)
+                              FROM         TBVinculoUsuario
+                              WHERE     IDUsuario = vwUsuarioWebService.IDUsuario AND (IDTPUsuario = 7 AND IDEmpresa IN
+                                                        (SELECT     IDEmpresa
+                                                          FROM          TBGrupoRegistroEmpresa)))) &gt; 0 THEN 7 ELSE 2 END AS IDTPUsuario, CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = @IDEmpresa AND ManutencaoDigital = 1) &gt; 0 THEN 1 ELSE 0 END AS CadastraDigital, 
+                      CASE WHEN
+                          (SELECT     COUNT(IDUsuario)
+                            FROM          TBVinculoUsuario
+                            WHERE      IDUsuario = vwUsuarioWebService.IDUsuario AND IDEmpresa = @IDEmpresa AND IDStatus = 1) &gt; 0 THEN 1 ELSE 2 END AS IDStatus, DSUsuario, 
+                      IDEmpresa, IDUsuario
+FROM         vwUsuarioWebService
+WHERE     (Login = @LoginLogar) AND (IDStatus = 1)
+GROUP BY DSUsuario, IDEmpresa, IDUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LoginLogar" ColumnName="Login" DataSourceName="PontoFrequenciaN.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@LoginLogar" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillMatricula" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataMatricula" GeneratorSourceName="FillMatricula" GetMethodModifier="Public" GetMethodName="GetDataMatricula" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataMatricula" UserSourceName="FillMatricula">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (Matricula LIKE '%' + @Matricula + '%') AND (IDEmpresa = @IDEmpresa)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Matricula" ColumnName="Matricula" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(7)" DbType="AnsiString" Direction="Input" ParameterName="@Matricula" Precision="0" ProviderType="VarChar" Scale="0" Size="7" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresa" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillMatriculaGrupoUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataMatriculaGrupoUsuario" GeneratorSourceName="FillMatriculaGrupoUsuario" GetMethodModifier="Public" GetMethodName="GetDataMatriculaGrupoUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataMatriculaGrupoUsuario" UserSourceName="FillMatriculaGrupoUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (Matricula LIKE '%' + @Matricula + '%') AND (IDEmpresa IN (SELECT IDEmpresa FROM TBGrupoRegistroEmpresa WHERE (IDGrupoRegistro = @IDGrupoRegistro)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Matricula" ColumnName="Matricula" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(7)" DbType="AnsiString" Direction="Input" ParameterName="@Matricula" Precision="0" ProviderType="VarChar" Scale="0" Size="7" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDGrupoRegistro" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDGrupoRegistro" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillPIS" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataPIS" GeneratorSourceName="FillPIS" GetMethodModifier="Public" GetMethodName="GetDataPIS" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataPIS" UserSourceName="FillPIS">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DSUsuario, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, Login, PIS, ReferenciaREP, SenhaAdmin, TextHashCode FROM vwUsuarioWebService WHERE (PIS = @PIS) AND (IDEmpresa = @IDEmpPIS) AND (IDStatus = 1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="PIS" ColumnName="PIS" DataSourceName="" DataTypeServer="unknown" DbType="Object" Direction="Input" ParameterName="@PIS" Precision="0" Scale="0" Size="1024" SourceColumn="PIS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpPIS" ColumnName="IDEmpresa" DataSourceName="" DataTypeServer="unknown" DbType="Object" Direction="Input" ParameterName="@IDEmpPIS" Precision="0" Scale="0" Size="1024" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillRefREP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataRefREP" GeneratorSourceName="FillRefREP" GetMethodModifier="Public" GetMethodName="GetDataRefREP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataRefREP" UserSourceName="FillRefREP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DSUsuario, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, Login, PIS, ReferenciaREP, SenhaAdmin, TextHashCode FROM vwUsuarioWebService WHERE (ReferenciaREP IS NULL) AND (IDStatus = 1) AND (IDEmpresa = @IDEmprREPNull)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmprREPNull" ColumnName="IDEmpresa" DataSourceName="PontoFrequencia.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmprREPNull" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillREPEmpresa" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataREPEmpresa" GeneratorSourceName="FillREPEmpresa" GetMethodModifier="Public" GetMethodName="GetDataREPEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataREPEmpresa" UserSourceName="FillREPEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP (10) DSUsuario, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, Login, PIS, ReferenciaREP, SenhaAdmin, TextHashCode FROM vwUsuarioWebService WHERE (IDUsuario NOT IN (SELECT IDUsuario FROM TBREPUsuario WHERE (REP1 = @IDREPF) AND (IDEmpresa = @IDEmp))) AND (IDEmpresa = @IDEmp) AND (LEN(PIS) &gt;= 11) ORDER BY DSUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmp" ColumnName="IDEmpresa" DataSourceName="PontoFrequencia.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmp" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDREPF" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDREPF" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillREPEmpresaGeral" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataFillREPEmpresaGeral" GeneratorSourceName="FillREPEmpresaGeral" GetMethodModifier="Public" GetMethodName="GetDataFillREPEmpresaGeral" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataFillREPEmpresaGeral" UserSourceName="FillREPEmpresaGeral">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DSUsuario, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, Login, PIS, ReferenciaREP, SenhaAdmin, TextHashCode FROM vwUsuarioWebService WHERE (IDUsuario NOT IN (SELECT IDUsuario FROM TBREPUsuario WHERE (REP1 = @IDREPFG) AND (IDEmpresa = @IDEmpG))) AND (IDEmpresa = @IDEmpG) AND (LEN(PIS) &gt;= 11) ORDER BY DSUsuario</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpG" ColumnName="IDEmpresa" DataSourceName="PontoFrequencia.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpG" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDREPFG" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDREPFG" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillSearchCPFIDempresa" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillSearchCPFIDempresa" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillSearchCPFIDempresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (Login LIKE '%' + @CPF + '%') AND (IDEmpresa = @IDEmpresa OR IDEmpresa IN (SELECT IDEmpresa FROM TBGrupoRegistroEmpresa WHERE (IDGrupoRegistro = @IDGrupoRegistro)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CPF" ColumnName="Login" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@CPF" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="Login" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresa" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDGrupoRegistro" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDGrupoRegistro" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillSearchMatriculaGrupoRegistro" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillSearchMatriculaGrupoRegistro" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillSearchMatriculaGrupoRegistro">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (Matricula LIKE '%' + @Matricula + '%') AND (IDEmpresa = @IDEmpresa OR IDEmpresa IN (SELECT IDEmpresa FROM TBGrupoRegistroEmpresa WHERE (IDGrupoRegistro = @IDGrupoRegistro)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Matricula" ColumnName="Matricula" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(7)" DbType="AnsiString" Direction="Input" ParameterName="@Matricula" Precision="0" ProviderType="VarChar" Scale="0" Size="7" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresa" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDGrupoRegistro" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDGrupoRegistro" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="PontoFrequenciaNConnectionString (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillSearchNome" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataSearcheNome" GeneratorSourceName="FillSearchNome" GetMethodModifier="Public" GetMethodName="GetDataSearcheNome" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataSearcheNome" UserSourceName="FillSearchNome">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CadastraDigital, DSUsuario, FotoUsuario, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, IDEmpresa, IDSetor, IDStatus, IDTPUsuario, IDUsuario, IDVinculoUsuario, Login, Matricula, PIS, PrimeiroNome, ReferenciaREP, RegimePlantonista, SenhaAdmin, Template1, Template2, TextHashCode, TotalHoraDia FROM vwUsuarioWebService WHERE (DSUsuario LIKE '%' + @Nome + '%') AND (IDEmpresa = @IDEmpresa OR IDEmpresa IN (SELECT IDEmpresa FROM TBGrupoRegistroEmpresa WHERE (IDGrupoRegistro = @IDGrupoRegistro)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Nome" ColumnName="DSUsuario" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="varchar(500)" DbType="AnsiString" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="500" SourceColumn="DSUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresa" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaPMC.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDGrupoRegistro" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDGrupoRegistro" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwMaiorRefREPTableAdapter" GeneratorDataComponentClassName="vwMaiorRefREPTableAdapter" Name="vwMaiorRefREP" UserDataComponentName="vwMaiorRefREPTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwMaiorRefREP" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MaiorRefREP, IDEmpresa
+FROM            vwMaiorRefREP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaiorRefREP" DataSetColumn="MaiorRefREP" />
+              <Mapping SourceColumn="IDEmpresa" DataSetColumn="IDEmpresa" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwMaiorRefREP" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillIDEmpresa" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataIDEmpresa" GeneratorSourceName="FillIDEmpresa" GetMethodModifier="Public" GetMethodName="GetDataIDEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataIDEmpresa" UserSourceName="FillIDEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MaiorRefREP, IDEmpresa
+FROM            vwMaiorRefREP
+WHERE        (IDEmpresa = @IDEmpresaREP)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IDEmpresaREP" ColumnName="IDEmpresa" DataSourceName="" DataTypeServer="unknown" DbType="Object" Direction="Input" ParameterName="@IDEmpresaREP" Precision="0" Scale="0" Size="1024" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwUsuarioWebServiceFotoTableAdapter" GeneratorDataComponentClassName="vwUsuarioWebServiceFotoTableAdapter" Name="vwUsuarioWebServiceFoto" UserDataComponentName="vwUsuarioWebServiceFotoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDUsuario, FotoUsuario
+FROM            vwUsuarioWebService</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDUsuario" DataSetColumn="IDUsuario" />
+              <Mapping SourceColumn="FotoUsuario" DataSetColumn="FotoUsuario" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionString (Settings)" DbObjectName="PontoFrequencia.dbo.vwUsuarioWebService" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillIDUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataIDusuario" GeneratorSourceName="FillIDUsuario" GetMethodModifier="Public" GetMethodName="GetDataIDusuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataIDusuario" UserSourceName="FillIDUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDUsuario, FotoUsuario
+FROM            vwUsuarioWebService
+WHERE        (IDUsuario = @IDUserFoto) AND (IDEmpresa = @IDempresaFoto)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="IDUserFoto" ColumnName="IDUsuario" DataSourceName="PontoFrequencia.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDUserFoto" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDempresaFoto" ColumnName="IDEmpresa" DataSourceName="PontoFrequencia.dbo.vwUsuarioWebService" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDempresaFoto" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBConfiguracaoFTPTableAdapter" GeneratorDataComponentClassName="TBConfiguracaoFTPTableAdapter" Name="TBConfiguracaoFTP" UserDataComponentName="TBConfiguracaoFTPTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.TBConfiguracaoFTP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [TBConfiguracaoFTP] WHERE (([IDConfiguracaoFTP] = @Original_IDConfiguracaoFTP) AND ((@IsNull_EnderecoFTP = 1 AND [EnderecoFTP] IS NULL) OR ([EnderecoFTP] = @Original_EnderecoFTP)) AND ((@IsNull_DTCadastroFTP = 1 AND [DTCadastroFTP] IS NULL) OR ([DTCadastroFTP] = @Original_DTCadastroFTP)) AND ((@IsNull_UsuarioFTP = 1 AND [UsuarioFTP] IS NULL) OR ([UsuarioFTP] = @Original_UsuarioFTP)) AND ((@IsNull_SenhaFTP = 1 AND [SenhaFTP] IS NULL) OR ([SenhaFTP] = @Original_SenhaFTP)) AND ((@IsNull_IDEmpresa = 1 AND [IDEmpresa] IS NULL) OR ([IDEmpresa] = @Original_IDEmpresa)) AND ((@IsNull_VersaoClientBiometria = 1 AND [VersaoClientBiometria] IS NULL) OR ([VersaoClientBiometria] = @Original_VersaoClientBiometria)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDConfiguracaoFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDConfiguracaoFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EnderecoFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EnderecoFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_EnderecoFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EnderecoFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DTCadastroFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DTCadastroFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DTCadastroFTP" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DTCadastroFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UsuarioFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UsuarioFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UsuarioFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UsuarioFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SenhaFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SenhaFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SenhaFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SenhaFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDEmpresa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_VersaoClientBiometria" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="VersaoClientBiometria" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_VersaoClientBiometria" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VersaoClientBiometria" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [TBConfiguracaoFTP] ([EnderecoFTP], [DTCadastroFTP], [UsuarioFTP], [SenhaFTP], [IDEmpresa], [VersaoClientBiometria]) VALUES (@EnderecoFTP, @DTCadastroFTP, @UsuarioFTP, @SenhaFTP, @IDEmpresa, @VersaoClientBiometria);
+SELECT IDConfiguracaoFTP, EnderecoFTP, DTCadastroFTP, UsuarioFTP, SenhaFTP, IDEmpresa, VersaoClientBiometria FROM TBConfiguracaoFTP WHERE (IDConfiguracaoFTP = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EnderecoFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EnderecoFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DTCadastroFTP" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DTCadastroFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UsuarioFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UsuarioFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SenhaFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SenhaFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@VersaoClientBiometria" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VersaoClientBiometria" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     IDConfiguracaoFTP, EnderecoFTP, DTCadastroFTP, UsuarioFTP, SenhaFTP, IDEmpresa, VersaoClientBiometria
+FROM         TBConfiguracaoFTP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [TBConfiguracaoFTP] SET [EnderecoFTP] = @EnderecoFTP, [DTCadastroFTP] = @DTCadastroFTP, [UsuarioFTP] = @UsuarioFTP, [SenhaFTP] = @SenhaFTP, [IDEmpresa] = @IDEmpresa, [VersaoClientBiometria] = @VersaoClientBiometria WHERE (([IDConfiguracaoFTP] = @Original_IDConfiguracaoFTP) AND ((@IsNull_EnderecoFTP = 1 AND [EnderecoFTP] IS NULL) OR ([EnderecoFTP] = @Original_EnderecoFTP)) AND ((@IsNull_DTCadastroFTP = 1 AND [DTCadastroFTP] IS NULL) OR ([DTCadastroFTP] = @Original_DTCadastroFTP)) AND ((@IsNull_UsuarioFTP = 1 AND [UsuarioFTP] IS NULL) OR ([UsuarioFTP] = @Original_UsuarioFTP)) AND ((@IsNull_SenhaFTP = 1 AND [SenhaFTP] IS NULL) OR ([SenhaFTP] = @Original_SenhaFTP)) AND ((@IsNull_IDEmpresa = 1 AND [IDEmpresa] IS NULL) OR ([IDEmpresa] = @Original_IDEmpresa)) AND ((@IsNull_VersaoClientBiometria = 1 AND [VersaoClientBiometria] IS NULL) OR ([VersaoClientBiometria] = @Original_VersaoClientBiometria)));
+SELECT IDConfiguracaoFTP, EnderecoFTP, DTCadastroFTP, UsuarioFTP, SenhaFTP, IDEmpresa, VersaoClientBiometria FROM TBConfiguracaoFTP WHERE (IDConfiguracaoFTP = @IDConfiguracaoFTP)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EnderecoFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EnderecoFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DTCadastroFTP" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DTCadastroFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UsuarioFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UsuarioFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SenhaFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SenhaFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@VersaoClientBiometria" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VersaoClientBiometria" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDConfiguracaoFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDConfiguracaoFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EnderecoFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EnderecoFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_EnderecoFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EnderecoFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DTCadastroFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DTCadastroFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DTCadastroFTP" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DTCadastroFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UsuarioFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UsuarioFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UsuarioFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UsuarioFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SenhaFTP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SenhaFTP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SenhaFTP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SenhaFTP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDEmpresa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDEmpresa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_VersaoClientBiometria" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="VersaoClientBiometria" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_VersaoClientBiometria" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VersaoClientBiometria" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="IDConfiguracaoFTP" ColumnName="IDConfiguracaoFTP" DataSourceName="PontoFrequenciaN.dbo.TBConfiguracaoFTP" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDConfiguracaoFTP" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDConfiguracaoFTP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDConfiguracaoFTP" DataSetColumn="IDConfiguracaoFTP" />
+              <Mapping SourceColumn="EnderecoFTP" DataSetColumn="EnderecoFTP" />
+              <Mapping SourceColumn="DTCadastroFTP" DataSetColumn="DTCadastroFTP" />
+              <Mapping SourceColumn="UsuarioFTP" DataSetColumn="UsuarioFTP" />
+              <Mapping SourceColumn="SenhaFTP" DataSetColumn="SenhaFTP" />
+              <Mapping SourceColumn="IDEmpresa" DataSetColumn="IDEmpresa" />
+              <Mapping SourceColumn="VersaoClientBiometria" DataSetColumn="VersaoClientBiometria" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionString (Settings)" DbObjectName="PontoFrequenciaN.dbo.TBConfiguracaoFTP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillIDEmpresa" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataIDEmpresa" GeneratorSourceName="FillIDEmpresa" GetMethodModifier="Public" GetMethodName="GetDataIDEmpresa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataIDEmpresa" UserSourceName="FillIDEmpresa">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP (1) EnderecoFTP, IDConfiguracaoFTP, IDEmpresa, SenhaFTP, UsuarioFTP, VersaoClientBiometria FROM TBConfiguracaoFTP WHERE (IDEmpresa = @IDEmpresOrgao)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDEmpresOrgao" ColumnName="IDEmpresa" DataSourceName="PontoFrequenciaN.dbo.TBConfiguracaoFTP" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDEmpresOrgao" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDEmpresa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBExoneradosXLSTableAdapter" GeneratorDataComponentClassName="TBExoneradosXLSTableAdapter" Name="TBExoneradosXLS" UserDataComponentName="TBExoneradosXLSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PontoFrequenciaConnectionStringDev (Settings)" DbObjectName="PontoFrequenciaPMC.dbo.TBExoneradosXLS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TBExoneradosXLS] ([MATRICULA], [NOME], [CPF], [SECRETARIA], [LOTACAO], [CARGO], [ADMISSAO], [POSSE], [EXERCICIO], [EXONERACAO], [SITUACAO_FUNCIONAL], [STATUS], [OCUPAÇÃO], [MOTIVO EXONERAÇÃO], [ATIVO2019]) VALUES (@MATRICULA, @NOME, @CPF, @SECRETARIA, @LOTACAO, @CARGO, @ADMISSAO, @POSSE, @EXERCICIO, @EXONERACAO, @SITUACAO_FUNCIONAL, @STATUS, @OCUPAÇÃO, @MOTIVO_EXONERAÇÃO, @ATIVO2019)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MATRICULA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MATRICULA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NOME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CPF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CPF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SECRETARIA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SECRETARIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LOTACAO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LOTACAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CARGO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CARGO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ADMISSAO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ADMISSAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@POSSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="POSSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EXERCICIO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EXERCICIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EXONERACAO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EXONERACAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SITUACAO_FUNCIONAL" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SITUACAO_FUNCIONAL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STATUS" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STATUS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OCUPAÇÃO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OCUPAÇÃO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MOTIVO_EXONERAÇÃO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MOTIVO EXONERAÇÃO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@ATIVO2019" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="ATIVO2019" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MATRICULA, NOME, CPF, SECRETARIA, LOTACAO, CARGO, ADMISSAO, POSSE, EXERCICIO, EXONERACAO, SITUACAO_FUNCIONAL, STATUS, OCUPAÇÃO, [MOTIVO EXONERAÇÃO], ATIVO2019 FROM dbo.TBExoneradosXLS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MATRICULA" DataSetColumn="MATRICULA" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="CPF" DataSetColumn="CPF" />
+              <Mapping SourceColumn="SECRETARIA" DataSetColumn="SECRETARIA" />
+              <Mapping SourceColumn="LOTACAO" DataSetColumn="LOTACAO" />
+              <Mapping SourceColumn="CARGO" DataSetColumn="CARGO" />
+              <Mapping SourceColumn="ADMISSAO" DataSetColumn="ADMISSAO" />
+              <Mapping SourceColumn="POSSE" DataSetColumn="POSSE" />
+              <Mapping SourceColumn="EXERCICIO" DataSetColumn="EXERCICIO" />
+              <Mapping SourceColumn="EXONERACAO" DataSetColumn="EXONERACAO" />
+              <Mapping SourceColumn="SITUACAO_FUNCIONAL" DataSetColumn="SITUACAO_FUNCIONAL" />
+              <Mapping SourceColumn="STATUS" DataSetColumn="STATUS" />
+              <Mapping SourceColumn="OCUPAÇÃO" DataSetColumn="OCUPAÇÃO" />
+              <Mapping SourceColumn="MOTIVO EXONERAÇÃO" DataSetColumn="MOTIVO EXONERAÇÃO" />
+              <Mapping SourceColumn="ATIVO2019" DataSetColumn="ATIVO2019" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetUsuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetUsuario" msprop:Generator_UserDSName="DataSetUsuario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwUsuarioWebService" msprop:Generator_TableClassName="vwUsuarioWebServiceDataTable" msprop:Generator_TableVarName="tablevwUsuarioWebService" msprop:Generator_TablePropName="vwUsuarioWebService" msprop:Generator_RowDeletingName="vwUsuarioWebServiceRowDeleting" msprop:Generator_RowChangingName="vwUsuarioWebServiceRowChanging" msprop:Generator_RowEvHandlerName="vwUsuarioWebServiceRowChangeEventHandler" msprop:Generator_RowDeletedName="vwUsuarioWebServiceRowDeleted" msprop:Generator_UserTableName="vwUsuarioWebService" msprop:Generator_RowChangedName="vwUsuarioWebServiceRowChanged" msprop:Generator_RowEvArgName="vwUsuarioWebServiceRowChangeEvent" msprop:Generator_RowClassName="vwUsuarioWebServiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDUsuario" msprop:Generator_ColumnPropNameInRow="IDUsuario" msprop:Generator_ColumnPropNameInTable="IDUsuarioColumn" msprop:Generator_UserColumnName="IDUsuario" type="xs:int" />
+              <xs:element name="IDSetor" msprop:Generator_ColumnVarNameInTable="columnIDSetor" msprop:Generator_ColumnPropNameInRow="IDSetor" msprop:Generator_ColumnPropNameInTable="IDSetorColumn" msprop:Generator_UserColumnName="IDSetor" type="xs:int" minOccurs="0" />
+              <xs:element name="IDStatus" msprop:Generator_ColumnVarNameInTable="columnIDStatus" msprop:Generator_ColumnPropNameInRow="IDStatus" msprop:Generator_ColumnPropNameInTable="IDStatusColumn" msprop:Generator_UserColumnName="IDStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="Login" msprop:Generator_ColumnVarNameInTable="columnLogin" msprop:Generator_ColumnPropNameInRow="Login" msprop:Generator_ColumnPropNameInTable="LoginColumn" msprop:Generator_UserColumnName="Login">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDEmpresa" msprop:Generator_ColumnVarNameInTable="columnIDEmpresa" msprop:Generator_ColumnPropNameInRow="IDEmpresa" msprop:Generator_ColumnPropNameInTable="IDEmpresaColumn" msprop:Generator_UserColumnName="IDEmpresa" type="xs:int" minOccurs="0" />
+              <xs:element name="TextHashCode" msprop:Generator_ColumnVarNameInTable="columnTextHashCode" msprop:Generator_ColumnPropNameInRow="TextHashCode" msprop:Generator_ColumnPropNameInTable="TextHashCodeColumn" msprop:Generator_UserColumnName="TextHashCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SenhaAdmin" msprop:Generator_ColumnVarNameInTable="columnSenhaAdmin" msprop:Generator_ColumnPropNameInRow="SenhaAdmin" msprop:Generator_ColumnPropNameInTable="SenhaAdminColumn" msprop:Generator_UserColumnName="SenhaAdmin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTPUsuario" msprop:Generator_ColumnVarNameInTable="columnIDTPUsuario" msprop:Generator_ColumnPropNameInRow="IDTPUsuario" msprop:Generator_ColumnPropNameInTable="IDTPUsuarioColumn" msprop:Generator_UserColumnName="IDTPUsuario" type="xs:int" minOccurs="0" />
+              <xs:element name="PIS" msprop:Generator_ColumnVarNameInTable="columnPIS" msprop:Generator_ColumnPropNameInRow="PIS" msprop:Generator_ColumnPropNameInTable="PISColumn" msprop:Generator_UserColumnName="PIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReferenciaREP" msprop:Generator_ColumnVarNameInTable="columnReferenciaREP" msprop:Generator_ColumnPropNameInRow="ReferenciaREP" msprop:Generator_ColumnPropNameInTable="ReferenciaREPColumn" msprop:Generator_UserColumnName="ReferenciaREP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrimeiroNome" msprop:Generator_ColumnVarNameInTable="columnPrimeiroNome" msprop:Generator_ColumnPropNameInRow="PrimeiroNome" msprop:Generator_ColumnPropNameInTable="PrimeiroNomeColumn" msprop:Generator_UserColumnName="PrimeiroNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSUsuario" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDSUsuario" msprop:Generator_ColumnPropNameInRow="DSUsuario" msprop:Generator_ColumnPropNameInTable="DSUsuarioColumn" msprop:Generator_UserColumnName="DSUsuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="601" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FotoUsuario" msprop:Generator_ColumnVarNameInTable="columnFotoUsuario" msprop:Generator_ColumnPropNameInRow="FotoUsuario" msprop:Generator_ColumnPropNameInTable="FotoUsuarioColumn" msprop:Generator_UserColumnName="FotoUsuario" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CadastraDigital" msprop:Generator_ColumnVarNameInTable="columnCadastraDigital" msprop:Generator_ColumnPropNameInRow="CadastraDigital" msprop:Generator_ColumnPropNameInTable="CadastraDigitalColumn" msprop:Generator_UserColumnName="CadastraDigital" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Template1" msprop:Generator_ColumnVarNameInTable="columnTemplate1" msprop:Generator_ColumnPropNameInRow="Template1" msprop:Generator_ColumnPropNameInTable="Template1Column" msprop:Generator_UserColumnName="Template1" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Template2" msprop:Generator_ColumnVarNameInTable="columnTemplate2" msprop:Generator_ColumnPropNameInRow="Template2" msprop:Generator_ColumnPropNameInTable="Template2Column" msprop:Generator_UserColumnName="Template2" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDVinculoUsuario" msprop:Generator_ColumnVarNameInTable="columnIDVinculoUsuario" msprop:Generator_ColumnPropNameInRow="IDVinculoUsuario" msprop:Generator_ColumnPropNameInTable="IDVinculoUsuarioColumn" msprop:Generator_UserColumnName="IDVinculoUsuario" type="xs:long" />
+              <xs:element name="TotalHoraDia" msprop:Generator_ColumnVarNameInTable="columnTotalHoraDia" msprop:Generator_ColumnPropNameInRow="TotalHoraDia" msprop:Generator_ColumnPropNameInTable="TotalHoraDiaColumn" msprop:Generator_UserColumnName="TotalHoraDia" type="xs:int" minOccurs="0" />
+              <xs:element name="HoraSaidaTarde" msprop:Generator_ColumnVarNameInTable="columnHoraSaidaTarde" msprop:Generator_ColumnPropNameInRow="HoraSaidaTarde" msprop:Generator_ColumnPropNameInTable="HoraSaidaTardeColumn" msprop:Generator_UserColumnName="HoraSaidaTarde" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraEntradaTarde" msprop:Generator_ColumnVarNameInTable="columnHoraEntradaTarde" msprop:Generator_ColumnPropNameInRow="HoraEntradaTarde" msprop:Generator_ColumnPropNameInTable="HoraEntradaTardeColumn" msprop:Generator_UserColumnName="HoraEntradaTarde" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraSaidaManha" msprop:Generator_ColumnVarNameInTable="columnHoraSaidaManha" msprop:Generator_ColumnPropNameInRow="HoraSaidaManha" msprop:Generator_ColumnPropNameInTable="HoraSaidaManhaColumn" msprop:Generator_UserColumnName="HoraSaidaManha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraEntradaManha" msprop:Generator_ColumnVarNameInTable="columnHoraEntradaManha" msprop:Generator_ColumnPropNameInRow="HoraEntradaManha" msprop:Generator_ColumnPropNameInTable="HoraEntradaManhaColumn" msprop:Generator_UserColumnName="HoraEntradaManha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegimePlantonista" msprop:Generator_ColumnVarNameInTable="columnRegimePlantonista" msprop:Generator_ColumnPropNameInRow="RegimePlantonista" msprop:Generator_ColumnPropNameInTable="RegimePlantonistaColumn" msprop:Generator_UserColumnName="RegimePlantonista" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwMaiorRefREP" msprop:Generator_TableClassName="vwMaiorRefREPDataTable" msprop:Generator_TableVarName="tablevwMaiorRefREP" msprop:Generator_TablePropName="vwMaiorRefREP" msprop:Generator_RowDeletingName="vwMaiorRefREPRowDeleting" msprop:Generator_RowChangingName="vwMaiorRefREPRowChanging" msprop:Generator_RowEvHandlerName="vwMaiorRefREPRowChangeEventHandler" msprop:Generator_RowDeletedName="vwMaiorRefREPRowDeleted" msprop:Generator_UserTableName="vwMaiorRefREP" msprop:Generator_RowChangedName="vwMaiorRefREPRowChanged" msprop:Generator_RowEvArgName="vwMaiorRefREPRowChangeEvent" msprop:Generator_RowClassName="vwMaiorRefREPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaiorRefREP" msprop:Generator_ColumnVarNameInTable="columnMaiorRefREP" msprop:Generator_ColumnPropNameInRow="MaiorRefREP" msprop:Generator_ColumnPropNameInTable="MaiorRefREPColumn" msprop:Generator_UserColumnName="MaiorRefREP" type="xs:int" minOccurs="0" />
+              <xs:element name="IDEmpresa" msprop:Generator_ColumnVarNameInTable="columnIDEmpresa" msprop:Generator_ColumnPropNameInRow="IDEmpresa" msprop:Generator_ColumnPropNameInTable="IDEmpresaColumn" msprop:Generator_UserColumnName="IDEmpresa" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwUsuarioWebServiceFoto" msprop:Generator_TableClassName="vwUsuarioWebServiceFotoDataTable" msprop:Generator_TableVarName="tablevwUsuarioWebServiceFoto" msprop:Generator_RowChangedName="vwUsuarioWebServiceFotoRowChanged" msprop:Generator_TablePropName="vwUsuarioWebServiceFoto" msprop:Generator_RowDeletingName="vwUsuarioWebServiceFotoRowDeleting" msprop:Generator_RowChangingName="vwUsuarioWebServiceFotoRowChanging" msprop:Generator_RowEvHandlerName="vwUsuarioWebServiceFotoRowChangeEventHandler" msprop:Generator_RowDeletedName="vwUsuarioWebServiceFotoRowDeleted" msprop:Generator_RowClassName="vwUsuarioWebServiceFotoRow" msprop:Generator_UserTableName="vwUsuarioWebServiceFoto" msprop:Generator_RowEvArgName="vwUsuarioWebServiceFotoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDUsuario" msprop:Generator_ColumnPropNameInRow="IDUsuario" msprop:Generator_ColumnPropNameInTable="IDUsuarioColumn" msprop:Generator_UserColumnName="IDUsuario" type="xs:int" />
+              <xs:element name="FotoUsuario" msprop:Generator_ColumnVarNameInTable="columnFotoUsuario" msprop:Generator_ColumnPropNameInRow="FotoUsuario" msprop:Generator_ColumnPropNameInTable="FotoUsuarioColumn" msprop:Generator_UserColumnName="FotoUsuario" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBConfiguracaoFTP" msprop:Generator_TableClassName="TBConfiguracaoFTPDataTable" msprop:Generator_TableVarName="tableTBConfiguracaoFTP" msprop:Generator_TablePropName="TBConfiguracaoFTP" msprop:Generator_RowDeletingName="TBConfiguracaoFTPRowDeleting" msprop:Generator_RowChangingName="TBConfiguracaoFTPRowChanging" msprop:Generator_RowEvHandlerName="TBConfiguracaoFTPRowChangeEventHandler" msprop:Generator_RowDeletedName="TBConfiguracaoFTPRowDeleted" msprop:Generator_UserTableName="TBConfiguracaoFTP" msprop:Generator_RowChangedName="TBConfiguracaoFTPRowChanged" msprop:Generator_RowEvArgName="TBConfiguracaoFTPRowChangeEvent" msprop:Generator_RowClassName="TBConfiguracaoFTPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDConfiguracaoFTP" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDConfiguracaoFTP" msprop:Generator_ColumnPropNameInRow="IDConfiguracaoFTP" msprop:Generator_ColumnPropNameInTable="IDConfiguracaoFTPColumn" msprop:Generator_UserColumnName="IDConfiguracaoFTP" type="xs:int" />
+              <xs:element name="EnderecoFTP" msprop:Generator_ColumnVarNameInTable="columnEnderecoFTP" msprop:Generator_ColumnPropNameInRow="EnderecoFTP" msprop:Generator_ColumnPropNameInTable="EnderecoFTPColumn" msprop:Generator_UserColumnName="EnderecoFTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DTCadastroFTP" msprop:Generator_ColumnVarNameInTable="columnDTCadastroFTP" msprop:Generator_ColumnPropNameInRow="DTCadastroFTP" msprop:Generator_ColumnPropNameInTable="DTCadastroFTPColumn" msprop:Generator_UserColumnName="DTCadastroFTP" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UsuarioFTP" msprop:Generator_ColumnVarNameInTable="columnUsuarioFTP" msprop:Generator_ColumnPropNameInRow="UsuarioFTP" msprop:Generator_ColumnPropNameInTable="UsuarioFTPColumn" msprop:Generator_UserColumnName="UsuarioFTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SenhaFTP" msprop:Generator_ColumnVarNameInTable="columnSenhaFTP" msprop:Generator_ColumnPropNameInRow="SenhaFTP" msprop:Generator_ColumnPropNameInTable="SenhaFTPColumn" msprop:Generator_UserColumnName="SenhaFTP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDEmpresa" msprop:Generator_ColumnVarNameInTable="columnIDEmpresa" msprop:Generator_ColumnPropNameInRow="IDEmpresa" msprop:Generator_ColumnPropNameInTable="IDEmpresaColumn" msprop:Generator_UserColumnName="IDEmpresa" type="xs:int" minOccurs="0" />
+              <xs:element name="VersaoClientBiometria" msprop:Generator_ColumnVarNameInTable="columnVersaoClientBiometria" msprop:Generator_ColumnPropNameInRow="VersaoClientBiometria" msprop:Generator_ColumnPropNameInTable="VersaoClientBiometriaColumn" msprop:Generator_UserColumnName="VersaoClientBiometria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBExoneradosXLS" msprop:Generator_TableClassName="TBExoneradosXLSDataTable" msprop:Generator_TableVarName="tableTBExoneradosXLS" msprop:Generator_RowChangedName="TBExoneradosXLSRowChanged" msprop:Generator_TablePropName="TBExoneradosXLS" msprop:Generator_RowDeletingName="TBExoneradosXLSRowDeleting" msprop:Generator_RowChangingName="TBExoneradosXLSRowChanging" msprop:Generator_RowEvHandlerName="TBExoneradosXLSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBExoneradosXLSRowDeleted" msprop:Generator_RowClassName="TBExoneradosXLSRow" msprop:Generator_UserTableName="TBExoneradosXLS" msprop:Generator_RowEvArgName="TBExoneradosXLSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MATRICULA" msprop:Generator_ColumnVarNameInTable="columnMATRICULA" msprop:Generator_ColumnPropNameInRow="MATRICULA" msprop:Generator_ColumnPropNameInTable="MATRICULAColumn" msprop:Generator_UserColumnName="MATRICULA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPF" msprop:Generator_ColumnVarNameInTable="columnCPF" msprop:Generator_ColumnPropNameInRow="CPF" msprop:Generator_ColumnPropNameInTable="CPFColumn" msprop:Generator_UserColumnName="CPF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECRETARIA" msprop:Generator_ColumnVarNameInTable="columnSECRETARIA" msprop:Generator_ColumnPropNameInRow="SECRETARIA" msprop:Generator_ColumnPropNameInTable="SECRETARIAColumn" msprop:Generator_UserColumnName="SECRETARIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOTACAO" msprop:Generator_ColumnVarNameInTable="columnLOTACAO" msprop:Generator_ColumnPropNameInRow="LOTACAO" msprop:Generator_ColumnPropNameInTable="LOTACAOColumn" msprop:Generator_UserColumnName="LOTACAO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARGO" msprop:Generator_ColumnVarNameInTable="columnCARGO" msprop:Generator_ColumnPropNameInRow="CARGO" msprop:Generator_ColumnPropNameInTable="CARGOColumn" msprop:Generator_UserColumnName="CARGO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADMISSAO" msprop:Generator_ColumnVarNameInTable="columnADMISSAO" msprop:Generator_ColumnPropNameInRow="ADMISSAO" msprop:Generator_ColumnPropNameInTable="ADMISSAOColumn" msprop:Generator_UserColumnName="ADMISSAO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSSE" msprop:Generator_ColumnVarNameInTable="columnPOSSE" msprop:Generator_ColumnPropNameInRow="POSSE" msprop:Generator_ColumnPropNameInTable="POSSEColumn" msprop:Generator_UserColumnName="POSSE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EXERCICIO" msprop:Generator_ColumnVarNameInTable="columnEXERCICIO" msprop:Generator_ColumnPropNameInRow="EXERCICIO" msprop:Generator_ColumnPropNameInTable="EXERCICIOColumn" msprop:Generator_UserColumnName="EXERCICIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EXONERACAO" msprop:Generator_ColumnVarNameInTable="columnEXONERACAO" msprop:Generator_ColumnPropNameInRow="EXONERACAO" msprop:Generator_ColumnPropNameInTable="EXONERACAOColumn" msprop:Generator_UserColumnName="EXONERACAO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SITUACAO_FUNCIONAL" msprop:Generator_ColumnVarNameInTable="columnSITUACAO_FUNCIONAL" msprop:Generator_ColumnPropNameInRow="SITUACAO_FUNCIONAL" msprop:Generator_ColumnPropNameInTable="SITUACAO_FUNCIONALColumn" msprop:Generator_UserColumnName="SITUACAO_FUNCIONAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STATUS" msprop:Generator_ColumnVarNameInTable="columnSTATUS" msprop:Generator_ColumnPropNameInRow="STATUS" msprop:Generator_ColumnPropNameInTable="STATUSColumn" msprop:Generator_UserColumnName="STATUS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OCUPAÇÃO" msprop:Generator_ColumnVarNameInTable="columnOCUPAÇÃO" msprop:Generator_ColumnPropNameInRow="OCUPAÇÃO" msprop:Generator_ColumnPropNameInTable="OCUPAÇÃOColumn" msprop:Generator_UserColumnName="OCUPAÇÃO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOTIVO_x0020_EXONERAÇÃO" msprop:Generator_ColumnVarNameInTable="columnMOTIVO_EXONERAÇÃO" msprop:Generator_ColumnPropNameInRow="MOTIVO_EXONERAÇÃO" msprop:Generator_ColumnPropNameInTable="MOTIVO_EXONERAÇÃOColumn" msprop:Generator_UserColumnName="MOTIVO EXONERAÇÃO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ATIVO2019" msprop:Generator_ColumnVarNameInTable="columnATIVO2019" msprop:Generator_ColumnPropNameInRow="ATIVO2019" msprop:Generator_ColumnPropNameInTable="ATIVO2019Column" msprop:Generator_UserColumnName="ATIVO2019" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwUsuarioWebService" />
+      <xs:field xpath="mstns:IDUsuario" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:vwUsuarioWebService" />
+      <xs:field xpath="mstns:IDVinculoUsuario" />
+    </xs:unique>
+    <xs:unique name="vwUsuarioWebServiceFoto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwUsuarioWebServiceFoto" />
+      <xs:field xpath="mstns:IDUsuario" />
+    </xs:unique>
+    <xs:unique name="TBConfiguracaoFTP_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBConfiguracaoFTP" />
+      <xs:field xpath="mstns:IDConfiguracaoFTP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

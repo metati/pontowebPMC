@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:mstns="http://tempuri.org/nwindDataSet.xsd" id="TESTEUsuario" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=192.168.171.31;Initial Catalog=PontoFrequenciaN;Persist Security Info=True;User ID=dbpontosa;Password=dbpontoSADCTI" IsAppSettingsProperty="false" Modifier="Assembly" ParameterPrefix="@" Provider="System.Data.SqlClient" Name="Connection" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwUsuariogridAdapter" Name="vwUsuariogrid" UserDataComponentName="vwUsuariogridAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Connection" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PrimeiroNome, DSUsuario, DataCadastro, DSTPUsuario, DSStatus, SituacaoDigital, DSCargo, IDUsuario, IDSetor, DSSetor, Login, IDStatus, IDCargo, IDTPUsuario, DTCadastro, TotHorasDiarias, HoraEntradaManha, HoraEntradaTarde, HoraSaidaManha, HoraSaidaTarde, SenhaDigital, AcessoEspecial, IDEmpresa, FotoUsuario, DTNascimento, DTAdmissao, PIS, RG, DTRG, NomeComp, IDEntidade, DSEntidade, DashboardCorporativo, CadastraDigital, DSEmpresa FROM dbo.vwUsuariogrid</CommandText>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PrimeiroNome" DataSetColumn="PrimeiroNome" />
+              <Mapping SourceColumn="DSUsuario" DataSetColumn="DSUsuario" />
+              <Mapping SourceColumn="DataCadastro" DataSetColumn="DataCadastro" />
+              <Mapping SourceColumn="DSTPUsuario" DataSetColumn="DSTPUsuario" />
+              <Mapping SourceColumn="DSStatus" DataSetColumn="DSStatus" />
+              <Mapping SourceColumn="SituacaoDigital" DataSetColumn="SituacaoDigital" />
+              <Mapping SourceColumn="DSCargo" DataSetColumn="DSCargo" />
+              <Mapping SourceColumn="IDUsuario" DataSetColumn="IDUsuario" />
+              <Mapping SourceColumn="IDSetor" DataSetColumn="IDSetor" />
+              <Mapping SourceColumn="DSSetor" DataSetColumn="DSSetor" />
+              <Mapping SourceColumn="Login" DataSetColumn="Login" />
+              <Mapping SourceColumn="IDStatus" DataSetColumn="IDStatus" />
+              <Mapping SourceColumn="IDCargo" DataSetColumn="IDCargo" />
+              <Mapping SourceColumn="IDTPUsuario" DataSetColumn="IDTPUsuario" />
+              <Mapping SourceColumn="DTCadastro" DataSetColumn="DTCadastro" />
+              <Mapping SourceColumn="TotHorasDiarias" DataSetColumn="TotHorasDiarias" />
+              <Mapping SourceColumn="HoraEntradaManha" DataSetColumn="HoraEntradaManha" />
+              <Mapping SourceColumn="HoraEntradaTarde" DataSetColumn="HoraEntradaTarde" />
+              <Mapping SourceColumn="HoraSaidaManha" DataSetColumn="HoraSaidaManha" />
+              <Mapping SourceColumn="HoraSaidaTarde" DataSetColumn="HoraSaidaTarde" />
+              <Mapping SourceColumn="SenhaDigital" DataSetColumn="SenhaDigital" />
+              <Mapping SourceColumn="AcessoEspecial" DataSetColumn="AcessoEspecial" />
+              <Mapping SourceColumn="IDEmpresa" DataSetColumn="IDEmpresa" />
+              <Mapping SourceColumn="FotoUsuario" DataSetColumn="FotoUsuario" />
+              <Mapping SourceColumn="DTNascimento" DataSetColumn="DTNascimento" />
+              <Mapping SourceColumn="DTAdmissao" DataSetColumn="DTAdmissao" />
+              <Mapping SourceColumn="PIS" DataSetColumn="PIS" />
+              <Mapping SourceColumn="RG" DataSetColumn="RG" />
+              <Mapping SourceColumn="DTRG" DataSetColumn="DTRG" />
+              <Mapping SourceColumn="NomeComp" DataSetColumn="NomeComp" />
+              <Mapping SourceColumn="IDEntidade" DataSetColumn="IDEntidade" />
+              <Mapping SourceColumn="DSEntidade" DataSetColumn="DSEntidade" />
+              <Mapping SourceColumn="DashboardCorporativo" DataSetColumn="DashboardCorporativo" />
+              <Mapping SourceColumn="CadastraDigital" DataSetColumn="CadastraDigital" />
+              <Mapping SourceColumn="DSEmpresa" DataSetColumn="DSEmpresa" />
+            </Mappings>
+          </TableAdapter>
+        </Tables>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TESTEUsuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwUsuariogrid">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PrimeiroNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSUsuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataCadastro" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSTPUsuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SituacaoDigital" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DSCargo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDUsuario" type="xs:int" />
+              <xs:element name="IDSetor" type="xs:int" />
+              <xs:element name="DSSetor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Login">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDStatus" type="xs:int" />
+              <xs:element name="IDCargo" type="xs:int" />
+              <xs:element name="IDTPUsuario" type="xs:int" />
+              <xs:element name="DTCadastro" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TotHorasDiarias" type="xs:int" />
+              <xs:element name="HoraEntradaManha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraEntradaTarde">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraSaidaManha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraSaidaTarde">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SenhaDigital" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcessoEspecial" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IDEmpresa" type="xs:int" minOccurs="0" />
+              <xs:element name="FotoUsuario" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="DTNascimento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DTAdmissao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DTRG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NomeComp" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="601" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDEntidade" type="xs:int" />
+              <xs:element name="DSEntidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DashboardCorporativo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CadastraDigital" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DSEmpresa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

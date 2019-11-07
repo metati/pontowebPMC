@@ -1,0 +1,220 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmMudaOrgao.aspx.cs" Inherits="Cadastro_frmMudaOrgao" %>
+
+<%@ Register assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+
+
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    
+    <script type="text/javascript">
+        function AbrePopTrocaOrgao(IDUsuario) {
+            coIDUsuarioTroca.Set('IDusuarioTroca', IDUsuario);
+            pcMudaServidor.Show();
+        }
+        function BuscaServidor(IDUsuario) {
+            gridBuscaServidor.PerformCallback();
+        }
+        function PreencheSetor() {
+            cbSetorTroca.PerformCallback(cbEmpresa.GetValue());
+        }
+        function FechaPopTroca() {
+            cbEmpresa.SetText('');
+            cbSetorTroca.SetText('');
+            pcMudaServidor.Hide();
+        }
+        function ApagaTextBox() {
+            tbBuscapServidor.SetText('');
+        }
+        function SalvaTroca() {
+            pcMudaServidor.Hide();
+            gridBuscaServidor.PerformCallback('Op');
+        }
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            width: 346px;
+        }
+        .style2
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            width: 100px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <p>
+        Mudar servidor de órgão
+        <table class="dxflInternalEditorTable_DevEx">
+            <tr>
+                <td class="style1">
+                    <dx:ASPxRadioButtonList ID="rblOpcao" runat="server" EnableTheming="True" 
+                        SelectedIndex="0" Theme="DevEx">
+                        <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	ApagaTextBox();
+}" />
+                        <Items>
+                            <dx:ListEditItem Selected="True" Text="Buscar por Nome" Value="0" />
+                            <dx:ListEditItem Text="Buscar por CPF" Value="1" />
+                        </Items>
+                    </dx:ASPxRadioButtonList>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    <dx:ASPxTextBox ID="tbBuscapServidor" runat="server" 
+                        ClientInstanceName="tbBuscapServidor" Theme="DevEx" Width="350px">
+                        <ValidationSettings ValidationGroup="ValidaBusca">
+                            <RequiredField IsRequired="True" />
+                        </ValidationSettings>
+                    </dx:ASPxTextBox>
+                </td>
+                <td>
+                    <dx:ASPxButton ID="btBuscarServidorOrgao" runat="server" Text="Buscar" 
+                        Theme="DevEx" ValidationGroup="ValidaBusca" Width="100px" 
+                        AutoPostBack="False" ClientInstanceName="btBuscarServidorOrgao">
+                        <ClientSideEvents Click="function(s, e) {
+if(ASPxClientEdit.ValidateGroup('ValidaBusca'))	
+BuscaServidor();
+}" />
+                    </dx:ASPxButton>
+                </td>
+            </tr>
+        </table>
+        <table class="style2">
+            <tr>
+                <td>
+                    <dx:ASPxGridView ID="gridBuscaServidor" runat="server" 
+                        AutoGenerateColumns="False" ClientInstanceName="gridBuscaServidor" 
+                        DataMember="vwusuariogrid" EnableTheming="True" KeyFieldName="IDUsuario" 
+                        Theme="DevEx" Width="750px" 
+                        oncustomcallback="gridBuscaServidor_CustomCallback" 
+                        onpageindexchanged="gridBuscaServidor_PageIndexChanged">
+                        <Columns>
+                            <dx:GridViewDataTextColumn Caption="#" VisibleIndex="0" Width="80px">
+                                                             <DataItemTemplate>
+                                    <a href="javascript:void(0);" onclick="AbrePopTrocaOrgao('<%#Eval("IDUsuario") %>')">
+                                        <img src="../Icones/Editar.png" height="16px" width="16px" border="0" />Mudar</a>
+                                 </DataItemTemplate>  
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn Caption="Nome" FieldName="DSUsuario" 
+                                VisibleIndex="1" Width="200px">
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn Caption="Órgão" FieldName="DSEmpresa" 
+                                VisibleIndex="3" Width="350px">
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn Caption="Situação" FieldName="DSStatus" 
+                                VisibleIndex="4" Width="50px">
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn Caption="CPF" FieldName="Login" VisibleIndex="2" 
+                                Width="100px">
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn FieldName="IDUsuario" Visible="False" 
+                                VisibleIndex="5">
+                            </dx:GridViewDataTextColumn>
+                        </Columns>
+                        <SettingsPager>
+                            <Summary Text="Página {0} de {1} ({2})" />
+                        </SettingsPager>
+                        <SettingsLoadingPanel Text="Buscando&amp;hellip;" />
+                    </dx:ASPxGridView>
+                </td>
+            </tr>
+        </table>
+        <table class="style2">
+            <tr>
+                <td>
+                                    <dx:ASPxButton ID="btVoltar" runat="server" 
+                                        CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                        SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Voltar" 
+                                        Width="100px" onclick="btVoltar_Click" 
+                        CausesValidation="False">
+                                    </dx:ASPxButton>
+                                </td>
+            </tr>
+        </table>
+        <table class="style2">
+            <tr>
+                <td>
+                    <dx:ASPxPopupControl ID="pcMudaServidor" runat="server" 
+                        ClientInstanceName="pcMudaServidor" HeaderText="Mudar servidor de órgão" 
+                        PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
+                        RenderMode="Lightweight" Theme="DevEx" Width="550px">
+                        <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table class="style2">
+        <tr>
+            <td>
+                Órgão:</td>
+            <td>
+                <dx:ASPxComboBox ID="cbEmpresa" runat="server" ClientInstanceName="cbEmpresa" 
+                    IncrementalFilteringMode="Contains" TextField="DSEmpresa" Theme="DevEx" 
+                    ValueField="IDEmpresa" Width="400px">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreencheSetor();
+}" />
+                    <ValidationSettings ValidationGroup="ValidaTroca">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Servidor:</td>
+            <td>
+                <dx:ASPxComboBox ID="cbSetorTroca" runat="server" 
+                    ClientInstanceName="cbSetorTroca" IncrementalFilteringMode="Contains" 
+                    TextField="DSSetor" Theme="DevEx" ValueField="IDSetor" Width="400px" 
+                    OnCallback="cbSetorTroca_Callback">
+                    <ValidationSettings ValidationGroup="ValidaTroca">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+        </tr>
+    </table>
+    <table class="style2">
+        <tr>
+            <td class="style3">
+                <dx:ASPxButton ID="btSalvarTroca" runat="server" 
+                    ClientInstanceName="btSalvarTroca" Text="Salvar" Theme="DevEx" 
+                    ValidationGroup="ValidaTroca" Width="100px">
+                    <ClientSideEvents Click="function(s, e) {
+	if(ASPxClientEdit.ValidateGroup('ValidaTroca'))	
+SalvaTroca();
+}" />
+                </dx:ASPxButton>
+            </td>
+            <td>
+                <dx:ASPxButton ID="btCancelarTroca" runat="server" 
+                    ClientInstanceName="btCancelarTroca" Text="Cancelar" Theme="DevEx" 
+                    Width="100px">
+                    <ClientSideEvents Click="function(s, e) {
+	FechaPopTroca();
+}" />
+                </dx:ASPxButton>
+            </td>
+        </tr>
+    </table>
+                            </dx:PopupControlContentControl>
+</ContentCollection>
+                    </dx:ASPxPopupControl>
+                                                <dx:ASPxHiddenField ID="coIDUsuarioTroca" 
+                        runat="server" ClientInstanceName="coIDUsuarioTroca">
+                    </dx:ASPxHiddenField>
+                </td>
+            </tr>
+        </table>
+    </p>
+</asp:Content>
+

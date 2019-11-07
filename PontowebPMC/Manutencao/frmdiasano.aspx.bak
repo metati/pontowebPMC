@@ -1,0 +1,61 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmdiasano.aspx.cs" Inherits="Manutencao_frmdiasano" %>
+
+<%@ Register assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <script type="text/javascript">
+        function Progresso(s, e) {
+            cbDia.PerformCallback();
+        }
+    </script>
+    <table class="style1">
+        <tr>
+            <td>
+                Manutenção de datas</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <dx:ASPxButton ID="btGerarDia" runat="server" AutoPostBack="False" 
+                    ClientInstanceName="btGerarDia" Text="Gerar dias do ano corrente" Theme="DevEx" 
+                    Width="318px">
+                    <ClientSideEvents Click="function(s, e) {
+	Progresso();
+}" />
+                </dx:ASPxButton>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <dx:ASPxCallbackPanel ID="cbDia" runat="server" ClientInstanceName="cbDia" 
+                    LoadingPanelText="Gerando datas&amp;hellip;" Theme="DevEx" Width="600px" 
+                    oncallback="cbDia_Callback">
+                    <PanelCollection>
+<dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+    <dx:ASPxProgressBar ID="pbDia" runat="server" ClientInstanceName="pbDia" 
+        CustomDisplayFormat="" Height="21px" Position="50" Theme="DevEx" 
+        Width="200px" Visible="False">
+    </dx:ASPxProgressBar>
+                        </dx:PanelContent>
+</PanelCollection>
+                </dx:ASPxCallbackPanel>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <DataSetPontoFrequencia Ref="2" type="Stimulsoft.Report.Dictionary.StiXmlDatabase" isKey="true">
+        <Alias>DataSetPontoFrequencia</Alias>
+        <Name>DataSetPontoFrequencia</Name>
+        <PathData>C:\Users\Dayan\Documents\Visual Studio 2010\Projects\MetodosPontoFrequencia - GED\MetodosPontoFrequencia\DataSetPontoFrequencia.xsd</PathData>
+        <PathSchema />
+      </DataSetPontoFrequencia>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <vWHorasDia Ref="3" type="DataTableSource" isKey="true">
+        <Alias>vWHorasDia</Alias>
+        <Columns isList="true" count="27">
+          <value>DSUsuario,System.String</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>DataFrequencia,System.String</value>
+          <value>EntradaManha,System.String</value>
+          <value>SaidaManha,System.String</value>
+          <value>EntradaTarde,System.String</value>
+          <value>SaidaTarde,System.String</value>
+          <value>HorasDia,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>OBS,System.String</value>
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>Justificado,System.String</value>
+          <value>MF,System.String</value>
+          <value>DSMES,System.String</value>
+          <value>IMF,System.String</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>dsEmpresa,System.String</value>
+          <value>FotoUsuario,System.Object</value>
+          <value>IMGEmpresa,System.Object</value>
+          <value>AnoReferencia,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Login,System.String</value>
+          <value>Situacao,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vWHorasDia</Name>
+        <NameInSource>DataSetPontoFrequencia.vWHorasDia</NameInSource>
+      </vWHorasDia>
+      <TBSetor Ref="4" type="DataTableSource" isKey="true">
+        <Alias>TBSetor</Alias>
+        <Columns isList="true" count="10">
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>IDOrgao,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>Sigla,System.String</value>
+          <value>EntradaManha,System.DateTime</value>
+          <value>SaidaManha,System.DateTime</value>
+          <value>EntradaTarde,System.DateTime</value>
+          <value>SaidaTarde,System.DateTime</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>DataSetPontoFrequencia.TBSetor</NameInSource>
+      </TBSetor>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="1">
+    <value>InternalVersion,_x0032_011.2.1012_x0020_from_x0020_14-Jun-2011</value>
+  </MetaTags>
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="12">
+        <Section1 Ref="6" type="ReportTitleBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,0.4,20.5,2.73</ClientRectangle>
+          <Components isList="true" count="2">
+            <dsEmpresa1 Ref="7" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.15,0.75,9.06,0.88</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>dsEmpresa1</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{vWHorasDia.dsEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+            </dsEmpresa1>
+            <Line27 Ref="8" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,2.06,20.89,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="9" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line27</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <StartCap Ref="10" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </Section1>
+        <ReportHeaderSection1 Ref="11" type="ReportTitleBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,3.93,20.5,1.92</ClientRectangle>
+          <Components isList="true" count="10">
+            <DSUsuario1 Ref="12" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.45,0.43,8.53,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSUsuario1</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>{vWHorasDia.DSUsuario}</Text>
+              <TextBrush>Black</TextBrush>
+            </DSUsuario1>
+            <TotHorasDiarias1 Ref="13" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.02,0.43,0.77,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>TotHorasDiarias1</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>{vWHorasDia.TotHorasDiarias}</Text>
+              <TextBrush>Black</TextBrush>
+            </TotHorasDiarias1>
+            <Text15 Ref="14" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0.43,2.13,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>Funcionário:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text16 Ref="15" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.18,0.43,3.84,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>Total de Horas Diárias:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text16>
+            <DSSetor1 Ref="16" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.17,0,9.17,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSSetor1</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>{vWHorasDia.DSSetor}</Text>
+              <TextBrush>Black</TextBrush>
+            </DSSetor1>
+            <Text14 Ref="17" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0,1.07,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>Setor:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text14>
+            <DSMES1 Ref="18" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>4.09,0.85,2.34,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DSMES1</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>{vWHorasDia.DSMES}</Text>
+              <TextBrush>Black</TextBrush>
+            </DSMES1>
+            <Text17 Ref="19" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.89,0.85,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>Mês Referência:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text17>
+            <Text10 Ref="20" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.67,0.85,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <Text>Ano Referência:</Text>
+              <TextBrush>Black</TextBrush>
+            </Text10>
+            <Line28 Ref="21" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,1.28,20.89,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="22" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line28</Name>
+              <Page isRef="5" />
+              <Parent isRef="11" />
+              <StartCap Ref="23" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line28>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportHeaderSection1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </ReportHeaderSection1>
+        <Section5 Ref="24" type="PageFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,115.71,20.5,1.57</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text23 Ref="25" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.58,0.54,13,0.85</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="5" />
+              <Parent isRef="24" />
+              <Text>Secretaria de Estado de Administração</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text23>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section5</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </Section5>
+        <Section2 Ref="26" type="PageHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,6.65,20.5,0.61</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text7 Ref="27" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>9.52,0.21,2.98,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Entrada da Tarde</Text>
+              <TextBrush>Black</TextBrush>
+            </Text7>
+            <Text8 Ref="28" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.72,0.21,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Saida da Tarde</Text>
+              <TextBrush>Black</TextBrush>
+            </Text8>
+            <Text9 Ref="29" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.7,0.21,1.07,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Total </Text>
+              <TextBrush>Black</TextBrush>
+            </Text9>
+            <Text11 Ref="30" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>17.19,0.21,2.56,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Observação</Text>
+              <TextBrush>Black</TextBrush>
+            </Text11>
+            <Text6 Ref="31" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>6.54,0.21,2.77,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Saida da Manha</Text>
+              <TextBrush>Black</TextBrush>
+            </Text6>
+            <Text5 Ref="32" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>3.13,0.21,3.2,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Entrada da Manha</Text>
+              <TextBrush>Black</TextBrush>
+            </Text5>
+            <Text4 Ref="33" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.99,0.21,1.71,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="26" />
+              <Text>Data</Text>
+              <TextBrush>Black</TextBrush>
+            </Text4>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section2</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </Section2>
+        <GroupHeaderSection1 Ref="34" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,8.06,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSSetor}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupHeaderSection1>
+        <GroupHeaderSection2 Ref="35" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,8.86,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSUsuario}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection2</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupHeaderSection2>
+        <GroupHeaderSection3 Ref="36" type="GroupHeaderBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,9.66,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{vWHorasDia.DSMES}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderSection3</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupHeaderSection3>
+        <Section3 Ref="37" type="DataBand" isKey="true">
+          <Brush>White</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,10.46,20.5,0.61</ClientRectangle>
+          <Components isList="true" count="8">
+            <DataFrequencia1 Ref="38" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0.99,0.21,2.74,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataFrequencia1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.DataFrequencia}</Text>
+              <TextBrush>Black</TextBrush>
+            </DataFrequencia1>
+            <EntradaManha1 Ref="39" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>4.19,0.21,2.53,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>EntradaManha1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.EntradaManha}</Text>
+              <TextBrush>Black</TextBrush>
+            </EntradaManha1>
+            <SaidaManha1 Ref="40" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>7.39,0.21,2.27,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>SaidaManha1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.SaidaManha}</Text>
+              <TextBrush>Black</TextBrush>
+            </SaidaManha1>
+            <EntradaTarde1 Ref="41" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>10.37,0.21,2.48,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>EntradaTarde1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.EntradaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+            </EntradaTarde1>
+            <SaidaTarde1 Ref="42" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>12.93,0.21,2.06,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>SaidaTarde1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.SaidaTarde}</Text>
+              <TextBrush>Black</TextBrush>
+            </SaidaTarde1>
+            <HorasDia1 Ref="43" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>15.28,0.21,1.85,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>HorasDia1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.HorasDia}</Text>
+              <TextBrush>Black</TextBrush>
+            </HorasDia1>
+            <MF1 Ref="44" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.98,0.21,5.9,0.39</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>MF1</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <Text>{vWHorasDia.MF}</Text>
+              <TextBrush>Black</TextBrush>
+            </MF1>
+            <Line25 Ref="45" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,0,20.66,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="46" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line25</Name>
+              <Page isRef="5" />
+              <Parent isRef="37" />
+              <StartCap Ref="47" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line25>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>vWHorasDia</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>Section3</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="6">
+            <value>ASC</value>
+            <value>DSSetor</value>
+            <value>ASC</value>
+            <value>DSUsuario</value>
+            <value>ASC</value>
+            <value>DSMES</value>
+          </Sort>
+        </Section3>
+        <GroupFooterSection3 Ref="48" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,11.87,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection3</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupFooterSection3>
+        <GroupFooterSection2 Ref="49" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,12.67,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection2</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupFooterSection2>
+        <GroupFooterSection1 Ref="50" type="GroupFooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,13.47,20.5,0</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterSection1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupFooterSection1>
+        <Section4 Ref="51" type="FooterBand" isKey="true">
+          <Brush>White</Brush>
+          <ClientRectangle>0,14.27,20.5,1.94</ClientRectangle>
+          <Components isList="true" count="4">
+            <Text2 Ref="52" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>16.01,1.36,1.68,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="51" />
+              <Text>Funcionário</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+            <Text1 Ref="53" type="Text" isKey="true">
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>2.64,1.37,2.21,0.43</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="5" />
+              <Parent isRef="51" />
+              <Text>Chefe Imediato</Text>
+              <TextBrush>Black</TextBrush>
+            </Text1>
+            <Line1 Ref="54" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>1.17,1.35,5.81,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="55" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line1</Name>
+              <Page isRef="5" />
+              <Parent isRef="51" />
+              <StartCap Ref="56" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line1>
+            <Line2 Ref="57" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>13.77,1.33,5.81,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="58" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>Line2</Name>
+              <Page isRef="5" />
+              <Parent isRef="51" />
+              <StartCap Ref="59" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </Line2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Section4</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </Section4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>e6877be83da24cfebd2ee62244c57e76</Guid>
+      <LargeHeight>True</LargeHeight>
+      <Margins>0.25,0.25,0.19,0.19</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <TitleBeforeHeader>True</TitleBeforeHeader>
+      <Watermark Ref="60" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="61" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportAuthor isNull="true" />
+  <ReportChanged>6/27/2014 5:42:10 PM</ReportChanged>
+  <ReportCreated>6/27/2014 5:38:48 PM</ReportCreated>
+  <ReportDescription isNull="true" />
+  <ReportFile>C:\Users\Dayan\Documents\Ponto Frequencia\WebPontoFrequencia2\Relatorio\RPT\bkprptFolhaFrequencia.mrt</ReportFile>
+  <ReportGuid>26c5703a1c03496f8ca68389ad3097e2</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.2.1304</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <DataSetPontoFrequencia Ref="2" type="Stimulsoft.Report.Dictionary.StiXmlDatabase" isKey="true">
+        <Alias>DataSetPontoFrequencia</Alias>
+        <Name>DataSetPontoFrequencia</Name>
+        <PathData>C:\Users\Dayan\Documents\Ponto Frequencia\MetodosPontoFrequencia - GED\MetodosPontoFrequencia\DataSetPontoFrequencia.xsd</PathData>
+        <PathSchema />
+      </DataSetPontoFrequencia>
+    </Databases>
+    <DataSources isList="true" count="34">
+      <TBCargo Ref="3" type="DataTableSource" isKey="true">
+        <Alias>TBCargo</Alias>
+        <Columns isList="true" count="2">
+          <value>IDCargo,System.Int32</value>
+          <value>DSCargo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBCargo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBCargo</NameInSource>
+      </TBCargo>
+      <TBEntidade Ref="4" type="DataTableSource" isKey="true">
+        <Alias>TBEntidade</Alias>
+        <Columns isList="true" count="4">
+          <value>IDEntidade,System.Int32</value>
+          <value>DSEntidade,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>VinculoCodigo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBEntidade</Name>
+        <NameInSource>DataSetPontoFrequencia.TBEntidade</NameInSource>
+      </TBEntidade>
+      <TBFeriadoPontoFacultativo Ref="5" type="DataTableSource" isKey="true">
+        <Alias>TBFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSFeriadoPontoFacultativo,System.String</value>
+          <value>FeriadoAnual,System.Byte[]</value>
+          <value>IDTPFeriadoPontoFacultativo,System.Int32</value>
+          <value>DTFeriadoPontoFacultativo,System.String</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFeriadoPontoFacultativo</NameInSource>
+      </TBFeriadoPontoFacultativo>
+      <TBFrequencia Ref="6" type="DataTableSource" isKey="true">
+        <Alias>TBFrequencia</Alias>
+        <Columns isList="true" count="12">
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDMotivoFalta,System.Int32</value>
+          <value>DTFrequencia,System.DateTime</value>
+          <value>HoraEntraManha,System.DateTime</value>
+          <value>HoraSaidaManha,System.DateTime</value>
+          <value>HoraEntradaTarde,System.DateTime</value>
+          <value>HoraSaidaTarde,System.DateTime</value>
+          <value>OBS,System.String</value>
+          <value>TotalHorasDias,System.DateTime</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>AnoReferencia,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFrequencia</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFrequencia</NameInSource>
+      </TBFrequencia>
+      <TBInformacaoDiaria Ref="7" type="DataTableSource" isKey="true">
+        <Alias>TBInformacaoDiaria</Alias>
+        <Columns isList="true" count="5">
+          <value>TBInformacaoDiaria,System.Int32</value>
+          <value>DSInformacaoDiaria,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>DTInformacaoDiaria,System.String</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBInformacaoDiaria</Name>
+        <NameInSource>DataSetPontoFrequencia.TBInformacaoDiaria</NameInSource>
+      </TBInformacaoDiaria>
+      <TBMotivoFalta Ref="8" type="DataTableSource" isKey="true">
+        <Alias>TBMotivoFalta</Alias>
+        <Columns isList="true" count="2">
+          <value>IDMotivoFalta,System.Int32</value>
+          <value>DSMotivoFalta,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBMotivoFalta</Name>
+        <NameInSource>DataSetPontoFrequencia.TBMotivoFalta</NameInSource>
+      </TBMotivoFalta>
+      <TBOrgao Ref="9" type="DataTableSource" isKey="true">
+        <Alias>TBOrgao</Alias>
+        <Columns isList="true" count="3">
+          <value>IDOrgao,System.Int32</value>
+          <value>DSOrgao,System.String</value>
+          <value>Sigla,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBOrgao</Name>
+        <NameInSource>DataSetPontoFrequencia.TBOrgao</NameInSource>
+      </TBOrgao>
+      <TBSetor Ref="10" type="DataTableSource" isKey="true">
+        <Alias>TBSetor</Alias>
+        <Columns isList="true" count="10">
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>IDOrgao,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>Sigla,System.String</value>
+          <value>EntradaManha,System.DateTime</value>
+          <value>SaidaManha,System.DateTime</value>
+          <value>EntradaTarde,System.DateTime</value>
+          <value>SaidaTarde,System.DateTime</value>
+          <value>IDEmpresa,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>DataSetPontoFrequencia.TBSetor</NameInSource>
+      </TBSetor>
+      <TBStatus Ref="11" type="DataTableSource" isKey="true">
+        <Alias>TBStatus</Alias>
+        <Columns isList="true" count="2">
+          <value>IDStatus,System.Int32</value>
+          <value>DSStatus,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>DataSetPontoFrequencia.TBStatus</NameInSource>
+      </TBStatus>
+      <TBTipoUsuario Ref="12" type="DataTableSource" isKey="true">
+        <Alias>TBTipoUsuario</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPUsuario,System.Int32</value>
+          <value>DSTPUsuario,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoUsuario</NameInSource>
+      </TBTipoUsuario>
+      <TBUsuario Ref="13" type="DataTableSource" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <Columns isList="true" count="30">
+          <value>IDUsuario,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDEntidade,System.Int32</value>
+          <value>DSUsuario,System.String</value>
+          <value>Login,System.String</value>
+          <value>DTCadastro,System.DateTime</value>
+          <value>Senha,System.Byte[]</value>
+          <value>DTExclusao,System.DateTime</value>
+          <value>IDTPUsuario,System.Int32</value>
+          <value>SenhaAdmin,System.String</value>
+          <value>IDCargo,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>HoraEntradaManha,System.String</value>
+          <value>HoraEntradaTarde,System.String</value>
+          <value>HoraSaidaManha,System.String</value>
+          <value>HoraSaidaTarde,System.String</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>PrimeiroAcesso,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>SenhaDigital,System.String</value>
+          <value>AcessoEspecial,System.Boolean</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>TextHashCode,System.String</value>
+          <value>DTNascimento,System.DateTime</value>
+          <value>DTAdmissao,System.DateTime</value>
+          <value>PIS,System.String</value>
+          <value>RG,System.String</value>
+          <value>DTRG,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.TBUsuario</NameInSource>
+      </TBUsuario>
+      <TBMes Ref="14" type="DataTableSource" isKey="true">
+        <Alias>TBMes</Alias>
+        <Columns isList="true" count="2">
+          <value>IDMes,System.Int32</value>
+          <value>DSMes,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBMes</Name>
+        <NameInSource>DataSetPontoFrequencia.TBMes</NameInSource>
+      </TBMes>
+      <TBTipoFeriadoPontoFacultativo Ref="15" type="DataTableSource" isKey="true">
+        <Alias>TBTipoFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPFeiradoPontoFacultativo,System.Int32</value>
+          <value>DSTPFeriadoPontoFacultativo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoFeriadoPontoFacultativo</NameInSource>
+      </TBTipoFeriadoPontoFacultativo>
+      <vwFerias Ref="16" type="DataTableSource" isKey="true">
+        <Alias>vwFerias</Alias>
+        <Columns isList="true" count="11">
+          <value>IDFerias,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+          <value>DTInicioFerias,System.DateTime</value>
+          <value>DTFimFerias,System.DateTime</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DTInicioFerias1,DTInicioFerias,System.String</value>
+          <value>DTFimFerias1,DTFimFerias,System.String</value>
+          <value>DSTPFerias,System.String</value>
+          <value>IDTPFerias,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.vwFerias</NameInSource>
+      </vwFerias>
+      <vwNomeUsuario Ref="17" type="DataTableSource" isKey="true">
+        <Alias>vwNomeUsuario</Alias>
+        <Columns isList="true" count="2">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwNomeUsuario</Name>
+        <NameInSource>DataSetPontoFrequencia.vwNomeUsuario</NameInSource>
+      </vwNomeUsuario>
+      <vwInformacaoDiaria Ref="18" type="DataTableSource" isKey="true">
+        <Alias>vwInformacaoDiaria</Alias>
+        <Columns isList="true" count="5">
+          <value>TBInformacaoDiaria,System.Int32</value>
+          <value>DSInformacaoDiaria,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DTInformacaoDiaria,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwInformacaoDiaria</Name>
+        <NameInSource>DataSetPontoFrequencia.vwInformacaoDiaria</NameInSource>
+      </vwInformacaoDiaria>
+      <vWHorasDia Ref="19" type="DataTableSource" isKey="true">
+        <Alias>vWHorasDia</Alias>
+        <Columns isList="true" count="28">
+          <value>DSUsuario,System.String</value>
+          <value>PrimeiroNome,System.String</value>
+          <value>DataFrequencia,System.String</value>
+          <value>EntradaManha,System.String</value>
+          <value>SaidaManha,System.String</value>
+          <value>EntradaTarde,System.String</value>
+          <value>SaidaTarde,System.String</value>
+          <value>HorasDia,System.String</value>
+          <value>DSSetor,System.String</value>
+          <value>OBS,System.String</value>
+          <value>IDFrequencia,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>Justificado,System.String</value>
+          <value>MF,System.String</value>
+          <value>IMF,System.String</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>IMGEmpresa,System.Byte[]</value>
+          <value>AnoReferencia,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Situacao,System.String</value>
+          <value>DSMes,System.String</value>
+          <value>DSEmpresa,System.String</value>
+          <value>login,System.String</value>
+          <value>DTFrequencia,System.DateTime</value>
+          <value>IDusuario,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vWHorasDia</Name>
+        <NameInSource>DataSetPontoFrequencia.vWHorasDia</NameInSource>
+      </vWHorasDia>
+      <vwFeriadoPontoFacultativo Ref="20" type="DataTableSource" isKey="true">
+        <Alias>vwFeriadoPontoFacultativo</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSFeriadoPontoFacultativo,System.String</value>
+          <value>DTFeriadoPontoFacultativo,System.String</value>
+          <value>FeriadoAnual,System.Byte[]</value>
+          <value>IDTPFeriadoPontoFacultativo,System.Int32</value>
+          <value>DSTPFeriadoPontoFacultativo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwFeriadoPontoFacultativo</Name>
+        <NameInSource>DataSetPontoFrequencia.vwFeriadoPontoFacultativo</NameInSource>
+      </vwFeriadoPontoFacultativo>
+      <TBLog Ref="21" type="DataTableSource" isKey="true">
+        <Alias>TBLog</Alias>
+        <Columns isList="true" count="7">
+          <value>IDlog,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>Operacao,System.String</value>
+          <value>Dado,System.String</value>
+          <value>DadoAnterior,System.String</value>
+          <value>DTInclusao,System.DateTime</value>
+          <value>Metodo,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBLog</Name>
+        <NameInSource>DataSetPontoFrequencia.TBLog</NameInSource>
+      </TBLog>
+      <vwTotalHorasMes Ref="22" type="DataTableSource" isKey="true">
+        <Alias>vwTotalHorasMes</Alias>
+        <Columns isList="true" count="6">
+          <value>IDUsuario,System.Int32</value>
+          <value>MesReferencia,System.Int32</value>
+          <value>Horas,System.Int32</value>
+          <value>Minutos,System.Int32</value>
+          <value>Segundos,System.Int32</value>
+          <value>AnoReferencia,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwTotalHorasMes</Name>
+        <NameInSource>DataSetPontoFrequencia.vwTotalHorasMes</NameInSource>
+      </vwTotalHorasMes>
+      <TBTipoFerias Ref="23" type="DataTableSource" isKey="true">
+        <Alias>TBTipoFerias</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPFerias,System.Int32</value>
+          <value>DSTPFerias,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoFerias</NameInSource>
+      </TBTipoFerias>
+      <TBFerias Ref="24" type="DataTableSource" isKey="true">
+        <Alias>TBFerias</Alias>
+        <Columns isList="true" count="6">
+          <value>IDFerias,System.Int32</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDStatus,System.Int32</value>
+          <value>DTInicioFerias,System.DateTime</value>
+          <value>DTFimFerias,System.DateTime</value>
+          <value>IDTPFerias,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>DataSetPontoFrequencia.TBFerias</NameInSource>
+      </TBFerias>
+      <vwHoras Ref="25" type="DataTableSource" isKey="true">
+        <Alias>vwHoras</Alias>
+        <Columns isList="true" count="1">
+          <value>Horas,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwHoras</Name>
+        <NameInSource>DataSetPontoFrequencia.vwHoras</NameInSource>
+      </vwHoras>
+      <TBEmpresa Ref="26" type="DataTableSource" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <Columns isList="true" count="15">
+          <value>IDEmpresa,System.Int32</value>
+          <value>DSEmpresa,System.String</value>
+          <value>Endereco,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>HoraEntradaManhaPadrao,System.String</value>
+          <value>HoraEntradaTardePadrao,System.String</value>
+          <value>HoraSaidaManhaPadrao,System.String</value>
+          <value>HoraSaidaTardePadrao,System.String</value>
+          <value>CNPJ,System.String</value>
+          <value>LimiteEntradaSaida,System.String</value>
+          <value>PadraoHoraEmpresa,System.Boolean</value>
+          <value>IMGEmpresa,System.Byte[]</value>
+          <value>HoraPadraoAlmoco,System.String</value>
+          <value>TrabalhaSabado,System.Boolean</value>
+          <value>HorasSabado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>DataSetPontoFrequencia.TBEmpresa</NameInSource>
+      </TBEmpresa>
+      <TBTesteAutomatico Ref="27" type="DataTableSource" isKey="true">
+        <Alias>TBTesteAutomatico</Alias>
+        <Columns isList="true" count="2">
+          <value>IDInsert,System.Int32</value>
+          <value>DataHora,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTesteAutomatico</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTesteAutomatico</NameInSource>
+      </TBTesteAutomatico>
+      <TBDado Ref="28" type="DataTableSource" isKey="true">
+        <Alias>TBDado</Alias>
+        <Columns isList="true" count="3">
+          <value>IDDado,System.Int32</value>
+          <value>Insercao,System.Int32</value>
+          <value>IDTPDado,System.Int32</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBDado</Name>
+        <NameInSource>DataSetPontoFrequencia.TBDado</NameInSource>
+      </TBDado>
+      <TBTipoDado Ref="29" type="DataTableSource" isKey="true">
+        <Alias>TBTipoDado</Alias>
+        <Columns isList="true" count="2">
+          <value>IDTPDado,System.Int32</value>
+          <value>DSDado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBTipoDado</Name>
+        <NameInSource>DataSetPontoFrequencia.TBTipoDado</NameInSource>
+      </TBTipoDado>
+      <viewDado Ref="30" type="DataTableSource" isKey="true">
+        <Alias>viewDado</Alias>
+        <Columns isList="true" count="3">
+          <value>TotalDado,System.Int32</value>
+          <value>IDTPDado,System.Int32</value>
+          <value>DSDado,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>viewDado</Name>
+        <NameInSource>DataSetPontoFrequencia.viewDado</NameInSource>
+      </viewDado>
+      <TBUserTeste Ref="31" type="DataTableSource" isKey="true">
+        <Alias>TBUserTeste</Alias>
+        <Columns isList="true" count="8">
+          <value>IDUsuario,System.Int32</value>
+          <value>Nome,System.String</value>
+          <value>Senha1,System.String</value>
+          <value>Senha2,System.String</value>
+          <value>Template1,System.Byte[]</value>
+          <value>Template2,System.Byte[]</value>
+          <value>Template3,System.Byte[]</value>
+          <value>Template4,System.Byte[]</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBUserTeste</Name>
+        <NameInSource>DataSetPontoFrequencia.TBUserTeste</NameInSource>
+      </TBUserTeste>
+      <vwIndicePresenca Ref="32" type="DataTableSource" isKey="true">
+        <Alias>vwIndicePresenca</Alias>
+        <Columns isList="true" count="7">
+          <value>IDEmpresa,System.Int32</value>
+          <value>Situacao,System.String</value>
+          <value>TotSituacao,System.Int32</value>
+          <value>DataFrequencia,System.String</value>
+          <value>IDSetor,System.Int32</value>
+          <value>IDClienteSIG,System.Int32</value>
+          <value>Total,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwIndicePresenca</Name>
+        <NameInSource>DataSetPontoFrequencia.vwIndicePresenca</NameInSource>
+      </vwIndicePresenca>
+      <vwUsuariogrid Ref="33" type="DataTableSource" isKey="true">
+        <Alias>vwUsuariogrid</Alias>
+        <Columns isList="true" count="28">
+          <value>PrimeiroNome,System.String</value>
+          <value>DSUsuario,System.String</value>
+          <value>DataCadastro,System.String</value>
+          <value>DSTPUsuario,System.String</value>
+          <value>DSStatus,System.String</value>
+          <value>DSCargo,System.String</value>
+          <value>IDUsuario,System.Int32</value>
+          <value>IDSetor,System.Int32</value>
+          <value>DSSetor,System.String</value>
+          <value>Login,System.String</value>
+          <value>IDStatus,System.Int32</value>
+          <value>IDCargo,System.Int32</value>
+          <value>IDTPUsuario,System.Int32</value>
+          <value>DTCadastro,System.DateTime</value>
+          <value>TotHorasDiarias,System.Int32</value>
+          <value>HoraEntradaManha,System.String</value>
+          <value>HoraEntradaTarde,System.String</value>
+          <value>HoraSaidaManha,System.String</value>
+          <value>HoraSaidaTarde,System.String</value>
+          <value>SenhaDigital,System.String</value>
+          <value>AcessoEspecial,System.Boolean</value>
+          <value>IDEmpresa,System.Int32</value>
+          <value>FotoUsuario,System.Byte[]</value>
+          <value>DTNascimento,System.DateTime</value>
+          <value>DTAdmissao,System.DateTime</value>
+          <value>PIS,System.String</value>
+          <value>IDEntidade,System.Int32</value>
+          <value>DSEntidade,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>vwUsuariogrid</Name>
+        <NameInSource>DataSetPontoFrequencia.vwUsuariogrid</NameInSource>
+      </vwUsuariogrid>
+      <TBGenero Ref="34" type="DataTableSource" isKey="true">
+        <Alias>TBGenero</Alias>
+        <Columns isList="true" count="2">
+          <value>IDGenero,System.Int32</value>
+          <value>DSGenero,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBGenero</Name>
+        <NameInSource>DataSetPontoFrequencia.TBGenero</NameInSource>
+      </TBGenero>
+      <TBGrauInstr Ref="35" type="DataTableSource" isKey="true">
+        <Alias>TBGrauInstr</Alias>
+        <Columns isList="true" count="2">
+          <value>IDGrauInstr,System.Int32</value>
+          <value>DSGrauInstr,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBGrauInstr</Name>
+        <NameInSource>DataSetPontoFrequencia.TBGrauInstr</NameInSource>
+      </TBGrauInstr>
+      <TBDiasAno Ref="36" type="DataTableSource" isKey="true">
+        <Alias>TBDiasAno</Alias>
+        <Columns isList="true" count="2">
+          <value>IDDiasAno,System.Int64</value>
+          <value>DTDiasAno,System.DateTime</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Name>TBDiasAno</Name>
+        <NameInSource>DataSetPontoFrequencia.TBDiasAno</NameInSource>
+      </TBDiasAno>
+    </DataSources>
+    <Relations isList="true" count="21">
+      <TBStatus Ref="37" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBEntidade_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+      <TBTipoFeriadoPontoFacultativo Ref="38" type="DataRelation" isKey="true">
+        <Alias>TBTipoFeriadoPontoFacultativo</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDTPFeriadoPontoFacultativo</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Name>TBTipoFeriadoPontoFacultativo</Name>
+        <NameInSource>FK_TBFeriadoPontoFacultativo_TBTipoFeriadoPontoFacultativo</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDTPFeiradoPontoFacultativo</value>
+        </ParentColumns>
+        <ParentSource isRef="15" />
+      </TBTipoFeriadoPontoFacultativo>
+      <TBEmpresa Ref="39" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="5" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBFeriadoPontoFacultativo_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBMotivoFalta Ref="40" type="DataRelation" isKey="true">
+        <Alias>TBMotivoFalta</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDMotivoFalta</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>TBMotivoFalta</Name>
+        <NameInSource>FK_TBFrequencia_TBMotivoFalta</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDMotivoFalta</value>
+        </ParentColumns>
+        <ParentSource isRef="8" />
+      </TBMotivoFalta>
+      <TBUsuario Ref="41" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="6" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBFrequencia_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBUsuario>
+      <TBEmpresa Ref="42" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBInformacaoDiaria_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBOrgao Ref="43" type="DataRelation" isKey="true">
+        <Alias>TBOrgao</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDOrgao</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>TBOrgao</Name>
+        <NameInSource>FK_TBSetor_TBOrgao</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDOrgao</value>
+        </ParentColumns>
+        <ParentSource isRef="9" />
+      </TBOrgao>
+      <TBStatus Ref="44" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBSetor_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+      <TBEmpresa Ref="45" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="10" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBSetor_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBFerias Ref="46" type="DataRelation" isKey="true">
+        <Alias>TBFerias</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="11" />
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>TBFerias_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="24" />
+      </TBFerias>
+      <TBCargo Ref="47" type="DataRelation" isKey="true">
+        <Alias>TBCargo</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDCargo</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBCargo</Name>
+        <NameInSource>FK_TBUsuario_TBCargo</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDCargo</value>
+        </ParentColumns>
+        <ParentSource isRef="3" />
+      </TBCargo>
+      <TBEntidade Ref="48" type="DataRelation" isKey="true">
+        <Alias>TBEntidade</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEntidade</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBEntidade</Name>
+        <NameInSource>FK_TBUsuario_TBEntidade</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEntidade</value>
+        </ParentColumns>
+        <ParentSource isRef="4" />
+      </TBEntidade>
+      <TBSetor Ref="49" type="DataRelation" isKey="true">
+        <Alias>TBSetor</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDSetor</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBSetor</Name>
+        <NameInSource>FK_TBUsuario_TBSetor</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDSetor</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </TBSetor>
+      <TBStatus Ref="50" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBUsuario_TBStatus</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+      <TBTipoUsuario Ref="51" type="DataRelation" isKey="true">
+        <Alias>TBTipoUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDTPUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBTipoUsuario</Name>
+        <NameInSource>FK_TBUsuario_TBTipoUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDTPUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="12" />
+      </TBTipoUsuario>
+      <TBLog Ref="52" type="DataRelation" isKey="true">
+        <Alias>TBLog</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBLog</Name>
+        <NameInSource>TBLog_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="21" />
+      </TBLog>
+      <TBFerias Ref="53" type="DataRelation" isKey="true">
+        <Alias>TBFerias</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBFerias</Name>
+        <NameInSource>TBFerias_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="24" />
+      </TBFerias>
+      <TBEmpresa Ref="54" type="DataRelation" isKey="true">
+        <Alias>TBEmpresa</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ChildColumns>
+        <ChildSource isRef="13" />
+        <Dictionary isRef="1" />
+        <Name>TBEmpresa</Name>
+        <NameInSource>FK_TBUsuario_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDEmpresa</value>
+        </ParentColumns>
+        <ParentSource isRef="26" />
+      </TBEmpresa>
+      <TBUsuario Ref="55" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="21" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBLog_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBUsuario>
+      <TBUsuario Ref="56" type="DataRelation" isKey="true">
+        <Alias>TBUsuario</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ChildColumns>
+        <ChildSource isRef="24" />
+        <Dictionary isRef="1" />
+        <Name>TBUsuario</Name>
+        <NameInSource>FK_TBFerias_TBUsuario</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDUsuario</value>
+        </ParentColumns>
+        <ParentSource isRef="13" />
+      </TBUsuario>
+      <TBStatus Ref="57" type="DataRelation" isKey="true">
+        <Alias>TBStatus</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ChildColumns>
+        <ChildSource isRef="26" />
+        <Dictionary isRef="1" />
+        <Name>TBStatus</Name>
+        <NameInSource>FK_TBEmpresa_TBEmpresa</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>IDStatus</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </TBStatus>
+    </Relations>
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="58" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="4">
+        <Text1 Ref="59" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3,1,6.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+          <Text>{vWHorasDia.DSUsuario}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text1>
+        <Text2 Ref="60" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,1,2.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text2</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+          <Text>DSUsuario</Text>
+          <TextBrush>Black</TextBrush>
+        </Text2>
+        <Text3 Ref="61" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.2,3.6,3.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text3</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+          <Text>{vWHorasDia.DataFrequencia}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text3>
+        <Text4 Ref="62" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.8,3.6,7.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,12</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text4</Name>
+          <Page isRef="58" />
+          <Parent isRef="58" />
+          <Text>DataFrequencia</Text>
+          <TextBrush>Black</TextBrush>
+        </Text4>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>cee7d3ff76364fd593224af806c40ab1</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="63" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="64" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>7/1/2014 5:21:06 PM</ReportChanged>
+  <ReportCreated>7/1/2014 5:20:47 PM</ReportCreated>
+  <ReportFile />
+  <ReportGuid>f9258be561814253b5607b596db0705c</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2012.2.1304</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

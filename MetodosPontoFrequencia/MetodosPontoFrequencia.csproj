@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC266969-F757-48C1-8460-752DE6776B43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetodosPontoFrequencia</RootNamespace>
+    <AssemblyName>MetodosPontoFrequencia</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MNT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MNT.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acesso.cs" />
+    <Compile Include="AtualizacaoAutomatica.cs" />
+    <Compile Include="Cadastro.cs" />
+    <Compile Include="Cript.cs" />
+    <Compile Include="DataSetPontoFrequencia.cs">
+      <DependentUpon>DataSetPontoFrequencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPontoFrequencia1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPontoFrequencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetREP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetREP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUsuario.cs">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DefineSetor.cs" />
+    <Compile Include="EnviaSMS.cs" />
+    <Compile Include="ErroOperacao.cs" />
+    <Compile Include="FechamentoFolha\FechamentoFolhaSrv.cs" />
+    <Compile Include="Frequencia.cs" />
+    <Compile Include="HorasExtras\HorasExtrasDAO.cs" />
+    <Compile Include="HorasExtras\PermissoesDAO.cs" />
+    <Compile Include="HorasExtras\RegimeHorasDAO.cs" />
+    <Compile Include="IndicePresenca.cs" />
+    <Compile Include="Justificativa\Justificativa.cs" />
+    <Compile Include="LogOperacao.cs" />
+    <Compile Include="Model\ConfigHorasSincModel.cs" />
+    <Compile Include="Model\HorasDiaModel.cs" />
+    <Compile Include="Model\RegimeModel.cs" />
+    <Compile Include="Model\TBFechamentoFolha.cs" />
+    <Compile Include="Model\TBPontoEletronicoModel.cs" />
+    <Compile Include="Model\TBPontoEletronicoSetorModel.cs" />
+    <Compile Include="Model\TBUsuarioInfo.cs" />
+    <Compile Include="Model\TesteConexaoModel.cs" />
+    <Compile Include="MonitoramentoClientXML.cs" />
+    <Compile Include="PontoEletronico\PontoEletronicoSrv.cs" />
+    <Compile Include="PreencheTabela.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPonto\LogConexoesClint.cs" />
+    <Compile Include="RegistroPonto\LogRegistro.cs" />
+    <Compile Include="REP.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SomaTolerancia.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="UtilLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSetPontoFrequencia.xsc">
+      <DependentUpon>DataSetPontoFrequencia.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPontoFrequencia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPontoFrequencia1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPontoFrequencia.xss">
+      <DependentUpon>DataSetPontoFrequencia.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetREP.xsc">
+      <DependentUpon>DataSetREP.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetREP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetREP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetREP.xss">
+      <DependentUpon>DataSetREP.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUsuario.xsc">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetUsuario.xss">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

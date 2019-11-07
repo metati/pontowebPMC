@@ -1,0 +1,782 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using MetodosPontoFrequencia;
+
+public partial class Manutencao_frmManutencaoFrequencia : System.Web.UI.Page
+{
+    public DataSetPontoFrequencia ds = new DataSetPontoFrequencia();
+    public Frequencia Freq = new Frequencia();
+    public PreencheTabela PT = new PreencheTabela();
+    public int Lei;
+    public bool Linhas;
+    public string msg = "";
+    public int TotalHorasDia;
+    bool AbonoFalta;
+    DateTime Horas;
+    int? TotaDia;
+    private string TextoConfirmacao;
+    Crip crp = new Crip();
+    private TimeSpan Segundos;
+    //string msg;
+    protected string TotalHoraDia;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (HttpContext.Current.User.Identity.IsAuthenticated == false)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+        else
+        {
+            lblegenda1.BackColor = System.Drawing.Color.CornflowerBlue;
+            lblegenda1.Text = "***";
+            lblegenda1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            lblegenda2.BackColor = System.Drawing.Color.WhiteSmoke;
+            lblegenda2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            lblegenda2.Text = "***";
+            lblegenda3.BackColor = System.Drawing.Color.Wheat;
+            lblegenda3.ForeColor = System.Drawing.Color.Wheat;
+            lblegenda3.Text = "***";
+            lblegenda4.BackColor = System.Drawing.Color.IndianRed;
+            lblegenda4.ForeColor = System.Drawing.Color.IndianRed;
+            lblegenda4.Text = "***";
+            if (!IsPostBack)
+            {
+                PreencheddlSetor();
+                //PreencheddlMes();
+                PreencheddlMotivoFalta();
+                PreencheddlMes();
+                //PreenchegridFrequencia(Convert.ToInt32(Session["IDSETOR"]), deData.Date.Date.ToShortDateString());
+                //cbSetor.Value = Session["IDSETOR"];
+            }
+
+            if (cbSetor.Text != "" && cbUsuario.Text != "")
+            {
+                coIDUsuarioSetorManut["IDusuarioFolha"] = crp.CriptograFa(cbUsuario.Value.ToString());
+                coIDUsuarioSetorManut["IDsetorFolha"] = crp.CriptograFa(cbSetor.Value.ToString());
+            }
+        }
+    }
+
+    protected string FormatarData(string DTFrequencia)
+    {
+        if (DTFrequencia.Length == 9)
+        {
+            if (DTFrequencia.Substring(0, 2).IndexOf("/") == 1)
+                DTFrequencia = string.Format("0{0}", DTFrequencia);
+            else
+            {
+                DTFrequencia = string.Format("{0}0{1}", DTFrequencia.Substring(0, 3), DTFrequencia.Substring(3, 6));
+            }
+        }
+        else if (DTFrequencia.Length == 8)
+        {
+            DTFrequencia = string.Format("0{0}", DTFrequencia);
+            DTFrequencia = string.Format("{0}0{1}", DTFrequencia.Substring(0, 3), DTFrequencia.Substring(3, 6));
+        }
+
+        return DTFrequencia;
+    }
+
+    protected void TotalHorasAbonoFalta(int IDUsuario, int IDMotivoFalta, DateTime DataJust, string TotDia, string HorasTotais)
+    {
+        MetodosPontoFrequencia.DataSetPontoFrequenciaTableAdapters.vwUsuariogridTableAdapter adpUser = new MetodosPontoFrequencia.DataSetPontoFrequenciaTableAdapters.vwUsuariogridTableAdapter();
+        MetodosPontoFrequencia.DataSetPontoFrequenciaTableAdapters.TBMotivoFaltaTableAdapter adpMOti = new MetodosPontoFrequencia.DataSetPontoFrequenciaTableAdapters.TBMotivoFaltaTableAdapter();
+
+        if (hdJustificativa["TPJust"].ToString() == "2")
+        {
+            try
+            {
+                adpUser.FillIDEmpresaSetorUsuario(ds.vwUsuariogrid, Convert.ToInt32(Session["IDEmpresa"]), Convert.ToInt32(cbSetorModo.Value.ToString()), IDUsuario);
+
+                if (ds.vwUsuariogrid.Rows.Count > 0)
+                {
+                    TotalHorasDia = ds.vwUsuariogrid[0].TotHorasDiarias;
+                }
+
+                adpMOti.FillIDMotivoFalta(ds.TBMotivoFalta, IDMotivoFalta);
+
+                if (ds.TBMotivoFalta.Rows.Count > 0)
+                    AbonoFalta = ds.TBMotivoFalta[0].AbonarHoras;
+
+                if (AbonoFalta)
+                {
+                    TotaDia = ds.vwUsuariogrid[0].TotHorasDiarias;
+                }
+                else
+                {
+                    TotaDia = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+
+            //Caso maior não atualiza o valor da hora total
+            //if (Convert.ToDateTime(HorasTotais) > TotaDia)
+            //{
+                //TotaDia = Convert.ToDateTime(HorasTotais);
+            //}
+        }
+
+    }
+    protected void PreencheddlSetor()
+    {
+        if (Convert.ToInt32(Session["TPUsuario"]) == 3)
+        {
+            //PT.PreencheTBSetor(ds); -- cookie
+            //PT.PreencheTBSetorIDSetor(ds, Convert.ToInt32(Session["IDSETOR"]), Convert.ToInt32(Session["IDEmpresa"]));
+            PT.PreencheTBSetorGestor(ds, Convert.ToInt32(Session["IDUsuario"]), Convert.ToInt32(Session["IDEmpresa"]));
+        }
+        else
+        {
+            PT.PreencheTBSetorIDEmpresa(ds, Convert.ToInt32(Session["IDEmpresa"]));
+        }
+
+        cbSetor.DataSource = ds;
+        cbSetor0.DataSource = ds;
+        cbSetorModo.DataSource = ds;
+
+        cbSetor.IncrementalFilteringMode = DevExpress.Web.ASPxEditors.IncrementalFilteringMode.Contains;
+        cbSetor0.IncrementalFilteringMode = DevExpress.Web.ASPxEditors.IncrementalFilteringMode.Contains;
+        cbSetorModo.IncrementalFilteringMode = DevExpress.Web.ASPxEditors.IncrementalFilteringMode.Contains;
+
+        cbSetorModo.DataBind();
+        cbSetor.DataBind();
+        cbSetor0.DataBind();
+    }
+
+    protected void PreencheddlUsuario(string IDSetor)
+    {
+        PT.PreenchevwNomeUsuario(ds, Convert.ToInt32(IDSetor));
+        cbUsuario.DataSource = ds;
+        cbUsuario.DataBind();
+    }
+
+    protected void PreencheddlMes()
+    {
+        PT.PreencheTBMes(ds);
+        cbMes.DataSource = ds;
+        cbMes.DataBind();
+    }
+
+    protected void PreencheGridSemRegistro(int IDEmpresa, int IDSetor)
+    {
+        PT.UsuarioSemRegistroDiario(ds, IDEmpresa, IDSetor, System.DateTime.Now.ToShortDateString());
+        gridSemRegistro.DataSource = ds;
+        gridSemRegistro.DataBind();
+    }
+
+    protected void PreencheddlMotivoFalta()
+    {
+        if ((string)Session["TPUsuario"] != "1")
+            PT.PreencheTBMotivoFalta(ds);
+        else
+            PT.PreencheTBMotivoFaltaCInoperante(ds);
+        
+        cbMotivoFaltaManut.DataSource = ds;
+        cbMotivoFalta.DataSource = ds;
+
+        cbMotivoFaltaManut.Items.Add("Justificar para o órgão.");
+
+        cbMotivoFaltaManut.IncrementalFilteringMode = DevExpress.Web.ASPxEditors.IncrementalFilteringMode.Contains;
+        cbMotivoFalta.IncrementalFilteringMode = DevExpress.Web.ASPxEditors.IncrementalFilteringMode.Contains;
+        cbMotivoFalta.DataBind();
+        cbMotivoFaltaManut.DataBind();
+    }
+    protected void PreenchegridFrequencia(int IDSetor,int IDUsuario, int IDMesRef)
+    {
+        if(rbAno.SelectedItem.ToString() == "Ano Corrente")
+            Freq.HorasDias(IDMesRef, IDUsuario,DateTime.Now.Year, ds, Convert.ToInt32(Session["IDEmpresa"]), IDSetor);
+        else
+            Freq.HorasDias(IDMesRef, IDUsuario, DateTime.Now.Year-1, ds, Convert.ToInt32(Session["IDEmpresa"]), IDSetor);
+
+        if (ds.vWHorasDia.Rows.Count > 0)
+        {
+            Lei = 1;
+        }
+
+        gridFrequencia.DataSource = ds;
+        //gridFrequencia.PageIndex = 0;
+        gridFrequencia.DataBind();
+
+    }
+    protected void gridFrequencia_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e)
+    {
+        
+        if (e.Parameters == "1")
+        {
+            JustificativaColetiva();
+        }
+        if (e.Parameters == "J")
+        {
+            ExcluirJustificativa();
+        }
+        if (e.Parameters == "JU")
+        {
+            SalvarJustificativa(Convert.ToInt32(hdItensJustificativa["IDUsuario"].ToString()), Convert.ToInt32(hdItensJustificativa["IDFrequencia"].ToString()), hdJustificativa["OBS"].ToString(), Convert.ToInt32(hdJustificativa["IDMotivoFalta"].ToString()));
+        }
+
+        if(cbSetor.Text != "" && cbUsuario.Text != "" && cbMes.Text != "")
+            PreenchegridFrequencia(Convert.ToInt32(cbSetor.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.Value));
+        //PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void gridFrequencia_PageIndexChanged(object sender, EventArgs e)
+    {
+        if (cbSetor.Text != "" && cbUsuario.Text != "" && cbMes.Text != "")
+            PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void gridFrequencia_ProcessColumnAutoFilter(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewAutoFilterEventArgs e)
+    {
+        if (cbSetor.Text != "" && cbUsuario.Text != "" && cbMes.Text != "")
+            PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void gridFrequencia_BeforeColumnSortingGrouping(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewBeforeColumnGroupingSortingEventArgs e)
+    {
+        if (cbSetor.Text != "" && cbUsuario.Text != "" && cbMes.Text != "")
+            PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void btDetalhar_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void SalvarJustificativa(int IDUsuario, int IDFrequencia, string OBS, int IDMotivoFalta)
+    {
+        //string HorasDia = gridFrequencia.GetRowValues(gridFrequencia.FocusedRowIndex, "HorasDia").ToString();
+        //string TotHorasDiarias = gridFrequencia.GetRowValues(gridFrequencia.FocusedRowIndex, "TotHorasDiarias").ToString();
+
+        //if (Convert.ToDateTime(HorasDia) < Convert.ToDateTime("0"+TotHorasDiarias+":00:00"))
+        //{
+        try
+        {
+            TotalHorasAbonoFalta(IDUsuario, IDMotivoFalta, Convert.ToDateTime(hdItensJustificativa["DTJust"].ToString()), 
+                hdItensJustificativa["TotalHorasDiarias"].ToString(), hdItensJustificativa["TotDIa"].ToString());
+
+            msg = Freq.JustificaFrequenciaDia(IDFrequencia, IDUsuario, IDMotivoFalta, OBS, 
+                Convert.ToDateTime(hdItensJustificativa["DTJust"].ToString()), TotaDia, 
+                Convert.ToInt32(hdJustificativa["TPJust"].ToString()), Convert.ToInt32(Session["IDEmpresa"].ToString()), 
+                hdJustificativa["INDEX"].ToString(), Convert.ToInt32(Session["IDUsuario"]),
+                Convert.ToInt32(hdItensJustificativa["IDVinculoUsuario"]));
+
+            lbResposta.Text = msg;
+
+            if (lbResposta.Text.IndexOf("sucesso") >= 0)
+            {
+                lbResposta.Text = "";
+                lbResposta.DataBind();
+            }
+
+            //lbResposta.Text = msg;
+            //lbResposta.DataBind();
+
+        }
+        catch (Exception ex)
+        {
+            ex.ToString();
+        }
+
+            cbMotivoFaltaManut.SelectedIndex = 0; //Zerar Motivos de Falta
+            cbMotivoFaltaManut.DataBind();
+            memoOBS.Text = ""; ////Zerar Motivos de Falta
+        //}
+        //else
+       // {
+       //     msg = "Frequência do dia compatível com a carga horária diária. Impossível alterar.";
+       // }
+
+            //PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void btSalvar_Click(object sender, EventArgs e)
+    {
+        SalvarJustificativa(Convert.ToInt32(coIDUsuario.Value), Convert.ToInt32(coIDFrequencia.Value), memoOBSOLD.Text, Convert.ToInt32(cbMotivoFaltaManut.SelectedItem.Value));
+    }
+    protected void btFechar_Click(object sender, EventArgs e)
+    {
+        cbMotivoFaltaManut.SelectedIndex = 0; //Zerar Motivos de Falta
+        cbMotivoFaltaManut.DataBind();
+        memoOBSOLD.Text = ""; ////Zerar Motivos de Falta
+    }
+    protected void gridFrequencia_HtmlRowPrepared(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewTableRowEventArgs e)
+    {
+        if (Lei == 1)
+        {
+            e.Row.Font.Size = 9;
+
+            string IDRegimeHOra = Convert.ToString(e.GetValue("IDRegimeHora"));
+            
+            string Justificado = Convert.ToString(e.GetValue("IMF"));
+
+            int TotalHoras = Convert.ToInt32(e.GetValue("TotHorasDiarias"));
+
+            DateTime DTFrequencia = Convert.ToDateTime(e.GetValue("DataFrequencia"));
+
+            if (DTFrequencia.ToShortDateString() != "01/01/0001")
+            {
+                //if (e.GetValue("HorasDia").ToString() != "")
+                //Horas = Convert.ToDateTime(e.GetValue("HorasDia"));
+                //else
+                //Horas = Convert.ToDateTime("00:00:00");
+                TotalHoraDia = e.GetValue("HorasDia").ToString();
+                Segundos = new TimeSpan(Convert.ToInt32(TotalHoraDia.Substring(0, 2)), Convert.ToInt32(TotalHoraDia.Substring(3, 2)), Convert.ToInt32(TotalHoraDia.Substring(6, 2)));
+            }
+
+            //Caso Frequência igual igual ou maior a carga horária pintar de branco.
+            //Caso na tolerância - pentar de laranjo
+            //Caso abaixo da tolerância pintar de vermelho.
+
+            if (Segundos.TotalSeconds != 0 && Justificado == "0")
+            {
+                TotalHoras = TotalHoras * 3600;
+
+                if (TotalHoras == 4 && IDRegimeHOra == "7")
+                    TotalHoras += 1800;
+                    
+
+
+                if (Segundos.TotalSeconds >= TotalHoras)
+                {
+                    e.Row.BackColor = System.Drawing.Color.WhiteSmoke;
+                }
+                else if ((Segundos.TotalSeconds < TotalHoras) && (Segundos.TotalSeconds >= ((TotalHoras) - (15 * 60))))
+                {
+                    e.Row.BackColor = System.Drawing.Color.Wheat;
+                }
+                else if (IDRegimeHOra != "3" && IDRegimeHOra != "4")
+                {
+                    e.Row.BackColor = System.Drawing.Color.IndianRed;
+                }
+                
+                return;
+            }
+            else if ((DTFrequencia.DayOfWeek.ToString() == "Saturday" || DTFrequencia.DayOfWeek.ToString() == "Sunday") && Justificado == "0")
+            {
+                e.Row.BackColor = System.Drawing.Color.Gainsboro;
+                return;
+            }
+            else if ((Justificado != "0") && (Justificado != "10") && (Justificado != ""))
+            {
+                e.Row.BackColor = System.Drawing.Color.CornflowerBlue;
+                return;
+            }
+            else if ((Justificado == "0" || Justificado == "10") && DTFrequencia <= DateTime.Now  && (IDRegimeHOra != "3" && IDRegimeHOra != "4"))
+            {
+                e.Row.BackColor = System.Drawing.Color.IndianRed;
+                return;
+            }
+        }
+    }
+    protected void btPesquisar_Click(object sender, EventArgs e)
+    {
+    }
+    protected void gridFrequencia_DetailRowExpandedChanged(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewDetailRowEventArgs e)
+    {
+        PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void gridFrequencia_CustomColumnGroup(object sender, DevExpress.Web.ASPxGridView.CustomColumnSortEventArgs e)
+    {
+        PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void gridFrequencia_DetailsChanged(object sender, EventArgs e)
+    {
+        PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void gridFrequencia_CustomColumnSort(object sender, DevExpress.Web.ASPxGridView.CustomColumnSortEventArgs e)
+    {
+        PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+    }
+    protected void btOK_Click(object sender, EventArgs e)
+    {
+        SalvarExclusao();
+    }
+    protected void SalvarExclusao()
+    {
+        string msg = Freq.ExcluirFalta(Convert.ToInt32(coIDFrequencia.Value),Convert.ToInt32(coIDUsuario.Value));
+
+        PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+        
+        this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('" + msg + "');</script>");
+    }
+    protected void gridSemRegistro_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e)
+    {
+        PreencheGridSemRegistro(Convert.ToInt32(Session["IDEmpresa"]), Convert.ToInt32( cbSetor.SelectedItem.Value));
+    }
+    protected void gridSemRegistro_PageIndexChanged(object sender, EventArgs e)
+    {
+        PreencheGridSemRegistro(Convert.ToInt32(Session["IDEmpresa"]), Convert.ToInt32(cbSetor.SelectedItem.Value));
+    }
+
+    protected void ExcluirJustificativa()
+    {
+        msg = Freq.ExcluirJustificativa(ds, Convert.ToInt32(coIDFrequencia.Value), Convert.ToInt32(coIDUsuario.Value), Convert.ToInt32(Session["IDEmpresa"]), Convert.ToDateTime(coDTFrequencia.Value), Convert.ToInt32(Session["IDUsuario"]), Convert.ToInt32(coIDVinculoUsuario.Value));
+        PreenchegridFrequencia(Convert.ToInt32(cbSetor.SelectedItem.Value), Convert.ToInt32(cbUsuario.Value), Convert.ToInt32(cbMes.SelectedItem.Value));
+        //this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('" + msg + "');</script>");
+    }
+    
+    protected void JustificativaColetiva()
+    {
+        DataSetPontoFrequencia dsw = new DataSetPontoFrequencia();
+
+        PT.PreenchevwHorasDia(dsw, FormatarData(Convert.ToDateTime(hdItensJustificativa["DataColetiva"].ToString()).ToShortDateString()), Convert.ToInt32(hdItensJustificativa["SetorColetiva"].ToString()), Convert.ToInt32(Session["IDEmpresa"]));
+
+        if (dsw.vWHorasDia.Rows.Count > 0)
+        {
+            try
+            {
+                //Prever aqui situação de alguma falha, parar as inserções caso ocorra alguma exceção
+                for (int i = 0; i <= (dsw.vWHorasDia.Rows.Count - 1); i++)
+                {
+                    TotalHorasAbonoFalta(dsw.vWHorasDia[i].IDusuario, Convert.ToInt32(hdItensJustificativa["SetorColetiva"].ToString()), Convert.ToDateTime(hdItensJustificativa["DataColetiva"].ToString()), string.Format("{0} 0{1}:00:00", Convert.ToDateTime(hdItensJustificativa["DataColetiva"].ToString()).ToShortDateString(), dsw.vWHorasDia[i].TotHorasDiarias.ToString()),dsw.vWHorasDia[i].HorasDia);
+
+                    msg = Freq.JustificaFrequenciaDia(dsw.vWHorasDia[i].IDFrequencia, dsw.vWHorasDia[i].IDusuario, 
+                        Convert.ToInt32(hdJustificativa["IDMotivoFalta"].ToString()), hdJustificativa["OBS"].ToString(), 
+                        dsw.vWHorasDia[i].DTFrequencia, TotaDia, Convert.ToInt32(hdJustificativa["TPJust"].ToString()), 
+                        dsw.vWHorasDia[i].IDEmpresa, hdJustificativa["INDEX"].ToString(), 
+                        Convert.ToInt32(Session["IDUsuario"]), (int)dsw.vWHorasDia[i].IDVinculoUsuario);
+                }
+                this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('" + msg + "');</script>");
+
+            }
+            catch( Exception ex)
+            {
+                ex.ToString();
+                this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('Houve falha em tentar lançar a justificativa coletiva. Tente novamente.');</script>");
+            }
+        }
+        else
+        {
+            this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> alert('Não há registro(s) de frequência para a data selecionada. Lance uma falta/exceção.');</script>");
+        }
+
+    }
+    protected void cbUsuario_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+    {
+        PreencheddlUsuario(cbSetor.Value.ToString());
+    }
+
+    private void MontaRadioList(string FASE)
+    {
+        if (FASE == "0")
+        {
+            if(hdJustificativa.Count > 0)
+                rbList.Value = hdJustificativa["TPJust"].ToString();
+
+            rbList.Items.Clear();
+            rbList.Items.Add("Justificativa de registro único", 0);
+            rbList.Items.Add("Justificativa de meio período", 1);
+            rbList.Items.Add("Justificativa de período integral", 2);
+            //labels
+            lbMotivo.Visible = false;
+            lbConfirmacao.Visible = false;
+            lbOBS.Visible = false;
+            cbMotivoFaltaManut.Visible = false;
+            memoOBS.Visible = false;
+            btRetornar.Visible = false;
+            cbMotivoFaltaManut.Value = "";
+
+            //Modo coletivo
+            cbSetorModo.Visible = false;
+            deDataFaltaModo.Visible = false;
+            lbSetorModo.Visible = false;
+            lbDataModo.Visible = false;
+            lbResposta.Visible = false;
+        }
+
+        if (FASE == "1")
+        {
+            if (hdJustificativa.Count > 1)
+            {
+                if (hdJustificativa["INDEX"].ToString() != "" && rbList.Value == null)
+                    rbList.Value = hdJustificativa["INDEX"].ToString();
+            }
+
+            switch (hdJustificativa["TPJust"].ToString())
+            {
+                case "0":
+                    rbList.Items.Clear();
+                    rbList.Items.Add("Entrada Manhã", 0);
+                    rbList.Items.Add("Saída Manhã", 1);
+                    rbList.Items.Add("Entrada Tarde", 2);
+                    rbList.Items.Add("Saída Tarde", 3);
+                    rbList.DataBind();
+                    //labels
+                    lbMotivo.Visible = false;
+                    lbConfirmacao.Visible = false;
+                    lbOBS.Visible = false;
+                    cbMotivoFaltaManut.Visible = false;
+                    memoOBS.Visible = false;
+                    btRetornar.Visible = true;
+                    lbResposta.Visible = false;
+
+                    //Modo coletivo
+                    cbSetorModo.Visible = false;
+                    deDataFaltaModo.Visible = false;
+
+                    lbSetorModo.Visible = false;
+                    lbDataModo.Visible = false;
+
+                    break;
+                case "1":
+                    rbList.Items.Clear();
+                    rbList.Items.Add("Matutino", 0);
+                    rbList.Items.Add("Vespertino", 1);
+                    rbList.DataBind();
+                    
+                    //labels
+                    lbMotivo.Visible = false;
+                    lbConfirmacao.Visible = false;
+                    lbOBS.Visible = false;
+                    cbMotivoFaltaManut.Visible = false;
+                    memoOBS.Visible = false;
+                    btRetornar.Visible = true;
+
+                    //Modo coletivo
+                    cbSetorModo.Visible = false;
+                    deDataFaltaModo.Visible = false;
+                    lbSetorModo.Visible = false;
+                    lbDataModo.Visible = false;
+
+                    lbResposta.Visible = false;
+                    break;
+                case "2":
+                    rbList.Items.Clear();
+                    rbList.Visible = false;
+                    rbList.DataBind();
+                    //labels
+                    lbMotivo.Visible = true;
+                    lbConfirmacao.Visible = false;
+                    lbOBS.Visible = true;
+                    cbMotivoFaltaManut.Visible = true;
+                    btSalvarAvanc.Text = "Avançar";
+                    btRetornar.Text = "Retornar";
+                    memoOBS.Visible = true;
+
+                    lbResposta.Visible = false;
+
+                    if (hdItensJustificativa["Modo"].ToString() == "Coletivo")
+                    {
+                        //Modo coletivo
+                        cbSetorModo.Visible = true;
+                        deDataFaltaModo.Visible = true;
+
+                        lbSetorModo.Visible = true;
+                        lbDataModo.Visible = true;
+                    }
+                    else
+                    {
+                        //Modo coletivo
+                        cbSetorModo.Visible = false;
+                        deDataFaltaModo.Visible = false;
+
+                        lbSetorModo.Visible = false;
+                        lbDataModo.Visible = false;
+                    }
+                    break;
+            }
+
+        }
+        else if (FASE == "2")
+        {
+            switch (hdJustificativa["TPJust"].ToString())
+            {
+                case "0":
+                    rbList.Visible = false;
+                    lbConfirmacao.Visible = false;
+                    lbMotivo.Visible = true;
+                    lbOBS.Visible = true;
+                    cbMotivoFaltaManut.Visible = true;
+                    btSalvarAvanc.Text = "Avançar";
+                    btRetornar.Text = "Retornar";
+                    memoOBS.Visible = true;
+                    lbResposta.Visible = false;
+
+                    if (hdItensJustificativa["Modo"].ToString() == "Coletivo")
+                    {
+                        //Modo coletivo
+                        cbSetorModo.Visible = true;
+                        deDataFaltaModo.Visible = true;
+
+                        lbSetorModo.Visible = true;
+                        lbDataModo.Visible = true;
+
+
+                    }
+                    else
+                    {
+                        //Modo coletivo
+                        cbSetorModo.Visible = false;
+                        deDataFaltaModo.Visible = false;
+
+                        lbSetorModo.Visible = false;
+                        lbDataModo.Visible = false;
+                    }
+
+                    break;
+                case "1":
+                    rbList.Visible = false;
+                    lbConfirmacao.Visible = false;
+                    lbMotivo.Visible = true;
+                    lbOBS.Visible = true;
+                    cbMotivoFaltaManut.Visible = true;
+                    btSalvarAvanc.Text = "Avançar";
+                    btRetornar.Text = "Retornar";
+                    memoOBS.Visible = true;
+
+                    lbResposta.Visible = false;
+
+                    if (hdItensJustificativa["Modo"].ToString() == "Coletivo")
+                    {
+                        //Modo coletivo
+                        cbSetorModo.Visible = true;
+                        deDataFaltaModo.Visible = true;
+                        
+                        lbSetorModo.Visible = true;
+                        lbDataModo.Visible = true;
+
+
+                    }
+                    else
+                    {
+                        //Modo coletivo
+                        cbSetorModo.Visible = false;
+                        deDataFaltaModo.Visible = false;
+
+                        lbSetorModo.Visible = false;
+                        lbDataModo.Visible = false;
+
+                    }
+
+                    break;
+                case "2":
+                    rbList.Visible = false;
+                    lbConfirmacao.Visible = true;
+                    lbMotivo.Visible = false;
+                    lbOBS.Visible = false;
+                    cbMotivoFaltaManut.Visible = false;
+                    memoOBS.Visible = false;
+                    MontaTextoConfirmacao(cbMotivoFaltaManut.Text);
+                    btSalvarAvanc.Text = "Salvar";
+                    btRetornar.Text = "Cancelar";
+
+                    lbResposta.Visible = false;
+
+                    //Modo coletivo
+                    cbSetorModo.Visible = false;
+                    deDataFaltaModo.Visible = false;
+                    lbSetorModo.Visible = false;
+                    lbDataModo.Visible = false;
+                    break;
+            }
+        }
+        else if (FASE == "3")
+        {
+            if (hdJustificativa["TPJust"].ToString() == "0" || hdJustificativa["TPJust"].ToString() == "1")
+            {
+                rbList.Visible = false;
+                lbConfirmacao.Visible = true;
+                lbMotivo.Visible = false;
+                lbOBS.Visible = false;
+                cbMotivoFaltaManut.Visible = false;
+                memoOBS.Visible = false;
+
+                lbResposta.Visible = false;
+
+                //Modo coletivo
+                cbSetorModo.Visible = false;
+                deDataFaltaModo.Visible = false;
+
+                lbSetorModo.Visible = false;
+                lbDataModo.Visible = false;
+
+                MontaTextoConfirmacao(cbMotivoFaltaManut.Text);
+                btSalvarAvanc.Text = "Salvar";
+                btRetornar.Text = "Cancelar";                
+            }
+        }
+        else if (FASE == "JU" || FASE == "JC")
+        {
+            rbList.Visible = false;
+            lbConfirmacao.Visible = true;
+            lbMotivo.Visible = false;
+            lbOBS.Visible = false;
+            cbMotivoFaltaManut.Visible = false;
+            memoOBS.Visible = false;
+
+            //Modo coletivo
+            cbSetorModo.Visible = false;
+            deDataFaltaModo.Visible = false;
+
+            lbSetorModo.Visible = false;
+            lbDataModo.Visible = false;
+
+            //MontaTextoConfirmacao(cbMotivoFaltaManut.Text);
+            btSalvarAvanc.Text = "Salvar";
+            btRetornar.Text = "Cancelar";
+            
+            switch (FASE)
+            {
+                case "JU":
+                    SalvarJustificativa(Convert.ToInt32(hdItensJustificativa["IDUsuario"].ToString()), Convert.ToInt32(hdItensJustificativa["IDFrequencia"].ToString()), hdJustificativa["OBS"].ToString(), Convert.ToInt32(hdJustificativa["IDMotivoFalta"].ToString()));
+                    break;
+                case "JC":
+                    JustificativaColetiva();
+                    lbResposta.Text = ""; //Paleativo, até se desenvolver outra rotina para listar os que não deram certo na justificativa.
+                    break;
+            }
+
+            if (lbResposta.Text == "")
+            {
+                MontaTextoConfirmacao(cbMotivoFaltaManut.Text);
+                lbConfirmacao.Visible = true;
+                lbConfirmacao.Text = "Operação realizada com sucesso.";
+                lbConfirmacao.Font.Size = System.Web.UI.WebControls.FontUnit.Medium;
+                lbConfirmacao.ForeColor = System.Drawing.Color.Green;
+                lbConfirmacao.Font.Bold = true;
+               
+                lbResposta.Visible = false;
+                btSalvarAvanc.Text = "Finalizar";
+                btRetornar.Visible = false;
+            }
+            else
+            {
+                lbConfirmacao.Visible = false;
+                btSalvarAvanc.Visible = false;
+                lbResposta.ForeColor = System.Drawing.Color.Red;
+                lbResposta.Font.Bold = true;
+                lbResposta.Font.Size = System.Web.UI.WebControls.FontUnit.Medium;
+                lbResposta.Visible = true;
+                btRetornar.Text = "Cancelar";
+            }
+        }
+    }
+
+    private void MontaTextoConfirmacao(string MotivoFalta)
+    {
+        lbConfirmacao.Text = string.Format("Confirmar a justificativa: {0} .", MotivoFalta);
+    }
+
+    protected void cpJust_Callback1(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+    {
+        MontaRadioList(e.Parameter);
+    }
+    protected void btOK0_Click(object sender, EventArgs e)
+    {
+        ExcluirJustificativa();
+    }
+    protected void cbMes_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+    {
+        coIDUsuarioSetorManut["IDusuarioFolha"]  = crp.CriptograFa(cbUsuario.Value.ToString());
+
+        coIDUsuarioSetorManut["IDsetorFofolha"] = crp.CriptograFa(cbSetor.Value.ToString());
+    }
+    protected void btGerarFolha_Click(object sender, EventArgs e)
+    {
+        //string meuscript = @"function MudaPagina()"
+        //Page.ClientScript.RegisterClientScriptBlock(this.GetType(),"MyScript")
+        this.Page.RegisterStartupScript("MSG", @"<script language='javascript'> if(ASPxClientEdit.ValidateGroup('ValidaGrupo'))MudaPagina();</script>");
+    }
+}

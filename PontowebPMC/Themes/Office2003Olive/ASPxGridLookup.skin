@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+
+<dxgv:ASPxGridLookup runat="server" CssFilePath="{0}/styles.css" CssPostfix="Office2003Olive"
+	SpriteCssFilePath="{0}/sprite.css">
+    <GridViewImages SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="GridView/gvLoadingOnStatusBar.gif" />
+	</GridViewImages>	
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="Editors/Loading.gif" />
+    </GridViewImagesFilterControl>
+    <GridViewStyles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="10px" />
+    </GridViewStyles>	
+    <GridViewStylesEditors>
+        <ProgressBar Height="25px" />
+    </GridViewStylesEditors>
+    <ButtonStyle Width="13px" />
+</dxgv:ASPxGridLookup>
+

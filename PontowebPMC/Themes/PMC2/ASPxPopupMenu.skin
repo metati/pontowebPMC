@@ -1,0 +1,20 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxPopupMenu runat="server" ShowSubMenuShadow="False" SpriteCssFilePath="{0}/sprite.css" CssPostfix="PMC2" CssFilePath="{0}/styles.css">
+    <VerticalPopOutImage>
+        <SpriteProperties HottrackedCssClass="dxWeb_mVerticalPopOutHover_PMC2" />
+    </VerticalPopOutImage>
+    <VerticalPopOutRtlImage>
+        <SpriteProperties HottrackedCssClass=".dxWeb_mVerticalPopOutHoverRtl_PMC2" />
+    </VerticalPopOutRtlImage>
+    <ScrollUpButtonImage>
+        <SpriteProperties HottrackedCssClass="dxWeb_mScrollUpHover_PMC2" />
+    </ScrollUpButtonImage>
+    <ScrollDownButtonImage>
+        <SpriteProperties HottrackedCssClass="dxWeb_mScrollDownHover_PMC2" />
+    </ScrollDownButtonImage>
+    <LoadingPanelImage Url="Web/Loading.gif" />
+    <SubMenuStyle GutterWidth="0px" />
+</dx:ASPxPopupMenu>
+

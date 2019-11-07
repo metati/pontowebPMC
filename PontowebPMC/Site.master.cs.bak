@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using MetodosPontoFrequencia;
+
+public partial class SiteMaster : System.Web.UI.MasterPage
+{
+    private int IDUsuarioControle;
+    private bool digital,dashboard;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (HttpContext.Current.User.Identity.IsAuthenticated == true)
+        {
+            if (Convert.ToInt32(Session["PrimeiroAcesso"]) == 2 && (bool)Session["VinculoSelecionado"] == true)
+            {
+                
+                MenuPrincipal.Visible = true;
+                //lbusuario.Text = string.Format("Usuário: {0} ", (string)Session["DSUsuario"]);
+                coIDTPUsuarioGeral2.Set("coIDTPUsuarioGeral2", (string)Session["TPUsuario"]);
+                //coIDTPUsuarioGeral.Value = (string)Session["TPUsuario"];
+                coIDTPUsuarioGeral2.Set("tpusuario", (string)Session["TPUsuario"]);
+
+                if ((string)Session["TPUsuario"] != string.Empty)
+                {
+                    ASPxHyperLink1.Visible = true;
+                }
+                if ((bool)Session["DASHBOARDCORPORATIVO"] == true)
+                    dashboard = true;
+                else
+                    dashboard = false;
+                
+                if ((string)Session["DIGITAL"] == "1")
+                    digital = true;
+                else
+                    digital = false;
+
+                lbUsuario.Text = string.Format("Usuário logado: {0}",(string)Session["DSUsuario"]);
+                lbUsuario.Font.Size = FontUnit.Smaller;
+
+                FormarMenu(MenuPrincipal.Items);
+                NomeEmpresa(Convert.ToInt32(Session["IDEmpresa"]));
+
+            }
+        }
+    }
+    protected void NomeEmpresa(int IDEmpresa)
+    {
+            DataSetPontoFrequencia ds = new DataSetPontoFrequencia();
+            PreencheTabela PT = new PreencheTabela();
+
+            PT.PreencheTBEmpresaID(ds, IDEmpresa);
+
+            lbEmpresa.Text = PT.NomeEmpresa;
+            Session["DSEMPRESA"] = PT.NomeEmpresa;
+            lbEmpresa.DataBind();
+    }
+    protected void NavigationMenu_DataBound(object sender, EventArgs e)
+    {
+        
+    }
+    protected void NavigationMenu_MenuItemDataBound(object sender, MenuEventArgs e)
+    {
+    }
+
+    protected void FormarMenu(DevExpress.Web.ASPxMenu.MenuItemCollection Itens)
+    {
+        Acesso AC = new Acesso();
+        MenuPrincipal.Visible = !(Convert.ToInt32(Session["TPUsuario"]) == 0);
+
+        for (int i = 0; i < Itens.Count; i++)
+        {
+            Itens[i].Visible = AC.TipoAcesso(Convert.ToInt32(Session["TPUsuario"]), Itens[i].Text,digital,dashboard);
+            
+           // int TotalSubItem = Itens[i].Items.Count; -- Para controle de SubItens do menu principal.
+
+            //if(TotalSubItem != 0)
+            //{
+            //    for (int z = 0; z < TotalSubItem ; z++)
+            //    {
+            //        Itens[i].Items[z].Visible = AC.TipoAcesso(Convert.ToInt32(Session["TPUsuario"]), Itens[i].Items[z].Text);
+            //    }
+           // }
+            FormarMenu(Itens[i].Items);
+        }
+    }
+    protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
+    {
+        MenuPrincipal.Visible = false;
+        Session.Abandon();
+    }
+
+    public int PreencheSession
+    {
+        set
+        {
+            IDUsuarioControle = value;
+        }
+        get
+        {
+            Session["IDUsuarioF"] = IDUsuarioControle;
+            return IDUsuarioControle;
+        }
+    }
+}

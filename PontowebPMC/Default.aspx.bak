@@ -1,0 +1,82 @@
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
+
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <script type="text/javascript">
+        function AbrePop() {
+
+            popEmpresa.Show();
+        }
+        function FechaPop() {
+            popEmpresa.Hide();
+        }
+        function DefineSession() {
+
+            cbEmpresa.PerformCallback(cbEmpresa.GetValue());
+            popEmpresa.Hide();
+        }
+    </script>
+    <h2>
+        Bem vindo&nbsp;
+        <asp:Label ID="lbNome" runat="server" Text="LbNome"></asp:Label>
+    &nbsp;<dx:ASPxLabel ID="lbMensagemHoras" runat="server" Text="Horas">
+        </dx:ASPxLabel>
+    </h2>
+    <p align="center">
+        <img runat="server" id="imgPrincipal" /></p>
+    <p>
+        <dx:ASPxPopupControl ID="popEmpresa" runat="server" 
+            ClientInstanceName="popEmpresa" Modal="True" 
+            PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
+            CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+            HeaderText="Usuário Adm. Escolha uma empresa para conferência" 
+            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="400px" 
+            CloseAction="None" ShowCloseButton="False" EnableHotTrack="False">
+            <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+            </LoadingPanelImage>
+            <HeaderStyle>
+            <Paddings PaddingLeft="7px" />
+            </HeaderStyle>
+            <LoadingPanelStyle ImageSpacing="5px">
+            </LoadingPanelStyle>
+            <ContentCollection>
+<dx:PopupControlContentControl runat="server" SupportsDisabledAttribute="True">
+    <table class="style1">
+        <tr>
+            <td>
+                Empresa:</td>
+            <td>
+                <dx:ASPxComboBox ID="cbEmpresa" runat="server" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" DataMember="TBEmpresa" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Width="300px" 
+                    ClientInstanceName="cbEmpresa" 
+                    OnCallback="cbEmpresa_Callback" TextField="DSEmpresa" 
+                    ValueField="IDEmpresa" Spacing="0">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	DefineSession();
+}" />
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                </dx:ASPxComboBox>
+            </td>
+        </tr>
+    </table>
+                </dx:PopupControlContentControl>
+</ContentCollection>
+        </dx:ASPxPopupControl>
+</p>
+</asp:Content>

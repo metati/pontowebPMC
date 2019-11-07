@@ -1,0 +1,383 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dx" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dx" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<script type="text/javascript" src="/Scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/swfobject.js"></script>
+<script type="text/javascript" src="/Scripts/scriptcam.js"></script>
+
+<script type="text/javascript">
+
+    function AbreAjuda() {
+        //window.open('http://www.gestao.mt.gov.br/index.php?pg=ver&id=2426&c=95');
+        //if (coIDTPUsuarioGeral2.Get("tpusuario") != '2')
+        //window.open('/ajudaG/index.htm');
+        //else
+        //window.open('/ajuda/index.htm');
+    }
+    function Pesquisa() {
+        gridUsuario.PerformCallback();
+    }
+    function PesquisaGridFrequencia() {
+        gridFrequencia.PerformCallback();
+    }
+    function AbrepopManutencaoUsuario() {
+        popManutencaoUsuario.Show();
+    }
+    function AbrepopManutencaoUsuario0() {
+        popManutencaoUsuario0.Show();
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <link href="~/Styles/Site.css" rel="stylesheet" id="PagEst" type="text/css" runat="server" />
+
+    <link rel="ICON" type="image/ico" href="Images/brasAo.png" />
+    <link rel="shortcut icon" href="Images/LogoMeta.ico" type="image/ico" />
+
+    <title>Ponto na Rede - Sistema Gestor de Marcação de Ponto</title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1 {
+            width: 72px;
+        }
+
+        .style2 {
+            width: 121%;
+            height: 115px;
+        }
+
+        .style3 {
+            width: 1077px;
+        }
+
+        .auto-style2 {
+            width: 69px;
+        }
+
+        #codUsuario {
+            display: none;
+        }
+
+        #codEmpresa {
+            display: none;
+        }
+
+        #idE {
+            display: none;
+        }
+
+        #idU {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <h1>
+                        <table class="style2" style="">
+                            <tr>
+                                <td class="auto-style2">
+                                    <asp:Image ID="Image1" runat="server" Height="102px"
+                                        ImageUrl="~/Images/logomarca_parceiros.jpg" Width="180px" />
+                                </td>
+                                <td class="style3">PONTO NA REDE - SISTEMA GESTOR DE MARCAÇÃO DE PONTO<br />
+                                    <dx:ASPxLabel ID="lbEmpresa" runat="server"
+                                        CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" CssPostfix="SoftOrange"
+                                        Style="font-size: large; color: #FFFFFF">
+                                    </dx:ASPxLabel>
+                                    <br />
+                                    <dx:ASPxLabel ID="lbUsuario" runat="server"
+                                        CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" CssPostfix="SoftOrange"
+                                        Style="font-size: large; color: #FFFFFF">
+                                    </dx:ASPxLabel>
+                                </td>
+                                <td class="dxtcRightAlignCell_DevEx">
+                                &nbsp;
+                            </tr>
+                        </table>
+                    </h1>
+                </div>
+                <div class="loginDisplay" align="left">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <a href="Help/index.htm" style="margin-right: 7px; font-size: 12px" target="_blank" id="btnAjuda" runat="server">Ajuda</a>
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText=""
+                        LogoutText="Sair" OnLoggingOut="LoginStatus1_LoggingOut" Font-Bold="True"
+                        Font-Size="Small" />
+                    <br />
+                </div>
+                <div class="clear hideSkiplink" style="text-align: left">
+                    <dx:ASPxMenu ID="MenuPrincipal" runat="server"
+                        CssFilePath="~/App_Themes/DevEx/{0}/styles.css"
+                        CssPostfix="DevEx" Font-Size="Small" Height="30px"
+                        SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Visible="False"
+                        Width="1260px" AutoSeparators="RootOnly" ShowPopOutImages="True"
+                        Style="font-size: 0em" EnableTheming="True" Theme="Default" LoadingPanelText="Processando&amp;hellip;">
+                        <SubMenuStyle GutterWidth="13px" GutterImageSpacing="9px" />
+                        <Items>
+                            <dx:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Home">
+                                <Image Height="30px" Url="~/Images/Imagem16.png"
+                                    Width="30px" ToolTip="Home">
+                                </Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem NavigateUrl="~/frmHorasDiarias.aspx" Text="Meus Registros" ToolTip="confira os registros realizados no mês corrente e anteriores">
+                                <Image Height="30px" Url="~/Images/Imagem29.png"
+                                    Width="30px" ToolTip="Período díarios">
+                                </Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Manutenção de Frequência">
+                                <Items>
+                                    <dx:MenuItem Text="Realizar Justificativa"
+                                        NavigateUrl="~/Manutencao/frmManutencaoFrequencia.aspx" ToolTip="manutenção de marcação de ponto">
+                                        <Image Url="~/Images/Imagem20.png" Height="20px" ToolTip="Justificar registro não efetuado" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Espelho de marcação de ponto"
+                                        NavigateUrl="~/Manutencao/frmGeraFolhaFrequencia.aspx">
+                                        <Image Url="~/Images/Imagem15.png" Height="20px" ToolTip="Folha de ponto frequência" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Manutencao/frmLancarFalta.aspx" Text="Lançar Falta">
+                                        <Image Url="~/Images/Imagem34.png" Height="20px" ToolTip="Lançar falta" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Lançar Férias/Licenças"
+                                        NavigateUrl="~/Manutencao/frmCadastroFeriasLicenca.aspx">
+                                        <Image Height="20px"
+                                            Url="~/Images/Imagem27.png"
+                                            Width="20px" ToolTip="Lançar férias e licenças">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Feriados e Pontos Facultativos"
+                                        NavigateUrl="~/Cadastro/frmCadastraFeriadoPontoFacultativo.aspx">
+                                        <Image Height="20px" Url="~/Images/Imagem41.png" Width="16px" ToolTip="Feriados e ponto facultativos">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Defaultsession.aspx" Text="Administrar Outra Empresa/Órgão">
+                                        <Image Height="30px" Url="~/Images/Imagem20.png" Width="30px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Manutencao/frmControleHorasExtras.aspx" Text="Controle de Horas Extras">
+                                        <Image Height="20px" Url="~/Images/Imagem51.jpeg" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Manutencao/frmHorasExtras.aspx" Text="Lançamento de Horas Extras">
+                                        <Image Height="20px" Url="~/Images/imagem52.jpeg" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Manutencao/frmRegimesHorarios.aspx" Text="Regime de horários">
+                                        <Image Height="20px" Url="~/Images/Imagem50.jpeg" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="#" Text="Escalas de horários" ItemStyle-CssClass="escalaMenu">
+                                        <Image Height="20px" Url="~/Images/Imagem50.jpeg" Width="20px">
+                                        </Image>
+                                        <ItemStyle CssClass="escalaMenu"></ItemStyle>
+                                    </dx:MenuItem>
+                                     <dx:MenuItem NavigateUrl="~/FechamentoFolha/frmFechamentoFolha.aspx" Text="Fechamento de Folha">
+                                        <Image Height="20px" Url="~/Images/Imagem47.png" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                </Items>
+                                <Image Height="30px" Url="~/Images/Imagem20.png"
+                                    Width="30px" ToolTip="Manutenção de frequência">
+                                </Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Cadastros" ToolTip="Cadastros">
+                                <Items>
+                                    <dx:MenuItem NavigateUrl="~/Cadastro/frmCadastraSetor.aspx" Text="Setor">
+                                        <Image Height="20px" Url="~/Images/Imagem43.png" Width="20px" ToolTip="Setor">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Colaborador/Usuário" NavigateUrl="~/Cadastro/frmFiltroUsuario.aspx">
+                                        <Image Height="20px" Url="~/Images/Imagem4.png" Width="20px" ToolTip="Usuário">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Cargo" NavigateUrl="~/Cadastro/frmCadastraCargo.aspx">
+                                        <Image Height="20px" Url="~/Images/Imagem13.png"
+                                            Width="20px" ToolTip="Cargo">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Vínculos" NavigateUrl="~/Cadastro/frmCadastraVinculo.aspx">
+                                        <Image Height="20px" Url="~/Images/Imagem13.png"
+                                            Width="20px" ToolTip="Vínculos">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem Text="Justificativas"
+                                        NavigateUrl="~/Cadastro/frmCadastraMotivoFalta.aspx">
+                                        <Image Height="20px" Url="~/Images/Imagem44.png"
+                                            Width="20px" ToolTip="Motivos de faltas">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Manutencao/frmdiasano.aspx" Text="Dias do ano">
+                                        <Image Height="20px" Url="~/Images/Imagem10.png"
+                                            Width="20px" ToolTip="Dias do ano">
+                                        </Image>
+                                    </dx:MenuItem>
+                                </Items>
+                                <Image Height="30px" Url="~/Images/Imagem23.png"
+                                    Width="30px" ToolTip="Cadastros">
+                                </Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Relatórios" ToolTip="Relatórios">
+                                <Items>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmSituacaousuario.aspx"
+                                        Text="Situação Cadastral Usuários">
+                                        <Image Height="20px" Url="~/Images/RImagem51.png" Width="20px" ToolTip="Situação cadastral dos usuários">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/Relacaopontodia.aspx"
+                                        Text="Relação de marcação por período">
+                                        <Image Height="20px" Url="~/Images/RImagem50.png" Width="20px" ToolTip="Relação de marcação por período">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmLocalRegistro.aspx"
+                                        Text="Registros de Ponto e Locais de Marcação">
+                                        <Image Height="20px" Url="~/Images/Imagem21.png" Width="20px" ToolTip="Registro de ponto e local de marcação">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmMotivoFaltaPeriodo.aspx"
+                                        Text="Relação de Justificativas por período">
+                                        <Image Height="20px" Url="~/Images/RImagem52.png" Width="20px" ToolTip="Relação de justificativa poríodo">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmFichaUsuario.aspx"
+                                        Text="Ficha de Servidores">
+                                        <Image Height="20px" Url="~/Images/RImagem49.png" Width="20px" ToolTip="Ficha de usuário">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmRelDesconto.aspx" Text="Relatório de Descontos">
+                                        <Image Height="20px" Url="~/Images/Imagem24.png" Width="20px" ToolTip="Relatório de desconto">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmRelAusenteInjust.aspx" Text="Relatório de Falta/Registro Ausente">
+                                        <Image Height="20px" Url="~/Images/Imagem5.png" Width="20px" ToolTip="Relatório de falta">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/HorasExtras/RelatControleHorasExtras.aspx" Text="Relatório de Controle de Horas Extras">
+                                        <Image Height="20px" Url="~/Images/Imagem5.png" Width="20px" ToolTip="Relatório de Controle de Horas Extras">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/FiltroRelatorio/frmAuditRel.aspx" Text="Auditoria de Justificativas">
+                                        <Image Height="20px" Url="~/Images/Imagem5.png" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                    <dx:MenuItem NavigateUrl="~/Relatorio/EspelhoPonto.aspx" Text="Conferência Fechamento de Folha">
+                                        <Image Height="20px" Url="ToolTip = 'Relatório de Controle de Horas Extras', Height = 20px, Width = 20px, Url = '~/Images/Imagem5.png'" Width="20px">
+                                        </Image>
+                                    </dx:MenuItem>
+                                </Items>
+                                <Image Height="30px" Url="~/Images/Imagem15.png" Width="30px" ToolTip="Relatórios">
+                                </Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem NavigateUrl="~/Painel/frmPainelEmpresa.aspx"
+                                Text="Dashboard" ToolTip="Dashboard">
+                                <Image Height="30px" Url="~/Images/Imagem11.png" Width="30px" ToolTip="Dashboard">
+                                </Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem NavigateUrl="~/Account/frmTrocaSenha.aspx"
+                                Text="Alterar a minha senha" ToolTip="Alterar a senha de acesso">
+                                <Image Height="40px"
+                                    Url="~/Images/Imagem36.png" Width="38px" ToolTip="Alterar senha">
+                                </Image>
+                            </dx:MenuItem>
+                        </Items>
+                        <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                        </LoadingPanelImage>
+                        <ItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2" />
+
+                        <ItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2"></ItemSubMenuOffset>
+
+                        <ItemStyle DropDownButtonSpacing="10px" PopOutImageSpacing="10px" />
+                        <LoadingPanelStyle ImageSpacing="5px">
+                        </LoadingPanelStyle>
+
+                        <SubMenuStyle GutterWidth="3px" GutterImageSpacing="9px"></SubMenuStyle>
+
+                    </dx:ASPxMenu>
+                </div>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="footer" style="color: #FFFFFF; font-size: 12px">
+            <br />
+            Ponto na Rede - Todos os direitos reservados<br />
+            <dx:ASPxHiddenField ID="coIDTPUsuarioGeral2" runat="server" ClientInstanceName="coIDTPUsuarioGeral2">
+            </dx:ASPxHiddenField>
+
+            <asp:HiddenField ID="coIDTPUsuarioGeral" runat="server" />
+
+        </div>
+        <asp:HiddenField ID="codUsuario" runat="server" ClientIDMode="Static" />
+        <asp:HiddenField ID="codEmpresa" runat="server" ClientIDMode="Static" />
+    </form>
+
+    <script type="text/javascript">
+        $('.escalaMenu').click(function () {
+            postEscala();
+            $('#codUsuario').hide();
+            $('#codEmpresa').hide();
+        })
+        function postEscala() {
+            var mapForm = document.createElement("form");
+            mapForm.target = "Map";
+            mapForm.method = "POST"; // or "post" if appropriate
+            mapForm.action = "../../escala/EscalaHorario.aspx";
+            mapForm.id = "MapEscala";
+            var mapInput = document.createElement("input");
+            mapInput.type = "text";
+            mapInput.name = "idU";
+            mapInput.value = $('#codUsuario').val();
+            mapForm.appendChild(mapInput);
+
+            var mapInputIdE = document.createElement("input");
+            mapInputIdE.type = "text";
+            mapInputIdE.name = "idE";
+            mapInputIdE.value = $('#codEmpresa').val();
+            mapForm.appendChild(mapInputIdE);
+
+            document.body.appendChild(mapForm);
+
+            map = window.open("", "Map", "status=0,title=0,height=" + screen.availHeight + ",width=" + screen.availWidth + ",scrollbars=1");
+
+            if (map) {
+                mapForm.submit();
+            } else {
+                alert('You must allow popups for this map to work.');
+            }
+
+            setTimeout(function () {
+                $('#idU').remove();
+                $('#idE').remove();
+                $('#MapEscala').remove();
+                console.log(1)
+            }, 3000)
+
+        }
+    </script>
+</body>
+</html>

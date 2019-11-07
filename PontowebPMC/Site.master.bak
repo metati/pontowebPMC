@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxMenu" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxTabControl" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxClasses" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<script type="text/javascript" src="/Scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/swfobject.js"></script>
+<script type="text/javascript" src="/Scripts/scriptcam.js"></script>
+
+<script type="text/javascript">
+  function Pesquisa() 
+  {
+      gridUsuario.PerformCallback();
+  }
+  function AbreAjuda() {
+      window.open("ponto.html");
+  }
+  function PesquisaGridFrequencia() 
+  {
+      gridFrequencia.PerformCallback();
+  }
+   function AbrepopManutencaoUsuario()
+   {
+        popManutencaoUsuario.Show();
+    }
+    function AbrepopManutencaoUsuario0() 
+    {
+        popManutencaoUsuario0.Show();
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <link href="~/Styles/Site.css" rel="stylesheet" id="PagEst" type="text/css" runat="server" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    &nbsp;Ponto Frequência Digital
+                </h1>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <dx:ASPxLabel ID="lbEmpresa" runat="server" 
+                        CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" CssPostfix="SoftOrange" 
+                        style="font-size: large; color: #FFFFFF">
+                    </dx:ASPxLabel>
+                </p>
+            </div>
+            <div class="loginDisplay">
+                <asp:Label ID="lbusuario" runat="server"></asp:Label>
+                <br />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Acessar" 
+                    LogoutText="Sair" onloggingout="LoginStatus1_LoggingOut" />
+            </div>
+            <div class="clear hideSkiplink">
+                <dx:ASPxMenu ID="MenuPrincipal" runat="server" 
+                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    CssPostfix="DevEx" Font-Size="Small" Height="30px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Visible="False" 
+                    Width="1260px" AutoSeparators="RootOnly" ShowPopOutImages="True" 
+                    style="font-size: 0em">
+
+                    <SubMenuStyle GutterWidth="13px" GutterImageSpacing="9px" />
+
+                    <Items>
+                        <dx:MenuItem NavigateUrl="~/Default.aspx" Text="Principal">
+                        </dx:MenuItem>
+                        <dx:MenuItem NavigateUrl="~/frmHorasDiarias.aspx" Text="Minhas horas diárias">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="Manutenção de Frequência">
+                            <Items>
+                                <dx:MenuItem Text="Justificativas de Faltas e Atrasos" 
+                                    NavigateUrl="~/Manutencao/frmManutencaoFrequencia.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Gerar Folha de Frequência" 
+                                    NavigateUrl="~/Manutencao/frmGeraFolhaFrequencia.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem NavigateUrl="~/Manutencao/frmLancarFalta.aspx" Text="Lançar Falta">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Lançar Férias" 
+                                    NavigateUrl="~/Manutencao/frmCadastroFeriasLicenca.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Feriados e Pontos Facultativos" 
+                                    NavigateUrl="~/Cadastro/frmCadastraFeriadoPontoFacultativo.aspx">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="Cadastro">
+                            <Items>
+                                <dx:MenuItem NavigateUrl="~/Cadastro/frmCadastraSetor.aspx" Text="Setor">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Usuário" NavigateUrl="~/Cadastro/frmFiltroUsuario.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Cargo" NavigateUrl="~/Cadastro/frmCadastraCargo.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Vínculos" NavigateUrl="~/Cadastro/frmCadastraVinculo.aspx">
+                                </dx:MenuItem>
+                                <dx:MenuItem Text="Motivos de Faltas" 
+                                    NavigateUrl="~/Cadastro/frmCadastraMotivoFalta.aspx">
+                                </dx:MenuItem>
+                            </Items>
+                        </dx:MenuItem>
+                        <dx:MenuItem NavigateUrl="~/Account/frmTrocaSenha.aspx" 
+                            Text="Mudar Senha de Acesso">
+                        </dx:MenuItem>
+                    </Items>
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+                    </LoadingPanelImage>
+                    <ItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2" />
+
+<ItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2"></ItemSubMenuOffset>
+
+                    <ItemStyle DropDownButtonSpacing="10px" PopOutImageSpacing="10px" />
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+
+<SubMenuStyle GutterWidth="3px" GutterImageSpacing="9px"></SubMenuStyle>
+
+                </dx:ASPxMenu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <asp:HiddenField ID="coIDTPUsuarioGeral" runat="server" />
+        Frequência Digital - Todos os direitos reservados<br />
+        <dx:ASPxHiddenField ID="coIDTPUsuarioGeral2" runat="server" ClientInstanceName="coIDTPUsuarioGeral2">
+        </dx:ASPxHiddenField>
+        
+    </div>
+    </form>
+</body>
+</html>

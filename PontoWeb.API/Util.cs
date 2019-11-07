@@ -15,7 +15,6 @@ namespace PontoWeb.API
             get
             {
                 //return "Data Source=ribeiraodaponte.cuiaba.mt.gov.br;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=pontoweb;Password=Pt@20wEb18;Min Pool Size=10;Max Pool Size=200;Connect Timeout=90;Packet Size=16000";
-                //return "Data Source=200.241.193.131\\SQLMETATI16,1477;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=sa;password=MetaTIPMC2016;Pooling=true;Enlist=false;Min Pool Size=5;";
                 return "Data Source=resmarchetti.cuiaba.mt.gov.br;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=pontoweb;Password=Pt@20wEb18@ZUR;Min Pool Size=10;Max Pool Size=200;Connect Timeout=90;Packet Size=16000";
 
             }

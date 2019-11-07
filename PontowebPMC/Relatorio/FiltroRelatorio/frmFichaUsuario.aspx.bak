@@ -1,0 +1,137 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmFichaUsuario.aspx.cs" Inherits="Relatorio_FiltroRelatorio_frmFichaUsuario" %>
+
+<%@ Register assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+        .style1
+        {
+            width: 145px;
+        }
+        .style2
+        {
+            width: 98px;
+        }
+        .style4
+        {
+            width: 8%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+
+    <script type="text/javascript">
+
+        function MudaPagina() {
+
+            window.open('/Relatorio/frmVizualizaRelatorio.aspx?Setor=' + coIDUsuarioServidorFicha.Get("IDSetor") + '&Situ=' + rbSituRel.GetValue() + '&User=' + coIDUsuarioServidorFicha.Get("IDUsuario") + '&Ano=0 &Rel=frmfca');
+        }
+
+        function PreenchecbUsuario() {
+            cbUsuarioFichaServidor.PerformCallback();
+        }
+
+    </script>
+    <p>
+        Relatório de Ficha de Servidores<table class="dxflInternalEditorTable_DevEx">
+            <tr>
+                <td class="style1">
+                    Setor:</td>
+                <td>
+                                    <dx:ASPxComboBox runat="server" IncrementalFilteringMode="Contains" 
+                    TextField="DSSetor" ValueField="IDSetor" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="TBSetor" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbSetorFichaServidor" ID="cbSetorFolha">
+                                        <ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreenchecbUsuario();
+}" />
+<ClientSideEvents SelectedIndexChanged="function(s, e) {
+	PreenchecbUsuario();
+}"></ClientSideEvents>
+
+<LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+
+<ValidationSettings ValidationGroup="ValidaGrupo">
+<RequiredField IsRequired="True"></RequiredField>
+</ValidationSettings>
+</dx:ASPxComboBox>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    Servidor:</td>
+                <td>
+                                    <dx:ASPxComboBox runat="server" IncrementalFilteringMode="Contains" 
+                    TextField="Nome" ValueField="IDUsuario" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="vwNomeUsuario" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbUsuarioFichaServidor" ID="cbUsuarioBancoHora" 
+                    oncallback="cbUsuario_Callback" DropDownStyle="DropDown" EnableSynchronization="False">
+<LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+
+                                        <DropDownButton ToolTip="Filtrar por servidor">
+                                        </DropDownButton>
+
+<ValidationSettings ValidationGroup="ValidaGrupo">
+</ValidationSettings>
+</dx:ASPxComboBox>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    Filtrar situação:</td>
+                <td>
+                                    <dx:ASPxRadioButtonList ID="rbSituRel" runat="server" 
+                                        ClientInstanceName="rbSituRel" RepeatDirection="Horizontal" SelectedIndex="0" 
+                                        Theme="DevEx">
+                                        <Items>
+                                            <dx:ListEditItem Selected="True" Text="Nenhum" Value="0" />
+                                            <dx:ListEditItem Text="Ativados" Value="1" />
+                                            <dx:ListEditItem Text="Desativados" Value="2" />
+                                        </Items>
+                                    </dx:ASPxRadioButtonList>
+
+
+                </td>
+            </tr>
+        </table>
+        <table class="dxflInternalEditorTable_DevEx">
+            <tr>
+                <td class="style4">
+                <dx:ASPxButton ID="btrelaBancohora" runat="server" 
+                            CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Ok" 
+                            Width="100px" 
+                            ValidationGroup="ValidaGrupo" AutoPostBack="False" 
+                            ClientInstanceName="btrelaBancohora" 
+                    onclick="btrelaBancohora_Click">
+                    <ClientSideEvents Click="function(s, e) {
+}" />
+                </dx:ASPxButton>
+                </td>
+                <td>
+                <dx:ASPxButton ID="btVoltar" runat="server" CausesValidation="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                            CssPostfix="DevEx" 
+                            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Voltar" 
+                            Width="100px" onclick="btVoltar_Click">
+                </dx:ASPxButton>
+                    <dx:ASPxHiddenField ID="coIDUsuarioServidorFicha" runat="server" 
+                        ClientInstanceName="coIDUsuarioServidorFicha">
+                    </dx:ASPxHiddenField>
+                </td>
+            </tr>
+        </table>
+    </p>
+</asp:Content>
+

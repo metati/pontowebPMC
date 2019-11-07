@@ -1,0 +1,131 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodosPontoFrequencia", "MetodosPontoFrequencia\MetodosPontoFrequencia.csproj", "{AC266969-F757-48C1-8460-752DE6776B43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pnrClient", "pnrClient\pnrClient.csproj", "{439A854F-DB94-4290-BE77-0ABEDE5091B6}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PontowebPMC", "PontowebPMC\", "{7175C001-36C3-482F-A24D-233AA99F690E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{ac266969-f757-48c1-8460-752de6776b43}|MetodosPontoFrequencia.dll;{b3769497-932f-464a-a57a-55f66c855091}|MetaTI.API.dll;{543B924C-AC2F-4595-AC14-639BC1157525}|MetaTI.Util.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50160"
+		Debug.AspNetCompiler.PhysicalPath = "PontowebPMC\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50160\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50160"
+		Release.AspNetCompiler.PhysicalPath = "PontowebPMC\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50160\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50160"
+		SlnRelativePath = "PontowebPMC\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaTI.API", "MetaTI.API\MetaTI.API.csproj", "{B3769497-932F-464A-A57A-55F66C855091}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IntegradorPontowebPMC", "IntegradorPontowebPMC\", "{7E70E963-A650-4960-B267-AE87C74F4C7C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{ac266969-f757-48c1-8460-752de6776b43}|MetodosPontoFrequencia.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50166"
+		Debug.AspNetCompiler.PhysicalPath = "IntegradorPontowebPMC\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50166\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50166"
+		Release.AspNetCompiler.PhysicalPath = "IntegradorPontowebPMC\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50166\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50166"
+		SlnRelativePath = "IntegradorPontowebPMC\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaTI.Util", "MetaTI.Util\MetaTI.Util\MetaTI.Util\MetaTI.Util.csproj", "{543B924C-AC2F-4595-AC14-639BC1157525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESCALA", "PontoWeb.API\ESCALA.csproj", "{6DB20A69-67C0-4A17-9504-270D1008A1FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC266969-F757-48C1-8460-752DE6776B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Debug|x86.Build.0 = Debug|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC266969-F757-48C1-8460-752DE6776B43}.Release|x86.Build.0 = Release|Any CPU
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Debug|x86.ActiveCfg = Debug|x86
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Debug|x86.Build.0 = Debug|x86
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Release|x86.ActiveCfg = Release|x86
+		{439A854F-DB94-4290-BE77-0ABEDE5091B6}.Release|x86.Build.0 = Release|x86
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Debug|x86.Build.0 = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Release|x86.ActiveCfg = Debug|Any CPU
+		{7175C001-36C3-482F-A24D-233AA99F690E}.Release|x86.Build.0 = Debug|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Debug|x86.Build.0 = Debug|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3769497-932F-464A-A57A-55F66C855091}.Release|x86.Build.0 = Release|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Release|x86.ActiveCfg = Debug|Any CPU
+		{7E70E963-A650-4960-B267-AE87C74F4C7C}.Release|x86.Build.0 = Debug|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Debug|x86.Build.0 = Debug|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Release|x86.ActiveCfg = Release|Any CPU
+		{543B924C-AC2F-4595-AC14-639BC1157525}.Release|x86.Build.0 = Release|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Debug|x86.Build.0 = Debug|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{6DB20A69-67C0-4A17-9504-270D1008A1FA}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB93FC5B-E637-4294-986C-B6CC36637D2E}
+	EndGlobalSection
+EndGlobal

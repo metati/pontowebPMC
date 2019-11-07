@@ -1,0 +1,209 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="frmCadastraMotivoFalta.aspx.cs" Inherits="Cadastro_frmCadastraMotivoFalta" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxTabControl" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxClasses" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxGridView.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style4
+        {
+            width: 66px;
+        }
+
+        .dxbButton_PlasticBlue 
+{	
+  	color: #000000;    
+	font-weight:normal;  	
+	font-size: 9pt;
+	font-family: Tahoma;				    
+	vertical-align: middle;	 		
+	border: solid 1px #B8B8B8;
+    padding: 1px 1px 1px 1px;
+	cursor: pointer;
+}
+        
+        .style2
+        {
+            width: 73px;
+        }
+        .style5
+    {
+        width: 69px;
+    }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <dx:ASPxPageControl ID="pgMotivoFalta" runat="server" ActiveTabIndex="1" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+        CssPostfix="DevEx" Width="500px" 
+        SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+        <TabPages>
+            <dx:TabPage Text="Cadastrar">
+                <ContentCollection>
+                    <dx:ContentControl runat="server" SupportsDisabledAttribute="True">
+                        <table class="style1">
+                            <tr>
+                                <td>
+                                    <table class="style1">
+                                        <tr>
+                                            <td>
+                                                <dx:ASPxLabel ID="ASPxLabel1" runat="server" ClientIDMode="AutoID" 
+                                                    Text="Descrição:">
+                                                </dx:ASPxLabel>
+                                            </td>
+                                            <td>
+                                                <dx:ASPxTextBox ID="tbDescricaoCargo" runat="server" 
+                                                    Width="300px" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                                    CssPostfix="DevEx" SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                                                </dx:ASPxTextBox>
+                                            </td>
+                                            <td>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                                    ControlToValidate="tbDescricaoCargo" ErrorMessage="*"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <table class="style1">
+                                                    <tr>
+                                                        <td class="style4">
+                                                            <dx:ASPxButton ID="btSalvar" runat="server" 
+                                                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                                OnClick="btSalvar_Click" 
+                                                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Salvar" 
+                                                                Width="100px">
+                                                            </dx:ASPxButton>
+                                                        </td>
+                                                        <td class="style2">
+                                                            <dx:ASPxButton ID="btLista" runat="server" CausesValidation="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                                                CssPostfix="DevEx" OnClick="btLista_Click" 
+                                                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Lista" 
+                                                                Width="100px">
+                                                            </dx:ASPxButton>
+                                                        </td>
+                                                        <td>
+                                                            <dx:ASPxButton ID="btVoltarCad" runat="server" CausesValidation="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                                                CssPostfix="DevEx" OnClick="btVoltarCad_Click" 
+                                                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Voltar" 
+                                                                Width="100px">
+                                                            </dx:ASPxButton>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                &nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </dx:ContentControl>
+                </ContentCollection>
+            </dx:TabPage>
+            <dx:TabPage Text="Listar">
+                <ContentCollection>
+                    <dx:ContentControl runat="server" SupportsDisabledAttribute="True">
+                        <table class="style1">
+                            <tr>
+                                <td>
+                                    <dx:ASPxGridView ID="gridMotivoFalta" runat="server" 
+                                        AutoGenerateColumns="False" 
+                                        CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                        DataMember="TBMotivoFalta" KeyFieldName="IDMotivoFalta" Width="500px">
+                                        <Columns>
+                                            <dx:GridViewDataTextColumn FieldName="IDMotivoFalta" 
+                                                ShowInCustomizationForm="True" Visible="False" VisibleIndex="0">
+                                            </dx:GridViewDataTextColumn>
+                                            <dx:GridViewDataTextColumn Caption="Descrição" FieldName="DSMotivoFalta" 
+                                                ShowInCustomizationForm="True" VisibleIndex="1">
+                                            </dx:GridViewDataTextColumn>
+                                        </Columns>
+                                        <SettingsBehavior AllowFocusedRow="True" />
+                                        <SettingsPager NumericButtonCount="20" PageSize="20">
+                                            <AllButton Text="All">
+                                            </AllButton>
+                                            <NextPageButton Text="Próx. &gt;">
+                                            </NextPageButton>
+                                            <PrevPageButton Text="&lt; Ant.">
+                                            </PrevPageButton>
+                                            <Summary Text="Página {0} de {1} ({2} itens)" />
+                                        </SettingsPager>
+                                        <Settings ShowFilterRow="True" ShowVerticalScrollBar="True" />
+                                        <SettingsLoadingPanel Text="Processando&amp;hellip;" />
+                                        <Images SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                                            <LoadingPanelOnStatusBar Url="~/App_Themes/DevEx/GridView/StatusBarLoading.gif">
+                                            </LoadingPanelOnStatusBar>
+                                            <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+                                            </LoadingPanel>
+                                        </Images>
+                                        <ImagesFilterControl>
+                                            <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif">
+                                            </LoadingPanel>
+                                        </ImagesFilterControl>
+                                        <Styles CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                                            CssPostfix="DevEx">
+                                            <Header ImageSpacing="5px" SortingImageSpacing="5px">
+                                            </Header>
+                                            <AlternatingRow Enabled="True">
+                                            </AlternatingRow>
+                                            <LoadingPanel ImageSpacing="5px">
+                                            </LoadingPanel>
+                                        </Styles>
+                                        <StylesEditors ButtonEditCellSpacing="0">
+                                            <ProgressBar Height="25px">
+                                            </ProgressBar>
+                                        </StylesEditors>
+                                    </dx:ASPxGridView>
+                                    <table class="style1">
+                                        <tr>
+                                            <td class="style4">
+                                                <dx:ASPxButton ID="btCadastrar" runat="server" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    OnClick="btCadastrar_Click" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Cadastrar" 
+                                                    Width="100px">
+                                                </dx:ASPxButton>
+                                            </td>
+                                            <td class="style5">
+                                                <dx:ASPxButton ID="btAlterar" runat="server" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    OnClick="btAlterar_Click" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Alterar" 
+                                                    Width="100px">
+                                                </dx:ASPxButton>
+                                            </td>
+                                            <td>
+                                                <dx:ASPxButton ID="btVoltar" runat="server" 
+                                                    CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                                    OnClick="btVoltar_Click" 
+                                                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Voltar" 
+                                                    Width="100px">
+                                                </dx:ASPxButton>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </dx:ContentControl>
+                </ContentCollection>
+            </dx:TabPage>
+        </TabPages>
+        <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif">
+        </LoadingPanelImage>
+        <LoadingPanelStyle ImageSpacing="5px">
+        </LoadingPanelStyle>
+        <Paddings PaddingLeft="5px" PaddingRight="5px" Padding="2px" />
+        <ContentStyle>
+            <Paddings Padding="12px" />
+            <Border BorderWidth="1px" BorderColor="#9DA0AA" BorderStyle="Solid" />
+        </ContentStyle>
+    </dx:ASPxPageControl>
+</asp:Content>
+

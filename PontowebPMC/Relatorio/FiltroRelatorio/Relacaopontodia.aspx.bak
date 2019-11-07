@@ -1,0 +1,231 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Relacaopontodia.aspx.cs" Inherits="Relatorio_FiltroRelatorio_Relacaopontodia" %>
+
+<%@ Register assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+
+
+.dxeButtonEditButton_DevEx,
+.dxeSpinLargeIncButton_DevEx,
+.dxeSpinLargeDecButton_DevEx,
+.dxeSpinIncButton_DevEx,
+.dxeSpinDecButton_DevEx
+{
+	background: White none;
+}
+
+.dxeButtonEditButton_DevEx
+{
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 1px;
+}
+.dxeButtonEditButton_DevEx,
+.dxeButtonEdit_DevEx .dxeSBC
+{
+	border-style: solid;
+	border-color: Transparent;
+	-border-color: White;
+}
+
+.dxeButtonEditButton_DevEx,
+.dxeCalendarButton_DevEx,
+.dxeSpinIncButton_DevEx,
+.dxeSpinDecButton_DevEx,
+.dxeSpinLargeIncButton_DevEx,
+.dxeSpinLargeDecButton_DevEx
+{
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+
+.dxeButtonEditButton_DevEx
+{
+	background: White none;
+}
+
+        .dxeButtonEditButton_DevEx
+{
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 1px;
+}
+
+
+        .dxeButtonEditButton_DevEx
+{
+	border-style: solid;
+	border-color: Transparent;
+	-border-color: White;
+}
+
+        .dxeButtonEditButton_DevEx
+{
+	vertical-align: middle;
+	cursor: pointer;
+}
+        .style2
+        {
+            width: 97px;
+        }
+        .style4
+        {
+            width: 7%;
+        }
+        .style5
+        {
+            width: 6%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+        <script type="text/javascript">
+
+            function MudaPagina() {
+                var Ano, hoje;
+
+                hoje = new Date();
+
+                window.open('/Relatorio/frmVizualizaRelatorio.aspx?Mes=0&Setor=' + coRelacaoPontoDia.Get("IDSetor") + '&DiaIni=' + deDataRelacaoDia.GetText() + '&DiaFim=' + deDataRelacaoDiaFinal.GetText() + '&User=' + coIDUsuarioRelacaoPontoDia.Get("IDUsuario") + '&Ano=' + Ano + '&Ausencia=' + cbFaltosos.GetValue() + '&Rel=frmRelacDia');
+            }
+
+            function PreenchecbUsuarioRelacaoPontoDia() {
+                cbUsuarioRelacaoPontoDia.PerformCallback(cbSetorRelacaoDia.GetValue());
+            }
+
+    </script>
+    <p>
+        <strong>Relação de marcação de frequência por dia de referência</strong></p>
+    <table class="dxflInternalEditorTable_DevEx">
+        <tr>
+            <td class="style4">
+                Setor:</td>
+            <td>
+                <dx:ASPxComboBox runat="server" 
+                    EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" 
+                    TextField="DSSetor" ValueField="IDSetor" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="TBSetor" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbSetorRelacaoDia" ID="cbRelacaoDia">
+                    <ClientSideEvents SelectedIndexChanged="function(s, e) {
+PreenchecbUsuarioRelacaoPontoDia();
+}" />  
+                    <LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <LoadingPanelStyle ImageSpacing="5px">
+                    </LoadingPanelStyle>
+                    <ValidationSettings ValidationGroup="ValidaGrupo">
+                        <RequiredField IsRequired="True">
+                        </RequiredField>
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Servidor:</td>
+            <td>
+                                    <dx:ASPxComboBox runat="server" 
+                    EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" 
+                    TextField="Nome" ValueField="IDUsuario" Spacing="0" Width="400px" 
+                    SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" DataMember="vwNomeUsuario" 
+                    CssPostfix="DevEx" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                    ClientInstanceName="cbUsuarioRelacaoPontoDia" ID="cbUsuarioRelacaoPontoDia" 
+                                        oncallback="cbUsuarioRelacaoPontoDia_Callback" 
+                    DropDownStyle="DropDown">
+<LoadingPanelImage Url="~/App_Themes/DevEx/Editors/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+
+</dx:ASPxComboBox>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Data Inicial:</td>
+            <td>
+                            <dx:ASPxDateEdit ID="deDataRelacao" runat="server" ClientInstanceName="deDataRelacaoDia" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                Date="01/12/2013 14:38:46" Spacing="0" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                                <CalendarProperties ClearButtonText="Apagar" TodayButtonText="Hoje">
+                                    <HeaderStyle Spacing="1px" />
+                                </CalendarProperties>
+                                <ClientSideEvents DateChanged="function(s, e) {
+}" />
+                                <ButtonStyle Width="13px">
+                                </ButtonStyle>
+                                <ValidationSettings ValidationGroup="ValidaGrupo">
+                                </ValidationSettings>
+                            </dx:ASPxDateEdit>
+                            <dx:ASPxHiddenField ID="coRelacaoPontoDia" runat="server" 
+                                ClientInstanceName="coRelacaoPontoDia">
+                            </dx:ASPxHiddenField>
+                            <dx:ASPxHiddenField ID="coIDUsuarioRelacaoPontoDia" runat="server" 
+                                ClientInstanceName="coIDUsuarioRelacaoPontoDia">
+                            </dx:ASPxHiddenField>
+                            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                Data Final:</td>
+            <td>
+                            <dx:ASPxDateEdit ID="deDataRelacao0" runat="server" ClientInstanceName="deDataRelacaoDiaFinal" 
+                                CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                                Date="01/12/2013 14:38:46" Spacing="0" 
+                                SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css">
+                                <CalendarProperties ClearButtonText="Apagar" TodayButtonText="Hoje">
+                                    <HeaderStyle Spacing="1px" />
+                                </CalendarProperties>
+                                <ClientSideEvents DateChanged="function(s, e) {
+}" />
+                                <ButtonStyle Width="13px">
+                                </ButtonStyle>
+                                <ValidationSettings ValidationGroup="ValidaGrupo">
+                                </ValidationSettings>
+                            </dx:ASPxDateEdit>
+                            </td>
+        </tr>
+        <tr>
+            <td class="style4">
+                &nbsp;</td>
+            <td>
+                            <dx:ASPxCheckBox ID="cbFaltosos" runat="server" ClientInstanceName="cbFaltosos" 
+                                Text="Filtrar por ausência de registros" Theme="DevEx">
+                            </dx:ASPxCheckBox>
+                            </td>
+        </tr>
+    </table>
+    <table class="dxflInternalEditorTable_DevEx">
+        <tr>
+            <td class="style5">
+                <dx:ASPxButton ID="btRelacaoDia" runat="server" 
+                            CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx" 
+                            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Ok" 
+                            Width="100px" 
+                            ValidationGroup="ValidaGrupo" AutoPostBack="False" 
+                            ClientInstanceName="btRelacaoDia" onclick="btRelacaoDia_Click">
+                    <ClientSideEvents Click="function(s, e) {
+}" />
+                </dx:ASPxButton>
+            </td>
+            <td>
+                <dx:ASPxButton ID="btCancelDia" runat="server" CausesValidation="False" CssFilePath="~/App_Themes/DevEx/{0}/styles.css" 
+                            CssPostfix="DevEx" 
+                            SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" Text="Voltar" 
+                            Width="100px" onclick="btVoltar_Click" 
+                    ClientInstanceName="btCancelDia">
+                </dx:ASPxButton>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+

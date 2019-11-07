@@ -1,0 +1,2328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/DataSetUsuario.xsd" />
+      <s:import namespace="http://tempuri.org/DataSetREP.xsd" />
+      <s:import namespace="http://tempuri.org/DataSetPontoFrequencia.xsd" />
+      <s:import schemaLocation="http://wscbateste.pontonarede.com.br/service.asmx?schema=DataSetUsuario" namespace="http://tempuri.org/DataSetUsuario.xsd" />
+      <s:import schemaLocation="http://wscbateste.pontonarede.com.br/service.asmx?schema=DataSetPontoFrequencia" namespace="http://tempuri.org/DataSetPontoFrequencia.xsd" />
+      <s:import schemaLocation="http://wscbateste.pontonarede.com.br/service.asmx?schema=DataSetREP" namespace="http://tempuri.org/DataSetREP.xsd" />
+      <s:element name="InformarOcorrencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DTOcorrencia" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="DSOcorrencia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VersaoClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeMaquina" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InformarOcorrenciaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SearchNomeCPFLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TextoBusca" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoBusca" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchNomeCPFLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchNomeCPFLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistroFalha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistroFalhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistroFalhaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MonitoramentoClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SerialHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SerialProcessador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MACRede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeComputador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SistemaOperacional" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTultimaConexao" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VersaoClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MemoriaTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EspacoLivreHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CapacidadeHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArquiteturaMaquina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Processador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MonitoramentoClientResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MonitoramentoClientHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SerialHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SerialProcessador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MACRede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPLocal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeComputador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SistemaOperacional" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTultimaConexao" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="VersaoClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MemoriaTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EspacoLivreHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CapacidadeHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArquiteturaMaquina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Processador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HashMaquina" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MonitoramentoClientHashResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHashMaquina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SerialProcessador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SerialHD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MACRede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHashMaquinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHashMaquinaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HoraServidor">
+        <s:complexType />
+      </s:element>
+      <s:element name="HoraServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HoraServidorResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisponibilidadeServidor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisponibilidadeServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DisponibilidadeServidorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VersaoClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VersaoClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VersaoClientResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="REPEmpresaSetor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="REPEmpresaSetorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="REPEmpresaSetorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetREP.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaEmpresas">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetornaEmpresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaEmpresasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetPontoFrequencia.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetorEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetorEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetorEmpresaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetPontoFrequencia.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NomeSetor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NomeSetorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NomeSetorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="REPEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="REPEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="REPEmpresaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetREP.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPonto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuariosPontoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HashMaquina" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuariosPontoHashResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManutencaoHashCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="hash" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDempresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManutencaoHashCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ManutencaoHashCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManutencaoTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDVinculoUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Template" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginOperador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManutencaoTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ManutencaoTemplateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManutencaoTemplate2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDVinculoUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Template" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Template2" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginOperador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManutencaoTemplate2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ManutencaoTemplate2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoNome">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoNomeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuariosPontoNomeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioSemREP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDREP" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioSemREPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioSemREPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioSemREPGeral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDREP" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuarioSemREPGeralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuarioSemREPGeralResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UltimaRefREP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UltimaRefREPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UltimaRefREPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DTUltimaColeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDREP" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtultimaColeta" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DTUltimaColetaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CadUltimaRefREP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefREP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDREP" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CadUltimaRefREPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CadUltimaRefREPResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsuariosPontoLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsuariosPontoLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogarAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogarAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogarAdminResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocalizaUsuarioPIS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PIS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocalizaUsuarioPISResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocalizaUsuarioPISResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FotoUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDusuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FotoUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FotoUsuarioResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaterPonto3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idsetorbatida" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraBatida" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraEntradaManha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraSaidaManha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaEntradaTarde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraSaidaTarde" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalHoraDia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimeiroNome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RegimePlantonista" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDVinculoUsuario" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaterPonto3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaterPonto3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaterPonto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idsetorbatida" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraBatida" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraEntradaManha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraSaidaManha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaEntradaTarde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraSaidaTarde" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalHoraDia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimeiroNome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RegimePlantonista" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDVinculoUsuario" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaterPontoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaterPontoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaterPontoHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idsetorbatida" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraBatida" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraEntradaManha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraSaidaManha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaEntradaTarde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HoraSaidaTarde" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalHoraDia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimeiroNome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RegimePlantonista" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDVinculoUsuario" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="HashMaquina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TempoLeitura" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BaterPontoHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BaterPontoHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UltimaColetaREP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDREP" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UltimaColetaREPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UltimaColetaREPResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PontoEspecial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Data" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PontoEspecialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PontoEspecialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PontoEspecial2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Data" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PontoEspecial2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PontoEspecial2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BATEU">
+        <s:complexType />
+      </s:element>
+      <s:element name="BATEUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BATEUResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocalRegistroFrequencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgbatida" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idusuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idsetorBatida" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTFrequencia" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LocalRegistroFrequenciaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PedidoJustificativaLocal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observacao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PedidoJustificativaLocalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PedidoJustificativaLocalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvarLogConexoes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="list" type="tns:ArrayOfTesteConexaoModel" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="_hashMaquina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTesteConexaoModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TesteConexaoModel" nillable="true" type="tns:TesteConexaoModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TesteConexaoModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ConexaoRedeLocal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoRedeLocalMensagem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConexaoInternet" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoInternetMensagem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConexaoWSInterno" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoWSInternoMensagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoWSInternoTempo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConexaoWSExterno" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoWSExternoMensagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoWSExternoTempo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConexaoLeitor" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoLeitorMensagem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConexaoBancoLocal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConexaoBancoLocalMensagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlWS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataLog" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SalvarLogConexoesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SalvarLogConexoesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigHorasSincronizacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="_hashMaquina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TokenAcesso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigHorasSincronizacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfigHorasSincronizacaoResult" type="tns:ConfigHorasSincModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConfigHorasSincModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MinutosLogConexao" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimeiraSincHoraInicio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimeiraSincHoraFim" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegundaSincHoraInicio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegundaSincHoraFim" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPDFResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportHoras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FiltroSituacao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresaOrgao_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MesRef" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnoRef" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportHorasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportHorasResult" type="tns:ArrayOfHorasDiaModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHorasDiaModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HorasDiaModel" nillable="true" type="tns:HorasDiaModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HorasDiaModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Matricula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodVerba" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Situacao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornoHoras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresaOrgao_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MesRef" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AnoRef" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornoHorasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornoHorasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifyEmpresaOrgao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoProcedimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeEmpresaOrgao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresaOrgao_eTurmalina" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sigla" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StatusOrgao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifyEmpresaOrgaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertModifyEmpresaOrgaoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifySetorLotacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoProcedimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lotacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sigla" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresaOrgao_eTurmalina" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifySetorLotacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertModifySetorLotacaoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifyUsuarioVinculo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoProcedimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDCargo_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresaOrgao_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDRegimeHora" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor_eTurmalina" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TelefoneSMS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifyUsuarioVinculoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertModifyUsuarioVinculoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifyAfastamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoProcedimento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matricula" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDSetor_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDEmpresa_eTurmalina" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoAfastamento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTInicial" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTFinal" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodRegistroComitante" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertModifyAfastamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertModifyAfastamentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InformarOcorrenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:InformarOcorrencia" />
+  </wsdl:message>
+  <wsdl:message name="InformarOcorrenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:InformarOcorrenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchNomeCPFLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchNomeCPFLogin" />
+  </wsdl:message>
+  <wsdl:message name="SearchNomeCPFLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchNomeCPFLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistroFalhaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistroFalha" />
+  </wsdl:message>
+  <wsdl:message name="RegistroFalhaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistroFalhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MonitoramentoClientSoapIn">
+    <wsdl:part name="parameters" element="tns:MonitoramentoClient" />
+  </wsdl:message>
+  <wsdl:message name="MonitoramentoClientSoapOut">
+    <wsdl:part name="parameters" element="tns:MonitoramentoClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="MonitoramentoClientHashSoapIn">
+    <wsdl:part name="parameters" element="tns:MonitoramentoClientHash" />
+  </wsdl:message>
+  <wsdl:message name="MonitoramentoClientHashSoapOut">
+    <wsdl:part name="parameters" element="tns:MonitoramentoClientHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHashMaquinaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHashMaquina" />
+  </wsdl:message>
+  <wsdl:message name="GetHashMaquinaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHashMaquinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="HoraServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:HoraServidor" />
+  </wsdl:message>
+  <wsdl:message name="HoraServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:HoraServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisponibilidadeServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:DisponibilidadeServidor" />
+  </wsdl:message>
+  <wsdl:message name="DisponibilidadeServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:DisponibilidadeServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="VersaoClientSoapIn">
+    <wsdl:part name="parameters" element="tns:VersaoClient" />
+  </wsdl:message>
+  <wsdl:message name="VersaoClientSoapOut">
+    <wsdl:part name="parameters" element="tns:VersaoClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="REPEmpresaSetorSoapIn">
+    <wsdl:part name="parameters" element="tns:REPEmpresaSetor" />
+  </wsdl:message>
+  <wsdl:message name="REPEmpresaSetorSoapOut">
+    <wsdl:part name="parameters" element="tns:REPEmpresaSetorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresasSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="RetornaEmpresasSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetorEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:SetorEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="SetorEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:SetorEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="NomeSetorSoapIn">
+    <wsdl:part name="parameters" element="tns:NomeSetor" />
+  </wsdl:message>
+  <wsdl:message name="NomeSetorSoapOut">
+    <wsdl:part name="parameters" element="tns:NomeSetorResponse" />
+  </wsdl:message>
+  <wsdl:message name="REPEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:REPEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="REPEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:REPEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuariosPonto" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoHashSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoHash" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoHashSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManutencaoHashCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:ManutencaoHashCode" />
+  </wsdl:message>
+  <wsdl:message name="ManutencaoHashCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:ManutencaoHashCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManutencaoTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:ManutencaoTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ManutencaoTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:ManutencaoTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManutencaoTemplate2SoapIn">
+    <wsdl:part name="parameters" element="tns:ManutencaoTemplate2" />
+  </wsdl:message>
+  <wsdl:message name="ManutencaoTemplate2SoapOut">
+    <wsdl:part name="parameters" element="tns:ManutencaoTemplate2Response" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoNomeSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoNome" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoNomeSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoNomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioSemREPSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuarioSemREP" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioSemREPSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuarioSemREPResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioSemREPGeralSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuarioSemREPGeral" />
+  </wsdl:message>
+  <wsdl:message name="UsuarioSemREPGeralSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuarioSemREPGeralResponse" />
+  </wsdl:message>
+  <wsdl:message name="UltimaRefREPSoapIn">
+    <wsdl:part name="parameters" element="tns:UltimaRefREP" />
+  </wsdl:message>
+  <wsdl:message name="UltimaRefREPSoapOut">
+    <wsdl:part name="parameters" element="tns:UltimaRefREPResponse" />
+  </wsdl:message>
+  <wsdl:message name="DTUltimaColetaSoapIn">
+    <wsdl:part name="parameters" element="tns:DTUltimaColeta" />
+  </wsdl:message>
+  <wsdl:message name="DTUltimaColetaSoapOut">
+    <wsdl:part name="parameters" element="tns:DTUltimaColetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadUltimaRefREPSoapIn">
+    <wsdl:part name="parameters" element="tns:CadUltimaRefREP" />
+  </wsdl:message>
+  <wsdl:message name="CadUltimaRefREPSoapOut">
+    <wsdl:part name="parameters" element="tns:CadUltimaRefREPResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoLogin" />
+  </wsdl:message>
+  <wsdl:message name="UsuariosPontoLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UsuariosPontoLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogarAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:LogarAdmin" />
+  </wsdl:message>
+  <wsdl:message name="LogarAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:LogarAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaUsuarioPISSoapIn">
+    <wsdl:part name="parameters" element="tns:LocalizaUsuarioPIS" />
+  </wsdl:message>
+  <wsdl:message name="LocalizaUsuarioPISSoapOut">
+    <wsdl:part name="parameters" element="tns:LocalizaUsuarioPISResponse" />
+  </wsdl:message>
+  <wsdl:message name="FotoUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:FotoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="FotoUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:FotoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BaterPonto3SoapIn">
+    <wsdl:part name="parameters" element="tns:BaterPonto3" />
+  </wsdl:message>
+  <wsdl:message name="BaterPonto3SoapOut">
+    <wsdl:part name="parameters" element="tns:BaterPonto3Response" />
+  </wsdl:message>
+  <wsdl:message name="BaterPontoSoapIn">
+    <wsdl:part name="parameters" element="tns:BaterPonto" />
+  </wsdl:message>
+  <wsdl:message name="BaterPontoSoapOut">
+    <wsdl:part name="parameters" element="tns:BaterPontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BaterPontoHashSoapIn">
+    <wsdl:part name="parameters" element="tns:BaterPontoHash" />
+  </wsdl:message>
+  <wsdl:message name="BaterPontoHashSoapOut">
+    <wsdl:part name="parameters" element="tns:BaterPontoHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="UltimaColetaREPSoapIn">
+    <wsdl:part name="parameters" element="tns:UltimaColetaREP" />
+  </wsdl:message>
+  <wsdl:message name="UltimaColetaREPSoapOut">
+    <wsdl:part name="parameters" element="tns:UltimaColetaREPResponse" />
+  </wsdl:message>
+  <wsdl:message name="PontoEspecialSoapIn">
+    <wsdl:part name="parameters" element="tns:PontoEspecial" />
+  </wsdl:message>
+  <wsdl:message name="PontoEspecialSoapOut">
+    <wsdl:part name="parameters" element="tns:PontoEspecialResponse" />
+  </wsdl:message>
+  <wsdl:message name="PontoEspecial2SoapIn">
+    <wsdl:part name="parameters" element="tns:PontoEspecial2" />
+  </wsdl:message>
+  <wsdl:message name="PontoEspecial2SoapOut">
+    <wsdl:part name="parameters" element="tns:PontoEspecial2Response" />
+  </wsdl:message>
+  <wsdl:message name="BATEUSoapIn">
+    <wsdl:part name="parameters" element="tns:BATEU" />
+  </wsdl:message>
+  <wsdl:message name="BATEUSoapOut">
+    <wsdl:part name="parameters" element="tns:BATEUResponse" />
+  </wsdl:message>
+  <wsdl:message name="LocalRegistroFrequenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:LocalRegistroFrequencia" />
+  </wsdl:message>
+  <wsdl:message name="LocalRegistroFrequenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:LocalRegistroFrequenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PedidoJustificativaLocalSoapIn">
+    <wsdl:part name="parameters" element="tns:PedidoJustificativaLocal" />
+  </wsdl:message>
+  <wsdl:message name="PedidoJustificativaLocalSoapOut">
+    <wsdl:part name="parameters" element="tns:PedidoJustificativaLocalResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalvarLogConexoesSoapIn">
+    <wsdl:part name="parameters" element="tns:SalvarLogConexoes" />
+  </wsdl:message>
+  <wsdl:message name="SalvarLogConexoesSoapOut">
+    <wsdl:part name="parameters" element="tns:SalvarLogConexoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigHorasSincronizacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfigHorasSincronizacao" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigHorasSincronizacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfigHorasSincronizacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPDF" />
+  </wsdl:message>
+  <wsdl:message name="GetPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportHorasSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportHoras" />
+  </wsdl:message>
+  <wsdl:message name="ImportHorasSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportHorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornoHorasSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornoHoras" />
+  </wsdl:message>
+  <wsdl:message name="RetornoHorasSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornoHorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifyEmpresaOrgaoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertModifyEmpresaOrgao" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifyEmpresaOrgaoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertModifyEmpresaOrgaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifySetorLotacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertModifySetorLotacao" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifySetorLotacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertModifySetorLotacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifyUsuarioVinculoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertModifyUsuarioVinculo" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifyUsuarioVinculoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertModifyUsuarioVinculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifyAfastamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertModifyAfastamento" />
+  </wsdl:message>
+  <wsdl:message name="InsertModifyAfastamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertModifyAfastamentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="InformarOcorrencia">
+      <wsdl:input message="tns:InformarOcorrenciaSoapIn" />
+      <wsdl:output message="tns:InformarOcorrenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchNomeCPFLogin">
+      <wsdl:input message="tns:SearchNomeCPFLoginSoapIn" />
+      <wsdl:output message="tns:SearchNomeCPFLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroFalha">
+      <wsdl:input message="tns:RegistroFalhaSoapIn" />
+      <wsdl:output message="tns:RegistroFalhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MonitoramentoClient">
+      <wsdl:input message="tns:MonitoramentoClientSoapIn" />
+      <wsdl:output message="tns:MonitoramentoClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MonitoramentoClientHash">
+      <wsdl:input message="tns:MonitoramentoClientHashSoapIn" />
+      <wsdl:output message="tns:MonitoramentoClientHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHashMaquina">
+      <wsdl:input message="tns:GetHashMaquinaSoapIn" />
+      <wsdl:output message="tns:GetHashMaquinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HoraServidor">
+      <wsdl:input message="tns:HoraServidorSoapIn" />
+      <wsdl:output message="tns:HoraServidorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisponibilidadeServidor">
+      <wsdl:input message="tns:DisponibilidadeServidorSoapIn" />
+      <wsdl:output message="tns:DisponibilidadeServidorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VersaoClient">
+      <wsdl:input message="tns:VersaoClientSoapIn" />
+      <wsdl:output message="tns:VersaoClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="REPEmpresaSetor">
+      <wsdl:input message="tns:REPEmpresaSetorSoapIn" />
+      <wsdl:output message="tns:REPEmpresaSetorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresas">
+      <wsdl:input message="tns:RetornaEmpresasSoapIn" />
+      <wsdl:output message="tns:RetornaEmpresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetorEmpresa">
+      <wsdl:input message="tns:SetorEmpresaSoapIn" />
+      <wsdl:output message="tns:SetorEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NomeSetor">
+      <wsdl:input message="tns:NomeSetorSoapIn" />
+      <wsdl:output message="tns:NomeSetorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="REPEmpresa">
+      <wsdl:input message="tns:REPEmpresaSoapIn" />
+      <wsdl:output message="tns:REPEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPonto">
+      <wsdl:input message="tns:UsuariosPontoSoapIn" />
+      <wsdl:output message="tns:UsuariosPontoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoHash">
+      <wsdl:input message="tns:UsuariosPontoHashSoapIn" />
+      <wsdl:output message="tns:UsuariosPontoHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoHashCode">
+      <wsdl:input message="tns:ManutencaoHashCodeSoapIn" />
+      <wsdl:output message="tns:ManutencaoHashCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoTemplate">
+      <wsdl:input message="tns:ManutencaoTemplateSoapIn" />
+      <wsdl:output message="tns:ManutencaoTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoTemplate2">
+      <wsdl:input message="tns:ManutencaoTemplate2SoapIn" />
+      <wsdl:output message="tns:ManutencaoTemplate2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoNome">
+      <wsdl:input message="tns:UsuariosPontoNomeSoapIn" />
+      <wsdl:output message="tns:UsuariosPontoNomeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioSemREP">
+      <wsdl:input message="tns:UsuarioSemREPSoapIn" />
+      <wsdl:output message="tns:UsuarioSemREPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioSemREPGeral">
+      <wsdl:input message="tns:UsuarioSemREPGeralSoapIn" />
+      <wsdl:output message="tns:UsuarioSemREPGeralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UltimaRefREP">
+      <wsdl:input message="tns:UltimaRefREPSoapIn" />
+      <wsdl:output message="tns:UltimaRefREPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DTUltimaColeta">
+      <wsdl:input message="tns:DTUltimaColetaSoapIn" />
+      <wsdl:output message="tns:DTUltimaColetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CadUltimaRefREP">
+      <wsdl:input message="tns:CadUltimaRefREPSoapIn" />
+      <wsdl:output message="tns:CadUltimaRefREPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoLogin">
+      <wsdl:input message="tns:UsuariosPontoLoginSoapIn" />
+      <wsdl:output message="tns:UsuariosPontoLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogarAdmin">
+      <wsdl:input message="tns:LogarAdminSoapIn" />
+      <wsdl:output message="tns:LogarAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LocalizaUsuarioPIS">
+      <wsdl:input message="tns:LocalizaUsuarioPISSoapIn" />
+      <wsdl:output message="tns:LocalizaUsuarioPISSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FotoUsuario">
+      <wsdl:input message="tns:FotoUsuarioSoapIn" />
+      <wsdl:output message="tns:FotoUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaterPonto3">
+      <wsdl:input message="tns:BaterPonto3SoapIn" />
+      <wsdl:output message="tns:BaterPonto3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaterPonto">
+      <wsdl:input message="tns:BaterPontoSoapIn" />
+      <wsdl:output message="tns:BaterPontoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BaterPontoHash">
+      <wsdl:input message="tns:BaterPontoHashSoapIn" />
+      <wsdl:output message="tns:BaterPontoHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UltimaColetaREP">
+      <wsdl:input message="tns:UltimaColetaREPSoapIn" />
+      <wsdl:output message="tns:UltimaColetaREPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PontoEspecial">
+      <wsdl:input message="tns:PontoEspecialSoapIn" />
+      <wsdl:output message="tns:PontoEspecialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PontoEspecial2">
+      <wsdl:input message="tns:PontoEspecial2SoapIn" />
+      <wsdl:output message="tns:PontoEspecial2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BATEU">
+      <wsdl:input message="tns:BATEUSoapIn" />
+      <wsdl:output message="tns:BATEUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LocalRegistroFrequencia">
+      <wsdl:input message="tns:LocalRegistroFrequenciaSoapIn" />
+      <wsdl:output message="tns:LocalRegistroFrequenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PedidoJustificativaLocal">
+      <wsdl:input message="tns:PedidoJustificativaLocalSoapIn" />
+      <wsdl:output message="tns:PedidoJustificativaLocalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarLogConexoes">
+      <wsdl:input message="tns:SalvarLogConexoesSoapIn" />
+      <wsdl:output message="tns:SalvarLogConexoesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigHorasSincronizacao">
+      <wsdl:input message="tns:GetConfigHorasSincronizacaoSoapIn" />
+      <wsdl:output message="tns:GetConfigHorasSincronizacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPDF">
+      <wsdl:input message="tns:GetPDFSoapIn" />
+      <wsdl:output message="tns:GetPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportHoras">
+      <wsdl:input message="tns:ImportHorasSoapIn" />
+      <wsdl:output message="tns:ImportHorasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornoHoras">
+      <wsdl:input message="tns:RetornoHorasSoapIn" />
+      <wsdl:output message="tns:RetornoHorasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyEmpresaOrgao">
+      <wsdl:input message="tns:InsertModifyEmpresaOrgaoSoapIn" />
+      <wsdl:output message="tns:InsertModifyEmpresaOrgaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifySetorLotacao">
+      <wsdl:input message="tns:InsertModifySetorLotacaoSoapIn" />
+      <wsdl:output message="tns:InsertModifySetorLotacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyUsuarioVinculo">
+      <wsdl:input message="tns:InsertModifyUsuarioVinculoSoapIn" />
+      <wsdl:output message="tns:InsertModifyUsuarioVinculoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyAfastamento">
+      <wsdl:input message="tns:InsertModifyAfastamentoSoapIn" />
+      <wsdl:output message="tns:InsertModifyAfastamentoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InformarOcorrencia">
+      <soap:operation soapAction="http://tempuri.org/InformarOcorrencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchNomeCPFLogin">
+      <soap:operation soapAction="http://tempuri.org/SearchNomeCPFLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroFalha">
+      <soap:operation soapAction="http://tempuri.org/RegistroFalha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonitoramentoClient">
+      <soap:operation soapAction="http://tempuri.org/MonitoramentoClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonitoramentoClientHash">
+      <soap:operation soapAction="http://tempuri.org/MonitoramentoClientHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHashMaquina">
+      <soap:operation soapAction="http://tempuri.org/GetHashMaquina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HoraServidor">
+      <soap:operation soapAction="http://tempuri.org/HoraServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisponibilidadeServidor">
+      <soap:operation soapAction="http://tempuri.org/DisponibilidadeServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersaoClient">
+      <soap:operation soapAction="http://tempuri.org/VersaoClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="REPEmpresaSetor">
+      <soap:operation soapAction="http://tempuri.org/REPEmpresaSetor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresas">
+      <soap:operation soapAction="http://tempuri.org/RetornaEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetorEmpresa">
+      <soap:operation soapAction="http://tempuri.org/SetorEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NomeSetor">
+      <soap:operation soapAction="http://tempuri.org/NomeSetor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="REPEmpresa">
+      <soap:operation soapAction="http://tempuri.org/REPEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPonto">
+      <soap:operation soapAction="http://tempuri.org/UsuariosPonto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoHash">
+      <soap:operation soapAction="http://tempuri.org/UsuariosPontoHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoHashCode">
+      <soap:operation soapAction="http://tempuri.org/ManutencaoHashCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoTemplate">
+      <soap:operation soapAction="http://tempuri.org/ManutencaoTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoTemplate2">
+      <soap:operation soapAction="http://tempuri.org/ManutencaoTemplate2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoNome">
+      <soap:operation soapAction="http://tempuri.org/UsuariosPontoNome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioSemREP">
+      <soap:operation soapAction="http://tempuri.org/UsuarioSemREP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioSemREPGeral">
+      <soap:operation soapAction="http://tempuri.org/UsuarioSemREPGeral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UltimaRefREP">
+      <soap:operation soapAction="http://tempuri.org/UltimaRefREP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTUltimaColeta">
+      <soap:operation soapAction="http://tempuri.org/DTUltimaColeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadUltimaRefREP">
+      <soap:operation soapAction="http://tempuri.org/CadUltimaRefREP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoLogin">
+      <soap:operation soapAction="http://tempuri.org/UsuariosPontoLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogarAdmin">
+      <soap:operation soapAction="http://tempuri.org/LogarAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalizaUsuarioPIS">
+      <soap:operation soapAction="http://tempuri.org/LocalizaUsuarioPIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FotoUsuario">
+      <soap:operation soapAction="http://tempuri.org/FotoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaterPonto3">
+      <soap:operation soapAction="http://tempuri.org/BaterPonto3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaterPonto">
+      <soap:operation soapAction="http://tempuri.org/BaterPonto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaterPontoHash">
+      <soap:operation soapAction="http://tempuri.org/BaterPontoHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UltimaColetaREP">
+      <soap:operation soapAction="http://tempuri.org/UltimaColetaREP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PontoEspecial">
+      <soap:operation soapAction="http://tempuri.org/PontoEspecial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PontoEspecial2">
+      <soap:operation soapAction="http://tempuri.org/PontoEspecial2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BATEU">
+      <soap:operation soapAction="http://tempuri.org/BATEU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalRegistroFrequencia">
+      <soap:operation soapAction="http://tempuri.org/LocalRegistroFrequencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PedidoJustificativaLocal">
+      <soap:operation soapAction="http://tempuri.org/PedidoJustificativaLocal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarLogConexoes">
+      <soap:operation soapAction="http://tempuri.org/SalvarLogConexoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigHorasSincronizacao">
+      <soap:operation soapAction="http://tempuri.org/GetConfigHorasSincronizacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPDF">
+      <soap:operation soapAction="http://tempuri.org/GetPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportHoras">
+      <soap:operation soapAction="http://tempuri.org/ImportHoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornoHoras">
+      <soap:operation soapAction="http://tempuri.org/RetornoHoras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyEmpresaOrgao">
+      <soap:operation soapAction="http://tempuri.org/InsertModifyEmpresaOrgao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifySetorLotacao">
+      <soap:operation soapAction="http://tempuri.org/InsertModifySetorLotacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyUsuarioVinculo">
+      <soap:operation soapAction="http://tempuri.org/InsertModifyUsuarioVinculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyAfastamento">
+      <soap:operation soapAction="http://tempuri.org/InsertModifyAfastamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InformarOcorrencia">
+      <soap12:operation soapAction="http://tempuri.org/InformarOcorrencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchNomeCPFLogin">
+      <soap12:operation soapAction="http://tempuri.org/SearchNomeCPFLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroFalha">
+      <soap12:operation soapAction="http://tempuri.org/RegistroFalha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonitoramentoClient">
+      <soap12:operation soapAction="http://tempuri.org/MonitoramentoClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MonitoramentoClientHash">
+      <soap12:operation soapAction="http://tempuri.org/MonitoramentoClientHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHashMaquina">
+      <soap12:operation soapAction="http://tempuri.org/GetHashMaquina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HoraServidor">
+      <soap12:operation soapAction="http://tempuri.org/HoraServidor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisponibilidadeServidor">
+      <soap12:operation soapAction="http://tempuri.org/DisponibilidadeServidor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VersaoClient">
+      <soap12:operation soapAction="http://tempuri.org/VersaoClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="REPEmpresaSetor">
+      <soap12:operation soapAction="http://tempuri.org/REPEmpresaSetor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornaEmpresas">
+      <soap12:operation soapAction="http://tempuri.org/RetornaEmpresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetorEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/SetorEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NomeSetor">
+      <soap12:operation soapAction="http://tempuri.org/NomeSetor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="REPEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/REPEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPonto">
+      <soap12:operation soapAction="http://tempuri.org/UsuariosPonto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoHash">
+      <soap12:operation soapAction="http://tempuri.org/UsuariosPontoHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoHashCode">
+      <soap12:operation soapAction="http://tempuri.org/ManutencaoHashCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoTemplate">
+      <soap12:operation soapAction="http://tempuri.org/ManutencaoTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManutencaoTemplate2">
+      <soap12:operation soapAction="http://tempuri.org/ManutencaoTemplate2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoNome">
+      <soap12:operation soapAction="http://tempuri.org/UsuariosPontoNome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioSemREP">
+      <soap12:operation soapAction="http://tempuri.org/UsuarioSemREP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioSemREPGeral">
+      <soap12:operation soapAction="http://tempuri.org/UsuarioSemREPGeral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UltimaRefREP">
+      <soap12:operation soapAction="http://tempuri.org/UltimaRefREP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTUltimaColeta">
+      <soap12:operation soapAction="http://tempuri.org/DTUltimaColeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadUltimaRefREP">
+      <soap12:operation soapAction="http://tempuri.org/CadUltimaRefREP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuariosPontoLogin">
+      <soap12:operation soapAction="http://tempuri.org/UsuariosPontoLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogarAdmin">
+      <soap12:operation soapAction="http://tempuri.org/LogarAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalizaUsuarioPIS">
+      <soap12:operation soapAction="http://tempuri.org/LocalizaUsuarioPIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FotoUsuario">
+      <soap12:operation soapAction="http://tempuri.org/FotoUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaterPonto3">
+      <soap12:operation soapAction="http://tempuri.org/BaterPonto3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaterPonto">
+      <soap12:operation soapAction="http://tempuri.org/BaterPonto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BaterPontoHash">
+      <soap12:operation soapAction="http://tempuri.org/BaterPontoHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UltimaColetaREP">
+      <soap12:operation soapAction="http://tempuri.org/UltimaColetaREP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PontoEspecial">
+      <soap12:operation soapAction="http://tempuri.org/PontoEspecial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PontoEspecial2">
+      <soap12:operation soapAction="http://tempuri.org/PontoEspecial2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BATEU">
+      <soap12:operation soapAction="http://tempuri.org/BATEU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocalRegistroFrequencia">
+      <soap12:operation soapAction="http://tempuri.org/LocalRegistroFrequencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PedidoJustificativaLocal">
+      <soap12:operation soapAction="http://tempuri.org/PedidoJustificativaLocal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarLogConexoes">
+      <soap12:operation soapAction="http://tempuri.org/SalvarLogConexoes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigHorasSincronizacao">
+      <soap12:operation soapAction="http://tempuri.org/GetConfigHorasSincronizacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPDF">
+      <soap12:operation soapAction="http://tempuri.org/GetPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportHoras">
+      <soap12:operation soapAction="http://tempuri.org/ImportHoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornoHoras">
+      <soap12:operation soapAction="http://tempuri.org/RetornoHoras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyEmpresaOrgao">
+      <soap12:operation soapAction="http://tempuri.org/InsertModifyEmpresaOrgao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifySetorLotacao">
+      <soap12:operation soapAction="http://tempuri.org/InsertModifySetorLotacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyUsuarioVinculo">
+      <soap12:operation soapAction="http://tempuri.org/InsertModifyUsuarioVinculo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertModifyAfastamento">
+      <soap12:operation soapAction="http://tempuri.org/InsertModifyAfastamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://wscbateste.pontonarede.com.br/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://wscbateste.pontonarede.com.br/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,209 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MetodosPontoFrequencia.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PontoFrequenciaConnectionStringdada" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringdayan2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringdayan" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringpontowebD2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringdayan6" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringpontowebD10" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringDayan3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringpontowebD3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringdayanh" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringDayan4" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringDayan7" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringpontowebD" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaPMCConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoDevConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringDev" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringSAD2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringSAD10" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringSAD3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionStringSAD" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaPMCConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;User ID=Pontoweb;Password=Pontow3b&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.163;Initial Catalog=BD_PONTO_WEB;User ID=Pontoweb;Password=Pontow3b</Value>
+    </Setting>
+    <Setting Name="PontoBKPConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.10.100.244;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.10.100.244;Initial Catalog=BD_PONTO_WEB;Persist Security Info=True;User ID=Pontoweb;Password=Pontow3b;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=201.38.172.142\\SQLMETATI16,1433;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=sa;Password=MetaTi@2016;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=201.38.172.142\\SQLMETATI16,1433;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=sa;Password=MetaTi@2016;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoFrequenciaNConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=201.38.172.142\\SQLMETATI16,1433;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=sa;Password=MetaTi@2016;Enlist=False;Pooling=True;Min Pool Size=5&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=201.38.172.142\\SQLMETATI16,1433;Initial Catalog=PontoFrequenciaPMC;Persist Security Info=True;User ID=sa;Password=MetaTi@2016;Enlist=False;Pooling=True;Min Pool Size=5</Value>
+    </Setting>
+    <Setting Name="PontoBKPConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;
+        &amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;
+        &amp;lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+        &amp;lt;ConnectionString&amp;gt;Data Source=184.173.11.205;Initial Catalog=PontoBKP;User ID=dbponto;Password=dbponto123&amp;lt;/ConnectionString&amp;gt;
+        &amp;lt;ProviderName&amp;gt;System.Data.SqlClient&amp;lt;/ProviderName&amp;gt;
+        &amp;lt;/SerializableConnectionString&amp;gt;
+      &lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">
+        &lt;?xml version="1.0" encoding="utf-16"?&gt;
+        &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+        &lt;ConnectionString&gt;Data Source=184.173.11.205;Initial Catalog=PontoBKP;User ID=dbponto;Password=dbponto123&lt;/ConnectionString&gt;
+        &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+        &lt;/SerializableConnectionString&gt;
+      </Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

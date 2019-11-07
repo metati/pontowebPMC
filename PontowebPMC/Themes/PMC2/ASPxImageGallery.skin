@@ -1,0 +1,18 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageGallery" Assembly="DevExpress.Web.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxImageGallery runat="server" PagerPanelSpacing="8px">
+    <Images SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="Web/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="PMC2" CssFilePath="{0}/styles.css">
+        <Pager ItemSpacing="0px" Spacing="0px" />
+    </Styles>
+    <PagerSettings CurrentPageNumberFormat="{0}">
+		<PageSizeItemSettings ShowPopupShadow="False">
+			<DropDownImage>
+				<SpriteProperties HottrackedCssClass="dxWeb_pPopOutHover_PMC2" PressedCssClass="dxWeb_pPopOutPressed_PMC2" />
+			</DropDownImage>
+        </PageSizeItemSettings>
+	</PagerSettings>
+</dx:ASPxImageGallery>

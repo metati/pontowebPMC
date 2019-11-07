@@ -1,0 +1,266 @@
+/* ----------------- Main ----------------- */
+/* Loading panel */
+.dxheLoadingDiv_PMC2
+{
+    background: white;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+}
+.dxheLoadingPanel_PMC2
+{
+	border: 1px solid #C3C3C3;
+	background-color: white;
+	font: 14px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+	color: #333333;
+}
+.dxheLoadingPanel_PMC2 td.dx
+{
+white-space: nowrap;
+    	text-align: center;
+	padding: 10px 14px;
+}
+
+.dxheControl_PMC2
+{
+}
+
+/* Area */
+.dxheContentArea_PMC2
+{
+    padding: 6px 4px;
+}
+.dxheContentArea_PMC2 .dxheErrorFrame_PMC2
+{
+	font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+	color: #D00707;
+	background-color: #FBC7C7;
+	margin-bottom: 6px;
+}
+.dxheContentArea_PMC2 .dxheErrorFrame_PMC2 .dxhe {
+    padding: 5px;
+}
+.dxheContentArea_PMC2 .dxheErrorFrame_PMC2 .dxhe td {
+    padding: 0px;
+}
+.dxheContentArea_PMC2 .dxheErrorFrame_PMC2 .dxheErrorFrameCloseButton_PMC2 {
+    cursor: pointer;
+}
+.dxheViewArea_PMC2
+{
+}
+.dxheContentArea_PMC2 td.dxheViewArea_PMC2 /*B209529*/
+{
+	font-size: 0;
+}
+.dxheHtmlViewArea_PMC2,
+.dxheDesignViewArea_PMC2,
+.dxhePreviewArea_PMC2 
+{
+    	margin: 0px;
+    	background: none #FFFFFF;
+border: 0;
+    	font-size: smaller;
+    	font: normal 12px Arial, Helvetica, sans-serif;    
+}
+.dxheContentArea_PMC2 .dxeMemo_PMC2 td,
+body.dxheDesignViewArea_PMC2,
+body.dxhePreviewArea_PMC2
+{
+    padding: 0 0 0 4px;
+}
+.dxheContentArea_PMC2 .dxeMemoEditArea_PMC2
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+.dxheControl_PMC2.dxhe-rtl .dxheContentArea_PMC2 .dxeMemo_PMC2 td,
+body.dxheDesignViewArea_PMC2.dxhe-rtl,
+body.dxhePreviewArea_PMC2.dxhe-rtl
+{
+	padding: 0 4px 0 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    .dxheControl_PMC2.dxhe-rtl .dxheContentArea_PMC2 .dxeMemo_PMC2 td
+    {
+	    padding: 0 0 0 4px;
+    }
+}
+.dxheControl_PMC2 .dxeMemo_PMC2 textarea 
+{
+	resize: none;
+}
+/* Element appearance in DesignView */
+body.dxheDesignViewArea_PMC2 table.dxEmptyBorderTable_PMC2,
+body.dxheDesignViewArea_PMC2 table.dxEmptyBorderTable_PMC2 td  {
+    border:1px dotted gray;
+}
+@media print 
+{
+	body.dxheDesignViewArea_PMC2 table.dxEmptyBorderTable_PMC2,
+	body.dxheDesignViewArea_PMC2 table.dxEmptyBorderTable_PMC2 td  
+	{
+		border:0px;
+	}
+}
+
+/* Status Bar */
+.dxheStatusBar_PMC2 
+{
+}
+.dxheStatusBar_PMC2 .dxheStatusBarTab_PMC2 
+{
+    padding-left: 11px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+}
+.dxheStatusBarActiveTab_PMC2 
+{
+}
+.dxHtmlEditor_heSizeGrip_PMC2
+{
+    cursor: se-resize;
+}
+.dxHtmlEditor_heSizeGripRtl_PMC2
+{
+    cursor: ne-resize;
+}
+.dxheSizeGripContainer_PMC2
+{
+    float: left;
+    height: 0;
+    width: 100%;
+    text-align: right;
+    font-size: 0;
+    margin-top: -16px;
+}
+.dxheControl_PMC2.dxhe-rtl .dxheSizeGripContainer_PMC2 
+{
+	text-align: left;
+}
+/* ----------------- Dialog Forms ----------------- */
+#dxInsertTableForm .buttonsCell,
+#dxInsertLinkForm .buttonsCell,
+#dxInsertImageForm .buttonsCell,
+#dxPasteFromWordForm .buttonsCell,
+#dxTableColumnPropertiesForm .buttonsCell,
+#dxSelectImageForm .buttonsCell,
+.dxheCustomDialog_PMC2 .dxhecd-Buttons
+{
+    background-color: white;
+    border-top: Solid 1px #E0E0E0;
+    padding: 11px;
+}
+/* Insert Image Form */
+#dxInsertImageForm .imagePreviewCell,
+#dxSelectImageForm .imagePreviewCell
+{
+    color: #878787;
+    border: dashed 1px #cac8c8;
+}
+#dxPasteFromWordForm .pasteContainerCell td
+{
+	border: Solid 1px #9F9F9F;
+}
+/*----------------- Toolbars -----------------*/
+.dxtbSpacing_PMC2
+{
+	height: 1px;
+}
+.dxtbControl_PMC2 
+{
+    font: 12px 'Segoe UI', Helvetica, 'Droid Sans', Tahoma, Geneva, sans-serif;
+    color: #333333;
+    width: 100%;
+    border-bottom: Solid 1px #c0c0c0;
+}
+.dxtbControl_PMC2 td.dxmMenu_PMC2
+{
+	border-width: 0px;
+}
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-main 
+{
+	background-color: #FFFFFF;
+}
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxmtb.dxm-horizontal .dxm-separator 
+{
+}
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxmtb.dxm-horizontal .dxm-separator b
+{
+	margin-top: 3px;
+	background-color: #c0c0c0;
+}
+.dxtbComboBoxMenuItem_PMC2
+{
+    padding-top: 2px;
+}
+
+/* Toolbars Lightweight Mode */
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-main {
+    border-width: 0px;
+}
+.dxmLite_PMC2 .dxmtb .dxtb-comboBoxMenuItem {
+	border-width: 0px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-horizontal.dxmtb .dxm-image-l .dxm-dropDownMode.dxtb-cb .dxm-content, 
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-horizontal.dxmtb .dxm-image-r .dxm-dropDownMode.dxtb-cb .dxm-content
+{
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-horizontal.dxmtb .dxm-image-l .dxm-item.dxtb-cddi .dxm-content, 
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-horizontal.dxmtb .dxm-image-r .dxm-item.dxtb-cddi .dxm-content
+{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-horizontal.dxmtb .dxm-image-l .dxm-item.dxtb-cddi .dxm-content img, 
+.dxtbControl_PMC2 .dxmLite_PMC2 .dxm-horizontal.dxmtb .dxm-image-r .dxm-item.dxtb-cddi .dxm-content img
+{
+	margin-top: -1px;
+}
+.dxmLite_PMC2 .dxhetipControl_PMC2 img
+{
+	vertical-align: top;
+}
+
+/* ToolbarColorButton */
+.dxtcbControl_PMC2 { }
+.dxtcbColorDiv_PMC2
+{
+	width: 16px;
+	height: 3px;
+	font-size:0px;
+	background-color: Transparent;
+}
+
+/*----------------- RoundPanel -----------------*/
+.dxheRP.dxrpControl_PMC2 .dxrpContent_PMC2,
+.dxheRP.dxrpControl_PMC2 .dxrpLE,
+.dxheRP.dxrpControl_PMC2 .dxrpRE,
+.dxheRP.dxrpControl_PMC2 .dxrpBE,
+.dxheRP.dxrpControl_PMC2 .dxrpNHTE
+{
+}
+.dxheRP.dxrpControl_PMC2 .dxrpContent_PMC2
+{
+    padding: 9px 8px;
+}
+.dxheRP.dxrpControl_PMC2 .dxrpTE,
+.dxheRP.dxrpControl_PMC2 .dxrpNHTE,
+.dxheRP.dxrpControl_PMC2 .dxrpLE,
+.dxheRP.dxrpControl_PMC2 .dxrpHLE,
+.dxheRP.dxrpControl_PMC2 .dxrpRE,
+.dxheRP.dxrpControl_PMC2 .dxrpHRE,
+.dxheRP.dxrpControl_PMC2 .dxrpBE,
+.dxheRP.dxrpControlGB_PMC2 .dxrpNHTE,
+.dxheRP.dxrpControlGB_PMC2 .dxrpLE,
+.dxheRP.dxrpControlGB_PMC2 .dxrpHLE,
+.dxheRP.dxrpControlGB_PMC2 .dxrpRE,
+.dxheRP.dxrpControlGB_PMC2 .dxrpBE
+{
+}
+
+

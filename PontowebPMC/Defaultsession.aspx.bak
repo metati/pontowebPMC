@@ -1,0 +1,91 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Defaultsession.aspx.cs" Inherits="Defaultsession" %>
+
+<%@ Register assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+   
+    <style type="text/css">
+
+
+.dxeButtonEditButton_DevEx,
+.dxeSpinLargeIncButton_DevEx,
+.dxeSpinLargeDecButton_DevEx,
+.dxeSpinIncButton_DevEx,
+.dxeSpinDecButton_DevEx
+{
+	background: White none;
+}
+
+.dxeButtonEditButton_DevEx
+{
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 1px;
+}
+.dxeButtonEditButton_DevEx,
+.dxeButtonEdit_DevEx .dxeSBC
+{
+	border-style: solid;
+	border-color: Transparent;
+	-border-color: White;
+}
+
+.dxeButtonEditButton_DevEx,
+.dxeCalendarButton_DevEx,
+.dxeSpinIncButton_DevEx,
+.dxeSpinDecButton_DevEx,
+.dxeSpinLargeIncButton_DevEx,
+.dxeSpinLargeDecButton_DevEx
+{
+	vertical-align: middle;
+	cursor: pointer;
+}
+        .style1
+        {
+            width: 100%;
+        }
+        </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <table class="dxflInternalEditorTable_DevEx">
+        <tr>
+            <td>
+                Usuário Administrador. Selecione um órgão para administrar</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <dx1:ASPxRadioButtonList ID="rlbOrgao" runat="server" 
+                    ClientInstanceName="rlbOrgao" Theme="DevEx" ValueType="System.String">
+                    <ValidationSettings ValidationGroup="ValidaSelecao">
+                        <RequiredField IsRequired="True" />
+                    </ValidationSettings>
+                </dx1:ASPxRadioButtonList>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <table class="style1">
+                    <tr>
+                        <td>
+                            <dx1:ASPxButton ID="btSalvar" runat="server" ClientInstanceName="btSalvar" 
+                                onclick="btSalvar_Click" Text="Ok" Theme="DevEx" Width="100px" 
+                                ValidationGroup="ValidaSelecao">
+                            </dx1:ASPxButton>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

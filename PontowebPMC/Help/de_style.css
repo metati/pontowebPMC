@@ -1,0 +1,283 @@
+div.p
+{
+margin-top:0px;
+margin-bottom:0px;
+font-weight:normal;
+}
+
+div.description_on_page div.p
+{font-family:Arial;
+font-size: 11pt;color:#000000;
+font-style:normal;
+text-decoration:none;
+font-weight:normal;
+}
+h1
+{
+font-family:Arial;
+font-size: 13pt;color:#375db0;
+font-style:normal;
+text-decoration:none;
+font-weight:normal;
+display:inline-block;
+margin:0;
+padding:0;
+}
+h2
+{
+font-family:Arial;
+font-size: 11pt;color:#4f87fd;
+font-style:normal;
+text-decoration:none;
+font-weight:normal;
+display:inline-block;
+margin:0;
+padding:0;
+}
+span.code
+{
+font-family:Courier New;
+font-size: 11pt;color:#000000;
+font-style:normal;
+text-decoration:none;
+font-weight:normal;
+}
+span.quote
+{
+font-family:Georgia;
+font-size: 11pt;color:#000000;
+font-style:italic;
+text-decoration:none;
+font-weight:normal;
+}img.de_780D01ADE8
+{
+margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
+span.de_0F609BFBFC
+{
+	color:#0000ff;
+	font-style:italic;
+	text-decoration:underline;
+}
+span.de_1E885E5B4A
+{
+	font-family:Arial;
+	font-size: 14pt;
+	color:#0000ff;
+}
+span.de_29B71EEFC0
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#49b64e;
+}
+span.de_2B94C39861
+{
+	color:#0000ff;
+	text-decoration:underline;
+}
+span.de_32432F17D6
+{
+	font-family:Arial;
+	font-size: 11pt;
+	color:#000000;
+}
+span.de_37F68C613B
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#0000ff;
+	text-decoration:underline;
+}
+span.de_3936C46AEE
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#000000;
+}
+span.de_466F54D926
+{
+	font-family:Calibri;
+	font-size: 11pt;
+	color:#0000ff;
+	font-style:italic;
+	text-decoration:underline;
+}
+span.de_49E2936747
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#0563c1;
+	text-decoration:underline;
+}
+span.de_4A74BCBC1A
+{
+	font-family:Verdana;
+	font-size: 10pt;
+	color:#000000;
+}
+span.de_4DDBC84374
+{
+	font-size: 12pt;
+	font-style:italic;
+}
+span.de_4F7AD1B79D
+{
+	font-family:Arial;
+	font-size: 11pt;
+	color:#000000;
+	font-style:italic;
+}
+span.de_58E825B70E
+{
+	font-family:Calibri;
+	font-size: 11pt;
+	color:#000000;
+}
+span.de_5958B4AF41
+{
+	font-size: 16pt;
+	color:#000000;
+	font-style:italic;
+}
+span.de_60829FE47E
+{
+	font-family:Arial;
+	font-size: 14pt;
+	color:#000000;
+}
+span.de_68A3F229CF
+{
+	font-size: 16pt;
+	color:#000000;
+}
+span.de_6D2D8B1FD4
+{
+	font-size: 12pt;
+}
+span.de_6E5AB88877
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#333333;
+}
+span.de_7356CF327D
+{
+	font-family:Calibri;
+	font-size: 14pt;
+	color:#0000ff;
+}
+span.de_73A0319092
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#ff003c;
+	font-style:italic;
+}
+span.de_77909389BF
+{
+	font-family:Arial;
+	font-size: 16pt;
+}
+span.de_7EA41EC2FA
+{
+	font-size: 16pt;
+}
+span.de_823826CA2C
+{
+	font-style:italic;
+}
+span.de_8965D2D79E
+{
+	font-family:Arial;
+	font-size: 16pt;
+	color:#000000;
+}
+span.de_93BEB2DF04
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#1322ec;
+}
+span.de_B261420348
+{
+	font-size: 14pt;
+}
+span.de_C189D8955F
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#ff3600;
+}
+span.de_C63EDFFF30
+{
+	color:#49b64e;
+}
+span.de_C87EA50B3C
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#49b681;
+}
+span.de_CD416F2CD0
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#49b64e;
+	font-style:italic;
+}
+span.de_D27B7F47FE
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#49b64e;
+	text-decoration:underline;
+}
+span.de_D335D7F1DA
+{
+	font-size: 16pt;
+	color:#49b64e;
+}
+span.de_D79B3213CA
+{
+	font-family:Arial;
+	font-size: 12pt;
+}
+span.de_D8B8F3ADAA
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#000000;
+	text-decoration:underline;
+}
+span.de_DBF328B893
+{
+	color:#000000;
+	font-style:italic;
+}
+span.de_E6222E61E6
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#000000;
+	font-style:italic;
+	text-decoration:underline;
+}
+span.de_E9382261E5
+{
+	font-family:Arial;
+	font-size: 16pt;
+	color:#000000;
+	font-style:italic;
+}
+span.de_EA500FA8D6
+{
+	font-size: 14pt;
+	color:#49b64e;
+}
+span.de_F1F3B4D4AE
+{
+	font-family:Arial;
+	font-size: 12pt;
+	color:#000000;
+	font-style:italic;
+}
